@@ -1,0 +1,54 @@
+<!--页面模板 管理列表页 管理列表启用方案-->
+<div class="f-page f-page-is-managelist f-page-has-scheme">
+  <!--方案区域-->
+  <farris-section
+    class="f-section-scheme f-section-in-managelist"
+    [showHeader]="false"
+  >
+    <!------未引入真正的方案组件-------------------假定这个是方案组件---------------------------->
+    <npt-common-scheme></npt-common-scheme>
+  </farris-section>
+  <!--Header 区域-->
+  <div class="f-page-header">
+    <nav class="f-page-header-base">
+      <div class="f-title">
+        <span class="f-title-icon f-text-orna-manage">
+          <i class="f-icon f-icon-page-title-administer"></i>
+        </span>
+        <h4 class="f-title-text">销售订单管理</h4>
+        <h5 class="f-title-subtitle">编号：YWZF201805020003</h5>
+        <div class="f-title-status">
+          <span class="badge badge-success">审批通过</span>
+        </div>
+        <div class="f-title-pagination">
+          <span class="f-icon f-icon-arrow-w f-state-disabled"></span>
+          <span class="f-icon f-icon-arrow-e"></span>
+        </div>
+      </div>
+      <div class="f-content"></div>
+      <f-response-toolbar
+        class="col-6 f-toolbar"
+        [datas]="toolbarData"
+        (rtClickEvent)="responseToolbarClick($event)"
+      ></f-response-toolbar>
+      <div class="f-toolbar-viewchange">
+        <npt-common-toolbar-dropdown
+          (urlChange)="urlChange($event)"
+        ></npt-common-toolbar-dropdown>
+      </div>
+    </nav>
+  </div>
+  <!--主题区域-->
+  <div class="f-page-main">
+    <!--需要嵌套的层---------------------------IDE转化成组件----------->
+    <div class="f-struct-wrapper f-utils-fill-flex-column">
+      <!--Section 组件-->
+      <farris-section
+        class="f-section-grid f-section-in-managelist"
+        [showHeader]="false"
+      >
+        <router-outlet></router-outlet>
+      </farris-section>
+    </div>
+  </div>
+</div>

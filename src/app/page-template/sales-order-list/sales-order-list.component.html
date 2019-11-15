@@ -1,0 +1,54 @@
+<!-- 顶部操作 Tab
+   <div class="common-tab-router">
+    <div class="scroll-tabs">
+      <div class="spacer">
+        <ul class="nav nav-tabs flex-nowrap demo-top-nav">
+          <li class="nav-item" style="max-width: 100px;">
+            <a class="nav-link pr-1 text-truncate active">
+              <span class="float-right st-drop-close ml-1">
+                <i class="material-icons align-middle" style="font-size:14px;"
+                  >close</i
+                >
+              </span>
+              <span class="st-tab-text"> 首页 </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+<div class="farris-header">
+  <nav class="navbar no-gutters flex-nowrap f-header-navbar">
+    <div class="col-4 text-truncate f-header-title-container">
+        <h4 class="farris-form-title">列表标题</h4>
+    </div>
+   <f-response-toolbar  [datas]="toolbarData"  (rtClickEvent)="responseToolbarClick($event)"></f-response-toolbar>
+  </nav>
+</div>
+<div class="flex-fill d-flex farris-split-section f-cmp-p ">
+  <kendo-grid
+    [data]="orderListData"
+    [class]="'flex-fill'"
+    [pageSize]="20"
+    total="40"
+    [pageable]="true"
+    [scrollable]="true"
+    [resizable]="true"
+  >
+    <kendo-grid-column field="DDRQ" title="单据日期" width="100">
+    </kendo-grid-column>
+    <kendo-grid-column field="DDBH" title="订单编号" width="140">
+    </kendo-grid-column>
+    <kendo-grid-column field="KHMC" title="客户名称"> </kendo-grid-column>
+    <kendo-grid-column field="KHBM" title="客户别名标题特别长的字段的验证">
+    </kendo-grid-column>
+    <kendo-grid-column field="BM" title="部门"> </kendo-grid-column>
+    <kendo-grid-column field="YWY" title="业务员"> </kendo-grid-column>
+    <kendo-grid-column
+      field="ZJE"
+      title="总金额"
+      width="100"
+    ></kendo-grid-column>
+    <kendo-grid-column field="BZ" title="币种" width="80"></kendo-grid-column>
+  </kendo-grid>
+</div>

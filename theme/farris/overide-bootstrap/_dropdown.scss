@@ -1,0 +1,23 @@
+
+
+.dropdown-divider {
+    margin: $farris-dropdown-padding-y 0;
+  }
+  
+  .dropleft .dropdown-toggle::before {
+    vertical-align: $farris-dropdown-toggle-vertical-align;
+  }
+  .dropright .dropdown-toggle::after {
+    vertical-align: $farris-dropdown-toggle-vertical-align;
+  }
+  // 20190514 下拉菜单
+  .btn-group .btn + .dropdown-toggle-split {
+    margin-left:1px;
+  }
+  
+  //下拉列表高度 sm不同 覆盖样式
+.dropdown-item{
+  line-height: 20px;
+  padding: $f-dropdown-item-padding-y $dropdown-item-padding-x;
+  color: $f-text-04;
+}

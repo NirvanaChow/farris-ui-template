@@ -1,0 +1,62 @@
+// 20190520 间隔
+$farris-section-divide-part-gutter: 10px solid $farris-pt-bg !default;
+$farris-section-right-divide-part-gutter: 5px solid $farris-pt-bg !default;
+
+// 处理chrome 73列表滚动问题
+.farris-split-section > app-datagridcomponent {
+  flex-direction: column !important;
+  overflow: hidden;
+  & > .w-100 {
+    flex: 1 1 auto !important;
+    overflow: hidden;
+  }
+}
+
+// 20190608 chrome 74滚动问题
+.farris-lsection > app-datagridcomponent {
+  overflow: hidden;
+  & > .d-flex {
+    overflow: hidden;
+  }
+}
+// 20190622 chrome 74滚动问题
+.farris-lsection > app-leftdatagridcomponent{
+  overflow:hidden;
+  & > .d-flex {
+    overflow: hidden;
+  }
+}
+.farris-rsection > app-rightdatagridcomponent{
+  overflow:hidden;
+  & > .d-flex {
+    overflow: hidden;
+  }
+}
+// 直接这样处理太粗暴，忽略了 滚动的情况
+// .flex-fill.flex-column.d-flex{
+//   overflow:hidden;
+// }
+
+/*
+* 新模板组件名也应该变
+*/
+// 20190520 处理旧模板中的样式问题
+// 主从表卡片
+.f-mtable-form-next-tab + .k-tabstrip {
+  margin-left: -$farris-split-setcion-inner-gutter-x !important;
+  margin-right: -$farris-split-setcion-inner-gutter-x !important;
+  padding: $farris-split-setcion-inner-gutter-y
+    $farris-split-setcion-inner-gutter-x;
+  margin-bottom: 0 !important;
+  border-top: $farris-section-divide-part-gutter;
+}
+
+// 多数据源模板
+.farris-rsection app-detailformcomponent + .k-tabstrip {
+  margin-left: -$farris-split-setcion-inner-gutter-x !important;
+  margin-right: -$farris-split-setcion-inner-gutter-x !important;
+  padding: $farris-split-setcion-inner-gutter-y
+    $farris-split-setcion-inner-gutter-x;
+  margin-bottom: 0 !important;
+  border-top: $farris-section-right-divide-part-gutter;
+}

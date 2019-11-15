@@ -1,0 +1,25 @@
+//20191011 新增下拉列表combolist样式
+.f-datalist{
+    .list-group{
+        .list-group-item{
+            padding: $f-combolist-item-padding-y 0.875rem;
+            border:0;
+            color: $f-combolist-item-color;
+            &.active{
+                background-color:$f-combolist-item-active-bg-color;
+                color: $f-combolist-item-color;
+            }
+            &:hover{
+                background-color: $f-combolist-item-hover-bg-color;
+            }
+        }
+    }
+}
+//下拉列表展开时候，样式
+input-group.actived{
+    .input-group{
+        box-shadow: $input-focus-box-shadow;
+        border-color:$farris-input-focus-border-color;
+    }
+  
+}

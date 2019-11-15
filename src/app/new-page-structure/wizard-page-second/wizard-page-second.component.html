@@ -1,0 +1,86 @@
+<wizard-page-detail  (pagedetailSelected)="pagedetailSelected($event)">
+    <ng-template wizardPageHeader>
+        <div class="page-friendly-reminder "  [ngClass]="showReminder?'':'d-none'">
+            <div class="reminder-message">
+                <span class="reminder-title">
+                    <span class="f-icon f-icon-info"></span>
+                    <span class="reminder-name">友情提示</span>
+                </span>
+                <span class="message"
+                    >您需要对年末结算所需的前期准备进行检查，全部通过后可进行年末结转</span
+                >
+            </div>
+            <div class="reminder-close">
+                <a
+                    href="javascript:void(0)"
+                    class="no-prompt"
+                    (click)="noPrompt()"
+                    >我知道了,不再提醒</a
+                >
+                <span
+                    class="close-icon k-icon k-i-close"
+                    (click)="closePrompt()"
+                ></span>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template wizardPageContent>
+        <div class="h-100 f-utils-flex-column f-template-wizard-page-content">
+            <farris-datagrid
+              class="f-component-grid f-utils-fill"
+              [columns]="columns"
+              [data]="orderListData"
+              #dg="datagrid"
+              [idField]="'DDBH'"
+              [showLineNumber]="true"
+              [fitColumns]="false"
+              [total]="total"
+              [striped]="false"
+              [showCheckbox]="false"
+              [virtualized]="true"
+              [pagination]="false"
+              [fit]="true"
+            >
+              <ng-template #cell1 let-ctx>
+                <span class="f-pretend-link mr-2">{{
+                  ctx.rowData['DDBH']
+                }}</span>
+                <span [class]="getBadgeCls(ctx.rowIndex)">通过</span>
+              </ng-template>
+            </farris-datagrid>
+            <div class="page-operation">
+                <button
+                    class="btn "
+                    [ngClass]="{
+                        'btn-primary': !enableDownload,
+                        'btn-secondary': enableDownload
+                    }"
+                    [disabled]="!enableBegin"
+                    (click)="startCheck()"
+                >
+                    开始检查
+                </button>
+                <button class="btn btn-primary" *ngIf="enableDownload">
+                    下载检查报告
+                </button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template wizardPageFooter>
+        <div class="f-template-wizard-page-footer">
+            <button class="btn btn-secondary" (click)="prevStep()">
+                上一步
+            </button>
+            <button class="btn btn-secondary" (click)="cancelWizard()">
+               取消
+            </button>
+            <button
+                class="btn btn-primary"
+                [disabled]="!enableDownload"
+                (click)="nextStep()"
+            >
+                下一步
+            </button>
+        </div>
+    </ng-template>
+</wizard-page-detail >

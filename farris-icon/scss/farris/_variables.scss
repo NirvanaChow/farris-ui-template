@@ -1,0 +1,12 @@
+// 图标
+$farris-icon-font-size: 1.125rem !default;
+$farris-icon-size: 1.125rem !default;
+$farris-flat-button-hover-opacity: 0.08 !default;
+// 图标扩展字体
+$farris-icon-extend-font-family:"FarrisExtend";
+// 图标
+$farris-i-prefix:"f-icon"!default;
+
+@mixin rewriteFamily(){
+    font-family:"FarrisIcons";
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>启动类</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面标题icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-626.000000, -290.000000)" id="启动类">
+            <g transform="translate(626.000000, 290.000000)">
+                <g id="标题icon" fill="#F49730">
+                    <rect id="Rectangle-2" x="0" y="0" width="28" height="28" rx="4"></rect>
+                </g>
+                <g id="启动" transform="translate(6.000000, 5.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M8.49995553,1.26386776e-16 C3.80558732,1.26386776e-16 0,3.80560511 0,8.49995553 C0,13.1943949 3.80560511,17 8.49995553,17 C13.1943949,17 17,13.1943949 17,8.49995553 C17,3.80558732 13.1943949,0 8.49995553,1.26386776e-16 Z M12.6588176,8.98572826 L6.92132756,12.3249489 C6.52671504,12.5375078 6.04094231,12.264294 6.04094231,11.8089376 L6.04094231,5.19106238 C6.04094231,4.73570603 6.5266261,4.46249222 6.92132756,4.6749622 L12.6588176,7.98385536 C13.053519,8.19641428 13.053519,8.77316934 12.6588176,8.98572826 L12.6588176,8.98572826 Z" id="形状"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

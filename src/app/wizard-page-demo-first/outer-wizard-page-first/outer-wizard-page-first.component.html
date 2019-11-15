@@ -1,0 +1,99 @@
+<wizard-page-detail (pagedetailSelected)="pagedetailSelected($event)">
+  <ng-template wizardPageHeader>
+    <div
+      class="page-friendly-reminder"
+      [ngClass]="showReminder ? '' : 'd-none'"
+    >
+      <div class="reminder-message">
+        <span class="reminder-title">
+          <span class="f-icon f-icon-info"></span>
+          <span class="reminder-name">友情提示</span>
+        </span>
+        <span class="message"
+          >您需要对年末结算所需的前期准备进行检查，全部通过后可进行年末结转</span
+        >
+      </div>
+      <div class="reminder-close">
+        <a href="javascript:void(0)" class="no-prompt" (click)="noPrompt()"
+          >我知道了,不再提醒</a
+        >
+        <span
+          class="close-icon k-icon k-i-close"
+          (click)="closePrompt()"
+        ></span>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template wizardPageContent>
+    <div class="f-template-wizard-page-content h-100 f-utils-flex-column">
+      <kendo-grid
+        [data]="orderListData"
+        class="f-component-grid f-utils-fill"
+        [pageSize]="20"
+        total="40"
+        [pageable]="true"
+        [scrollable]="true"
+      >
+        <kendo-grid-column field="DDRQ" title="加急" width="50">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <div class="text-center">
+              <span class="f-icon text-warning">flag</span>
+            </div>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="DDRQ" title="单据日期" width="120">
+        </kendo-grid-column>
+        <kendo-grid-column field="DDBH" title="订单编号" width="240">
+          <ng-template
+            kendoGridCellTemplate
+            let-dataItem
+            let-rowIndex="rowIndex"
+          >
+            <span class="f-pretend-link mr-2">{{ dataItem.DDBH }}</span
+            ><span [class]="getBadgeCls(rowIndex)">通过</span>
+          </ng-template>
+        </kendo-grid-column>
+        <kendo-grid-column field="BM" title="部门"> </kendo-grid-column>
+        <kendo-grid-column field="YWY" title="业务员"> </kendo-grid-column>
+        <kendo-grid-column
+          field="ZJE"
+          title="总金额"
+          width="100"
+        ></kendo-grid-column>
+        <kendo-grid-column
+          field="BZ"
+          title="币种"
+          width="80"
+        ></kendo-grid-column>
+      </kendo-grid>
+      <div class="page-operation">
+        <button
+          class="btn "
+          [ngClass]="{
+            'btn-primary': !enableDownload,
+            'btn-secondary': enableDownload
+          }"
+          [disabled]="!enableBegin"
+          (click)="startCheck()"
+        >
+          开始检查
+        </button>
+        <button class="btn btn-primary" *ngIf="enableDownload">
+          下载检查报告
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template wizardPageFooter>
+    <div class="f-template-wizard-page-footer">
+    <button class="btn btn-secondary" (click)=" cancelWizard()">取消</button>
+      <button
+        class="btn btn-primary"
+        [disabled]="!enableDownload"
+        (click)="nextStep()"
+      >
+        下一步
+      </button>
+    </div>
+  </ng-template>
+</wizard-page-detail >

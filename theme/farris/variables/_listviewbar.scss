@@ -1,0 +1,20 @@
+// 导航Listview
+$f-pt-listviewbar-box-shadow: 2px 0 4px 0 rgba(33, 43, 0, 0.06) !default;
+$f-pt-listviewbar-header-title-font-size: 1rem !default;
+$f-pt-listviewbar-header-title-line-height: 1.375rem !default;
+$f-pt-listviewbar-header-title-color: $f-text-01 !default;
+$f-pt-listviewbar-header-inner-gutter: 0.875rem 0.875rem !default;
+$f-pt-listviewbar-header-height: $farris-ptlayout-header-height !default;
+// 标题
+$f-pt-listviewbar-item-title-font-size: 0.875rem !default;
+$f-pt-listviewbar-item-title-line-height: 1.25rem !default;
+$f-pt-listviewbar-item-inner-gutter: 0.5rem 0.875rem 0.5rem 2rem !default;
+// badge
+$f-pt-listviewbar-item-badge-background: $f-theme-04 !default;
+$f-pt-listviewbar-item-badge-text: $f-text-00 !default;
+$f-pt-listviewbar-item-badge-font-size: 0.75rem !default;
+// Active状态
+$f-pt-listviewbar-item-active-title-text: $f-text-02 !default;
+$f-pt-listviewbar-item-active-badge-background: $f-theme-03!default;
+$f-pt-listviewbar-item-active-badge-text:$f-text-00 !default;
+$f-pt-listviewbar-item-active-background: $f-aid-02!default;

@@ -1,0 +1,89 @@
+<header
+  class="navbar navbar-expand flex-column flex-md-row bd-navbar pr-0"
+  style="flex-shrink: 0;"
+>
+  <a class="navbar-brand" href="#" style="font-size:1.5rem;">Farris UI</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        target="_blank"
+        href="https://material.io/tools/icons/?style=baseline"
+        >Material Design 图标</a
+      >
+    </li>
+  </ul>
+  <a class="docs-download d-none" [href]="downloadTheme()" target="_blank">下载主题</a>
+</header>
+<div class="flex-fill d-flex position-relative farris-overflow-hidden">
+  <app-preset-themes
+    class="doc-slider docs-swatches d-none"
+    [presetThemes]="presetThemes"
+    (selectThemeEvent)="selectThemeHandler($event)"
+  ></app-preset-themes>
+  <div class="docs-variables d-flex flex-column  flex-shrink-0" style="display:none!important;">
+    <div class="bd-navbar docs-content-bar">
+      <span
+        class="btn btn-warning float-right mt-2 mr-2"
+        (click)="changeTheme()"
+      >
+        应用</span
+      >
+      <h3 class=" docs-navbar-title ">主题变量</h3>
+    </div>
+    <app-variable-panel
+      [themeVariables]="themeVariables"
+      (formatCodeEvent)="formatCodeHandler()"
+      (selfVarriableAreaEvent)="selfVarriable($event)"
+      class="position-relative flex-fill farris-overflow-hidden"
+    ></app-variable-panel>
+  </div>
+  <div
+    class="flex-fill  position-relative"
+    [ngClass]="showVariableArea ? '' : 'd-none'"
+  >
+    <div class="editorPanel">
+      <angular-monaco-editor
+        class="customMonacoEditor"
+        [options]="options"
+        [(ngModel)]="themeExtend"
+        (onInit)="onMonacoInit($event)"
+      >
+      </angular-monaco-editor>
+    </div>
+  </div>
+  <div
+    class="flex-fill flex-column"
+    [ngClass]="showVariableArea ? 'd-none' : 'd-flex'"
+    style="overflow: hidden;"
+  >
+    <div class="bd-navbar shadow-none">
+      <div class="docs-content-bar h-100">
+        <ul class="navbar-nav flex-row mx-3">
+          <li class="nav-item" *ngFor="let navInfo of navInfos">
+            <a
+              class="nav-link  docs-navbar-title"
+              (click)="navTo(navInfo.url)"
+              [ngClass]="{ active: activeUrl == navInfo.url }"
+              >{{ navInfo.title }}</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex-fill position-relative" style="overflow: hidden;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <p
+    class="docs-cmplist-btn d-none"
+    (click)="showOrHideCmpListPanel()"
+    [ngClass]="{ expand: cmpListPanelShow }"
+  >
+    <span>组件列表</span>
+  </p>
+  <div class="cmp-list-popup" [ngClass]="{ expand: cmpListPanelShow }">
+    <app-cmp-list></app-cmp-list>
+  </div>
+</div>

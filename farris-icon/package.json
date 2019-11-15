@@ -1,0 +1,20 @@
+{
+  "version": "0.0.4",
+  "license": "MIT",
+  "author": {
+    "name": "ximena"
+  },
+  "name": "@farris/farris-icon",
+  "description": "Farris 图标库 ",
+  "main": "farrisicon.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "dependencies": {}
+}

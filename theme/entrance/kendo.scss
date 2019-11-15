@@ -1,0 +1,83 @@
+/*--------------修改开始------------------------------*/
+@import '../common/custom-kendo';
+@import '../kendoui-bt/custom';
+@import '../kendoui-bt/variables';
+@import '../common/after-bt';
+/*----------------修改结束-------------------------*/
+// Dependencies
+@import '../kendoui-bt/mixins';
+@import '../kendoui-bt/common/all';
+@import '../kendoui-bt/ripple';
+@import '../kendoui-bt/popup';
+
+// Data management
+@import '../kendoui-bt/pager';
+@import '../kendoui-bt/grid';
+@import '../kendoui-bt/spreadsheet';
+@import '../kendoui-bt/listview';
+@import '../kendoui-bt/pivotgrid';
+@import '../kendoui-bt/treelist';
+@import '../kendoui-bt/scrollview';
+
+// Editors
+@import '../kendoui-bt/autocomplete';
+@import '../kendoui-bt/colorpicker';
+@import '../kendoui-bt/combobox';
+@import '../kendoui-bt/datetime';
+@import '../kendoui-bt/dropdowngrid';
+@import '../kendoui-bt/dropdownlist';
+@import '../kendoui-bt/dropdowntree';
+@import '../kendoui-bt/editor';
+@import '../kendoui-bt/input';
+@import '../kendoui-bt/multiselect';
+@import '../kendoui-bt/numerictextbox';
+@import '../kendoui-bt/slider';
+@import '../kendoui-bt/upload';
+@import '../kendoui-bt/validator';
+@import '../kendoui-bt/switch';
+@import '../kendoui-bt/maskedtextbox';
+@import '../kendoui-bt/listbox';
+
+// Dataviz
+@import '../kendoui-bt/dataviz';
+@import '../kendoui-bt/map';
+
+// Barcodes
+@import '../kendoui-bt/barcode';
+@import '../kendoui-bt/qrcode';
+
+// Scheduling
+@import '../kendoui-bt/calendar';
+@import '../kendoui-bt/gantt';
+@import '../kendoui-bt/scheduler';
+
+// Media
+@import '../kendoui-bt/mediaplayer';
+
+// Layout
+@import '../kendoui-bt/dialog';
+@import '../kendoui-bt/notification';
+@import '../kendoui-bt/responsivepanel';
+@import '../kendoui-bt/splitter';
+@import '../kendoui-bt/tooltip';
+@import '../kendoui-bt/window';
+
+// Navigation
+@import '../kendoui-bt/button';
+@import '../kendoui-bt/menu';
+@import '../kendoui-bt/panelbar';
+@import '../kendoui-bt/tabstrip';
+@import '../kendoui-bt/toolbar';
+@import '../kendoui-bt/treeview';
+
+// Interactivity & UX
+@import '../kendoui-bt/progressbar';
+@import '../kendoui-bt/scroller';
+
+// Styling & Content
+@import '../kendoui-bt/styling';
+@import '../kendoui-bt/badge';
+@import '../kendoui-bt/card';
+
+// Chat
+@import '../kendoui-bt/chat';

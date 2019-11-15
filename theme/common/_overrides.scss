@@ -1,0 +1,100 @@
+// 字体
+$font-family-base: $farris-font-family-base;
+// 字体大小
+$font-size-base: $farris-font-size-base;
+// 行高
+$line-height-base: $farris-line-height-base;
+// 背景色
+// $body-bg:$farris-bt-main-content-bg;
+// 通用文字
+$body-color: $farris-body-color;
+// 字体weight
+$font-weight-light: $farris-font-weight-light;
+$font-weight-normal: $farris-font-weight-normal;
+$font-weight-bold: $farris-font-weight-bold;
+$h1-font-size: $farris-h1-font-size;
+$h2-font-size: $farris-h2-font-size;
+$h3-font-size: $farris-h3-font-size;
+$h4-font-size: $farris-h4-font-size;
+$h5-font-size: $farris-h5-font-size;
+$h6-font-size: $farris-h6-font-size;
+// H标签行高
+$headings-line-height: $farris-headings-line-height;
+
+$primary: $farris-primary;
+// $secondary:     $gray-600 !default;
+$success: $farris-success;
+$info: $farris-info;
+$warning: $farris-warning;
+$error: $farris-danger;
+// link
+$link-color: $farris-link-color;
+// 组件Active状态
+$component-active-color: $farris-component-active-color;
+//$component-active-bg: $farris-component-active-bg;
+$component-active-bg: $f-theme-04;
+// 默认边线宽度
+$border-width: $farris-border-width;
+// 默认边线颜色
+$border-color: $farris-border-color;
+// 边线圆角
+$border-radius: $farris-border-radius;
+$border-radius-lg: $farris-border-radius-lg;
+$border-radius-sm:$farris-border-radius-sm;
+// 启用阴影
+$enable-shadows: $farris-enable-shadows;
+// 输入框 控件大小 
+$input-padding-x: $farris-input-btn-padding-x;
+$input-padding-y: $farris-input-btn-padding-y;
+$input-line-height: $farris-input-line-height;
+
+// 按钮
+$btn-padding-x: $farris-btn-padding-x;
+$btn-padding-x-sm:$farris-btn-padding-x-sm;
+$btn-padding-x-lg:$farris-btn-padding-x-lg;
+
+$btn-box-shadow: $farris-btn-box-shadow;
+$btn-border-width: $farris-btn-border-width;
+// 分页
+$pagination-padding-y: $farris-pagination-padding-y;
+$pagination-padding-x: $farris-pagination-padding-x;
+$pagination-padding-y-sm: $farris-pagination-padding-y-sm;
+$pagination-padding-x-sm: $farris-pagination-padding-x-sm;
+$pagination-padding-y-lg: $farris-pagination-padding-y-lg;
+$pagination-padding-x-lg: $farris-pagination-padding-x-lg;
+
+
+$pagination-line-height: $farris-pagination-line-height;
+$pagination-color: $farris-pagination-color;
+$pagination-bg: $farris-pagination-bg;
+
+$pagination-border-width: $farris-pagination-border-width;
+$pagination-border-color: $farris-pagination-border-color;
+
+$pagination-active-color: $farris-pagination-active-color;
+$pagination-active-bg: $farris-pagination-active-bg;
+$pagination-active-border-color: $farris-pagination-active-border-color;
+
+$pagination-hover-color: $farris-pagination-hover-color;
+$pagination-hover-bg: $farris-pagination-hover-bg;
+$pagination-hover-border-color: $farris-pagination-hover-border-color;
+
+$pagination-disabled-color: $farris-pagination-disabled-color;
+$pagination-disabled-bg: $farris-pagination-disabled-bg;
+$pagination-disabled-border-color: $farris-pagination-disabled-border-color;
+
+//$pagination-focus-box-shadow:
+// form 布局
+$form-group-margin-bottom: $farris-form-group-margin-bottom-default;
+
+// 灰度文字
+$text-muted:$farris-text-muted;
+// 表格奇偶行
+$table-striped-order: $farris-table-striped-order;
+
+// 栅格化
+$grid-columns: $f-grid-columns;
+$grid-gutter-width: $f-grid-gutter-width;
+
+// 鼠标划过是否带下划线
+$link-hover-decoration:$f-link-hover-decoration;

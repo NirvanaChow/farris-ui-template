@@ -1,0 +1,12 @@
+.#{$f-page-prefix}-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;    
+    height: $farris-ptlayout-header-height;
+    padding: $farris-ptlayout-header-inner-gutter;
+    background: $farris-ptlayout-header-bg;
+    box-shadow: $f-pt-footer-shadow;
+}

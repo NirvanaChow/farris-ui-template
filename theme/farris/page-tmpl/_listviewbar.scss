@@ -1,0 +1,86 @@
+/*******************************
+         1906 财务可能已用
+*******************************/
+.f-pt-listviewbar {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: $f-pt-listviewbar-box-shadow;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.f-cmp-listview {
+  @extend .f-utils-fill-auto;
+}
+.f-pt-listviewbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $f-pt-listviewbar-header-inner-gutter;
+  height: $f-pt-listviewbar-header-height;
+  .f-title {
+    margin: 0;
+    color: $f-pt-listviewbar-header-title-color;
+    font-size: $f-pt-listviewbar-header-title-font-size;
+    line-height: $f-pt-listviewbar-header-title-line-height;
+  }
+  .f-title-ctr {
+    @include text-truncate;
+  }
+}
+.f-cmp-listview-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $f-pt-listviewbar-item-inner-gutter;
+  border-left: 4px solid #fff;
+  border-radius: 2px;
+  .f-title {
+    margin: 0;
+    font-size: $f-pt-listviewbar-item-title-font-size;
+    line-height: $f-pt-listviewbar-item-title-line-height;
+    @include text-truncate;
+  }
+  .badge {
+    color: $f-pt-listviewbar-item-badge-text;
+    font-size: 10px;
+    font-weight: normal;
+    padding: 0.125rem 0.375rem;
+    background: $f-pt-listviewbar-item-badge-background;
+  }
+  &.f-state-active {
+    color: $f-pt-listviewbar-item-active-title-text;
+    background: $f-pt-listviewbar-item-active-background;
+    border-color: $f-theme-02;
+    .badge {
+      color: $f-pt-listviewbar-item-active-badge-text;
+      background: $f-pt-listviewbar-item-active-badge-background;
+    }
+  }
+}
+/*******************************
+         1909 列表导航
+*******************************/
+.f-component-pagenav{
+  width: 218px;
+  background: $f-neutral-00;
+  box-shadow: 1px 1px 8px 0 rgba(0, 28, 64, 0.08);
+  &-header {
+    @include f-header-flex;
+    border-bottom:1px solid $f-neutral-05;
+    // 标题区域
+    .f-title {
+      flex: 1 1 0;
+      @include text-truncate;
+      font-size: 16px;
+      color: $f-text-01;
+      text-align:center;
+      padding:1rem 0;
+    }
+  }
+  &-main{
+    flex: 1 1 0;
+    
+  }
+}

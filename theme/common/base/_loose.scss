@@ -1,0 +1,94 @@
+//布局-卡片-页头-内间距 s 12 22 m 14 24
+$f-pt-card-header-inner-gutter:0.875rem 1.5rem !default;
+
+//section 内边距 一级结构 二级结构相同 s 14 14 m 16 14
+$f-pt-card-section-inner-gutter:1rem 0.875rem!default;
+//main主体区域外边距 s 8px m 10px
+$f-pt-split-section-outer-gutter:0.625rem!default;
+//筛选方案与筛选表单间距 s 12 m 14
+$f-pt-scheme-form-bottom-gutter:0.875rem!default;
+
+//布局-卡片-一级信息结构-内间距 s 14 14 m 16 14
+$f-pt-card-one-section-inner-gutter:1rem 0.875rem !default;
+//布局-卡片-一级信息结构-外间距 s 8px m 10px
+$f-pt-card-one-section-outer-gutter:0.625rem !default;
+
+//布局-分割线-相同模块组件(筛选区-列表 和 前置条件-内容区)-下-间距 s 14px m 16px
+$f-pt-cutoff-samemodule-bottom-gutter:1rem !default;
+
+//组件-页头-标题icon-右-间距 s 12 m 14
+$f-el-header-title-icon-right-gutter:0.875rem !default;
+
+//组件-表单-单标题-展开收起(文字与箭头)-右-间距 s 4px m 6px
+$f-el-form-title-arrow-right-gutter:0.375rem !default;
+//组件-表单-单标题-input之间-上下-间距 s 6px m 12px
+$f-el-form-title-input-top-bottom-gutter:0.75rem !default;
+
+//组件-表单-tabs页签(与不带分组标题的表单之间)-下-间距 s 12px m 14px
+//$f-el-form-tabs-bottom-gutter:0.75rem !default;
+//tabs 下面与grid之间间距 s 8px m 10px
+$f-el-form-tabs-grid-bottom-gutter:0.625rem !default;
+//tabs 下面与form之间间距 s 12px m 14px
+$f-el-form-tabs-form-bottom-gutter:0.875rem !default;
+
+//按钮 用padding来撑开高度 s 2px m 3px/0.1875rem
+$f-btn-padding-y:0.1875rem !default;
+
+//分页 按钮大小 用padding来区分大小 s 4px m 5px
+$f-pagination-padding-y:0.3125rem !default;
+
+//input输入框/select选择 s 2px m 3px/0.1875rem
+$f-input-btn-padding-y: 0.1875rem !default;
+
+//下拉按钮dropdown s 4px m 6px
+$f-dropdown-item-padding-y: 0.375rem !default;
+
+//btn-group 文字按钮之间间距 s 12px m 14px
+$f-btn-group-gutter-y:0.875rem!default;
+
+//tabs标签页 s 10 13 m 14 16
+$f-tabs-nav-link-inner-gutter-y:0.875rem!default;
+$f-tabs-nav-link-inner-gutter-x:1rem!default;
+//tabs标签页 面板式 padding-y s 7px m 9px
+$f-tabs-panel-nav-link-inner-gutter-y:0.5265rem!default;
+
+//表格
+//表格表头高度 s 34 m 42
+$f-grid-header-cell-height:2.625rem !default;
+//表格内容高度 s 28 m 36
+$f-grid-body-cell-height:2.25rem !default;
+$f-grid-body-cell-height-px:36px !default;
+
+//表格y方向padding值 s 4px m 8px 
+$f-grid-cell-padding-y:0.5rem !default;
+//表格表头y方向 padding值 s 7px m 11px
+$f-grid-header-cell-padding-y:0.6875rem !default;
+//表格编辑态下 padding高度变化 s 1px m 4px
+$f-grid-cell-edit-padding-y:4px !default;
+//表格表头竖线高度 s 16 m 20
+$f-grid-header-cell-line-height:1.25rem!default;
+
+
+//switch开关 s 40*22 m 44*24
+$f-k-switch-size:2.75rem !default;
+$f-k-switch-size-y:1.5rem !default;
+//switch开关 外部 s 36 m 40
+$f-k-switch-border-radius: 2.5rem !default;
+//switch开关 圆形部分大小 s 18 m 20
+$f-k-switch-handle-size:1.25rem !default;
+
+//输入控件 label距离下面输入框距离 s 6px m 8px
+$f-input-label-bottom:0.5rem!default;
+
+//手风琴 标题部分 padding-y s 9px m 14px
+$f-panel-bar-header-padding-y:0.875rem!default;
+
+
+//穿梭框中sm版区别
+//s 5px m 8 
+$f-multi-select-title-padding-y: 0.5rem!default;
+// s 4 m 6
+$f-multi-select-list-item-padding-y:0.375rem!default;
+
+//多选列表 s 4 m 6
+$f-combo-list-item-padding-y:0.375rem !default;

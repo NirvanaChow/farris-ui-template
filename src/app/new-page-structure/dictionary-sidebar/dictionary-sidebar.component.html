@@ -1,0 +1,166 @@
+<!--页面模板 是导航列表-->
+<div class="f-page f-page-is-managelistwithsidebar">
+  <!--Page Header-->
+  <div class="f-page-header">
+    <nav class="f-page-header-base">
+      <div class="f-title">
+          <span class="f-title-icon f-text-orna-dict">
+              <i class="f-icon f-icon-page-title-dictionary"></i>
+            </span>
+        <h4 class="f-title-text">管理列表</h4>
+        <h5 class="f-title-subtitle">编号：YWZF201805020003</h5>
+      </div>
+      <div class="f-content"></div>
+      <f-response-toolbar
+        class="col-7 f-toolbar"
+        [datas]="toolbarData"
+        (rtClickEvent)="responseToolbarClick($event)"
+        [btnState]="btnDisable"
+      ></f-response-toolbar>
+    </nav>
+  </div>
+  <div class="f-page-main">
+    <!--扩展区域-->
+    <div class="f-page-main-extend f-split-border-b f-common-py-form">
+      <div class="f-form-layout farris-form farris-form-controls-inline">
+
+            <div class="col-3">
+              <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                  <label for="hpinput01" class="col-form-label">
+                    <span class="farris-label-info text-danger">*</span
+                    ><span class="farris-label-text">订单编号</span>
+                  </label>
+                  <div class="farris-input-wrap">
+                    <input type="text" class="form-control" value="" />
+                    <div class="farris-feedback valid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                  <label class="col-form-label">
+                    <span class="farris-label-text">类型</span>
+                    <small class="farris-label-info text-muted">&nbsp;</small>
+                  </label>
+                  <div class="farris-input-wrap">
+                    <!-- <kendo-dropdownlist
+                      class="form-control"
+                      [data]="typeItemsDropDown"
+                      [value]="'国有单位'"
+                    >
+                    </kendo-dropdownlist> -->
+                    <farris-combo-list
+                      [(ngModel)]="valObj.id"
+                      [(selectedValues)]="valObj.text"
+                      [idField]="'id'"
+                      [textField]="'text'"
+                      [data]="listItemsDropDown"
+                    ></farris-combo-list>
+                    <div class="farris-feedback valid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                  <label class="col-form-label">
+                    <span class="farris-label-text">客户名称</span>
+                  </label>
+                  <div class="farris-input-wrap">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder=""
+                    />
+                    <div class="farris-feedback valid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-right">
+              <button class="btn btn-secondary">
+                查询
+              </button>
+            </div>
+      </div>
+    </div>
+    <!--需要嵌套的层---------------------------IDE转化成组件----------->
+    <div class="f-struct-wrapper f-utils-fill-flex-column">
+      <!--Section 组件-->
+      <farris-section
+        class="f-section-grid f-section-in-managelist"
+        [showHeader]="false"
+      >
+        <farris-datagrid
+          class="f-component-grid"
+          [columns]="columns"
+          [data]="orderListData"
+          #dg="datagrid"
+          [idField]="'DDBH'"
+          [showLineNumber]="true"
+          [fitColumns]="false"
+          [total]="total"
+          [striped]="false"
+          [showCheckbox]="false"
+          [virtualized]="true"
+          [pagination]="false"
+          [fit]="true"
+        >
+          <ng-template #cell1 let-ctx>
+            <button class="btn btn-secondary" (click)="showsidebar()">
+              操作
+            </button>
+          </ng-template>
+          <ng-template #cell2 let-ctx>
+            <div class="text-center">
+              <span class="f-icon f-icon-flag_urgent text-warning"></span>
+            </div>
+          </ng-template>
+          <ng-template #cell3 let-ctx>
+            <span class="f-pretend-link mr-2">{{ ctx.rowData['DDBH'] }}</span>
+            <span [class]="getBadgeCls(ctx.rowIndex)">通过</span>
+          </ng-template>
+        </farris-datagrid>
+      </farris-section>
+    </div>
+  </div>
+  <!-- 侧边栏 组件-->
+  <farris-sidebar
+    [width]="468"
+    [showPos]="'right'"
+    [showEntry]="false"
+    #farrissidebar
+    [isOpen]="sidebarOpen"
+    [maskable]="false"
+    [showFooter]="sidebarStateEdit"
+  >
+    <ng-template farrisSidebarTitle [titleCls]="'f-tmpl-for-title-withline'">
+      <h4 class="f-title-text">单据编号：CQ00189625</h4>
+      <div class="f-title-status">
+        <span class="badge badge-success">审批通过</span>
+      </div>
+    </ng-template>
+    <!-- <ng-template farrisSidebarToolbar [toolbarCls]="'col-7 px-0'">
+      <f-response-toolbar
+        [datas]="sidebarToolbarData"
+        (rtClickEvent)="sidebarToolbarClick($event)"
+        [btnVisible]="sidebarBtnVisible"
+      ></f-response-toolbar>
+    </ng-template> -->
+    <ng-template farrisSidebarContent>
+      <single-card></single-card>
+    </ng-template>
+    <ng-template farrisSidebarFooter>
+      <button class="btn btn-primary f-btn-ml" (click)="endSidebarEdit()">
+        保存
+      </button>
+      <button class="btn btn-secondary f-btn-ml" (click)="endSidebarEdit()">
+        取消
+      </button>
+    </ng-template>
+  </farris-sidebar>
+</div>

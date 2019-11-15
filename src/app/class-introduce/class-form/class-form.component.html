@@ -1,0 +1,166 @@
+<dl class="bd-example-introduce-class-list">
+    <dt>1. 表单的基本结构</dt>
+    <dd>
+      <p>应用场景：</p>
+      <p>a. 表单的结构很灵活，可以和各种flex布局写法结合。<code>farris-form</code>内的<code>farris-group-wrap</code>有最大宽度限制。</p>
+    </dd>
+</dl>
+<div class="bd-example">
+    <div class="farris-form mb-3">
+        <div class="col-12">
+            <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span>
+                        <span class="farris-label-text">输入控件标签</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <input class="form-control" type="text" value="输入值" readonly>
+                        <div class="farris-feedback valid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="farris-form form-row mb-3">
+        <div class="col-3">
+            <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span>
+                        <span class="farris-label-text">输入控件标签</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <input class="form-control" type="text" value="输入值" readonly>
+                        <div class="farris-feedback valid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span>
+                        <span class="farris-label-text">输入控件标签</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <input class="form-control" type="text" value="输入值" readonly>
+                        <div class="farris-feedback valid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="farris-form mb-3">
+      <div class="f-utils-flex-row-wrap">
+          <div class="col-3">
+              <div class="farris-group-wrap">
+                  <div class="form-group farris-form-group">
+                      <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span>
+                          <span class="farris-label-text">输入控件标签</span>
+                      </label>
+                      <div class="farris-input-wrap">
+                          <input class="form-control" type="text" value="输入值" readonly>
+                          <div class="farris-feedback valid-feedback"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3">
+              <div class="farris-group-wrap">
+                  <div class="form-group farris-form-group">
+                      <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span>
+                          <span class="farris-label-text">输入控件标签</span>
+                      </label>
+                      <div class="farris-input-wrap">
+                          <input class="form-control" type="text" value="输入值" readonly>
+                          <div class="farris-feedback valid-feedback"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+<code-show [path]="getPath('basic')" [show]="showCodeArea"></code-show>
+<dl class="bd-example-introduce-class-list">
+  <dd>
+    <p>b. 统一控制内部所有标签和输入元素的位置。默认是上下排列。增加<code>form-inline  farris-form-inline</code>后，横向排列。</p>
+  </dd>
+</dl>
+<div class="bd-example">
+    <div class="farris-form form-inline  farris-form-inline">
+        <div class="col-6">
+            <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span>
+                        <span class="farris-label-text">输入控件标签</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <input class="form-control" type="text" value="输入值" readonly>
+                        <div class="farris-feedback valid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<code-show [path]="getPath('inline')" [show]="showCodeArea"></code-show>
+<dl class="bd-example-introduce-class-list">
+    <dd>
+      <p>c. 统一控制内部输入元素的最大宽度。默认是26.5rem 输入框最大宽度为320px。解除单个输入控件宽度限制，添加<code>farris-group-auto</code>。解除所有输入控件的宽度限制，增加<code>farris-form-auto</code>。</p>
+    </dd>
+</dl>
+<div class="bd-example">
+    <div class="farris-form form-inline  farris-form-inline">
+        <div class="col-6 farris-group-auto">
+            <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span>
+                        <span class="farris-label-text">输入控件标签</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <input class="form-control" type="text" value="输入值" readonly>
+                        <div class="farris-feedback valid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="farris-form farris-form-controls-inline farris-form-auto">
+        <div class="f-section-formgroup-inputs">
+            <div class="col-6">
+                <div class="farris-group-wrap">
+                    <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                            <span class="farris-label-text">输入控件标签</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                            <input class="form-control" type="text" value="输入值">
+                            <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="farris-group-wrap">
+                    <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                            <span class="farris-label-text">输入控件标签</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                            <input class="form-control" type="text" value="输入值">
+                            <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<code-show [path]="getPath('width-auto')" [show]="showCodeArea"></code-show>

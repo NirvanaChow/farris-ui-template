@@ -1,0 +1,105 @@
+<!--页面模板  是导航类页面  是左表格右表格-->
+<div class="f-page f-page-navigate f-page-is-tree-grid">
+  <div class="f-page-header">
+    <nav class="f-page-header-base">
+      <div class="f-title">
+        <span class="f-title-icon f-text-orna-param"
+          ><span class="f-icon f-icon-page-title-maintenance"></span
+        ></span>
+        <h4 class="f-title-text">左树右列表——支持可拖拽</h4>
+        <h5 class="f-title-subtitle">编号：YWZF201805020003</h5>
+        <div class="f-title-status">
+          <span class="badge badge-success">审批通过</span>
+        </div>
+        <div class="f-title-pagination">
+          <span class="f-icon f-icon-arrow-w f-state-disabled"></span>
+          <span class="f-icon f-icon-arrow-e"></span>
+        </div>
+      </div>
+      <div class="f-content"></div>
+      <f-response-toolbar
+        class="col-7 f-toolbar"
+        [datas]="toolbarData"
+        (rtClickEvent)="responseToolbarClick($event)"
+      ></f-response-toolbar>
+    </nav>
+  </div>
+  <section class="f-page-main">
+    <farris-splitter class="f-page-content">
+      <farris-splitter-pane
+        class="f-col-w6 f-page-content-nav"
+        [ngResizable]="true"
+        [rzHandles]="'e'"
+      >
+        <!--需要嵌套的层---------------------------IDE转化成组件----------->
+        <div class="f-struct-wrapper  f-utils-fill-flex-column">
+          <farris-section
+            class="f-section-treegrid f-section-in-nav"
+            [showHeader]="false"
+          >
+            <farris-treetable
+              class="f-componet-treetable"
+              [data]="treedata"
+              [columns]="cols"
+              [idField]="'name'"
+              [showFilterBar]="false"
+              [fixedHeader]="true"
+              [fit]="true"
+              [striped]="true"
+              [showBorder]="false"
+            >
+            </farris-treetable>
+          </farris-section>
+        </div>
+      </farris-splitter-pane>
+
+      <farris-splitter-pane class="f-page-content-main">
+        <!--需要嵌套的层---------------------------IDE转化成组件----------->
+        <div class="f-struct-wrapper f-utils-fill-flex-column">
+          <!--Section 组件-->
+          <farris-section class="f-section-grid f-section-in-main"   [showHeader]="false">            
+            <ng-template farrisSectionExtend>
+              <div class="f-section-extend-gridfilter">
+                <span><i class="f-icon f-icon-info"></i></span>
+                <p>已选择 <span class="text-info">2</span> 项</p>
+                <p>支付申请总计：36.4 万</p>
+                <button class="btn btn-link">清空</button>
+              </div>
+            </ng-template>
+
+            <farris-datagrid
+              class="f-component-grid"
+              [columns]="grid2Columns"
+              [data]="grid2Data"
+              #dg="datagrid"
+              [idField]="'DDBH'"
+              [showLineNumber]="true"
+              [fitColumns]="false"
+              [total]="grid2Total"
+              [striped]="false"
+              [showCheckbox]="false"
+              [virtualized]="true"
+              [pagination]="false"
+              [fit]="true"
+            >
+              <ng-template #cell1 let-ctx>
+                <button class="btn btn-secondary">操作</button>
+              </ng-template>
+              <ng-template #cell2 let-ctx>
+                <div class="text-center">
+                  <span class="f-icon f-icon-flag_urgent text-warning"></span>
+                </div>
+              </ng-template>
+              <ng-template #cell3 let-ctx>
+                <span class="f-pretend-link mr-2">{{
+                  ctx.rowData['DDBH']
+                }}</span>
+                <span [class]="getBadgeCls(ctx.rowIndex)">通过</span>
+              </ng-template>
+            </farris-datagrid>
+          </farris-section>
+        </div>
+    </farris-splitter-pane>
+    </farris-splitter>
+  </section>
+</div>

@@ -1,0 +1,222 @@
+.#{$farris-i-prefix} {
+  &-message_help::before {
+    @include rewriteFamily();
+    content: '\eb04';
+  }
+
+  &-message_routine::before {
+    @include rewriteFamily();
+    content: '\eb05';
+  }
+
+  &-message_warning::before {
+    @include rewriteFamily();
+    content: '\eb06';
+  }
+
+  &-steps-transport::before {
+    @include rewriteFamily();
+    content: '\eb07';
+  }
+
+  &-steps-settlement::before {
+    @include rewriteFamily();
+    content: '\eb08';
+  }
+
+  &-steps-outofstock::before {
+    @include rewriteFamily();
+    content: '\eb09';
+  }
+
+  &-steps-invoice::before {
+    @include rewriteFamily();
+    content: '\eb0a';
+  }
+
+  &-steps-receivables::before {
+    @include rewriteFamily();
+    content: '\eb0b';
+  }
+
+  &-steps-delivergoods::before {
+    @include rewriteFamily();
+    content: '\eb0c';
+  }
+
+  &-exhale-discount::before {
+    @include rewriteFamily();
+    content: '\eb0d';
+  }
+  &-previouspage::before {
+    @include rewriteFamily();
+    content: '\eb0e';
+  }
+  &-nextpage::before {
+    @include rewriteFamily();
+    content: '\eb0f';
+  }
+  &-flag_urgent::before {
+    @include rewriteFamily();
+    content: '\eb10';
+  }
+  &-top_home::before {
+    @include rewriteFamily();
+    content: '\eb11';
+  }
+  &-top_menu::before {
+    @include rewriteFamily();
+    content: '\eb12';
+  }
+  &-top_agency::before {
+    @include rewriteFamily();
+    content: '\eb13';
+  }
+  &-top_news::before {
+    @include rewriteFamily();
+    content: '\eb14';
+  }
+  &-top_im_default::before {
+    @include rewriteFamily();
+    content: '\eb15';
+  }
+  &-top_developmenttool::before {
+    @include rewriteFamily();
+    content: '\eb16';
+  }
+  &-top_search::before {
+    @include rewriteFamily();
+    content: '\eb17';
+  }
+  &-top_my::before {
+    @include rewriteFamily();
+    content: '\eb18';
+  }
+  &-home-man::before {
+    @include rewriteFamily();
+    content: '\eb1a';
+  }
+
+  &-home-woman::before {
+    @include rewriteFamily();
+    content: '\eb1b';
+  }
+
+  &-home-setup::before {
+    @include rewriteFamily();
+    content: '\eb1c';
+  }
+
+  &-home-add::before {
+    @include rewriteFamily();
+    content: '\eb1d';
+  }
+
+  &-home-ring::before {
+    @include rewriteFamily();
+    content: '\eb1e';
+  }
+
+  &-home-operation::before {
+    @include rewriteFamily();
+    content: '\eb1f';
+  }
+
+  &-home-more::before {
+    @include rewriteFamily();
+    content: '\eb20';
+  }
+
+  &-home-weather-leaf::before {
+    @include rewriteFamily();
+    content: '\eb21';
+  }
+  &-engineering::before {
+    @include rewriteFamily();
+    content: '\eb22';
+  }
+  &-git::before {
+    @include rewriteFamily();
+    content: '\eb23';
+  }
+  &-panel-retraction::before {
+    @include rewriteFamily();
+    content: "\eb24";
+  }
+  &-edit-button::before {
+    @include rewriteFamily();
+    content: "\eb25";
+  }
+  &-input-language::before {
+    @include rewriteFamily();
+    content: "\eb26";
+  }
+  &-attribute-configuration::before {
+    @include rewriteFamily();
+    content: "\eb27";
+  }
+  &-bottomsetting::before {
+    @include rewriteFamily();
+    content: "\eb28";
+  }
+  &-roofing::before {
+    @include rewriteFamily();
+    content: "\eb29";
+  }
+  &-page-title-define::before {
+    @include rewriteFamily();
+    content: "\eb2a";
+  }
+  &-page-title-administer::before {
+    @include rewriteFamily();
+    content: "\eb2b";
+  }
+  &-page-title-configuration::before {
+    @include rewriteFamily();
+    content: "\eb2c";
+  }
+  &-page-title-dictionary::before {
+    @include rewriteFamily();
+    content: "\eb2d";
+  }
+  &-page-title-maintenance::before {
+    @include rewriteFamily();
+    content: "\eb2e";
+  }
+  &-page-title-query::before {
+    @include rewriteFamily();
+    content: "\eb2f";
+  }
+  &-page-title-number::before {
+    @include rewriteFamily();
+    content: "\eb30";
+  }
+  &-page-title-manage::before {
+    @include rewriteFamily();
+    content: "\eb31";
+  }
+  &-page-title-review::before {
+    @include rewriteFamily();
+    content: "\eb32";
+  }
+  &-page-title-start::before {
+    @include rewriteFamily();
+    content: "\eb33";
+  }
+  &-page-title-type::before {
+    @include rewriteFamily();
+    content: "\eb34";
+  }
+  &-page-title-record::before {
+    @include rewriteFamily();
+    content: "\eb35";
+  }
+  &-page-title-voucher::before {
+    @include rewriteFamily();
+    content: "\eb36";
+  }
+  &-page-title-task::before {
+    @include rewriteFamily();
+    content: "\eb37";
+  }
+}

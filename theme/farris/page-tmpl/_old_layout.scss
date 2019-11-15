@@ -1,0 +1,167 @@
+::-webkit-scrollbar {
+  width: $farris-scrollbar-width;
+  height: $farris-scrollbar-height;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: $farris-scrollbar-border-radius;
+  background-color: $farris-scrollbar-track-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: $farris-scrollbar-border-radius;
+  background: $farris-scrollbar-thumb-bg;
+}
+// 这个可能用不到——2019年6月15日 核查样式
+// .f-split-section-p {
+//   padding: $farris-split-setcion-inner-gutter-y
+//     $farris-split-setcion-inner-gutter-x;
+// }
+// .f-lsection-p {
+//    padding: $farris-split-setcion-inner-gutter-y 0
+//     $farris-split-setcion-inner-gutter-y $farris-split-setcion-inner-gutter-x;
+// }
+// .f-rsection-p {
+//   padding: $farris-ptlayout-rsection-gutter;
+// }
+// .f-card-p {
+//   padding: $farris-split-setcion-inner-gutter-y
+//     $farris-split-setcion-inner-gutter-x 0.5626rem;
+// }
+// 区域划分
+.farris-split-section {
+  background: $farris-split-section-bg;
+  box-shadow: $farris-split-section-shadow;
+  border-radius:$farris-split-section-border-radius;
+  margin: $farris-split-section-outer-gutter;
+  overflow: hidden;
+  flex-wrap: nowrap;
+
+  .farris-lsection {
+  //  background: $farris-ptlayout-content-bg;
+   // border-right: 1px solid $farris-aid-07;
+    padding:$farris-ptlayout-lsection-inner-gutter;
+    box-shadow: $f-pt-left-ctr-shadow;
+  }
+  .farris-rsection {
+    padding: $farris-ptlayout-rsection-gutter;
+  }
+}
+.f-mtable-form{
+  padding: $farris-split-setcion-inner-gutter-y 0 0.25rem!important;
+  margin-bottom: $farris-split-setcion-inner-gutter-y!important;
+  margin-left: -$farris-split-setcion-inner-gutter-x !important;
+  margin-right: -$farris-split-setcion-inner-gutter-x !important;
+}
+.f-mtable-form-next-tab {
+  padding: $farris-split-setcion-inner-gutter-y 0 0.25rem!important;
+  margin-bottom: $farris-split-setcion-inner-gutter-y!important;
+  margin-left: -$farris-split-setcion-inner-gutter-x !important;
+  margin-right: -$farris-split-setcion-inner-gutter-x !important;
+}
+
+.f-rregion-mtable-form{
+  margin-left: -0.9375rem !important;
+  margin-right: -0.9375rem !important;
+  margin-bottom: 0.9375rem!important;
+}
+.f-rregion-mtable-form-next-tab{
+  margin-left: -0.9375rem !important;
+  margin-right: -0.9375rem !important;
+  margin-bottom:0.3125rem!important;
+}
+// 折叠面板内部放输入控件
+.f-panel-width-form{
+    margin-left: -0.9375rem !important;
+    margin-right: -0.9375rem !important;
+    margin-bottom: 0.9375rem !important;
+}
+.f-panel-width-form-next-tab{
+  margin-left: -0.9375rem !important;
+  margin-right: -0.9375rem !important;
+  margin-bottom: 0.3125rem !important;
+}
+
+// 控制form 和 标签页的间距
+.f-form-next-tab {
+  margin-bottom: 0.3125rem !important;
+}
+
+// 顶部条
+.farris-header {
+  min-height: $farris-ptlayout-header-height;
+  // line-height:$farris-ptlayout-header-line-height;
+  padding: $farris-ptlayout-header-inner-gutter;
+  flex-shrink: 0;
+  background: $farris-ptlayout-header-bg;
+  box-shadow: $farris-ptlayout-header-shadow;
+}
+// 标题
+.farris-form-title {
+  margin: 0;
+  color: $farris-ptlayout-header-title-text;  
+  font-size: $farris-ptlayout-header-title-font-size;
+  line-height:$farris-ptlayout-header-line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 内容背景色
+.farris-card-content-bg {
+  //background: $farris-ptlayout-content-bg;
+  // 卡片折叠
+  .farris-panel .card-body {
+    padding: 0.9375rem 0 0;
+    background: $f-neutral-00;
+  }
+}
+
+.farris-card-section {
+  padding: $farris-ptlayout-card-gutter;
+}
+
+// 占据屏幕所有,启用流布局
+.farris-main-area {
+  @include f-utils-absolute-all;
+  margin: 0 auto;
+  display: flex;
+  background:$farris-pt-bg;
+  overflow: hidden;
+}
+
+// @include margin-padding-neg();
+// 左列右卡，左树右卡
+.farris-cardpart-title {
+  font-size: $farris-ptlayout-rsection-grid-title-font-size;
+  line-height: $farris-ptlayout-rsection-grid-title-line-height;
+  color: $farris-ptlayout-rsection-grid-title-text;
+  margin: 0 0 0.75rem 0;
+}
+// 左列表右列表
+.farris-grid-toolbar {
+  display: flex;
+  margin: $farris-ptlayout-grid-toolbar-outter-gutter;
+  flex-shrink: 0;
+  .farris-grid-title {
+    padding: 0;
+    margin: 0;
+    font-size: $farris-ptlayout-rsection-grid-title-font-size;
+    line-height: $farris-ptlayout-rsection-grid-title-line-height;
+    color: $farris-ptlayout-rsection-grid-title-text;
+  }
+}
+
+.f-header-navbar{
+  padding:0;
+}
+// 上下两个header挨着的时候
+.farris-header + .farris-header {
+  box-shadow: none;
+}
+
+
+
+
+
+
+

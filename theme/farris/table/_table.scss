@@ -1,0 +1,115 @@
+.farris-datatable {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  table {
+    margin: 0;
+    table-layout: fixed;
+  }
+  .farris-table-header {
+    position: relative;
+    overflow: hidden;
+    min-height: 34px;
+    thead > tr > th {
+      white-space: nowrap;
+      .dt-checkbox {
+        margin-right: 0;
+        vertical-align: top;
+        min-height: 1rem;
+      }
+      &:hover{
+        background:$farris-grid-header-border;
+      }
+      .f-datatable-sort{
+        @include table-sort;
+      }
+    }
+
+    .dt-checkbox-cell {
+      width: 45px;
+    }
+  }
+  .dt-checkbox-cell {
+    .custom-checkbox,
+    .custom-radio {
+      margin-bottom: 0;
+      padding-right: 0;
+    }
+  }
+  .farris-table-scorllable-body {
+    overflow: hidden;
+    flex: 1 1 auto;
+    .ui-table-tbody {
+      .dt-checkbox {
+        margin-right: 0;
+        vertical-align: top;
+      }
+      .dt-checkbox-cell {
+        width: 45px;
+      }
+    }
+
+    // .row-hight-light {
+    //   background-color: #b7d7ff;
+    //   color: #000;
+    // }
+
+    // .ui-table-tbody tr:not(.row-hight-light):hover {
+    //   cursor: pointer;
+    //   background-color: #e7f2ff;
+    // }
+    .ui-table-tbody tr:not(.selected):hover {
+      cursor: pointer;
+    }
+    .ui-table-tbody > tr:first-child > td {
+      border-top: 0;
+    }
+  }
+}
+
+.filter-row {
+  margin: 10px 0;
+  .search-fields {
+    min-width: 140px;
+    padding-left: 5px;
+  }
+  .search-text {
+    margin-left: 10px;
+    padding-right: 8px;
+  }
+}
+.farris-subgrid {
+  min-height: 410px;
+}
+// 结构调整table grid样式
+.table-striped tbody tr.selected:nth-of-type(even) {
+  background-color: $farris-grid-selected-bg;
+}
+// 暂无数据提醒
+.f-table-norecords-content {
+  height: 110px;
+  padding: 86px 0 0 0;
+  margin:120px 0 0;
+  width: 100%;
+  text-align: center;
+  font-size: $farris-h5-font-size;
+  color: $f-text-06;
+  background: url('imgs/table-norecords.png') no-repeat top center;
+}
+
+// .farris-treetable-norecords
+.table-hover tbody {
+  .f-table-norecords-row {
+    &:hover {
+      background: initial;
+    }
+  }
+}
+.f-table-norecords {
+  border: none;
+  .f-table-norecords-row {
+    td {
+      border: none;
+    }
+  }
+}

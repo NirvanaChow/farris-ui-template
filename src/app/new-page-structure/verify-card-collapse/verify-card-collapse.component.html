@@ -1,0 +1,220 @@
+<div class="f-page f-page-card f-page-is-mainsubcard">
+  <div class="f-page-header">
+    <nav class="f-page-header-base">
+      <div class="f-title">
+        <span class="f-title-icon f-text-orna-bill">
+          <i class="f-icon f-icon-page-title-record"></i>
+        </span>
+        <h4 class="f-title-text">卡片单据</h4>
+        <h5 class="f-title-subtitle">编号：YWZF201805020003</h5>
+        <div class="f-title-status">
+          <span class="badge badge-success">审批通过</span>
+        </div>
+        <div class="f-title-pagination">
+          <span class="f-icon f-icon-arrow-w f-state-disabled"></span>
+          <span class="f-icon f-icon-arrow-e"></span>
+        </div>
+      </div>
+      <div class="f-content"></div>
+      <f-response-toolbar
+        class="col-7 f-toolbar"
+        [datas]="toolbarData"
+        (rtClickEvent)="responseToolbarClick($event)"
+      ></f-response-toolbar>
+    </nav>
+  </div>
+  <section class="f-page-main">
+    <fieldset class="f-section-formgroup ">
+      <legend class="f-section-formgroup-legend f-state-visible">
+        <div class="f-title">新分组——不加class写法</div>
+        <div class="f-toolbar">
+          <button class="btn btn-link f-btn-mx">保存</button>
+          <button class="btn btn-link f-btn-mx">取消</button>
+          <span class="f-btn-separator"></span>
+          <button
+            class="btn f-btn-collapse-expand  f-btn-mx"
+            farrisCollapse
+            [collapseText]="'收起'"
+            [expandText]="'展开'"
+          ></button>
+        </div>
+      </legend>
+      <!--显示所有可以 是子输入控件都加上 f-state-visible ,也可以是section 加上 f-state-visible-all-->
+      <div class="f-section-formgroup-inputs">
+        <div class="col-12 col-md-6 col-xl-3 col-el-2  f-state-visible">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">业务日期</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 col-el-2">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-info text-danger">*</span
+                ><span class="farris-label-text">客户</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 col-el-2">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">客户别名</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" name="khbm" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 col-el-2">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">客户采购单号</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" name="khcgdh" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="col-12" farrisFold>
+      <legend class=" f-legend-icon f-legend-show">旧收折</legend>
+      <div class="d-flex flex-wrap mb-2">
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-info text-danger">*</span
+                ><span class="farris-label-text">客户</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" name="kh" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">客户别名</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" name="khbm" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">客户采购单号</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" name="khcgdh" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-info text-danger">*</span
+                ><span class="farris-label-text">业务员</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input type="text" class="form-control" name="khcgdh01" />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="f-section-formgroup col-12" farrisFold>
+        <legend class=" f-legend-icon f-legend-show">旧收折</legend>
+        <div class="d-flex flex-wrap mb-2">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-info text-danger">*</span
+                  ><span class="farris-label-text">客户</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="kh" />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">客户别名</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="khbm" />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">客户采购单号</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="khcgdh" />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label for="hpinput01" class="col-form-label">
+                  <span class="farris-label-info text-danger">*</span
+                  ><span class="farris-label-text">业务员</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="khcgdh01" />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+  </section>
+</div>

@@ -1,0 +1,22 @@
+<div class="f-page f-page-is-managelistwithsidebar">
+    <div class="f-page-header">
+        ...标题部分
+    </div>
+    <div class="f-page-main">
+        ...内容部分
+    </div>
+</div>
+<farris-sidebar [isOpen]="sidebarOpen">
+    <ng-template farrisSidebarTitle [titleCls]="'f-tmpl-for-title-withline'">
+      ...侧边栏标题部分
+    </ng-template>
+    <ng-template farrisSidebarToolbar [toolbarCls]="'col-7 px-0'" >
+        ...操作按钮部分
+    </ng-template>
+    <ng-template farrisSidebarContent>
+        ...侧边栏内容部分
+    </ng-template>
+    <ng-template farrisSidebarFooter [footerCls]="!sidebarStateEdit?'d-none':''">
+        ...侧边栏底部部分
+    </ng-template>
+</farris-sidebar>

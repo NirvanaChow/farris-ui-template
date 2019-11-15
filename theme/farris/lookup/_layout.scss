@@ -1,0 +1,59 @@
+// 2019年6月13日 自定义input-group组件状态控制
+.f-cmp-inputgroup{
+
+  .input-group-append {
+    background: $input-bg;
+  }
+  .input-group-text {
+    // width: $input-height-inner;
+    justify-content: center;
+    color: $farris-input-icon-color;
+    padding-left:#{$input-height-inner * 0.5 - $farris-icon-font-size * 0.5} ;
+    padding-right:#{$input-height-inner * 0.5 - $farris-icon-font-size * 0.5} ;
+    cursor: pointer;
+    &:hover{
+      color:$farris-input-icon-hover-color
+    }
+  }
+
+  //farris-input-group-disable 这个是临时支持
+  .f-state-readonly,
+  .f-state-disabled,
+  .farris-input-group-disable,
+  .farris-input-group-readonly {
+    .input-group-append {
+      background: $farris-input-readonly-bg;
+      visibility: hidden;
+    }
+    .input-group-text {
+      // color:$farris-input-readonly-color;
+      cursor: default;
+    }
+  }
+  .f-state-disabled {
+    background: $farris-input-disabled-bg;
+    border-color: $farris-input-disabled-border-color;
+    .form-control {
+      color: $farris-input-disabled-color;
+    }
+  }
+  .f-state-readonly{
+    background: $farris-input-readonly-bg;
+    border-color: $farris-input-readonly-border-color;
+    .form-control {
+      color: $farris-input-readonly-color;
+    }
+  }
+  .f-state-editable {
+    background: $farris-input-bg;
+    border-color: $farris-input-border-color;
+    .form-control {
+      color: $farris-input-color!important;
+    }
+  }
+}
+
+.k-grid-edit-row td .lookupbox {
+  width: calc(100% + 18px);
+  margin-left: -9px;
+}

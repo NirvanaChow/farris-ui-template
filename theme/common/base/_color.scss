@@ -1,0 +1,141 @@
+// 主题色————主题色纯净、沉稳、广阔，充分诠释产品的商务性和科技感。
+// Th01：文字按钮默认色
+$f-theme-01: #295ea3 !default;
+// Th02：框架区头部背景色
+$f-theme-02: #2277e4 !default;
+/* Th03：主要按钮点击背景色、
+    「次要按钮、组合按钮、分页按钮」点击边框/文字色、
+    下拉按钮点击边框/文字/ICON颜色、文字按钮点击色、
+    输入框点击/输入边框色、线性页签点击文字色
+*/
+$f-theme-03: #0068f3 !default;
+/*Th04：主要按钮默认背景色、
+    组合按钮、分页按钮」选中背景色、文字按钮滑过色、
+    线性Tabs选中文字/下划线颜色、「单选框、复选框」选中背景色、
+    数字/ICON步骤条进行中背景色
+----primary颜色
+    侧边栏导航按钮颜色
+*/
+$f-theme-04: #388fff !default;
+/* Th05：主要按钮滑过背景色、
+    次要按钮、组合按钮、分页按钮」滑过边框/文字色、
+    下拉按钮点击边框/文字/ICON颜色、输入框滑过边框色、
+    线性页签滑过文字色、「单选、复选框」滑过边框色、
+    数字步骤条已完成数字/边框色、ICON步骤条已完成背景色
+ ----标题竖线的颜色
+*/
+$f-theme-05: #59a1ff !default;
+
+//辅助色————辅助色选择不同明度的蓝色，表现界面的层次感。
+//框架背景色
+$f-aid-01: #f0f2f5 !default;
+// 「下拉弹层、表格、树、穿梭框」点击/选中背景色
+$f-aid-02: #e6f7ff !default;
+// 「下拉弹层、表格、树、穿梭框」滑过背景色
+$f-aid-03: #f3fbff !default;
+// 合计行背景色
+$f-aid-04: #fffaf3 !default;
+// 表单分组标题背景色
+$f-aid-05: #f7f9fd !default;
+
+// 点缀色————点缀色采用高纯度的邻近色和互补色，表现界面的韵律感和细节。
+// // OR01：通过状态
+// $f-ornament-01: #51bd78 !default;
+// // OR02：提交状态
+// $f-ornament-02: #5ac1c3 !default;
+// // OR03：制单状态
+// $f-ornament-03: #59a1ff !default;
+// // OR04：驳回状态
+// $f-ornament-04: #f49730 !default;
+
+// OR01：管理类
+$f-ornament-01: #51BD78 !default;
+// OR02：字典类
+$f-ornament-02: #FF9800 !default;
+// OR03：单据类
+$f-ornament-03: #5ACBCD !default;
+// OR04：查询报表类
+$f-ornament-04:  #817EFF !default;
+// OR04：系统参数类
+$f-ornament-05: #FBB902 !default;
+
+// 中性色————中性色选择不同明度的灰色，表现界面的区块及边界。
+
+// 分页背景色、次要按钮背景色、表格背景色、Switch选中背景色
+// 侧边栏内容区背景色
+$f-neutral-00:#fff!default;
+
+// 滚动条滑过/点击背景色、图标按钮默认色
+$f-neutral-01: #bfbfbf !default;
+/*「次要按钮、下拉按钮、组合按钮、分页按钮」默认边框色、
+    输入框默认边框色、
+    「单选框、复选框」默认边框色、
+    数字/ICON步骤条未开始背景色、
+    滚动条默认背景色、
+    图标按钮禁用色
+*/
+$f-neutral-02: #d9d9d9 !default;
+/*
+  「主要按钮、次要按钮、下拉按钮、组合按钮、分页按钮」禁用边框色
+*/
+$f-neutral-03: #dcdcdc !default;
+// Table表头与表体分割线
+$f-neutral-04: #e6e6e6 !default;
+// 页面一级分割线颜色、线性页签下划线颜色、Table奇偶行分割线
+// 侧边栏标题区边线颜色
+$f-neutral-05: #e9e9e9 !default;
+// 文字按钮与图标按钮分割线、Input只读/禁用边框色、单选/复选框选中禁用边框/背景色
+$f-neutral-06: #ececec !default;
+// 弹出窗口分割线
+$f-neutral-07: #efefef !default;
+//「主要按钮、次要按钮、下拉按钮、组合按钮、分页按钮」禁用背景色
+$f-neutral-08: #f5f5f5 !default;
+// 表格奇偶行背景色、电话号码/邮箱等特殊格式输入框前缀/后缀背景色
+$f-neutral-09: #f9f9f9 !default;
+// Table表头背景色
+$f-neutral-10: #fafafa !default;
+// 线性输入框编辑态下默认样式
+$f-neutral-11: #a8a8a8 !default;
+
+// 文字色
+// 分页Active文字颜色、主要按钮文字颜色
+$f-text-00:#fff!default;
+// T01：标题、Tabel表头文字
+$f-text-01: #000 !default;
+// T02：通用文字
+$f-text-02: rgba(0, 0, 0, 0.85) !default;
+// T03：Table内容文字
+$f-text-03: rgba(0, 0, 0, 0.75) !default;
+// T04：Input展示态标签文字、Tabs页签未选中文字、次要按钮/折叠面板下拉按钮默认色
+$f-text-04: rgba(0, 0, 0, 0.65) !default;
+// T05：表单分组标题；表格的二级标题
+$f-text-05: rgba(0, 0, 0, 0.45) !default;
+// T06：文字按钮禁用色
+$f-text-06: rgba(0, 0, 0, 0.25) !default;
+// T07：图标按钮禁用色
+$f-text-07: rgba(0, 0, 0, 0.15) !default;
+// T08 Input只读/禁用、单选/复选框选中禁用 文字色
+$f-text-08: rgba(0, 0, 0, 0.3) !default;
+
+// 语义色
+// 常规文字提示色
+$f-semantic-info: #59a1ff !default;
+// 提交状态提示色
+$f-semantic-submit: #5ac1c3 !default;
+// 成功文字提示色
+$f-semantic-success: #51bd78 !default;
+// 警告文字提示色
+$f-semantic-warning: #f49730 !default;
+// 失败、错误提示色
+$f-semantic-danger: #f24645 !default;
+
+// 失败、错误提示信息背景色
+$f-semantic-danger-bg: #FDE5E5!default;
+// 成功提示信息背景色
+$f-semantic-success-bg: #E6F5EC!default;
+
+// 遮罩层
+$f-mask-bg: rgba(0, 0, 0, 0.15) !default;
+
+// 页面模板背景色
+$f-tmpl-bg:#F0F3F6!default;

@@ -1,0 +1,173 @@
+// 20190723 页面
+$f-page-prefix:'f-page';
+// Header——前缀
+$pt-header-prefix: #{$f-page-prefix}-header;
+
+
+
+
+
+
+// 页面模板布局使用到的变量
+$farris-pt-bg: $f-tmpl-bg !default;
+
+// Header区域——阴影
+$farris-ptlayout-header-shadow: 0 1px 5px 0 rgba(0, 28, 64, 0.06) !default;
+//  Header区域——高度
+$farris-ptlayout-header-height: 3.25rem !default;
+//  Header区域——字体行高
+$farris-ptlayout-header-line-height: 1.75rem !default;
+//  Header区域——背景色
+$farris-ptlayout-header-bg: $f-neutral-00 !default;
+// Header区域——元素间距通用值
+$f-pt-header-common-gutter-y: 0.75rem !default;
+// Header区域——内间距——横向间距
+$f-pt-header-inner-gutter-x:1.375rem !default;
+// Header区域——内间距
+$farris-ptlayout-header-inner-gutter: $f-pt-header-common-gutter-y $f-pt-header-inner-gutter-x !default;
+// Header区域——标题-文字颜色
+$farris-ptlayout-header-title-text: $f-text-01 !default;
+// Header区域——标题-体大小
+$farris-ptlayout-header-title-font-size: 1.125rem !default;
+// Header区域——翻页图标-文字颜色
+$f-pager-ctr-icon-text: $f-text-06 !default;
+// Header区域——翻页图标-背景色
+$f-pager-ctr-icon-background: $f-neutral-00 !default;
+// Header区域——翻页图标-边框颜色
+$f-pager-ctr-icon-border-color: $f-neutral-03 !default;
+// Header区域——翻页图标-边框宽度
+$f-pager-ctr-icon-border-width: 1px !default;
+// Header区域——翻页图标-宽度
+$f-pager-ctr-icon-width: 1.25rem !default;
+// Header区域——翻页图标-高度
+$f-pager-ctr-icon-height: $f-pager-ctr-icon-width !default;
+// Header区域——翻页图标-行高
+$f-pager-ctr-icon-line-height: 1.125rem !default;
+// Header区域——翻页图标-圆角
+$f-pager-ctr-icon-border-radius: $farris-border-radius !default;
+// Header区域——翻页图标-图标之间的间距
+$f-pager-ctr-icon-outer-gutter: 0 0.5rem 0 0 !default;
+// Header区域——翻页图标-禁用文字颜色
+$f-pager-ctr-icon-disable-text: $f-text-06 !default;
+// Header区域——翻页图标-禁用背景色
+$f-pager-ctr-icon-disable-background: $f-neutral-08 !default;
+// Header区域——翻页图标-禁用边框
+$f-pager-ctr-icon-disable-border-color: $f-neutral-03 !default;
+// Header区域——元素间距
+$f-pt-header-el-gutter: 10px;
+// Header区域-元素间距新
+$f-pt-header-el-gutter-new:14px;
+
+// 主内容区——阴影
+$farris-split-section-shadow: 1px 1px 4px 0 rgba(0, 28, 64, 0.04) !default;
+// 主内容区——圆角
+$farris-split-section-border-radius: 2px !default;
+// 主内容区——内容背景色
+$farris-split-section-bg: $f-neutral-00 !default;
+// 主内容区——外间距
+$farris-split-section-outer-gutter-y:0.625rem;
+$farris-split-section-outer-gutter-x: 0.625rem;
+$farris-split-section-outer-gutter: $farris-split-section-outer-gutter-y
+$f-pt-split-section-outer-gutter !default;
+// 主内容区——内间距
+$farris-split-setcion-inner-gutter-x: 0.875rem;
+$farris-split-setcion-inner-gutter-y: 0.875rem;
+
+// 模板区域———组件之间的间距-横向
+$farris-cmp-gutter-x: $farris-split-setcion-inner-gutter-x;
+// 模板区域——组件之间的间距-纵向
+$farris-cmp-gutter-y: 0.875rem;
+// 模板区域——按钮之间的间距
+$farris-btn-gutter-x: 0.625rem;
+// 模板区域——Footer区域——阴影
+$f-pt-footer-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.06) !default;
+
+
+// 类型模板——默认内间距
+$f-pt-common-inner-gutter: 0;
+// 类型模板——左右结构——左侧区域——内间距
+$f-pt-left-ctr-inner-gutter: $farris-split-setcion-inner-gutter-y $farris-split-setcion-inner-gutter-x;
+// 类型模板——左右结构——左侧区域——阴影
+$f-pt-left-ctr-shadow: 1px 1px 4px 0 rgba(0, 28, 64, 0.1) !default;
+// 类型模板——左右结构——右侧区域——内间距
+$f-pt-right-ctr-inner-gutter: 0;
+
+
+// 表格区域——内间距
+$f-grid-ctr-inner-gutter: $farris-split-setcion-inner-gutter-y  $farris-split-setcion-inner-gutter-x!default;
+// 表格区域——标题区——常用间距
+$f-grid-bar-ctr-title-common-gutter: 0.625rem !default;
+// 表格区域——外间距
+$f-grid-bar-ctr-outer-gutter: 0 0 $f-grid-bar-ctr-title-common-gutter 0!default;
+// 表格区域——标题区——文字
+$f-grid-bar-ctr-title-ctr-text: $f-text-01 !default;
+// 表格区域——标题区——标题——内间距
+$f-grid-bar-ctr-title-ctr-title-inner-gutter: 0 0 0 1.125rem !default;
+// 表格区域——标题区——标题——外间距
+$f-grid-bar-ctr-title-ctr-title-outer-gutter: 0 $f-grid-bar-ctr-title-common-gutter 0 0 !default;
+// 表格区域——标题区——标题——边线宽度
+$f-grid-bar-ctr-title-ctr-title-border-width: 0.25rem;
+// 表格区域——标题区——标题——边线颜色
+$f-grid-bar-ctr-title-ctr-title-border-color: $f-theme-05 !default;
+// 表格区域——标题区——图标——文字
+$f-grid-bar-ctr-title-icon-text: $f-neutral-01 !default;
+// 表格区域——标题区——子标题区域——文字
+$f-grid-bar-ctr-title-ctr-subtitle-ctr-text: $f-text-05!default;
+
+
+
+// 表单区域——内间距
+$f-form-ctr-inner-gutter: 0 $farris-split-setcion-inner-gutter-x;
+// 表单区域——标题区——常用间距
+$f-form-bar-ctr-title-common-gutter: 0.625rem !default;
+// 表单区域——标题区———内间距
+$f-form-bar-ctr-inner-gutter: 0 0 $f-form-bar-ctr-title-common-gutter 0!default;
+// 表单区域——位置——(左右模板——右侧区域)——标题区——底部边线
+$f-form-ctr-pt-right-form-bar-ctr-border-bottom: 1px solid $f-neutral-05!default;
+// 表单区域——位置——(左右模板——右侧区域)——标题区——内间距
+$f-form-ctr-pt-right-form-bar-ctr-inner-gutter: 0  $farris-split-setcion-inner-gutter-x $f-form-bar-ctr-title-common-gutter!default;
+
+//表单区域-分组-标题区-内间距
+$f-form-ctr-formgroup-legend-inner-gutter:0 0.875rem;
+//表单区域-分组-标题区-外边距
+$f-form-ctr-formgroup-legend-outer-gutter:0 0 0.875rem 0;
+
+
+// 表单区域——标题区——工具按钮区——文字
+$f-form-bar-ctr-title-toolbar-text: $f-text-04 !default;
+// 表单区域——标题区——文字
+$f-form-bar-ctr-title-ctr-text: $f-text-01 !default;
+// 表单区域——标题区——标题——内间距
+$f-form-bar-ctr-title-ctr-title-inner-gutter: 0 0 0 1.125rem !default;
+// 表单区域——标题区——标题——外间距
+$f-form-bar-ctr-title-ctr-title-outer-gutter: 0
+  $f-form-bar-ctr-title-common-gutter 0 0 !default;
+// 表单区域——标题区——标题——边线宽度
+$f-form-bar-ctr-title-ctr-title-border-width: 0.25rem;
+// 表单区域——标题区——标题——边线颜色
+$f-form-bar-ctr-title-ctr-title-border-color: $f-theme-05 !default;
+// 表单区域——标题区——子标题区域——文字
+$f-form-bar-ctr-title-ctr-subtitle-ctr-text: $f-text-05!default;
+
+
+// 模板中用边线处理分割的特殊间距
+$f-pt-special-gutter: 10px solid $farris-pt-bg !default;
+
+
+// 旧模板——类型模板——左右结构——表格——标题——文字
+$farris-ptlayout-rsection-grid-title-text: $f-text-01 !default;
+// 旧模板——类型模板——左右结构——表格——标题——行高
+$farris-ptlayout-rsection-grid-title-line-height: 1.375rem !default;
+// 旧模板——类型模板——左右结构——表格——标题——大小
+$farris-ptlayout-rsection-grid-title-font-size: 1rem !default;
+// 旧模板——类型模板——左右结构——右侧区域——内间距
+$farris-ptlayout-rsection-gutter: $farris-split-setcion-inner-gutter-y $farris-split-setcion-inner-gutter-x $farris-split-setcion-inner-gutter-y
+  $farris-split-setcion-inner-gutter-y !default;
+// 旧模板——类型模板——左右结构——左侧区域——内间距
+$farris-ptlayout-lsection-inner-gutter: 0.875rem 0.875rem !default;
+// 旧模板——布局——卡片内间距
+$farris-ptlayout-card-gutter: 0.875rem 0 0.5rem !default;
+// 旧模板——表格——标题——外间距
+$farris-ptlayout-grid-toolbar-outter-gutter: 0 0 0.5rem 0!default;
+
+

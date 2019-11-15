@@ -1,0 +1,36 @@
+<div class="f-pt-listviewbar bg-white">
+  <div class="f-pt-listviewbar-header">
+    <div class="f-title-ctr">
+      <h4 class="f-title" (click)="getAll()" [ngClass]="{ active: activeIndex == -1 }">所有组件</h4>
+    </div>
+    <div class="f-listviewbar-toolbar">      
+    </div>
+  </div>
+  <ul class="f-cmp-listview list-group">
+    <li class="f-cmp-listview-item"  *ngFor="let data of components_data; let i = index"  [ngClass]="{ 'f-state-active': activeIndex == i }"  (click)="getComponent(data.type, i)"> 
+      <h6 class="f-title"> {{ data.text }}</h6>
+      <span class="k-icon k-i-check" [ngClass]="progressCls(data.progress)"></span>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="flex-fill bd-content p-3" style="overflow:auto;">
+  <div #changeElement>
+    <h3 class="p-3 text-center">选个组件，然后开始吧</h3>
+  </div>
+</div>
+<div class="modal" role="dialog" [ngClass]="{ 'd-block ': loading }">
+  <div class="modal-dialog" role="document" style="margin-top:200px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLiveLabel">提醒</h5>
+      </div>
+      <div class="modal-body">
+        <p>奋力加载中，不要打扰啦</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade " [ngClass]="{ 'show ': loading, 'd-none': !loading }"></div>

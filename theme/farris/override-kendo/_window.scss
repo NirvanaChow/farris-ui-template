@@ -1,0 +1,35 @@
+// 弹出窗口
+.k-window {
+    border-width: $farris-modal-content-border-width;
+    box-shadow: $farris-modal-content-box-shadow-sm-up;
+    .k-window-title {
+      margin: 0;
+      font-size: $farris-modal-title-font-size;
+    }
+  }
+  .k-dialog-buttongroup {
+    border-width: $farris-modal-content-border-width 0 0;
+  }
+  .k-window-titlebar,
+  .k-dialog-titlebar {
+    .k-button-icon {
+      margin-top: -#{$window-titlebar-padding-y * 0.5};
+      margin-bottom: -#{$window-titlebar-padding-y * 0.5};
+    }
+  }
+  
+  
+  .k-window-titlebar {
+    padding-right: $farris-modal-header-with-icon-padding-right;
+  }
+  
+// 2019年6月22日 正在加载的窗口在弹出窗口之下
+.k-overlay{
+  z-index:$farris-loading-z-index - 20;
+}
+.k-dialog-wrapper{
+  z-index:$farris-loading-z-index - 20;
+}
+.k-window{
+  z-index:$farris-loading-z-index - 18;
+}

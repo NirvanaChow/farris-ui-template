@@ -1,0 +1,178 @@
+<div class="bd-example">
+  <div class="form-row">
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">MaskedTextBox</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-maskedtextbox
+              [(ngModel)]="maskedValue"
+              [mask]="'9-000'"
+            ></kendo-maskedtextbox>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">NumericTextBox</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-numerictextbox
+              [(ngModel)]="numericValue"
+            ></kendo-numerictextbox>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text"
+              >Slider (value = {{ sliderValue }})</span
+            >
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-slider
+              [min]="min"
+              [max]="max"
+              [smallStep]="smallStep"
+              [(ngModel)]="sliderValue"
+            ></kendo-slider>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">Switch</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-switch [(ngModel)]="switchValue"></kendo-switch>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">Switch禁用</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch [(ngModel)]="switchValue2"></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">Switch禁用</span>
+                <span class="farris-label-info text-danger">*</span>
+              </label>
+              <div class="farris-input-wrap">
+                <kendo-switch [(ngModel)]="switchValue" [disabled]="true"></kendo-switch>
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label for="hpinput01" class="col-form-label">
+                  <span class="farris-label-text">Switch禁用</span>
+                  <span class="farris-label-info text-danger">*</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <kendo-switch [(ngModel)]="switchValue2" [disabled]="true"></kendo-switch>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+              <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                  <label for="hpinput01" class="col-form-label">
+                    <span class="farris-label-text">Switch</span>
+                    <span class="farris-label-info text-danger">*</span>
+                  </label>
+                  <div class="farris-input-wrap">
+                    <kendo-switch [(ngModel)]="switchValue" [readonly]="true"></kendo-switch>
+                    <div class="farris-feedback valid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="farris-group-wrap">
+                  <div class="form-group farris-form-group">
+                    <label for="hpinput01" class="col-form-label">
+                      <span class="farris-label-text">Switch只读</span>
+                      <span class="farris-label-info text-danger">*</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                      <kendo-switch [(ngModel)]="switchValue2" [readonly]="true"></kendo-switch>
+                      <div class="farris-feedback valid-feedback"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">TextBox</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-textbox-container floatingLabel="First name">
+              <input kendoTextBox />
+            </kendo-textbox-container>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">TextArea</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-textbox-container floatingLabel="First name">
+              <textarea kendoTextArea></textarea>
+            </kendo-textbox-container>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

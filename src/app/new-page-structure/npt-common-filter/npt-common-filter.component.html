@@ -1,0 +1,116 @@
+<!-- <farris-list-filter [filterList]="filterList" [alLeft]="true"></farris-list-filter> -->
+<farris-list-filter 
+[filterList]="filterList" 
+[alLeft]="true" 
+[autoLabel]="true" 
+[liveSearch]="true" 
+(query)="onSearch($event)"></farris-list-filter>
+<!-- <div class="f-page-content-nav-filter">
+    <div class="filter-pre-list d-flex">
+      <div class="filter-pre-list-tags ">
+          <span class="filter-tag"><span class="tag-name">年度：</span>2019</span>
+          <span class="filter-tag"><span class="tag-name" >科目体系：</span>企业科目体系</span>
+      </div>
+      <div class="filter-pre-list-edit">
+        <span class="f-icon f-icon-edit-button"></span>
+      </div>
+    </div>
+    <div class="filter-input d-flex position-relative">
+      <div class="filter-input-main f-utils-fill">
+          <input-group [groupText]="groupIcon" [placeholder]="'请输入编号或名称'"></input-group>
+      </div>
+      <div class="filter-expand" [class.active]="showFilter" (click)="showFilter = !showFilter">
+        <span class="f-icon f-icon-filter"></span>
+      </div>
+      <div class="filter-form position-absolute" [hidden]="!showFilter">
+          <div class="farris-form farris-form-controls-inline">
+            <fieldset class="f-section-formgroup">
+                <div class="f-section-formgroup-inputs">
+                  <div class="col-12">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">仓库</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">输入项一</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">输入项二</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">输入项三</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <div class="filter-form-btns text-right">
+              <button class="btn btn-primary">确定</button>
+              <button class="btn btn-secondary">取消</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="filter-result d-flex k-align-items-center">
+      <span class="filter-number">共<span class="number">6</span>个结果</span>
+      <div class="filter-tags">
+        <span class="filter-tag"><span class="tag-name">性质：</span>合并公司</span>
+        <span class="filter-tag"><span class="tag-name" >类别：</span>一级</span>
+      </div>
+      <span class="filter-btn btn btn-link">清空</span>
+    </div>
+  </div> -->

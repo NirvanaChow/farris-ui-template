@@ -1,0 +1,17 @@
+[
+  {
+    "theme": "default",
+    "types": ["default", "loose"],
+    "dist": "src/assets/themes/default"
+  },
+  {
+    "theme": "red",
+    "types": ["default", "loose"],
+    "dist": "src/assets/themes/red"
+  },
+  {
+    "theme": "green",
+    "types": ["default", "loose"],
+    "dist": "src/assets/themes/green"
+  }
+]

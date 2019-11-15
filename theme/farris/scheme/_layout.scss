@@ -1,0 +1,54 @@
+
+/*******************************
+      1906——实现方案——效果
+*******************************/
+.f-scheme-list-ctr {
+  .dropdown-toggle {
+    color: $f-theme-04;
+    font-size: 16px;
+    box-shadow: none;
+    border-color: transparent;
+    padding:0;
+    &::after {
+      display: none;
+    }
+  }
+}
+.f-scheme-bar-ctr {
+  margin-bottom: $f-pt-scheme-form-bottom-gutter;
+  &::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .f-scheme-list-ctr {
+    margin: 0 auto 0 0;
+    float: left;
+  }
+  .f-toolbar-ctr {
+    margin: 0 0 0 16px;
+    float: right;
+  }
+}
+.f-cmp-scheme {
+  padding: 16px 14px 0;
+  .farris-form {
+    padding-top: 10px;
+    border-bottom: 1px solid $f-neutral-05;
+    margin:0 -14px;
+  }
+}
+.f-toolbar-ctr {
+  display: inline-flex;
+}
+.f-scheme-setting {
+  color: $f-neutral-01;
+  border-right: 1px solid $f-neutral-04;
+  padding: 0 10px;
+  margin: 0 10px 0 0;
+}
+.f-scheme-fold {
+  color: $f-text-04;
+}

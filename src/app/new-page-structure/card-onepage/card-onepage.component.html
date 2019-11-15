@@ -1,0 +1,1004 @@
+<!--页面模板 是卡片模板 onepage-->
+<div class="f-page f-page-is-onepage">
+  <!--Page Header-->
+  <div class="f-page-header">
+      <nav class="f-page-header-base">
+        <div class="f-title">
+            <span class="f-title-icon f-text-orna-bill">
+                <i class="f-icon f-icon-page-title-record"></i>
+              </span>
+          <h4 class="f-title-text">资产卡片</h4>
+        </div>
+        <div class="f-content"></div>
+        <f-response-toolbar
+          class="col-7 f-toolbar"
+          [datas]="toolbarData"
+          (rtClickEvent)="responseToolbarClick($event)"
+          [btnState]="btnDisable"
+        ></f-response-toolbar>
+      </nav>
+    </div>
+  <!-- onepage tab区域 -->
+    <div class="f-onepage-tabs">
+      <farris-scrollspy [scrollspyData]="tabs" [fFollowType]="'tab'"></farris-scrollspy>
+    </div>
+  <!-- onpage content区域 -->
+    <div class="f-page-main f-onepage-content" fScrollSpyContainer [fOffset]="50" (fScrollChange)="scrollSectionChange($event)">
+      <farris-section
+        class="f-section-form f-section-in-onpage"
+        [showHeader]="false"
+      >
+          <div class="f-form-layout farris-form farris-form-controls-inline" *ngIf="defaultData"> 
+            <fieldset class="f-section-formgroup f-state-visible" [fScrollSpy]="'basic'" farrisCollapse  [collapseText]="'收起'"  [expandText]="'展开'" [title]="'基本信息'">
+  
+              
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">单据编号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="DJBH"
+                            [(ngModel)]="defaultData.FKDD.data.DJBH"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">业务类型</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <!-- <kendo-dropdownlist
+                            class="form-control"
+                            [data]="listItemsDropDown"
+                            [value]="'服务合同'"
+                            [ngClass]="{ 'f-state-readonly': isViewState }"
+                          >
+                          </kendo-dropdownlist> -->
+                          <farris-combo-list
+                              [(ngModel)]="valObj.id"
+                              [(selectedValues)]="valObj.text"
+                              [idField]="'id'"
+                              [textField]="'text'"
+                              [data]="listItemsDropDown"
+                            ></farris-combo-list>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2  f-state-visible">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">业务日期</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-datepicker class="form-control"></farris-datepicker>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">客户</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KH"
+                            name="kh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">客户</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KH"
+                              name="kh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-text">客户别名</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KHBM"
+                              name="khbm"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">客户</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KH"
+                              name="kh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </fieldset>
+            <fieldset class="f-section-formgroup f-state-visible" [fScrollSpy]="'bills'"  farrisCollapse  [collapseText]="'收起'"  [expandText]="'展开'" [title]="'单据信息'">
+          
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">客户</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KH"
+                              name="kh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">单据编号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="DJBH"
+                            [(ngModel)]="defaultData.FKDD.data.DJBH"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">业务类型</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <!-- <kendo-dropdownlist
+                            class="form-control"
+                            [data]="listItemsDropDown"
+                            [value]="'服务合同'"
+                            [ngClass]="{ 'f-state-readonly': isViewState }"
+                          >
+                          </kendo-dropdownlist> -->
+                          <farris-combo-list
+                              [(ngModel)]="valObj.id"
+                              [(selectedValues)]="valObj.text"
+                              [idField]="'id'"
+                              [textField]="'text'"
+                              [data]="listItemsDropDown"
+                            ></farris-combo-list>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2  f-state-visible">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">业务日期</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-datepicker class="form-control"></farris-datepicker>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">客户</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KH"
+                            name="kh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">客户</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KH"
+                              name="kh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-text">客户别名</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KHBM"
+                              name="khbm"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-text">客户采购单号</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                              name="khcgdh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label for="hpinput01" class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">业务员</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <farris-lookup-grid
+                              name="lxdh"
+                              [(ngModel)]="lookupEmpee"
+                              [uri]="'assets/data/empoyee.json'"
+                              [singleSelect]="true"
+                              [idField]="'Code'"
+                              [pageSize]="20"
+                              [pageIndex]="1"
+                              [pagination]="true"
+                              [textField]="'Name'"
+                              [valueField]="'Code'"
+                              [disabled]="isViewState"
+                              [ngClass]="{ 'f-state-disabled': isViewState }"
+                            ></farris-lookup-grid>
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </fieldset>
+            <fieldset class="f-section-formgroup f-state-visible" [fScrollSpy]="'accessory'" farrisCollapse  [collapseText]="'收起'"  [expandText]="'展开'" [title]="'附件信息'">
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">单据编号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="DJBH"
+                            [(ngModel)]="defaultData.FKDD.data.DJBH"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">业务类型</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <!-- <kendo-dropdownlist
+                            class="form-control"
+                            [data]="listItemsDropDown"
+                            [value]="'服务合同'"
+                            [ngClass]="{ 'f-state-readonly': isViewState }"
+                          >
+                          </kendo-dropdownlist> -->
+                          <farris-combo-list
+                              [(ngModel)]="valObj.id"
+                              [(selectedValues)]="valObj.text"
+                              [idField]="'id'"
+                              [textField]="'text'"
+                              [data]="listItemsDropDown"
+                            ></farris-combo-list>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2  f-state-visible">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">业务日期</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-datepicker class="form-control"></farris-datepicker>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">客户</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KH"
+                            name="kh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户别名</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHBM"
+                            name="khbm"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label class="col-form-label">
+                          <span class="farris-label-text">客户采购单号</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                            name="khcgdh"
+                          />
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                    <div class="farris-group-wrap">
+                      <div class="form-group farris-form-group">
+                        <label for="hpinput01" class="col-form-label">
+                          <span class="farris-label-info text-danger">*</span
+                          ><span class="farris-label-text">业务员</span>
+                        </label>
+                        <div class="farris-input-wrap">
+                          <farris-lookup-grid
+                            name="lxdh"
+                            [(ngModel)]="lookupEmpee"
+                            [uri]="'assets/data/empoyee.json'"
+                            [singleSelect]="true"
+                            [idField]="'Code'"
+                            [pageSize]="20"
+                            [pageIndex]="1"
+                            [pagination]="true"
+                            [textField]="'Name'"
+                            [valueField]="'Code'"
+                            [disabled]="isViewState"
+                            [ngClass]="{ 'f-state-disabled': isViewState }"
+                          ></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">客户</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KH"
+                              name="kh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-text">客户别名</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KHBM"
+                              name="khbm"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label class="col-form-label">
+                            <span class="farris-label-text">客户采购单号</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <input
+                              type="text"
+                              class="form-control"
+                              [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                              name="khcgdh"
+                            />
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3 col-el-2">
+                      <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                          <label for="hpinput01" class="col-form-label">
+                            <span class="farris-label-info text-danger">*</span
+                            ><span class="farris-label-text">业务员</span>
+                          </label>
+                          <div class="farris-input-wrap">
+                            <farris-lookup-grid
+                              name="lxdh"
+                              [(ngModel)]="lookupEmpee"
+                              [uri]="'assets/data/empoyee.json'"
+                              [singleSelect]="true"
+                              [idField]="'Code'"
+                              [pageSize]="20"
+                              [pageIndex]="1"
+                              [pagination]="true"
+                              [textField]="'Name'"
+                              [valueField]="'Code'"
+                              [disabled]="isViewState"
+                              [ngClass]="{ 'f-state-disabled': isViewState }"
+                            ></farris-lookup-grid>
+                            <div class="farris-feedback valid-feedback"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+             
+            </fieldset>
+          </div>
+    </farris-section>
+    </div>
+  <footer class="f-page-footer">
+    Page-尾部区域
+  </footer>
+</div>

@@ -1,0 +1,93 @@
+.f-template-wizard-title-text{
+    font-size: 14px;
+    color: rgba(0,0,0,0.85);
+    line-height: 20px;
+}
+.f-template-wizard-message-text{
+    @extend .f-template-wizard-title-text;
+    opacity: 0.65;
+}
+.f-template-wizard-page{
+    padding-right: 14px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // farris-page-detail{
+    //     height: 100%;
+    // }
+    .page-friendly-reminder{
+        display: flex;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 16px 0 26px;
+        background: #E6F7FF;
+        .reminder-message{
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            .reminder-title{
+                padding-right: 15px;
+                .f-icon{
+                    // display: inline-block;
+                    // width: 16px;
+                    // height: 16px;
+                    margin-right: 10px;
+                    // line-height: 16px;
+                    // text-align: center;
+                    // color: #fff;
+                    // background-color: #60A5FF;
+                    // border-radius: 50%;
+                    // font-size: 12px;
+                }
+                .reminder-name{
+                    @extend .f-template-wizard-message-text;
+                }
+            }
+            .message{
+                @extend .f-template-wizard-title-text;
+                font-size: 12px;
+                
+            }
+        }
+        .reminder-close{
+            .no-prompt{
+                margin-right: 7px;
+                @extend .f-template-wizard-title-text;
+                color: #295EA3;
+                opacity: 1;
+            }
+            .close-icon{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 14px;
+                color: #979797;
+                cursor: pointer;
+            }
+        }
+    }
+    .f-template-wizard-page-content{
+
+        padding: 11px 0 14px 14px;
+        .f-template-wizard-page-operation{
+            margin-top: 21px;
+            .btn{
+                margin-right: 6px;
+            }
+        }
+    }
+    .f-template-wizard-page-footer{
+        height: 56px;
+        line-height: 56px;
+        border-top: 1px solid #E9E9E9;
+        text-align: right;
+        width:100%;
+        .btn{
+            margin-left: 20px;
+        }
+    }
+}

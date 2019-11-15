@@ -1,0 +1,20 @@
+<div class="f-pt-listviewbar bg-white">
+    <div class="f-pt-listviewbar-header">
+      <div class="f-title-ctr">
+        <h4 class="f-title">组件Demo</h4>
+      </div>
+      <div class="f-listviewbar-toolbar">      
+      </div>
+    </div>
+    <ul class="f-cmp-listview list-group">
+      <li class="f-cmp-listview-item"  *ngFor="let data of components_data; let i = index"  [ngClass]="{ 'f-state-active': activeIndex == i }"  (click)="navTo(data.url,i)"> 
+        <h6 class="f-title"> {{ data.text }}</h6>
+        <span class="k-icon k-i-check" [ngClass]="progressCls(data.progress)"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="flex-fill bd-content p-3" style="overflow:auto;">
+    <router-outlet>
+      <h3 class="p-3 text-center">选个组件，然后开始吧</h3>
+    </router-outlet>
+  </div>

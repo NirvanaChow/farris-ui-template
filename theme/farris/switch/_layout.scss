@@ -1,0 +1,56 @@
+$f-switch-bg:$f-neutral-02;
+$f-switch-checked-bg:$f-theme-04;
+$f-switch-disabled-bg:$f-neutral-06;
+$f-switch-checked-disabled-bg:rgba($f-switch-checked-bg, 0.2);
+$f-switch-readonly-bg:$f-neutral-04;
+$f-switch-readonly-disabled-bg:rgba($f-switch-checked-bg, 0.6);
+
+$f-switch-width:$f-k-switch-size;
+//20191022 switch 样式修改 提取颜色及尺寸变量
+.switch{
+    background-color: $f-switch-bg;
+    small{
+        right: calc(100% - 30px);
+    }
+    &.checked {
+        background: $f-switch-checked-bg;
+    }
+    &.disabled {
+        background-color: $f-switch-disabled-bg;
+    }
+    &.checked.disabled{
+        background-color: $f-switch-checked-disabled-bg;
+    }
+    &.readonly{
+        background-color: $f-switch-readonly-bg;
+    }
+    &.checked.readonly{
+        background-color: $f-switch-readonly-disabled-bg;
+    }
+    &.switch-medium{
+        min-width: $f-switch-width;
+        height: $f-k-switch-size-y;
+        border-radius: $f-k-switch-size-y;
+        small {
+            width: $f-k-switch-handle-size ;
+            height: $f-k-switch-handle-size; 
+            right: calc(100% + 2px - #{$f-k-switch-size-y});
+        }
+        > .switch-pane {
+            > span {
+                line-height: $f-k-switch-size-y;
+            }
+            .switch-label {
+                &-checked {
+                    padding-right: calc(#{$f-k-switch-size-y} + 5px);
+                    padding-left: calc(#{$f-k-switch-size-y} / 3);
+                }
+                &-unchecked {
+                    padding-left: calc(#{$f-k-switch-size-y} + 5px);
+                    padding-right: calc(#{$f-k-switch-size-y} / 3);
+                }
+            }
+        }
+    }
+
+}

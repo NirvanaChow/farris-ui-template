@@ -1,0 +1,21 @@
+
+// form布局相关样式
+$farris-form-group-margin-bottom-default: 0.375rem;
+$farris-form-group-gutter-bottom:0.375rem;
+$farris-form-inline-form-group-margin-bottom:$farris-form-group-gutter-bottom;
+// 横向标签与输入控件间距
+$farris-inline-label-margin-x: 0.625rem;
+//20190920 右对齐表单 label宽度修改 96px 原 94px
+$farris-inline-label-default-width: 6rem;
+$farris-label-info-padding: 0 0.25rem 0 0;
+// $farris-col-form-label-padding-bottom: 0.3125rem;
+$farris-feedback-font-size: $farris-text-size-04;
+$farris-feedback-line-height: $farris-text-line-height-06;
+$farris-feedback-position-bottom: 1.6875rem;
+$farris-form-label-plaintext-text: $f-text-05;
+
+//表单分组标题背景色
+$farris-formgroup-legend-bg: $f-aid-05;
+$farris-formgroup-legend-title-color:$f-text-02;
+$farris-formgroup-legend-title-hover-color:$f-theme-05;
+$farris-formgroup-legend-title-active-color:$f-theme-04;

@@ -1,0 +1,44 @@
+
+// 树
+$farris-tree-icon-color: $f-neutral-01;
+$farris-tree-disabled-text: $f-text-05!default;
+$farris-tree-icon-disabled-color: $f-neutral-02!default;
+$farris-tree-icon-font-family: $farris-icon-font-family!default;
+$farris-tree-icon-expand: 'indeterminate_check_box'!default;
+$farris-tree-icon-collapse: 'add_box'!default;
+$farris-tree-item-padding-y: 0.125rem!default;
+
+// 这块变量被哪引用可能有问题 ，需要后面调整—————————————2019年6月13日
+// 鼠标滑过
+$farris-tree-node-hover-text:$f-text-01!default;
+$farris-tree-node-hover-bg: $f-aid-03;
+$farris-tree-node-hover-border: $f-aid-03;
+// 选中
+$farris-tree-node-selected-text: $f-text-01;
+$farris-tree-node-selected-bg: $f-aid-02;
+$farris-tree-node-selected-border:$f-aid-02;
+
+// 图标按钮
+$farris-btn-icon-line-height: $farris-line-height-base !default;
+$farris-btn-icon-padding-y: $farris-input-btn-padding-y !default;
+$farris-btn-icon-padding-x: $farris-input-btn-padding-y !default;
+$farris-btn-icon-font-size: $farris-font-size-base !default;
+$farris-btn-icon-border-width: $farris-border-width !default;
+$farris-btn-icon-border-color: $farris-border-color !default;
+$farris-btn-icon-border-radius: $farris-border-radius !default;
+
+// kendo treeview 边线
+$f-treeview-item-border-width:0!default;
+
+$f-treeview-bg: null !default;
+$f-treeview-text: $f-text-02!default;
+$f-treeview-border: null !default;
+
+$f-treeview-item-hovered-text: $f-treeview-text;
+$f-treeview-item-hovered-bg: $f-aid-03 ;
+$f-treeview-item-hovered-border: $f-treeview-border;
+
+$f-treeview-item-selected-text:$f-treeview-text;
+$f-treeview-item-selected-bg: $f-aid-02;
+$f-treeview-item-selected-border: $f-treeview-border;
+// kendo tree item的禁用是用的f-state-disabled ————————————2019年6月13日

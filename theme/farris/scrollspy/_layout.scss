@@ -1,0 +1,50 @@
+.f-page-is-sidescrollspy .f-page-main{
+    position: relative;
+    margin-right: 0;
+    background: $f-tmpl-bg;
+    overflow: hidden;
+    .f-scrollspy-content{
+      background: $f-neutral-00;
+      margin-right: 0.625rem;
+      height: 100%;
+      overflow: auto;
+    }
+}
+//20190926 提取滚动监听颜色变量
+$f-scrollspy-title-color:$f-text-02;
+$f-scrollspy-title-active-color:$f-theme-04;
+$f-scrollspy-title-active-border:$f-theme-05;
+$f-scrollspy-tab-title-color:$f-text-04;
+$f-scrollspy-tab-title-active-color:$f-theme-04;
+$f-scrollspy-tab-title-active-bg:$f-theme-04;
+.f-scrollspy-sidetabs{
+  .f-scrollspy-monitor-btn{
+    .f-scrollspy-monitor-title{
+        color: $f-scrollspy-title-color;
+    }
+    &.active{
+        &::after{
+            border: 3.5px solid $f-scrollspy-title-active-border;
+        }
+        .f-scrollspy-monitor-title{
+            color: $f-scrollspy-title-active-color;
+        }
+    }
+  }
+}
+
+.f-scrollspy-tabs{
+  .f-scrollspy-monitor-btn{
+      .f-scrollspy-monitor-title{
+          color: $f-scrollspy-tab-title-color;
+      }
+      &.active{
+          .f-scrollspy-monitor-title{
+              color: $f-scrollspy-tab-title-active-color;
+          }
+          &::after{
+              background-color: $f-scrollspy-tab-title-active-bg;
+          }  
+      }
+  }
+}

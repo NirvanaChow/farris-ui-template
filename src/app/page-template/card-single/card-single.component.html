@@ -1,0 +1,304 @@
+<div class="farris-header">
+    <!--顶部操作条和标题——————————————————开始-->
+    <nav class="navbar p-0">
+      <h4 class="farris-form-title mr-auto">卡片</h4>
+      <div class="btn-toolbar">
+        <button class="btn btn-primary f-btn-ml" (click)="changeState('add')">新增</button>
+        <button class="btn btn-secondary f-btn-ml" (click)="changeState('edit')">编辑</button>
+        <button class="btn btn-secondary f-btn-ml" (click)="changeState('view')">查看</button>
+        <button class="btn btn-secondary f-btn-ml" (click)="changeState('save')">保存</button>
+        <button class="btn btn-secondary  f-btn-ml" (click)="changeState('save')">删除</button>
+      </div>
+    </nav>
+    <!--页面操作按钮 ————————————————————结束-->
+  </div>
+  <div class="flex-fill farris-split-section f-cmp-px farris-overflow-y-auto">
+      <form class="farris-form  farris-card-section f-mtable-form " *ngIf="defaultData">
+          <fieldset class="col-12"  farrisFold>
+              <legend class=" f-legend-icon f-legend-show">客户相关</legend>
+              <div class="d-flex flex-wrap mb-2">
+                <div class="col-12 col-md-6 col-xl-3">
+                  <div class="farris-group-wrap">
+                    <div class="form-group farris-form-group">
+                      <label class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span><span class="farris-label-text">客户</span>
+                        
+                      </label>
+                      <div class="farris-input-wrap">
+                        <input type="text" class="form-control" [(ngModel)]="defaultData.FKDD.data.KH" name="kh" [readonly]="readonlyState()" />
+                        <div class="farris-feedback valid-feedback"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                  <div class="farris-group-wrap">
+                    <div class="form-group farris-form-group">
+                      <label class="col-form-label">
+                        <span class="farris-label-text">客户别名</span>
+                      </label>
+                      <div class="farris-input-wrap">
+                        <input type="text" class="form-control" [(ngModel)]="defaultData.FKDD.data.KHBM" name="khbm" [readonly]="readonlyState()"
+                        />
+                        <div class="farris-feedback valid-feedback"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                  <div class="farris-group-wrap">
+                    <div class="form-group farris-form-group">
+                      <label class="col-form-label">
+                        <span class="farris-label-text">客户采购单号</span>
+                      </label>
+                      <div class="farris-input-wrap">
+                        <input type="text" class="form-control" [(ngModel)]="defaultData.FKDD.data.KHCGDH" name="khcgdh" [readonly]="readonlyState()"
+                        />
+                        <div class="farris-feedback valid-feedback"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                  <div class="farris-group-wrap">
+                    <div class="form-group farris-form-group">
+                      <label for="hpinput01" class="col-form-label">
+                        <span class="farris-label-info text-danger">*</span><span class="farris-label-text">业务员</span>
+                        
+                      </label>
+                      <div class="farris-input-wrap">
+        
+                         
+                        <farris-lookup-grid name="lxdh" [(ngModel)]="item"  [uri]= "'assets/data/empoyee.json'"
+                        [singleSelect]="true"
+                        [idField]="'Code'"
+                        [pageSize]="20"
+                        [pageIndex]="1"
+                        [pagination]="true" [textField]="'Name'" [valueField]="'Code'" [disabled]="readonlyState()"></farris-lookup-grid>
+                          <div class="farris-feedback valid-feedback"> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+  
+      <fieldset class="col-12"   farrisFold>
+        <legend class=" f-legend-icon f-legend-show">客户相关</legend>
+        <div class="d-flex flex-wrap mb-2">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-info text-danger">*</span><span class="farris-label-text">客户</span>
+                  
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" [(ngModel)]="defaultData.FKDD.data.KH" name="kh" [readonly]="readonlyState()" />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">客户别名</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" [(ngModel)]="defaultData.FKDD.data.KHBM" name="khbm" [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">客户采购单号</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" [(ngModel)]="defaultData.FKDD.data.KHCGDH" name="khcgdh" [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label for="hpinput01" class="col-form-label">
+                   <span class="farris-label-info text-danger">*</span><span class="farris-label-text">业务员</span>
+                 
+                </label>
+                <div class="farris-input-wrap">
+  
+                   
+                  <farris-lookup-grid name="lxdh" [(ngModel)]="item"  [uri]= "'assets/data/empoyee.json'"
+                  [singleSelect]="true"
+                  [idField]="'Code'"
+                  [pageSize]="20"
+                  [pageIndex]="1"
+                  [pagination]="true" [textField]="'Name'" [valueField]="'Code'" [disabled]="readonlyState()"></farris-lookup-grid>
+                    <div class="farris-feedback valid-feedback"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset  class="col-12"  farrisFold>
+          <legend class=" f-legend-icon f-legend-show">单据相关</legend>
+        <div class="d-flex flex-wrap mb-2">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-info text-danger">*</span><span class="farris-label-text">单据编号</span>
+                  
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="DJBH" [(ngModel)]="defaultData.FKDD.data.DJBH" [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">业务类型</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <kendo-dropdownlist [class]="'form-control'" [data]="listItemsDropDown" [value]="'服务合同'" [readonly]="readonlyState()"> </kendo-dropdownlist>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">业务日期</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <kendo-datepicker [class]="'form-control'" name="YWRQ" [readonly]="readonlyState()"></kendo-datepicker>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset  class="col-12"  farrisFold>
+          <legend class=" f-legend-icon f-legend-show">相关金额</legend>
+        <div class="d-flex flex-wrap mb-2">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">整单折扣率</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <kendo-numerictextbox [class]="'form-control'" name="ZDZKL" [(ngModel)]="defaultData.FKDD.data.ZDZKL" [readonly]="readonlyState()"></kendo-numerictextbox>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">销售总额</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <kendo-numerictextbox [class]="'form-control'" name="XSZE" [(ngModel)]="defaultData.FKDD.data.XSZE" [readonly]="readonlyState()"></kendo-numerictextbox>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">运费</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="YF" [(ngModel)]="defaultData.FKDD.data.YF" [readonly]="readonlyState()" />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">XXX</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="FJF" [(ngModel)]="defaultData.FKDD.data.FJF" [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset  class="col-12"  farrisFold>
+        <legend class=" f-legend-icon f-legend-show">交易规则</legend>
+        <div class="d-flex">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">贸易术语</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="MYSY" [(ngModel)]="defaultData.FKDD.data.MYSY" [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">信用证号</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input type="text" class="form-control" name="XYZH" [(ngModel)]="defaultData.FKDD.data.XYZH" [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="farris-group-wrap">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">订单原因</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <textarea type="text" class="form-control" name="DDYY" [(ngModel)]="defaultData.FKDD.data.DDYY" [readonly]="readonlyState()"></textarea>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>

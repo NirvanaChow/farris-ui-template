@@ -1,0 +1,1898 @@
+<h4>输入控件</h4>
+<hr />
+<div class="row">
+    <div class="col-12 col-el-6">
+        <h5>KendoUI</h5>
+        <div class="bd-example">
+            <div class="test-area-inputs">
+                   <div class="section"> <input type="text" placeholder="Textbox..." class="k-textbox" />
+            <span class="k-widget k-maskedtextbox"><input value="(___) ___-__-__-__" class="k-textbox"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap"><input type="text" class="k-input" placeholder="Numeric..." /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+                   </div>
+                   <div class="section">
+            <input type="text" value="Normal" class="k-textbox" />
+            <span class="k-widget k-maskedtextbox"><input value="555 123 4567" class="k-textbox"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap"><input type="text" class="k-input" value="Normal" /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+        </div>
+        <div class="section">
+            <input type="text" value="Hover" class="k-textbox k-state-hover" />
+            <span class="k-widget k-maskedtextbox"><input value="555 123 4567" class="k-textbox k-state-hover"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-hover"><input type="text" class="k-input" value="Hover" /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+        </div>
+        <div class="section">
+            <input type="text" value="Active N/A" class="k-textbox" />
+            <span class="k-widget k-maskedtextbox"><input value="555 123 4567" class="k-textbox"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap"><input type="text" class="k-input" value="Active N/A" /><span class="k-select"><span class="k-link k-link-increase k-state-selected"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+        </div>
+        <div class="section">
+            <input type="text" value="Focused" class="k-textbox k-state-focused" />
+            <span class="k-widget k-maskedtextbox k-state-focused"><input value="555 123 4567" class="k-textbox"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-focused"><input type="text" class="k-input" value="Focused" /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+        </div>
+        <div class="section">
+            <input type="text" value="Disabled" class="k-textbox" disabled="disabled" />
+            <span class="k-widget k-maskedtextbox k-state-disabled"><input value="555 123 4567" class="k-textbox" disabled="disabled"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox k-state-disabled"><span class="k-numeric-wrap"><input type="text" class="k-input" value="Disabled" /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+        </div>
+        <div class="section">
+            <input type="text" value="Invalid" class="k-textbox k-state-invalid" />
+            <span class="k-widget k-maskedtextbox k-state-invalid"><input value="(___) ___-__-__-__" class="k-textbox"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox k-state-invalid"><span class="k-numeric-wrap"><input type="text" class="k-input" value="-1" /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+        </div>
+        <div class="section">
+            <input type="text" value="NG invalid" class="k-textbox ng-invalid ng-touched" />
+            <span class="k-widget k-maskedtextbox ng-invalid ng-touched"><input value="(___) ___-__-__-__" class="k-textbox"><span class="k-icon k-i-warning"></span></span>
+            <span class="k-widget k-numerictextbox ng-invalid ng-touched"><span class="k-numeric-wrap"><input type="text" class="k-input" value="-1" /><span class="k-select"><span class="k-link k-link-increase"><span class="k-icon k-i-arrow-60-up"></span></span><span class="k-link k-link-decrease"><span class="k-icon k-i-arrow-60-down"></span></span></span></span></span>
+                
+            </div>
+        </div></div>
+        <h2>调整Kendo和Bootstrap结构布局</h2>
+        <h3>布局样式-纵向</h3>
+        <div class="bd-example">
+            <div class="form-row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="input" class="form-control" id="hpinput01" value='Ximena'>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class=" col-form-label">
+                                <span class="farris-label-text">Input</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input class="k-textbox form-control" type="text">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">NumericTextBox</label>
+                            <div class="farris-input-wrap">
+                                <kendo-numerictextbox class="form-control k-widget k-numerictextbox" dir="ltr">
+
+
+                                    <span class="k-numeric-wrap">
+                                        <input autocomplete="off" autocorrect="off" class="k-input k-formatted-value" role="spinbutton" id="k-bb21085e-30f9-ec2b-43b6-3bcf3d28975c"
+                                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" title="" tabindex="0">
+
+                                        <span class="k-select">
+                                            <span class="k-link k-link-increase" aria-label="Increase value" title="Increase value">
+                                                <span class="k-icon k-i-arrow-n"></span>
+                                            </span>
+                                            <span class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value">
+                                                <span class="k-icon k-i-arrow-s"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </kendo-numerictextbox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">DropDownList</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-dropdownlist class="form-control k-widget k-dropdown k-header" dir="ltr">
+                                    <span role="listbox" unselectable="on" class="k-dropdown-wrap k-state-default" id="k-9018b19e-30f8-47ea-998e-09af085a5eb6"
+                                        dir="ltr" readonly="false" tabindex="0" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                        aria-expanded="false" aria-owns="275f0682-c624-4d6b-911e-8853620b54fb" aria-activedescendant="3c107fff-3a40-4613-a5e4-6b73e7f3633f-Basketball">
+                                        <span unselectable="on" class="k-input">
+
+                                            Basketball
+                                        </span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-dropdownlist>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">ComboBox</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-combobox class="form-control k-widget k-combobox k-header k-combobox-clearable" dir="ltr">
+                                    <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-88f92b07-5405-4d01-b08b-423a8e011be3" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="6d3dd76e-d2f8-4279-a759-ccaa6281fcf0" aria-activedescendant="ca07e955-e103-46ab-b5d2-9dccd5e249ef-Basketball">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-combobox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-multiselect class="form-control k-widget k-multiselect k-header" dir="ltr">
+                                    <div class="k-multiselect-wrap k-floatwrap">
+                                        <kendo-taglist>
+                                            <ul class="k-reset" role="listbox">
+
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Basketball
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Cricket
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </kendo-taglist>
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-ca939025-293e-48a1-8a9b-7a50b3e29ea0" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="bdc33dcd-48a4-4e15-9f91-5e88dbce9f77" aria-activedescendant="option-98c125d8-f751-4d2d-a910-c8d71c6b391b-Cricket">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+
+                                    </div>
+
+
+
+                                </kendo-multiselect>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+
+                                <kendo-datepicker _ngcontent-c0="" class="form-control k-widget k-datepicker ">
+
+
+                                    <span class="k-picker-wrap k-state-default">
+                                        <kendo-dateinput class="k-widget k-dateinput">
+
+
+                                            <span class="k-dateinput-wrap">
+                                                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="k-input" role="spinbutton" spellcheck="false" id="k-48940f95-1e6e-48d9-93db-ce8630fcfd5d"
+                                                    title="" tabindex="0" aria-expanded="false" aria-haspopup="true" aria-valuemin="-2209017943000"
+                                                    aria-valuemax="4102329600000" aria-valuenow="1536305900058" aria-valuetext="9/7/2018">
+
+                                            </span>
+                                        </kendo-dateinput>
+                                        <span class="k-select" role="button" title="Toggle calendar" aria-label="Toggle calendar" aria-controls="240c33e0-f1f1-4c78-ade0-3512e78a6f36">
+                                            <span class="k-icon k-i-calendar"></span>
+                                        </span>
+                                    </span>
+
+
+                                </kendo-datepicker>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <form class="k-form">
+                    <fieldset>
+                        <legend>用户信息</legend>
+
+                        <label class="k-form-field">
+                            <span>First Name</span>
+                            <input class="k-textbox" placeholder="Your Name">
+                        </label>
+                        <label class="k-form-field">
+                            <span>Last Name</span>
+                            <input class="k-textbox" placeholder="Your Last Name" value="Batista">
+                        </label>
+                        <div class="k-form-field">
+                            <span>Gender</span>
+
+                            <input class="k-radio" id="female" name="gender" type="radio">
+                            <label class="k-radio-label" for="female">Female</label>
+
+                            <input checked="checked" class="k-radio" id="male" name="gender" type="radio">
+                            <label class="k-radio-label" for="male">Male</label>
+                        </div>
+                        <label class="k-form-field">
+                            <span>Email <span class="k-required">*</span></span>
+                            <input class="k-textbox" placeholder="Your Email" type="email" value="bernardo.batista@progress.com">
+                        </label>
+                        <label class="k-form-field">
+                            <span>Company<span class="k-field-info">optional</span></span>
+                            <input class="k-textbox" placeholder="Your Company">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>信用信息</legend>
+                        <label class="k-form-field">
+                            <span>Username</span>
+                            <input class="k-textbox" placeholder="Your username" value="bbatista">
+                        </label>
+                        <label class="k-form-field">
+                            <span>Password</span>
+                            <input class="k-textbox" placeholder="Your password" type="password" value="123456">
+                        </label>
+                        <label class="k-form-field">
+                            <input checked="checked" class="k-checkbox" id="auth-2fa" type="checkbox">
+                            <label class="k-checkbox-label" for="auth-2fa">Enable two-factor authentication</label>
+                        </label>
+                    </fieldset>
+
+                    <div class="text-right">
+                      <button class="k-button" type="button">Cancel</button>
+                      <button class="k-button k-primary" type="button">Submit</button>
+                    </div>
+                </form> -->
+        </div>
+        <figure class="highlight">
+            <pre>布局结构：列信息、标签、输入控件、提示消息
+            class="form-row"
+        </pre>
+        </figure>
+        <h3>布局样式——横向</h3>
+        <div class="bd-example">
+            <div class="form-row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="input" class="form-control" id="hpinput01" value='Ximena'>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class=" col-form-label">
+                                <span class="farris-label-text">Input</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input class="k-textbox form-control" type="text">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">NumericTextBox</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-numerictextbox class="form-control k-widget k-numerictextbox" dir="ltr">
+
+
+                                    <span class="k-numeric-wrap">
+                                        <input autocomplete="off" autocorrect="off" class="k-input k-formatted-value" role="spinbutton" id="k-bb21085e-30f9-ec2b-43b6-3bcf3d28975c"
+                                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" title="" tabindex="0">
+
+                                        <span class="k-select">
+                                            <span class="k-link k-link-increase" aria-label="Increase value" title="Increase value">
+                                                <span class="k-icon k-i-arrow-n"></span>
+                                            </span>
+                                            <span class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value">
+                                                <span class="k-icon k-i-arrow-s"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </kendo-numerictextbox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">DropDownList</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-dropdownlist class="form-control k-widget k-dropdown k-header" dir="ltr">
+                                    <span role="listbox" unselectable="on" class="k-dropdown-wrap k-state-default" id="k-9018b19e-30f8-47ea-998e-09af085a5eb6"
+                                        dir="ltr" readonly="false" tabindex="0" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                        aria-expanded="false" aria-owns="275f0682-c624-4d6b-911e-8853620b54fb" aria-activedescendant="3c107fff-3a40-4613-a5e4-6b73e7f3633f-Basketball">
+                                        <span unselectable="on" class="k-input">
+
+                                            Basketball
+                                        </span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-dropdownlist>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">ComboBox</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-combobox class="form-control k-widget k-combobox k-header k-combobox-clearable" dir="ltr">
+                                    <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-88f92b07-5405-4d01-b08b-423a8e011be3" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="6d3dd76e-d2f8-4279-a759-ccaa6281fcf0" aria-activedescendant="ca07e955-e103-46ab-b5d2-9dccd5e249ef-Basketball">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-combobox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <!-- <div class="farris-input-wrap">
+                            <kendo-multiselect class="form-control k-widget k-multiselect k-header" dir="ltr">
+                                <div class="k-multiselect-wrap k-floatwrap">
+                                    <kendo-taglist>
+                                        <ul class="k-reset" role="listbox">
+
+                                            <li class="k-button">
+
+                                                <span>
+
+                                                    Basketball
+                                                </span>
+
+
+
+
+                                                <span aria-label="delete" class="k-select">
+                                                    <span class="k-icon k-i-close">
+                                                    </span>
+                                                </span>
+                                            </li>
+                                            <li class="k-button">
+
+                                                <span>
+
+                                                    Cricket
+                                                </span>
+
+
+
+
+                                                <span aria-label="delete" class="k-select">
+                                                    <span class="k-icon k-i-close">
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </kendo-taglist>
+                                    <kendo-searchbar class="k-searchbar">
+                                        <input autocomplete="off" size="1" id="k-ca939025-293e-48a1-8a9b-7a50b3e29ea0" placeholder="" class="k-input" tabindex="0"
+                                            dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                            aria-expanded="false" aria-owns="bdc33dcd-48a4-4e15-9f91-5e88dbce9f77" aria-activedescendant="option-98c125d8-f751-4d2d-a910-c8d71c6b391b-Cricket">
+                                    </kendo-searchbar>
+
+                                    <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+
+                                </div>
+
+
+
+                            </kendo-multiselect>
+                            <div class="farris-feedback valid-feedback">
+                                设置符合规则
+                            </div>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+
+                                <kendo-datepicker _ngcontent-c0="" class="form-control k-widget k-datepicker">
+
+
+                                    <span class="k-picker-wrap k-state-default">
+                                        <kendo-dateinput class="k-widget k-dateinput">
+
+
+                                            <span class="k-dateinput-wrap">
+                                                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="k-input" role="spinbutton" spellcheck="false" id="k-48940f95-1e6e-48d9-93db-ce8630fcfd5d"
+                                                    title="" tabindex="0" aria-expanded="false" aria-haspopup="true" aria-valuemin="-2209017943000"
+                                                    aria-valuemax="4102329600000" aria-valuenow="1536305900058" aria-valuetext="9/7/2018">
+
+                                            </span>
+                                        </kendo-dateinput>
+                                        <span class="k-select" role="button" title="Toggle calendar" aria-label="Toggle calendar" aria-controls="240c33e0-f1f1-4c78-ade0-3512e78a6f36">
+                                            <span class="k-icon k-i-calendar"></span>
+                                        </span>
+                                    </span>
+
+
+                                </kendo-datepicker>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <figure class="highlight">
+            <pre>class="form-row form-inline farris-form-inline"</pre>
+        </figure>
+        <h3>布局样式——验证纵向</h3>
+        <div class="bd-example">
+            <div class="form-row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="input" class="form-control is-valid" id="hpinput01" value='Ximena'>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control is-invalid">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="password" class="form-control is-valid" id="inputPassword3" placeholder="密码">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class=" col-form-label">
+                                <span class="farris-label-text">Input</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input class="k-textbox form-control is-valid" type="text">
+                                <div class="farris-feedback invalid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">NumericTextBox</label>
+                            <div class="farris-input-wrap">
+                                <kendo-numerictextbox class="form-control is-valid k-widget k-numerictextbox" dir="ltr">
+
+
+                                    <span class="k-numeric-wrap">
+                                        <input autocomplete="off" autocorrect="off" class="k-input k-formatted-value" role="spinbutton" id="k-bb21085e-30f9-ec2b-43b6-3bcf3d28975c"
+                                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" title="" tabindex="0">
+
+                                        <span class="k-select">
+                                            <span class="k-link k-link-increase" aria-label="Increase value" title="Increase value">
+                                                <span class="k-icon k-i-arrow-n"></span>
+                                            </span>
+                                            <span class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value">
+                                                <span class="k-icon k-i-arrow-s"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </kendo-numerictextbox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">DropDownList</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-dropdownlist class="form-control is-invalid k-widget k-dropdown k-header" dir="ltr">
+                                    <span role="listbox" unselectable="on" class="k-dropdown-wrap k-state-default" id="k-9018b19e-30f8-47ea-998e-09af085a5eb6"
+                                        dir="ltr" readonly="false" tabindex="0" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                        aria-expanded="false" aria-owns="275f0682-c624-4d6b-911e-8853620b54fb" aria-activedescendant="3c107fff-3a40-4613-a5e4-6b73e7f3633f-Basketball">
+                                        <span unselectable="on" class="k-input">
+
+                                            Basketball
+                                        </span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-dropdownlist>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">ComboBox</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-combobox class="form-control is-valid k-widget k-combobox k-header k-combobox-clearable" dir="ltr">
+                                    <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-88f92b07-5405-4d01-b08b-423a8e011be3" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="6d3dd76e-d2f8-4279-a759-ccaa6281fcf0" aria-activedescendant="ca07e955-e103-46ab-b5d2-9dccd5e249ef-Basketball">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-combobox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-multiselect class="form-control is-valid k-widget k-multiselect k-header" dir="ltr">
+                                    <div class="k-multiselect-wrap k-floatwrap">
+                                        <kendo-taglist>
+                                            <ul class="k-reset" role="listbox">
+
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Basketball
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Cricket
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </kendo-taglist>
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-ca939025-293e-48a1-8a9b-7a50b3e29ea0" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="bdc33dcd-48a4-4e15-9f91-5e88dbce9f77" aria-activedescendant="option-98c125d8-f751-4d2d-a910-c8d71c6b391b-Cricket">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+
+                                    </div>
+
+
+
+                                </kendo-multiselect>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+
+                                <kendo-datepicker _ngcontent-c0="" class="form-control is-invalid k-widget k-datepicker">
+
+
+                                    <span class="k-picker-wrap k-state-default">
+                                        <kendo-dateinput class="k-widget k-dateinput">
+
+
+                                            <span class="k-dateinput-wrap">
+                                                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="k-input" role="spinbutton" spellcheck="false" id="k-48940f95-1e6e-48d9-93db-ce8630fcfd5d"
+                                                    title="" tabindex="0" aria-expanded="false" aria-haspopup="true" aria-valuemin="-2209017943000"
+                                                    aria-valuemax="4102329600000" aria-valuenow="1536305900058" aria-valuetext="9/7/2018">
+
+                                            </span>
+                                        </kendo-dateinput>
+                                        <span class="k-select" role="button" title="Toggle calendar" aria-label="Toggle calendar" aria-controls="240c33e0-f1f1-4c78-ade0-3512e78a6f36">
+                                            <span class="k-icon k-i-calendar"></span>
+                                        </span>
+                                    </span>
+
+
+                                </kendo-datepicker>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <figure class="highlight">
+            <pre>class="form-row" </pre>
+        </figure>
+        <h3>布局样式——验证横向</h3>
+        <div class="bd-example">
+            <div class="form-row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="input" class="form-control is-valid" id="hpinput01" value='Ximena'>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control is-invalid">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="password" class="form-control is-valid" id="inputPassword3" placeholder="密码">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class=" col-form-label">
+                                <span class="farris-label-text">Input</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input class="k-textbox form-control is-valid" type="text">
+                                <div class="farris-feedback invalid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">NumericTextBox</label>
+                            <div class="farris-input-wrap">
+                                <kendo-numerictextbox class="form-control is-valid k-widget k-numerictextbox" dir="ltr">
+
+
+                                    <span class="k-numeric-wrap">
+                                        <input autocomplete="off" autocorrect="off" class="k-input k-formatted-value" role="spinbutton" id="k-bb21085e-30f9-ec2b-43b6-3bcf3d28975c"
+                                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" title="" tabindex="0">
+
+                                        <span class="k-select">
+                                            <span class="k-link k-link-increase" aria-label="Increase value" title="Increase value">
+                                                <span class="k-icon k-i-arrow-n"></span>
+                                            </span>
+                                            <span class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value">
+                                                <span class="k-icon k-i-arrow-s"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </kendo-numerictextbox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">DropDownList</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-dropdownlist class="form-control is-invalid k-widget k-dropdown k-header" dir="ltr">
+                                    <span role="listbox" unselectable="on" class="k-dropdown-wrap k-state-default" id="k-9018b19e-30f8-47ea-998e-09af085a5eb6"
+                                        dir="ltr" readonly="false" tabindex="0" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                        aria-expanded="false" aria-owns="275f0682-c624-4d6b-911e-8853620b54fb" aria-activedescendant="3c107fff-3a40-4613-a5e4-6b73e7f3633f-Basketball">
+                                        <span unselectable="on" class="k-input">
+
+                                            Basketball
+                                        </span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-dropdownlist>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">ComboBox</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-combobox class="form-control is-valid k-widget k-combobox k-header k-combobox-clearable" dir="ltr">
+                                    <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-88f92b07-5405-4d01-b08b-423a8e011be3" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="6d3dd76e-d2f8-4279-a759-ccaa6281fcf0" aria-activedescendant="ca07e955-e103-46ab-b5d2-9dccd5e249ef-Basketball">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-combobox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-multiselect class="form-control is-valid k-widget k-multiselect k-header" dir="ltr">
+                                    <div class="k-multiselect-wrap k-floatwrap">
+                                        <kendo-taglist>
+                                            <ul class="k-reset" role="listbox">
+
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Basketball
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Cricket
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </kendo-taglist>
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-ca939025-293e-48a1-8a9b-7a50b3e29ea0" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="bdc33dcd-48a4-4e15-9f91-5e88dbce9f77" aria-activedescendant="option-98c125d8-f751-4d2d-a910-c8d71c6b391b-Cricket">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+
+                                    </div>
+
+
+
+                                </kendo-multiselect>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+
+                                <kendo-datepicker _ngcontent-c0="" class="form-control is-invalid k-widget k-datepicker">
+
+
+                                    <span class="k-picker-wrap k-state-default">
+                                        <kendo-dateinput class="k-widget k-dateinput">
+
+
+                                            <span class="k-dateinput-wrap">
+                                                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="k-input" role="spinbutton" spellcheck="false" id="k-48940f95-1e6e-48d9-93db-ce8630fcfd5d"
+                                                    title="" tabindex="0" aria-expanded="false" aria-haspopup="true" aria-valuemin="-2209017943000"
+                                                    aria-valuemax="4102329600000" aria-valuenow="1536305900058" aria-valuetext="9/7/2018">
+
+                                            </span>
+                                        </kendo-dateinput>
+                                        <span class="k-select" role="button" title="Toggle calendar" aria-label="Toggle calendar" aria-controls="240c33e0-f1f1-4c78-ade0-3512e78a6f36">
+                                            <span class="k-icon k-i-calendar"></span>
+                                        </span>
+                                    </span>
+
+
+                                </kendo-datepicker>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <figure class="highlight">
+            <pre>class="form-row  form-inline farris-form-inline" </pre>
+        </figure>
+
+        <h3>布局样式——状态混排纵向</h3>
+        <div class="bd-example">
+            <div class="form-row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label form-label-plaintext">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <div class="form-control-plaintext">Ximena</div>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label form-label-plaintext">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control is-invalid">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label form-label-plaintext">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <div class="form-control-plaintext">123456</div>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>布局样式——状态混排横向</h3>
+        <div class="bd-example">
+            <div class="form-row">
+                <div class="col-12 col-md-4 col-lg-4">
+
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label form-label-plaintext">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <div class="form-control-plaintext">Ximena</div>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label  form-label-plaintext">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control is-invalid">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+
+                    <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label form-label-plaintext">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <div class="form-control-plaintext">123456</div>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>布局样式——IDE通过Form控制横向布局</h3>
+        <div class="bd-example">
+            <div class="farris-form d-flex flex-wrap farris-form-controls-inline">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="hpinput01" class="col-form-label">
+                                <span class="farris-label-text">账号</span>
+                                <span class="farris-label-info text-danger">*</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="input" class="form-control is-valid" id="hpinput01" value='Ximena'>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">类型</span>
+                                <small class="farris-label-info text-muted">提示信息</small>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <select class="form-control is-invalid">
+                                    <option selected>股份公司</option>
+                                    <option>国有单位</option>
+                                    <option>个人</option>
+                                </select>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label for="inputPassword3" class="col-form-label">
+                                <span class="farris-label-text">密码</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input type="password" class="form-control is-valid" id="inputPassword3" placeholder="密码">
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class=" col-form-label">
+                                <span class="farris-label-text">Input</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <input class="k-textbox form-control is-valid" type="text">
+                                <div class="farris-feedback invalid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">NumericTextBox</label>
+                            <div class="farris-input-wrap">
+                                <kendo-numerictextbox class="form-control is-valid k-widget k-numerictextbox" dir="ltr">
+
+
+                                    <span class="k-numeric-wrap">
+                                        <input autocomplete="off" autocorrect="off" class="k-input k-formatted-value" role="spinbutton" id="k-bb21085e-30f9-ec2b-43b6-3bcf3d28975c"
+                                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" title="" tabindex="0">
+
+                                        <span class="k-select">
+                                            <span class="k-link k-link-increase" aria-label="Increase value" title="Increase value">
+                                                <span class="k-icon k-i-arrow-n"></span>
+                                            </span>
+                                            <span class="k-link k-link-decrease" aria-label="Decrease value" title="Decrease value">
+                                                <span class="k-icon k-i-arrow-s"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </kendo-numerictextbox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">DropDownList</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-dropdownlist class="form-control is-invalid k-widget k-dropdown k-header" dir="ltr">
+                                    <span role="listbox" unselectable="on" class="k-dropdown-wrap k-state-default" id="k-9018b19e-30f8-47ea-998e-09af085a5eb6"
+                                        dir="ltr" readonly="false" tabindex="0" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                        aria-expanded="false" aria-owns="275f0682-c624-4d6b-911e-8853620b54fb" aria-activedescendant="3c107fff-3a40-4613-a5e4-6b73e7f3633f-Basketball">
+                                        <span unselectable="on" class="k-input">
+
+                                            Basketball
+                                        </span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-dropdownlist>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置不符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">ComboBox</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-combobox class="form-control is-valid k-widget k-combobox k-header k-combobox-clearable" dir="ltr">
+                                    <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-88f92b07-5405-4d01-b08b-423a8e011be3" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="6d3dd76e-d2f8-4279-a759-ccaa6281fcf0" aria-activedescendant="ca07e955-e103-46ab-b5d2-9dccd5e249ef-Basketball">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+                                        <span unselectable="on" class="k-select">
+                                            <span class="k-i-arrow-s k-icon"></span>
+                                        </span>
+
+                                    </span>
+
+
+                                </kendo-combobox>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <kendo-multiselect class="form-control is-valid k-widget k-multiselect k-header" dir="ltr">
+                                    <div class="k-multiselect-wrap k-floatwrap">
+                                        <kendo-taglist>
+                                            <ul class="k-reset" role="listbox">
+
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Basketball
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                <li class="k-button">
+
+                                                    <span>
+
+                                                        Cricket
+                                                    </span>
+
+
+
+
+                                                    <span aria-label="delete" class="k-select">
+                                                        <span class="k-icon k-i-close">
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </kendo-taglist>
+                                        <kendo-searchbar class="k-searchbar">
+                                            <input autocomplete="off" size="1" id="k-ca939025-293e-48a1-8a9b-7a50b3e29ea0" placeholder="" class="k-input" tabindex="0"
+                                                dir="ltr" role="listbox" aria-disabled="false" aria-readonly="false" aria-haspopup="true"
+                                                aria-expanded="false" aria-owns="bdc33dcd-48a4-4e15-9f91-5e88dbce9f77" aria-activedescendant="option-98c125d8-f751-4d2d-a910-c8d71c6b391b-Cricket">
+                                        </kendo-searchbar>
+
+                                        <span class="k-icon k-clear-value k-i-close" role="button" tabindex="-1" title="clear"></span>
+
+                                    </div>
+
+
+
+                                </kendo-multiselect>
+                                <div class="farris-feedback valid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="farris-group-wrap">
+                        <div class="form-group farris-form-group">
+
+                            <label class="col-form-label">
+                                <span class="farris-label-text">MultiSelect</span>
+                            </label>
+                            <div class="farris-input-wrap">
+
+                                <kendo-datepicker _ngcontent-c0="" class="form-control is-invalid k-widget k-datepicker">
+
+
+                                    <span class="k-picker-wrap k-state-default">
+                                        <kendo-dateinput class="k-widget k-dateinput">
+
+
+                                            <span class="k-dateinput-wrap">
+                                                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="k-input" role="spinbutton" spellcheck="false" id="k-48940f95-1e6e-48d9-93db-ce8630fcfd5d"
+                                                    title="" tabindex="0" aria-expanded="false" aria-haspopup="true" aria-valuemin="-2209017943000"
+                                                    aria-valuemax="4102329600000" aria-valuenow="1536305900058" aria-valuetext="9/7/2018">
+
+                                            </span>
+                                        </kendo-dateinput>
+                                        <span class="k-select" role="button" title="Toggle calendar" aria-label="Toggle calendar" aria-controls="240c33e0-f1f1-4c78-ade0-3512e78a6f36">
+                                            <span class="k-icon k-i-calendar"></span>
+                                        </span>
+                                    </span>
+
+
+                                </kendo-datepicker>
+                                <div class="farris-feedback invalid-feedback">
+                                    设置符合规则
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <fieldset class="col-12">
+                        <div class="col-12 col-md-4 col-lg-4">
+                                <div class="farris-group-wrap farris-group-ver">
+                                    <div class="form-group farris-form-group">
+                                        <label for="hpinput01" class="col-form-label">
+                                            <span class="farris-label-text">账号</span>
+                                            <span class="farris-label-info text-danger">*</span>
+                                        </label>
+                                        <div class="farris-input-wrap">
+                                            <input type="input" class="form-control is-valid" id="hpinput01" value='Ximena'>
+                                            <div class="farris-feedback valid-feedback">
+                                                设置符合规则
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-4">
+                                <div class="farris-group-wrap farris-group-ver">
+                                    <div class="form-group farris-form-group">
+                                        <label for="inputPassword3" class="col-form-label">
+                                            <span class="farris-label-text">类型</span>
+                                            <small class="farris-label-info text-muted">提示信息</small>
+                                        </label>
+                                        <div class="farris-input-wrap">
+                                            <select class="form-control is-invalid">
+                                                <option selected>股份公司</option>
+                                                <option>国有单位</option>
+                                                <option>个人</option>
+                                            </select>
+                                            <div class="farris-feedback invalid-feedback">
+                                                设置不符合规则
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-el-6">
+        <h5>Bootstrap</h5>
+        <h3>基础</h3>
+        <div class="bd-example">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <h3>大小</h3>
+        <div class="bd-example">
+            <select class="form-control form-control-lg">
+                <option>Large select</option>
+            </select>
+            <select class="form-control">
+                <option>Default select</option>
+            </select>
+            <select class="form-control form-control-sm">
+                <option>Small select</option>
+            </select>
+            <form>
+                <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h3>状态</h3>
+        <div class="bd-example">
+            <p>只读</p>
+            <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+            <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                </div>
+            </div>
+            <p>Readonly plain text</p>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <form>
+                <fieldset disabled>
+                    <div class="form-group">
+                        <label for="disabledTextInput">Disabled input</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledSelect">Disabled select menu</label>
+                        <select id="disabledSelect" class="form-control">
+                            <option>Disabled select</option>
+                        </select>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                        <label class="form-check-label" for="disabledFieldsetCheck">
+                            Can't check this
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+        <h3>水平布局</h3>
+        <div class="bd-example">
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    First radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Second radio
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                <label class="form-check-label" for="gridRadios3">
+                                    Third disabled radio
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="col-sm-2">Checkbox</div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                                Example checkbox
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <h3>帮助文本</h3>
+        <div class="bd-example">
+            <div>
+                <label for="inputPassword5">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters,
+                    or emoji.
+                </small>
+            </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="inputPassword6">Password</label>
+                    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                    <small id="passwordHelpInline" class="text-muted">
+                        Must be 8-20 characters long.
+                    </small>
+                </div>
+            </form>
+        </div>
+        <h3> 验证</h3>
+        <div class="bd-example">
+            <form class="needs-validation was-validated" novalidate="">
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required="">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required="">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend"
+                                required="">
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom03">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required="">
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom04">State</label>
+                        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required="">
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom05">Zip</label>
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required="">
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+            <form class="needs-validation was-validated" novalidate="">
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">First name</label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required="">
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip02">Last name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required="">
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltipUsername">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend"
+                                required="">
+                            <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip03">City</label>
+                        <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required="">
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationTooltip04">State</label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required="">
+                        <div class="invalid-tooltip">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationTooltip05">Zip</label>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required="">
+                        <div class="invalid-tooltip">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+        </div>
+    </div>
+</div>

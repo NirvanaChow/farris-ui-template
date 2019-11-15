@@ -1,0 +1,41 @@
+<div class="f-page f-page-is-managelist f-page-has-scheme">
+        <farris-section
+          class="f-section-scheme f-section-in-managelist"
+          [showHeader]="false"
+        >
+          <ng-template farrisSectionContent>
+            <div class="f-component-scheme">
+              <div class="f-scheme-bar-ctr">
+                <div class="f-scheme-list-ctr">
+                  <div class="btn-group mr-3" fDropdown>
+                    <button
+                      class="btn btn-secondary dropdown-toggle  dropdown-left"
+                      fDropdownToggle
+                      type="button"
+                    >
+                      默认筛选方案
+                      <span class="f-icon k-i-arrow-chevron-down"></span>
+                    </button>
+                    <div class="dropdown-menu" fDropdownMenu>
+                      <li class="dropdown-item"><span>...筛选方案列表</span></li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="farris-form farris-form-controls-inline">
+                ...筛选方案表单部分
+              </form>
+            </div>
+          </ng-template>
+        </farris-section>
+        <div class="f-page-header">
+          <nav class="f-page-header-base">
+            ...标题部分
+          </nav>
+        </div>
+        <div class="f-page-main">
+          <div class="f-struct-wrapper f-utils-fill-flex-column">
+            ...列表部分
+          </div>
+        </div>
+      </div>

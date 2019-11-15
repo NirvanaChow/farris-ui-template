@@ -1,0 +1,83 @@
+.k-icon{
+  font-family:"FarrisExtend";
+}
+// 输入控件图标的背景色
+.k-combobox {
+    // Normal state
+    .k-dropdown-wrap {
+      // @include appearance( input );
+      @include f_apperance(input);
+    }
+    .k-select {
+      @include f_apperance(input-icon);
+    }
+    > :hover,
+    .k-state-hover {
+      // @include appearance( hovered-input );
+      .k-select {
+        @include f_apperance(input-icon-hover);
+      }
+    }
+  }
+  
+  .k-dropdown,
+  .k-dropdowntree {
+    .k-dropdown-wrap {
+      @include f_apperance(input);
+      &:hover,
+      &.k-state-hover {
+        @include appearance_hovered-input;
+      }
+      &.k-state-focused {
+        @include appearance_focused-input;
+      }
+    }
+  }
+  .k-numerictextbox,
+  .k-dateinput-wrap,
+  .k-numeric-wrap,
+  .k-picker-wrap,
+  .k-dropdown-wrap {
+    .k-select {
+      @include f_apperance(input-icon);
+      &:hover {
+        @include f_apperance(input-icon-hover);
+      }
+    }
+  }
+
+  // 2019年6月29日 输入控件的 清空按钮
+.k-autocomplete,
+.k-dropdown-wrap,
+.k-multiselect-wrap {
+  .k-clear-value {
+    opacity: 1;
+    color: $farris-input-icon-color;
+  }
+}
+
+.k-autocomplete.k-state-focused,
+.k-autocomplete.k-state-hover,
+.k-autocomplete:hover,
+.k-dropdown-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-hover,
+.k-dropdown-wrap:hover,
+.k-multiselect-wrap:hover,
+.k-multiselect-wrap.k-state-hover,
+.k-state-hover > .k-multiselect-wrap,
+.k-multiselect-wrap.k-state-focused,
+.k-state-focused > .k-multiselect-wrap,
+.k-multiselect-wrap:hover {
+  .k-clear-value {
+    color: $farris-input-icon-hover-color;
+  }
+}
+
+.k-widget{
+  .k-i-clock,
+  .k-i-calendar{
+    &::before{
+      font-size:12px;
+    }   
+  }
+}

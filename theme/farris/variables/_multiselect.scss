@@ -1,0 +1,28 @@
+// 前缀
+$f-multiselect-prefix: 'f-multi-select';
+//背景色
+$f-multiselect-bg:$f-neutral-00;
+//list区域边框
+$f-multiselect-border: 1px solid $f-neutral-02;
+//list区域圆角
+$f-multiselect-radius: 2px;
+//list区域高度
+$f-multiselect-height: 445px;
+//标题区域背景色
+$f-multiselect-title-bg: $f-neutral-10;
+$f-multiselect-title-color:$f-text-01;
+//标题区域内边距
+$f-multiselect-title-inner-gutter:$f-multi-select-title-padding-y 14px;
+//list区域内边距
+$f-multiselect-list-inner-gutter:$f-multi-select-list-item-padding-y 0;
+//list 内 列表项内边距
+$f-multiselect-list-item-inner-gutter:$f-multi-select-list-item-padding-y 30px;
+
+$f-multiselect-list-item-active-bg:$f-aid-02;
+
+$f-multiselect-list-item-hover-bg:$f-aid-03;
+
+$f-multiselect-list-item-color:$f-text-02;
+
+$f-multiselect-list-item-disable-color: $f-text-08;
+

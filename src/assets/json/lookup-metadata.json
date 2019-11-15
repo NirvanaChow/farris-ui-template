@@ -1,0 +1,26 @@
+{
+    "id": "ff9b7903-d943-4b22-b60d-206adfd8d32d",
+    "displayType": "List",
+    "enableNavigation": false,
+    "navigationSource": null,
+    "creator": "Lucas Huang",
+    "createTime": "2018-09-18 09:18",
+    "source": {
+        "idField": "id",
+        "textField": "name",
+        "valueField": "id",
+        "condition": null,
+        "columns": [
+            { "field": "id", "title": "ID", "width": 200, "align":"left", "halign": "center", "search": false, "type": "string"},
+            { "field": "name", "title": "Name", "width": 100},
+            { "field": "code", "title": "Code", "width": 100},
+            { "field": "imgs", "title": "Face Image", "width": 100, "formatter": {
+                "type": "image",
+                "options":  {
+                    "width": 60,
+                    "height": 60
+                }
+            }}
+        ]
+    }
+}

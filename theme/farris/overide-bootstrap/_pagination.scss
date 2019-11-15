@@ -1,0 +1,42 @@
+// Pagination
+$cus-pagination-button-size: calc(
+  #{#{$farris-pagination-line-height} + #{$f-pagination-padding-y * 2} + #{$pagination-border-width *
+    2}}
+);
+// Pagination
+.pagination {
+  font-size: $farris-pagination-font-size;
+  padding: $farris-pagination-wrap-padding-y $farris-pagination-wrap-padding-x;
+}
+.page-link {
+  @include border-radius($farris-pagination-border-radius);
+  width: $cus-pagination-button-size;
+  height: $cus-pagination-button-size;
+  text-align: center;
+  margin-left: 0px;
+  overflow: hidden;
+  .k-icon {
+    vertical-align: top;
+  }
+  &:focus {
+    color: $farris-pagination-focus-color;
+    border-color: $farris-pagination-focus-border-color;
+  }
+}
+.page-item {
+  margin: $farris-pagination-margin-y $farris-pagination-margin-x;
+}
+.pagination-lg .page-link {
+  height: auto;
+  width: auto;
+}
+
+
+  // 翻页下拉
+  .k-pager-wrap .k-pager-sizes > select {
+    height: $input-height-sm;
+    padding: $input-padding-y-sm $input-padding-x-sm;
+    font-size: $font-size-sm;
+    line-height: $input-line-height-sm;
+    @include border-radius($input-border-radius-sm);
+  }

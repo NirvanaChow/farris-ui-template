@@ -1,0 +1,75 @@
+// Table
+$farris-grid-width: 0px !default;
+// 表格横向border-width
+$farris-grid-cell-horizontal-border-width: 1px !default;
+// 表格纵向border-width
+$farris-grid-cell-vertical-border-width: 0 !default;
+// 表格 padding
+$farris-grid-cell-padding-x: 0.625rem !default;
+$farris-grid-cell-padding-y: $f-grid-cell-padding-y !default;
+$farris-grid-header-padding-x: 0.625rem !default;
+$farris-grid-header-padding-y: 0.4375rem !default;
+//20190920表格编辑态 padding修改
+$farris-table-td-editcell-padding-y: $f-grid-cell-edit-padding-y!default;
+$farris-table-td-editcell-padding-x:  0.625rem!default;
+
+// table-sm  ------Todo List 此处
+$farris-grid-sm-cell-padding-x: 0.625rem !default;
+$farris-grid-sm-cell-padding-y: 0.25rem !default;
+$farris-grid-sm-header-padding-x: 0.625rem !default;
+$farris-grid-sm-header-padding-y: 0.4375rem!default;
+$farris-table-sm-td-editcell-padding-y: 0.25rem!default;
+
+
+// 表格背景色
+$farris-grid-bg: $f-neutral-00!default;
+$farris-grid-text: $f-text-03!default;
+$farris-grid-border: $f-neutral-05 !default;
+$farris-grid-header-font-weight: normal !default;
+// 奇偶行
+$farris-table-striped-order: even !default;
+$farris-grid-alt-text: $farris-grid-text !default;
+$farris-grid-alt-bg: $f-neutral-09 !default;
+$farris-grid-alt-border: $farris-grid-border !default;
+
+
+// 表格 Header
+$farris-grid-header-bg: $f-neutral-10 !default;
+$farris-grid-header-text: $f-text-01!default;
+$farris-grid-header-border: $f-neutral-04 !default;
+
+$farris-grid-header-splitter-color:$f-neutral-02!default;
+
+// 分页条
+$farris-grid-pager-bg:#fff!default;
+$farris-grid-pager-border: #e6e6e6 !default;
+$farris-grid-pager-height:3.5rem!default;
+
+// 表格 鼠标滑过 td
+$farris-grid-hovered-text: $farris-grid-text !default;
+$farris-grid-hovered-bg: $f-aid-03 !default;
+$farris-grid-hovered-border: $farris-grid-border !default;
+// 表格 选中
+$farris-grid-selected-text: $f-text-03 !default;
+$farris-grid-selected-bg: $f-aid-02!default;
+$farris-grid-selected-border: $farris-grid-border !default;
+
+
+// 表格
+$farris-table-td-height: calc(
+  #{$f-grid-cell-padding-y * 2} + #{$farris-grid-cell-horizontal-border-width} +
+    #{$farris-font-size-base * $farris-line-height-base}
+);
+$farris-table-sm-td-height: calc(
+  #{$farris-grid-sm-cell-padding-y * 2} + #{$farris-grid-cell-horizontal-border-width} +
+    #{$farris-font-size-base * $farris-line-height-base}
+);
+
+// 8月3日 阴影
+$f-grid-box-shadow-left:2px 0px 8px 0px rgba(0, 0, 0, 0.12);;
+$f-grid-box-shadow-right:-2px 0px 8px 0px rgba(0, 0, 0, 0.12);
+
+//20190923 表格排序
+$f-table-sort-icon-color:$f-text-06;
+$f-table-sort-icon-active-color:$f-theme-04;
+

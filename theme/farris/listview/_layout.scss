@@ -1,0 +1,40 @@
+$f-listview-nav-item-color:$f-text-02;
+$f-listview-nav-item-counter-color:$f-theme-04;
+$f-listview-nav-link-active-border-color:$f-theme-04;
+$f-listview-nav-link-active-bg:$f-aid-02;
+
+.f-template-listnav-row{
+    .list-nav-link{
+        .nav-item-name{
+            color: $f-listview-nav-item-color;
+        }
+        .nav-item-counter{
+            color: $f-listview-nav-item-counter-color;
+        }
+        &:hover{
+            background: $f-listview-nav-link-active-bg;
+        }
+        &.active{
+            background: $f-listview-nav-link-active-bg;
+            border-left: 3px solid $f-listview-nav-link-active-border-color;
+            .nav-item-counter{
+                background: $f-listview-nav-item-counter-color;
+            }
+        }
+    }
+}
+
+$f-listnav-toggle-hover-bg:$f-theme-05;
+$f-listnav-toggle-active-bg:$f-theme-04;
+//listnav 中组件颜色提取
+.f-list-nav{
+    .f-list-nav-toggle-sidebar{
+        background: rgba(0,28,64,0.10);
+        &:hover{
+            background: $f-listnav-toggle-hover-bg;
+        }
+        &.active{
+            background: $f-listnav-toggle-active-bg;
+        }
+    }
+}

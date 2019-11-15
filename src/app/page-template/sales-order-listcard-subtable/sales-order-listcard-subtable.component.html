@@ -1,0 +1,264 @@
+<div class="farris-header">
+  <!--顶部操作条和标题——————————————————开始-->
+  <nav class="navbar p-0">
+    <h4 class="farris-form-title mr-auto">左列右卡</h4>
+    <div class="btn-toolbar">
+      <button class="btn btn-primary f-btn-ml" (click)="changeState('add')">
+        新增
+      </button>
+      <button class="btn btn-secondary f-btn-ml" (click)="changeState('edit')">
+        编辑
+      </button>
+      <button
+        class="btn btn-secondary f-btn-ml"
+        (click)="changeState('delete')"
+      >
+        取消
+      </button>
+      <button
+        class="btn btn-secondary f-btn-ml"
+        (click)="changeState('delete')"
+      >
+        删除
+      </button>
+      <button class="btn btn-secondary  f-btn-ml" (click)="changeState('save')">
+        保存
+      </button>
+      <button class="btn btn-secondary" (click)="changeState('save')">
+        关闭
+      </button>
+    </div>
+  </nav>
+</div>
+<div
+  class="row no-gutters farris-split-section flex-fill f-overflow-y-auto f-overflow-lg-y-hidden"
+>
+  <div class="col-12 col-lg-4 d-flex flex-column farris-lsection">
+    <div class="farris-grid-toolbar">
+      <h4 class="farris-grid-title">标题</h4>
+      <!--操作按钮-->
+    </div>
+    <kendo-grid [data]="data" [class]="'flex-fill '">
+      <kendo-grid-column field="DDBH" title="订单编号" width="140">
+      </kendo-grid-column>
+      <kendo-grid-column field="KHMC" title="客户名称"> </kendo-grid-column>
+      <kendo-grid-column field="KHBM" title="客户别名"> </kendo-grid-column>
+    </kendo-grid>
+  </div>
+
+  <div class="col-12 col-lg-8 farris-rsection farris-overflow-y-auto">
+    <h4 class="farris-cardpart-title">主表信息</h4>
+    <form class="farris-form d-flex flex-wrap f-rregion-mtable-form-next-tab">
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span><span class="farris-label-text">订单编号</span>
+              
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                type="text"
+                class="form-control"
+                value="Ximena"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">类型</span>
+              <small class="farris-label-info text-muted">&nbsp;</small>
+            </label>
+            <div class="farris-input-wrap">
+              <select class="form-control" [disabled]="readonlyState()">
+                <option selected>股份公司</option>
+                <option>国有单位</option>
+                <option>个人</option>
+              </select>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">客户名称</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="密码"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class=" col-form-label">
+              <span class="farris-label-text">客户别名</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                class="k-textbox form-control"
+                type="text"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">业务类型</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dropdownlist
+                [class]="'form-control'"
+                [data]="listItemsDropDown"
+                [value]="'服务合同'"
+                [readonly]="readonlyState()"
+              >
+              </kendo-dropdownlist>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <kendo-tabstrip [class]="'f-cmp-mb'">
+      <kendo-tabstrip-tab [title]="'物料信息'" [selected]="true">
+        <ng-template kendoTabContent>
+          <div class="btn-toolbar my-1 mx-2">
+            <button class="k-button k-flat mr-2">新增</button>
+            <button class="k-button k-flat mr-2">删除</button>
+            <!-- <button class="k-button k-flat mr-2">复制</button>
+                <button class="k-button k-flat mr-2">配置</button>
+                <button class="k-button k-flat mr-2">重新配置</button> -->
+          </div>
+          <kendo-grid [class]="'farris-subgrid'">
+            <kendo-grid-column title="物料编号" width="180"></kendo-grid-column>
+            <kendo-grid-column title="物料名称" width="180"></kendo-grid-column>
+            <kendo-grid-column title="物料描述" width="180"></kendo-grid-column>
+            <kendo-grid-column title="物料特征" width="180"></kendo-grid-column>
+            <kendo-grid-column title="物料别名" width="180"></kendo-grid-column>
+            <kendo-grid-column title="客户物料编号" width="180"></kendo-grid-column>
+            <kendo-grid-column title="主数量" width="180"></kendo-grid-column>
+            <!-- <kendo-grid-column title="主单位" width="180"></kendo-grid-column>
+                <kendo-grid-column title="折前主单价" width="180"></kendo-grid-column>
+                <kendo-grid-column title="主单价" width="180"></kendo-grid-column>
+                <kendo-grid-column title="辅数量" width="180"></kendo-grid-column>
+                <kendo-grid-column title="辅单位" width="180"></kendo-grid-column>
+                <kendo-grid-column title="折前辅单价" width="180"></kendo-grid-column>
+                <kendo-grid-column title="辅单价" width="180"></kendo-grid-column> -->
+          </kendo-grid>
+        </ng-template>
+      </kendo-tabstrip-tab>
+      <kendo-tabstrip-tab [title]="'交货信息'">
+        <ng-template kendoTabContent class="p-0">
+          <div class="btn-toolbar my-1 mx-2">
+            <button class="k-button k-flat mr-2">新增</button>
+            <button class="k-button k-flat mr-2">删除</button>
+            <!-- <button class="k-button k-flat mr-2">复制</button>
+                <button class="k-button k-flat mr-2">配置</button>
+                <button class="k-button k-flat mr-2">重新配置</button> -->
+          </div>
+          <kendo-grid [class]="'farris-subgrid'">
+            <kendo-grid-column title="送达方" width="180"></kendo-grid-column>
+            <kendo-grid-column title="送货地址" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收货人" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收货电话" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收获地区" width="180"></kendo-grid-column>
+            <kendo-grid-column title="工厂" width="180"></kendo-grid-column>
+            <kendo-grid-column title="发货库存组织" width="180"></kendo-grid-column>
+            <kendo-grid-column title="发货仓库" width="180"></kendo-grid-column>
+            <kendo-grid-column title="发货条件" width="180"></kendo-grid-column>
+            <kendo-grid-column title="物流组织" width="180"></kendo-grid-column>
+            <kendo-grid-column title="计划交货日期" width="180"></kendo-grid-column>
+            <kendo-grid-column title="客户要求交货日期" width="180"></kendo-grid-column>
+            <kendo-grid-column title="货位" width="180"></kendo-grid-column>
+            <kendo-grid-column title="批号" width="180"></kendo-grid-column>
+            <kendo-grid-column title="允许不足交货" width="180"></kendo-grid-column>
+            <kendo-grid-column title="不足交货容差(%)" width="180"></kendo-grid-column>
+            <kendo-grid-column title="允许超量交货" width="180"></kendo-grid-column>
+            <kendo-grid-column title="超量交货容差(%)" width="180"></kendo-grid-column>
+            <kendo-grid-column title="交货相关" width="180"></kendo-grid-column>
+            <kendo-grid-column title="补货相关" width="180"></kendo-grid-column>
+          </kendo-grid>
+        </ng-template>
+      </kendo-tabstrip-tab>
+
+      <kendo-tabstrip-tab [title]="'结算信息'">
+        <ng-template kendoTabContent>
+          <div class="btn-toolbar my-1 mx-2">
+            <button class="k-button k-flat mr-2">新增</button>
+            <button class="k-button k-flat mr-2">删除</button>
+            <!-- <button class="k-button k-flat mr-2">复制</button>
+                <button class="k-button k-flat mr-2">配置</button>
+                <button class="k-button k-flat mr-2">重新配置</button> -->
+          </div>
+          <kendo-grid [class]="'farris-subgrid'">
+            <kendo-grid-column title="开票财务组织" width="180"></kendo-grid-column>
+            <kendo-grid-column title="开票路径" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收票方" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收票地址" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收票联系人" width="180"></kendo-grid-column>
+            <kendo-grid-column title="收票电话" width="180"></kendo-grid-column>
+            <kendo-grid-column title="开票依据" width="180"></kendo-grid-column>
+            <kendo-grid-column title="开票数量控制" width="180"></kendo-grid-column>
+            <kendo-grid-column title="允许不足开票" width="180"></kendo-grid-column>
+            <kendo-grid-column title="不足开票容差(%)" width="180"></kendo-grid-column>
+            <kendo-grid-column title="允许超量开票" width="180"></kendo-grid-column>
+            <kendo-grid-column title="超量开票容差(%)" width="180"></kendo-grid-column>
+            <kendo-grid-column title="税率" width="180"></kendo-grid-column>
+            <kendo-grid-column title="计税方式" width="180"></kendo-grid-column>
+            <kendo-grid-column title="寄售结清" width="180"></kendo-grid-column>
+            <kendo-grid-column title="应收财务组织" width="180"></kendo-grid-column>
+            <kendo-grid-column title="付款方" width="180"></kendo-grid-column>
+          </kendo-grid>
+        </ng-template>
+      </kendo-tabstrip-tab>
+      <kendo-tabstrip-tab [title]="'执行情况'">
+        <ng-template kendoTabContent>
+          <div class="btn-toolbar my-1 mx-2">
+            <button class="k-button k-flat mr-2">新增</button>
+            <button class="k-button k-flat mr-2">删除</button>
+            <!-- <button class="k-button k-flat mr-2">复制</button>
+                <button class="k-button k-flat mr-2">配置</button>
+                <button class="k-button k-flat mr-2">重新配置</button> -->
+          </div>
+          <kendo-grid [class]="'farris-subgrid'">
+            <kendo-grid-column title="已交货主数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="已交货辅数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="已出库主数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="已出库辅数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="客户实收主数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="客户实收辅数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="已开票主数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="已开票辅数量" width="180"></kendo-grid-column>
+            <kendo-grid-column title="原币已开票金额" width="180"></kendo-grid-column>
+            <kendo-grid-column title="本币已开票金额" width="180"></kendo-grid-column>
+            <kendo-grid-column title="原币已收款金额" width="180"></kendo-grid-column>
+            <kendo-grid-column title="本币已收款金额" width="180"></kendo-grid-column>
+            <kendo-grid-column title="已贷记主数量" width="180"></kendo-grid-column>
+          </kendo-grid>
+        </ng-template>
+      </kendo-tabstrip-tab>
+    </kendo-tabstrip>
+  </div>
+</div>

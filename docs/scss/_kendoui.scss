@@ -1,0 +1,161 @@
+.buttongroup-section {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px 10px;
+}
+.section-buttons {
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.section-calendar {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.test-area {
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 1400px) {
+  .test-area {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.test-calendar {
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.test-area .k-dialog {
+  position: relative;
+  width: 300px;
+  float: left;
+  margin: 1em;
+}
+
+.test-area .k-dialog:nth-child(2n + 1) {
+  clear: left;
+}
+
+.test-area .section > .k-widget {
+  margin: 0.5em;
+}
+
+.test-area .k-multiselect {
+  width: 12.4em;
+  display: inline-block;
+}
+
+.test-area .k-widget .k-clear-value,
+.test-area .k-i-loading {
+  display: block;
+}
+
+.test-area .k-animation-container {
+  position: relative;
+}
+
+.test-area .k-animation-container,
+.test-area .k-popup {
+  position: relative;
+}
+
+.test-area-grid-group {
+  display: grid;
+  grid-gap: 20px 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.test-area-inputs .k-widget,
+.test-area-inputs .k-textbox {
+  margin: 0.5em;
+  vertical-align: middle;
+}
+
+.test-area-menu {
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1024px;
+}
+
+.test-area-menu .k-animation-container {
+  position: relative;
+  display: inline-block;
+}
+
+.test-area-notification .k-animation-container {
+  float: left;
+  clear: both;
+}
+
+.test-area-notification .k-rtl .k-animation-container {
+  float: right;
+}
+
+.test-area-panelbar {
+  max-width: 600px;
+  display: grid;
+  grid-gap: 25px 25px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.test-area-slider {
+  background: #eeeeee;
+  max-width: 1000px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: grid;
+  text-align: center;
+  grid-gap: 25px;
+  grid-template-columns: 100px 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.test-area-switch {
+  max-width: 600px;
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background: #fff;
+  border: none;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+}
+.test-area-tabstrip {
+  width: 920px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  background: #fafafa;
+}
+.test-area-tooltip {
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: 1fr 1fr;
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.test-area-tooltip > section {
+  padding: 20px;
+  height: 100px;
+}
+.test-area-tooltip .dark {
+  background-color: #333;
+}
+.test-area-tooltip .light {
+  background-color: #eee;
+}
+
+.test-area-tooltip .k-animation-container {
+  position: relative; /* demo positioning*/
+  overflow: visible; /* HACK: this is usually added through js in jQuery component
+                          see https://github.com/telerik/kendo-themes/pull/59 */
+}

@@ -1,0 +1,228 @@
+/*20190417 禁用和只读下输入控件图标隐藏*/
+.k-state-disabled,
+.f-state-readonly {
+  &.k-combobox,
+  &.k-combobox > :hover,
+  &.k-combobox .k-state-hover,
+  &.k-numeric-wrap,
+  &.k-dropdown-wrap {
+    .k-select {
+      visibility: hidden;
+    }
+  }
+
+  &.k-multiselect {
+    .k-multiselect-wrap {
+      .k-button {
+        .k-select {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .k-dateinput-wrap,
+  .k-numeric-wrap,
+  .k-picker-wrap,
+  .k-dropdown-wrap {
+    .k-select {
+      visibility: hidden;
+    }
+  }
+}
+// 20190510 对调Grid奇偶行颜色
+// .k-grid-table {
+//   background: $farris-grid-alt-bg;
+//   color: $farris-grid-alt-text;
+//   .k-alt {
+//     background: $farris-grid-bg;
+//     color: $farris-grid-text;
+//   }
+// }
+// 20190510 输入控件禁用opacity方式去掉
+.k-autocomplete,
+.k-multiselect-wrap,
+.k-multiselect,
+.k-dropdown .k-dropdown-wrap,
+.k-combobox .k-dropdown-wrap,
+.k-numerictextbox .k-numeric-wrap {
+  &.k-state-disabled {
+    opacity: 1;
+    border-color: $farris-input-disabled-border-color;
+    color: $farris-input-disabled-color;
+    background: $farris-input-disabled-bg;
+    [disabled] {
+      filter: none;
+      opacity: 1;
+    }
+    .k-state-disabled {
+      filter: none;
+      opacity: 1;
+    }
+  }
+  &.k-state-focused {
+    border-color: $farris-input-focus-border-color;
+  }
+  &:not(.k-state-disabled):not(.k-state-focused):hover{
+    border-color: $farris-input-hovered-border-color;
+  }
+}
+
+.k-dateinput .k-dateinput-wrap,.k-datepicker .k-picker-wrap, .k-timepicker .k-picker-wrap, .k-datetimepicker .k-picker-wrap{
+  &:not(.k-state-disabled):not(.k-state-focused):hover{
+    border-color: $farris-input-hovered-border-color;
+  }
+}
+
+.k-state-disabled {
+  &.k-multiselect {
+    opacity: 1;
+    .k-multiselect-wrap {
+      border-color: $farris-input-disabled-border-color;
+      .k-button {
+        color: $farris-btn-disabled-color;
+        border-color: $farris-btn-disabled-border-color;
+        background: $farris-btn-disabled-bg;
+      }
+    }
+  }
+  &.k-dateinput {
+    opacity: 1;
+    .k-dateinput-wrap {
+      border-color: $farris-input-disabled-border-color;
+      color: $farris-input-disabled-color;
+      background: $farris-input-disabled-bg;
+    }
+  }
+  &.k-datepicker,
+  &.k-timepicker,
+  &.k-datetimepicker {
+    opacity: 1;
+    // 外面的边线
+    .k-picker-wrap {
+      border-color: $farris-input-disabled-border-color;
+      color: $farris-input-disabled-color;
+      background: $farris-input-disabled-bg;
+      .k-dateinput-wrap {
+        color: $farris-input-disabled-color;
+      }
+    }
+  }
+}
+
+.f-state-readonly {
+  &.k-autocomplete,
+  &.k-dropdown .k-dropdown-wrap,
+  &.k-combobox .k-dropdown-wrap,
+  &.k-datepicker .k-picker-wrap,
+  &.k-timepicker .k-picker-wrap,
+  &.k-datetimepicker .k-picker-wrap,
+  &.k-dateinput .k-dateinput-wrap,
+  &.k-numerictextbox .k-numeric-wrap {
+    border-color: $farris-input-readonly-border-color;
+    color: $farris-input-readonly-color;
+    background: $farris-input-readonly-bg;
+    &:hover{
+      border-color: $farris-input-readonly-border-color!important; //覆盖不了上面的not 样式
+    }
+  }
+  &.k-datepicker .k-picker-wrap .k-dateinput-wrap,
+  &.k-timepicker .k-picker-wrap .k-dateinput-wrap {
+    color: $farris-input-readonly-color;
+    background: $farris-input-readonly-bg;
+  }
+  // 多选下拉
+  .k-multiselect-wrap {
+    border-color: $farris-input-readonly-border-color;
+    .k-button {
+      color: $farris-btn-disabled-color;
+      border-color: $farris-btn-disabled-border-color;
+      background: $farris-btn-disabled-bg;
+    }
+    &:hover{
+      border-color: $farris-input-readonly-border-color!important;
+    }
+  }
+}
+
+
+//2019年9月12日 数字控件右侧三角部分样式修改
+.k-numerictextbox{
+  .k-numeric-wrap{
+    &:hover,&.k-state-focused{
+      .k-select{
+        opacity: 1;
+      }
+    }
+  }
+  .k-select{
+    opacity: 0;
+    border-left: 1px solid $f-neutral-02;
+    width: 1.25rem;
+    .k-link{
+      border-bottom: 1px solid $f-neutral-02;
+      &:last-child{
+        border-bottom: 0;
+      }
+      &:hover{
+        @include f_apperance(input-icon-hover);
+        border-color: $f-neutral-02;
+      }
+      .k-icon{
+        font-size: 14px;
+      }
+    }
+    &:hover{
+      color: $farris-input-icon-color;
+      border-color: $f-neutral-02;
+    }
+    //2019年9月16 修改数字控件 三角形样式
+    .k-i-arrow-n::before{
+      content: "\e013";
+    }
+    .k-i-arrow-s::before{
+      content: "\e015";
+    }
+  }
+}
+//20190920 kendo下拉控件 多选样式覆盖
+.k-multiselect{
+  .k-multiselect-wrap{
+    padding-left:5px;
+    padding-top: $f-input-btn-padding-y;
+    padding-bottom: $f-input-btn-padding-y;
+    &::before{
+      height: calc( 1.4286em)
+    }
+    li.k-button{
+      margin: 0;
+      background-color: $f-neutral-00;
+      line-height: 1.25rem;
+      min-height: 1.25rem;
+      padding: 0 5px;
+      border:0;
+      &.k-button + .k-button,&.k-button:last-child{
+        margin: 0;
+      }
+      &.k-button .k-select{
+        width: 0.875rem;
+        height: 0.875rem;
+        border-radius: 100%;
+        background-color: $f-neutral-02;
+        margin-left: 0.5rem;
+        margin-top: 3px;
+        .k-icon{
+          font-size: 0.875rem;
+          color: $f-text-00;
+        }
+      }
+    }
+    .k-searchbar{
+      .k-input{
+        height: 1.25rem;
+        padding-top:0;
+        padding-bottom: 0; 
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// 页面模板——标签区域——内间距
+$f-cmp-tabs-inner-gutter: $farris-split-setcion-inner-gutter-y $farris-split-setcion-inner-gutter-x;
+// 页面模板——标签区域——Header区域——文本
+$farris-ptlayout-tabstrip-item-text: $f-text-04!default;
+// 页面模板——标签区域——Header区域——边线
+$farris-ptlayout-tabstrip-item-border-width: 0 0 2px 0 !default;
+// 页面模板——标签区域——Header区域——鼠标滑过文本
+$farris-ptlayout-tabstrip-item-hover-text: $f-theme-04 !default;
+// 页面模板——标签区域——Header区域——鼠标滑过边线颜色
+$farris-ptlayout-tabstrip-item-hover-border-color: transparent !default;
+// 页面模板——标签区域——Header区域——选中文本
+$farris-ptlayout-tabstrip-item-active-text: $f-theme-04 !default;
+// 页面模板——标签区域——Header区域——选中边线颜色
+$farris-ptlayout-tabstrip-item-active-border-color: $f-theme-04!default;
+// 页面模板——标签区域——Header区域——标签页——内间距
+$farris-ptlayout-tabstrip-item-padding-y:0.5rem!default;
+// 页面模板——标签区域——Header区域——标签页——内间距
+$farris-ptlayout-tabstrip-item-padding-x: $farris-tabstrip-item-padding-x!default;
+// 页面模板——标签区域——Header区域——内间距
+$f-pt-tabs-header-gutters: 0 0.625rem 0.5rem 0.625rem !default;
+// 页面模板——标签区域——Header区域——字体
+$f-pt-tabs-header-font-size: 1rem !default;
+// 页面模板——标签区域——Header区域——行高
+$f-pt-tabs-header-line-height: 1.375rem !default;
+// 页面模板——标签区域——内容区域——内间距
+$f-pt-tabs-content-gutters: 0.25rem 0 0 0 !default;
+
+// 页面模板-标签区域-header-不可点击文本颜色
+$farris-ptlayout-tabstrip-item-disable-text: $f-text-06!default;
+
+$f-tabs-dropdown-toggle-split-border:$f-neutral-02 !default;
+$f-tabs-dropdown-toggle-split-hover-border:$f-theme-05 !default;
+$f-tabs-dropdown-toggele-hover-border-color:$f-theme-05 !default;
+$f-tabs-dropdown-toggele-active-border-color:$f-theme-03 !default;
+
+$f-tabs-title-text-custom-bg:$f-theme-04 !default;
+$f-tabs-nav-item-hover-color:$f-theme-05 !default;
+$f-tabs-nav-item-state-active-color:$f-theme-04 !default;
+
+$f-tabs-nav-item-active-color:$f-theme-03 !default;
+$f-tabs-toolbar-btn-color:$f-theme-04 !default;
+$f-tabs-toolbar-btn-hover-color:$f-theme-05 !default;
+$f-tabs-toolbar-btn-active-color:$f-theme-03 !default;
+
+$f-tabs-header-border-color:$f-neutral-05 !default;
+//面板tabs y方向padding值
+$f-pt-tabs-panel-nav-link-inner-gutter-y:$f-tabs-panel-nav-link-inner-gutter-y;
+//tabs nav-link区域padding
+$f-pt-tabs-nav-link-inner-gutter: $f-tabs-nav-link-inner-gutter-y $f-tabs-nav-link-inner-gutter-x;
+
+//面板tabs 默认背景色
+$f-pt-tabs-panel-header-bg:$f-neutral-10 !default;
+$f-pt-tabs-panel-header-active-bg:$f-neutral-00 !default;
+
+//tabs选项超出部分 三角颜色
+$f-pt-tabs-nav-btn-color:$f-text-04 !default;
+$f-pt-tabs-nav-btn-bg:$f-neutral-00 !default;

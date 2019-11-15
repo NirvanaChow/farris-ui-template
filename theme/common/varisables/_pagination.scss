@@ -1,0 +1,39 @@
+// Pagination
+$farris-pagination-wrap-padding-x: 0.625rem !default;
+$farris-pagination-wrap-padding-y: 0.625rem !default;
+$farris-pagination-wrap-margin-y: 0.9375rem !default;
+//$farris-pagination-margin-x: 0.3125rem !default;
+$farris-pagination-margin-x: 0.25rem !default;
+$farris-pagination-margin-y: 0rem !default;
+$farris-pagination-border-radius: $farris-border-radius !default;
+$farris-pagination-font-size: $farris-text-size-05 !default;
+$farris-pagination-padding-y: 0.25rem !default;
+$farris-pagination-padding-x: 0.25rem !default;
+$farris-pagination-padding-y-sm: 0.25rem !default;
+$farris-pagination-padding-x-sm: 0.25rem !default;
+$farris-pagination-padding-y-lg: 0.75rem !default;
+
+$farris-pagination-padding-x-lg: 0.75rem !default;
+$farris-pagination-line-height: 1rem !default;
+$farris-pagination-border-width: $farris-border-width !default;
+// 分页默认
+$farris-pagination-color: $f-text-02!default;
+$farris-pagination-bg:$f-neutral-00 !default;
+$farris-pagination-border-color: $f-neutral-02!default;
+// 聚焦状态
+$farris-pagination-focus-color: $f-theme-03 !default;
+$farris-pagination-focus-border-color: $f-theme-03!default;
+// $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
+// $pagination-focus-outline:          0 !default;
+// 鼠标滑过
+$farris-pagination-hover-color: $f-theme-05 !default;
+$farris-pagination-hover-bg: $f-neutral-00 !default;
+$farris-pagination-hover-border-color:$f-theme-05 !default;
+// 当前选中的分页
+$farris-pagination-active-color: $f-text-00 !default;
+$farris-pagination-active-bg:$farris-primary !default;
+$farris-pagination-active-border-color: $farris-primary !default;
+// 禁用
+$farris-pagination-disabled-color: $f-text-08!default;
+$farris-pagination-disabled-bg:$f-neutral-08  !default;
+$farris-pagination-disabled-border-color:$f-neutral-03!default;

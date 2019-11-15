@@ -1,0 +1,219 @@
+.f-template-listview-row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 10px 2px 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  .f-template-listview-row .list-view-item-title {
+    display: flex;
+    align-items: center;
+    padding-right: 8px; }
+    .f-template-listview-row .list-view-item-title .item-title-img {
+      width: 60px;
+      height: 60px;
+      margin-right: 16px;
+      border-radius: 6px;
+      background: #388FFF;
+      overflow: hidden; }
+      .f-template-listview-row .list-view-item-title .item-title-img .img {
+        display: block;
+        width: 60px;
+        height: 60px; }
+    .f-template-listview-row .list-view-item-title .item-title {
+      flex: 1; }
+      .f-template-listview-row .list-view-item-title .item-title .item-title-heading {
+        margin: 0;
+        line-height: 28px;
+        max-height: 28px;
+        font-size: 16px;
+        overflow: hidden; }
+      .f-template-listview-row .list-view-item-title .item-title .item-title-text {
+        margin-bottom: 0;
+        line-height: 24px;
+        font-size: 14px;
+        color: #999; }
+  .f-template-listview-row .list-view-item-content {
+    flex: 1;
+    padding: 0 8px;
+    text-align: right; }
+    .f-template-listview-row .list-view-item-content .content-message {
+      margin-bottom: 10px;
+      font-size: 0; }
+      .f-template-listview-row .list-view-item-content .content-message .ower, .f-template-listview-row .list-view-item-content .content-message .date {
+        display: inline-block;
+        font-size: 14px;
+        color: #999; }
+        .f-template-listview-row .list-view-item-content .content-message .ower p, .f-template-listview-row .list-view-item-content .content-message .date p {
+          margin-bottom: 0; }
+      .f-template-listview-row .list-view-item-content .content-message .ower {
+        text-align: left; }
+      .f-template-listview-row .list-view-item-content .content-message .date {
+        margin-left: 80px;
+        text-align: right; }
+    .f-template-listview-row .list-view-item-content .content-progressrate {
+      font-size: 0;
+      float: right; }
+      .f-template-listview-row .list-view-item-content .content-progressrate .progress-con, .f-template-listview-row .list-view-item-content .content-progressrate .progress-tip {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 22px; }
+      .f-template-listview-row .list-view-item-content .content-progressrate .progress-main {
+        min-width: 245px;
+        text-align: left; }
+      .f-template-listview-row .list-view-item-content .content-progressrate .progress-con {
+        position: relative;
+        width: 200px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: #ccc; }
+        .f-template-listview-row .list-view-item-content .content-progressrate .progress-con .full {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 5px;
+          border-radius: 5px;
+          background-color: #388FFF; }
+          .f-template-listview-row .list-view-item-content .content-progressrate .progress-con .full.error {
+            background-color: #f00; }
+      .f-template-listview-row .list-view-item-content .content-progressrate .progress-tip {
+        margin-left: 8px;
+        color: #999;
+        height: 22px; }
+        .f-template-listview-row .list-view-item-content .content-progressrate .progress-tip.error {
+          cursor: pointer; }
+          .f-template-listview-row .list-view-item-content .content-progressrate .progress-tip.error .k-icon {
+            font-size: 10px; }
+            .f-template-listview-row .list-view-item-content .content-progressrate .progress-tip.error .k-icon::before {
+              width: 12px;
+              height: 12px;
+              line-height: 12px;
+              text-align: center;
+              color: #fff;
+              border-radius: 50%;
+              background: #f00; }
+  .f-template-listview-row .list-view-item-operate {
+    padding-left: 20px;
+    font-size: 0; }
+    .f-template-listview-row .list-view-item-operate .operate-btn {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 14px;
+      color: #388FFF; }
+      .f-template-listview-row .list-view-item-operate .operate-btn:first-child {
+        margin-left: 0; }
+
+.f-template-listview-title-text, .f-template-timeline-row .timeline-example-content-wrapper .timeline-example-title, .f-template-timeline-row .timeline-example-content-wrapper .timeline-example-content .content-data li {
+  color: #000;
+  opacity: 0.65;
+  font-size: 14px;
+  line-height: 20px; }
+
+.f-template-timeline-row {
+  width: 100%; }
+  .f-template-timeline-row .timeline-example-content-wrapper .timeline-example-title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.6); }
+    .f-template-timeline-row .timeline-example-content-wrapper .timeline-example-title .title-sum {
+      line-height: 22px;
+      font-size: 16px;
+      color: #F49730; }
+  .f-template-timeline-row .timeline-example-content-wrapper .timeline-example-content .content-data {
+    font-size: 0;
+    margin-top: 16px; }
+    .f-template-timeline-row .timeline-example-content-wrapper .timeline-example-content .content-data li {
+      display: inline-block;
+      padding-right: 30px;
+      margin-bottom: 18px; }
+
+.f-template-listnav-row .list-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px 10px 40px; }
+  .f-template-listnav-row .list-nav-link.link-disable {
+    background-color: #F9F9F9; }
+  .f-template-listnav-row .list-nav-link .nav-item-name {
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    opacity: 0.85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .f-template-listnav-row .list-nav-link .nav-item-counter {
+    display: inline-block;
+    padding: 0 5px;
+    height: 14px;
+    line-height: 14px;
+    background: rgba(89, 161, 255, 0.14);
+    border-radius: 8px;
+    font-size: 10px;
+    color: #388FFF; }
+  .f-template-listnav-row .list-nav-link:hover {
+    background: #E6F7FF; }
+  .f-template-listnav-row .list-nav-link.active {
+    background: #E6F7FF;
+    border-left: 3px solid #388FFF;
+    padding-left: 37px; }
+    .f-template-listnav-row .list-nav-link.active .nav-item-counter {
+      background: #388FFF;
+      color: #fff; }
+
+.f-template-wizard-title-text, .f-template-wizard-message-text, .f-template-wizard-page .page-friendly-reminder .reminder-message .reminder-title .reminder-name, .f-template-wizard-page .page-friendly-reminder .reminder-message .message, .f-template-wizard-page .page-friendly-reminder .reminder-close .no-prompt {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 20px; }
+
+.f-template-wizard-message-text, .f-template-wizard-page .page-friendly-reminder .reminder-message .reminder-title .reminder-name {
+  opacity: 0.65; }
+
+.f-template-wizard-page {
+  padding-right: 14px;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  .f-template-wizard-page .page-friendly-reminder {
+    display: flex;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 16px 0 26px;
+    background: #E6F7FF; }
+    .f-template-wizard-page .page-friendly-reminder .reminder-message {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+      .f-template-wizard-page .page-friendly-reminder .reminder-message .reminder-title {
+        padding-right: 15px; }
+        .f-template-wizard-page .page-friendly-reminder .reminder-message .reminder-title .f-icon {
+          margin-right: 10px; }
+      .f-template-wizard-page .page-friendly-reminder .reminder-message .message {
+        font-size: 12px; }
+    .f-template-wizard-page .page-friendly-reminder .reminder-close .no-prompt {
+      margin-right: 7px;
+      color: #295EA3;
+      opacity: 1; }
+    .f-template-wizard-page .page-friendly-reminder .reminder-close .close-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #979797;
+      cursor: pointer; }
+  .f-template-wizard-page .f-template-wizard-page-content {
+    padding: 11px 0 14px 14px; }
+    .f-template-wizard-page .f-template-wizard-page-content .f-template-wizard-page-operation {
+      margin-top: 21px; }
+      .f-template-wizard-page .f-template-wizard-page-content .f-template-wizard-page-operation .btn {
+        margin-right: 6px; }
+  .f-template-wizard-page .f-template-wizard-page-footer {
+    height: 56px;
+    line-height: 56px;
+    border-top: 1px solid #E9E9E9;
+    text-align: right;
+    width: 100%; }
+    .f-template-wizard-page .f-template-wizard-page-footer .btn {
+      margin-left: 20px; }

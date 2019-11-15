@@ -1,0 +1,33 @@
+// 变量定义
+
+$farris-checkbox-size: 1rem;
+$farris-checkbox-radio-top: (
+  ($font-size-base * $line-height-base - $farris-checkbox-size) / 2
+);
+
+// 覆盖变量
+.k-h1 {
+  line-height: $farris-h1-line-height;
+}
+.k-h2 {
+  line-height: $farris-h2-line-height;
+}
+.k-h3 {
+  line-height: $farris-h3-line-height;
+}
+.k-h4 {
+  line-height: $farris-h4-line-height;
+}
+.k-h5 {
+  line-height: $farris-h5-line-height;
+}
+.k-h6 {
+  line-height: $farris-h6-line-height;
+}
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}

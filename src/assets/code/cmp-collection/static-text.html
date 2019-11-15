@@ -1,0 +1,135 @@
+<h5>整体控制</h5>
+<form
+  class="f-utils-flex-row-wrap farris-form  f-state-form-view"
+  [ngClass]="horizontalCls"
+  [formGroup]="formGroup"
+>
+  <div class="col-12 col-md-4 col-lg-4">
+    <div class="farris-group-wrap">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-info text-danger">*</span>
+          <span class="farris-label-text">静态文本</span>
+        </label>
+        <div class="farris-input-wrap">
+          <farris-text formControlName="name" [type]="'string'"></farris-text>
+          <div class="farris-feedback valid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4">
+    <div class="farris-group-wrap">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-info text-danger">*</span>
+          <span class="farris-label-text">静态文本</span>
+        </label>
+        <div class="farris-input-wrap">
+          <farris-text
+            formControlName="dates"
+            [type]="'date'"
+            [format]="'YYYY年M月D日'"
+          ></farris-text>
+          <div class="farris-feedback valid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4">
+    <div class="farris-group-wrap">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-info text-danger">*</span>
+          <span class="farris-label-text">账号</span>
+        </label>
+        <div class="farris-input-wrap">
+          <input
+            type="input"
+            class="form-control"
+            id="hpinput01"
+            value="Ximena"
+          />
+          <div class="farris-feedback valid-feedback">
+            设置符合规则
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4">
+    <div class="farris-group-wrap">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-text">静态文本</span>
+
+          <span class="farris-label-info text-danger">*</span>
+        </label>
+        <div class="farris-input-wrap">
+          <farris-text
+            formControlName="description"
+            [type]="'string'"
+            [isTextArea]="true"
+          ></farris-text>
+          <div class="farris-feedback valid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4">
+    <div class="farris-group-wrap">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-info text-danger">*</span>
+          <span class="farris-label-text">静态文本</span>
+        </label>
+        <div class="farris-input-wrap">
+          <textarea
+            class="form-control"
+            formControlName="description"
+          ></textarea>
+          <div class="farris-feedback valid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<h5>单独控制</h5>
+<form
+  class="f-utils-flex-row-wrap farris-form  f-state-view"
+  [ngClass]="horizontalCls"
+  [formGroup]="formGroup"
+>
+  <div class="col-12 col-md-4 col-lg-4 f-state-view">
+    <div class="farris-group-wrap">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-info text-danger">*</span>
+          <span class="farris-label-text">静态文本</span>
+        </label>
+        <div class="farris-input-wrap">
+          <farris-text formControlName="name" [type]="'string'"></farris-text>
+          <div class="farris-feedback valid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 col-lg-4">
+    <div class="farris-group-wrap f-state-view">
+      <div class="form-group farris-form-group">
+        <label for="hpinput01" class="col-form-label">
+          <span class="farris-label-info text-danger">*</span>
+          <span class="farris-label-text">静态文本</span>
+        </label>
+        <div class="farris-input-wrap">
+          <farris-text
+            formControlName="dates"
+            [type]="'date'"
+            [format]="'YYYY年M月D日'"
+          ></farris-text>
+          <div class="farris-feedback valid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

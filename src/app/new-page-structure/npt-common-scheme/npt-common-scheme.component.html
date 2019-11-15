@@ -1,0 +1,92 @@
+<!------未引入真正的方案组件-------------------假定这个是方案组件---------------------------->
+<div class="f-scheme-bar-ctr">
+    <div class="f-scheme-list-ctr">
+      <div class="btn-group mr-3" fDropdown>
+        <button
+          class="btn btn-secondary dropdown-toggle  dropdown-left"
+          fDropdownToggle
+          type="button"
+        >
+          默认筛选方案
+          <span class="f-icon k-i-arrow-chevron-down"></span>
+        </button>
+        <div class="dropdown-menu" fDropdownMenu>
+          <li class="dropdown-item"><span>当天</span></li>
+          <li class="dropdown-item"><span>本月</span></li>
+          <li class="dropdown-item"><span>上个月</span></li>
+          <div class="dropdown-divider"></div>
+          <li class="dropdown-item"><span>新建方案</span></li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="f-form-layout farris-form farris-form-controls-inline">
+
+      <div class="col-12 col-md-6 col-xl-3 col-el-2">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger"></span
+              ><span class="farris-label-text">订单编号</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input type="text" class="form-control" value="" />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 col-el-2">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger"></span
+              ><span class="farris-label-text">单据日期</span>
+            </label>
+            <div class="farris-input-wrap">
+              <farris-datepicker class="form-control"></farris-datepicker>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 col-el-2">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger"></span
+              ><span class="farris-label-text">客户名称</span>
+            </label>
+            <div class="farris-input-wrap">
+              <farris-lookup-grid
+                name="lxdh"
+                [(ngModel)]="lookupEmpee"
+                [uri]="'assets/data/empoyee.json'"
+                [singleSelect]="true"
+                [idField]="'Code'"
+                [pageSize]="20"
+                [pageIndex]="1"
+                [pagination]="true"
+                [textField]="'Name'"
+                [valueField]="'Code'"
+              ></farris-lookup-grid>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col text-right">
+        <div class="btn-group" fDropdown>
+          <button type="button" class="btn btn-primary">筛选</button>
+          <button
+            type="button"
+            class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+            fDropdownToggle
+          ></button>
+          <div class="dropdown-menu" fDropdownMenu>
+            <li class="dropdown-item"><span>保存方案</span></li>
+            <li class="dropdown-item"><span>另存为方案</span></li>
+          </div>
+        </div>
+      </div>
+  </form>

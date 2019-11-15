@@ -1,0 +1,42 @@
+{
+    "columns": [
+        {"title": "编号", "field": "Code", "width": 60},
+        {"title": "姓名", "field": "Name", "width": 80},
+        {"title": "年龄", "field": "Age", "width": 90},
+        {"title": "出生日期", "field": "birthday", "width": 140 },
+        {"title": "身份证号", "field": "idcode", "width": 120},
+        {"title": "邮编", "field": "postcode", "width": 120},
+        {"title": "地址", "field": "address", "width": 200}
+    ],
+    "items": [
+        {"Code": 1, "Name": "李仙", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 2, "Name": "莫愁", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 3, "Name": "令狐", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 4, "Name": "欧阳灵", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 5, "Name": "田玉", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 6, "Name": "业务员6", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 7, "Name": "业务员7", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 8, "Name": "李三", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 9, "Name": "张四", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 10, "Name": "王五", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 11, "Name": "赵大", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 12, "Name": "周二", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 13, "Name": "业务员8", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 14, "Name": "业务员9", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 15, "Name": "业务员10", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 16, "Name": "业务员11", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 17, "Name": "业务员12", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 18, "Name": "业务员13", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 19, "Name": "业务员14", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 20, "Name": "业务员15", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 21, "Name": "业务员a", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 22, "Name": "业务员b", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 23, "Name": "业务员c", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 24, "Name": "业务员d", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 25, "Name": "业务员e", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 26, "Name": "业务员f", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 27, "Name": "业务员g", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"},
+        {"Code": 28, "Name": "业务员h", "Age": 20, "birthday": "1998-5-6", "idcode": "没有权限查看", "postcode": "05310000", "address": "地球"}
+    ],
+    "total": 28
+}

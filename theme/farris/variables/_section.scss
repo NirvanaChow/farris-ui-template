@@ -1,0 +1,20 @@
+// 前缀
+$f-section-prefix: 'f-section';
+// 内间距
+$f-section-inner-gutter:0.875rem 0.875rem;
+// 外间距
+$f-section-outer-gutter:0 0 0.625rem;
+// 间距高度
+$f-section-gutter-height:0.625rem;
+// Header——外间距
+$f-section-header-outer-gutter:0 0 0.75rem;
+// Header——Title——内间距
+$f-section-header-title-inner-gutter:0 0 0 1rem;
+//  Header——Title——装饰边线——宽度
+$f-section-header-title-adorn-width:0.25rem;
+//  Header——Title——装饰边线——高度
+$f-section-header-title-adorn-height:1.125rem;
+// Header——Title——装饰边线——背景色
+$f-section-header-title-adorn-bg:$f-theme-05;
+// Header——Title——装饰边线——圆角
+$f-section-header-title-adorn-radius:1px;

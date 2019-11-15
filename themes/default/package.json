@@ -1,0 +1,22 @@
+{
+  "version": "0.0.39",
+  "license": "MIT",
+  "author": {
+    "name": "ximena"
+  },
+  "name": "@farris/farris-theme-default",
+  "description": "farris 主题 ",
+  "main": "farris-all.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "peerDependencies": {
+    "material-design-icons": "^3.0.1"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

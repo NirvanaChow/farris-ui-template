@@ -1,0 +1,2043 @@
+@font-face {
+  font-family: $farris-icon-extend-font-family;
+  font-style: normal;
+  font-weight: normal;
+  src: url("./farrisicon-extend.ttf") format('truetype');
+}
+
+.#{$farris-icon-extend} {
+  width: $farris-icon-size;
+  height:$farris-icon-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: $farris-icon-font-size;
+  font-family: $farris-icon-extend-font-family;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+
+  &::before {
+    vertical-align: baseline;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &-with-modifier {
+    position: relative;
+    margin: 0.25em;
+  }
+  &-modifier {
+    position: absolute;
+    font-size: 0.5em;
+    bottom: 0;
+    right: 0;
+    margin: 0 -0.5em -0.5em 0;
+  }
+  &-xs {
+    font-size: ($farris-icon-font-size * 0.5);
+  }
+  &-sm {
+    font-size: ($farris-icon-font-size * 0.75);
+  }
+  &-md {
+    font-size: ($farris-icon-font-size * 1.25);
+  }
+  &-lg {
+    font-size: ($farris-icon-font-size * 1.5);
+  }
+  &-xl {
+    font-size: ($farris-icon-font-size * 2);
+  }
+}
+
+.#{$farris-icon-extend-prefix}-none::before {
+  content: '';
+  display: none;
+}
+
+
+
+// sass-lint:disable single-line-per-selector
+.#{$farris-icon-extend-prefix}-arrow-45-up-right::before {
+  content: '\e000';
+}
+.#{$farris-icon-extend-prefix}-collapse-ne::before {
+  content: '\e000';
+}
+.#{$farris-icon-extend-prefix}-resize-ne::before {
+  content: '\e000';
+}
+.#{$farris-icon-extend-prefix}-arrow-45-down-right::before {
+  content: '\e001';
+}
+.#{$farris-icon-extend-prefix}-collapse-se::before {
+  content: '\e001';
+}
+.#{$farris-icon-extend-prefix}-resize-se::before {
+  content: '\e001';
+}
+.#{$farris-icon-extend-prefix}-arrow-45-down-left::before {
+  content: '\e002';
+}
+.#{$farris-icon-extend-prefix}-collapse-sw::before {
+  content: '\e002';
+}
+.#{$farris-icon-extend-prefix}-resize-sw::before {
+  content: '\e002';
+}
+.#{$farris-icon-extend-prefix}-arrow-45-up-left::before {
+  content: '\e003';
+}
+.#{$farris-icon-extend-prefix}-collapse-nw::before {
+  content: '\e003';
+}
+.#{$farris-icon-extend-prefix}-resize-new::before {
+  content: '\e003';
+}
+.#{$farris-icon-extend-prefix}-arrow-60-up::before {
+  content: '\e004';
+}
+.#{$farris-icon-extend-prefix}-kpi-trend-increase::before {
+  content: '\e004';
+}
+.#{$farris-icon-extend-prefix}-arrow-60-right::before {
+  content: '\e005';
+}
+.#{$farris-icon-extend-prefix}-arrow-60-down::before {
+  content: '\e006';
+}
+.#{$farris-icon-extend-prefix}-kpi-trend-decrease::before {
+  content: '\e006';
+}
+.#{$farris-icon-extend-prefix}-arrow-60-left::before {
+  content: '\e007';
+}
+.#{$farris-icon-extend-prefix}-arrow-end-up::before {
+  content: '\e008';
+}
+.#{$farris-icon-extend-prefix}-arrow-end-right::before {
+  content: '\e009';
+}
+.#{$farris-icon-extend-prefix}-arrow-end-down::before {
+  content: '\e00a';
+}
+.#{$farris-icon-extend-prefix}-arrow-end-left::before {
+  content: '\e00b';
+}
+.#{$farris-icon-extend-prefix}-arrow-double-60-up::before {
+  content: '\e00c';
+}
+.#{$farris-icon-extend-prefix}-arrow-seek-up::before {
+  content: '\e00c';
+}
+.#{$farris-icon-extend-prefix}-arrow-double-60-right::before {
+  content: '\e00d';
+}
+.#{$farris-icon-extend-prefix}-arrow-seek-right::before {
+  content: '\e00d';
+}
+.#{$farris-icon-extend-prefix}-forward-sm::before {
+  content: '\e00d';
+}
+.#{$farris-icon-extend-prefix}-arrow-double-60-down::before {
+  content: '\e00e';
+}
+.#{$farris-icon-extend-prefix}-arrow-seek-down::before {
+  content: '\e00e';
+}
+.#{$farris-icon-extend-prefix}-arrow-double-60-left::before {
+  content: '\e00f';
+}
+.#{$farris-icon-extend-prefix}-arrow-seek-left::before {
+  content: '\e00f';
+}
+.#{$farris-icon-extend-prefix}-rewind-sm::before {
+  content: '\e00f';
+}
+.#{$farris-icon-extend-prefix}-arrows-kpi::before {
+  content: '\e010';
+}
+.#{$farris-icon-extend-prefix}-kpi::before {
+  content: '\e010';
+}
+.#{$farris-icon-extend-prefix}-arrows-no-change::before {
+  content: '\e011';
+}
+.#{$farris-icon-extend-prefix}-arrow-overflow-down::before {
+  content: '\e012';
+}
+.#{$farris-icon-extend-prefix}-arrow-chevron-up::before {
+  content: '\e013';
+}
+.#{$farris-icon-extend-prefix}-arrow-chevron-right::before {
+  content: '\e014';
+}
+.#{$farris-icon-extend-prefix}-arrow-chevron-down::before {
+  content: '\e015';
+}
+.#{$farris-icon-extend-prefix}-arrow-chevron-left::before {
+  content: '\e016';
+}
+.#{$farris-icon-extend-prefix}-arrow-up::before {
+  content: '\e017';
+}
+.#{$farris-icon-extend-prefix}-arrow-right::before {
+  content: '\e018';
+}
+.#{$farris-icon-extend-prefix}-arrow-down::before {
+  content: '\e019';
+}
+.#{$farris-icon-extend-prefix}-arrow-left::before {
+  content: '\e01a';
+}
+.#{$farris-icon-extend-prefix}-arrow-drill::before {
+  content: '\e01b';
+}
+.#{$farris-icon-extend-prefix}-arrow-parent::before {
+  content: '\e01c';
+}
+.#{$farris-icon-extend-prefix}-arrow-root::before {
+  content: '\e01d';
+}
+.#{$farris-icon-extend-prefix}-arrows-resizing::before {
+  content: '\e01e';
+}
+.#{$farris-icon-extend-prefix}-arrows-dimensions::before {
+  content: '\e01f';
+}
+.#{$farris-icon-extend-prefix}-arrows-swap::before {
+  content: '\e020';
+}
+.#{$farris-icon-extend-prefix}-drag-and-drop::before {
+  content: '\e021';
+}
+.#{$farris-icon-extend-prefix}-categorize::before {
+  content: '\e022';
+}
+.#{$farris-icon-extend-prefix}-grid::before {
+  content: '\e023';
+}
+.#{$farris-icon-extend-prefix}-grid-layout::before {
+  content: '\e024';
+}
+.#{$farris-icon-extend-prefix}-group::before {
+  content: '\e025';
+}
+.#{$farris-icon-extend-prefix}-ungroup::before {
+  content: '\e026';
+}
+.#{$farris-icon-extend-prefix}-handler-drag::before {
+  content: '\e027';
+}
+.#{$farris-icon-extend-prefix}-layout::before {
+  content: '\e028';
+}
+.#{$farris-icon-extend-prefix}-layout-1-by-4::before {
+  content: '\e029';
+}
+.#{$farris-icon-extend-prefix}-layout-2-by-2::before {
+  content: '\e02a';
+}
+.#{$farris-icon-extend-prefix}-layout-side-by-side::before {
+  content: '\e02b';
+}
+.#{$farris-icon-extend-prefix}-layout-stacked::before {
+  content: '\e02c';
+}
+.#{$farris-icon-extend-prefix}-columns::before {
+  content: '\e02d';
+}
+.#{$farris-icon-extend-prefix}-rows::before {
+  content: '\e02e';
+}
+.#{$farris-icon-extend-prefix}-reorder::before {
+  content: '\e02f';
+}
+.#{$farris-icon-extend-prefix}-menu::before {
+  content: '\e030';
+}
+.#{$farris-icon-extend-prefix}-more-vertical::before {
+  content: '\e031';
+}
+.#{$farris-icon-extend-prefix}-more-horizontal::before {
+  content: '\e032';
+}
+.#{$farris-icon-extend-prefix}-undo::before {
+  content: '\e100';
+}
+.#{$farris-icon-extend-prefix}-redo::before {
+  content: '\e101';
+}
+.#{$farris-icon-extend-prefix}-reset::before {
+  content: '\e102';
+}
+.#{$farris-icon-extend-prefix}-reload::before {
+  content: '\e103';
+}
+.#{$farris-icon-extend-prefix}-refresh::before {
+  content: '\e103';
+}
+.#{$farris-icon-extend-prefix}-recurrence::before {
+  content: '\e103';
+}
+.#{$farris-icon-extend-prefix}-non-recurrence::before {
+  content: '\e104';
+}
+.#{$farris-icon-extend-prefix}-reset-sm::before {
+  content: '\e105';
+}
+.#{$farris-icon-extend-prefix}-reload-sm::before {
+  content: '\e106';
+}
+.#{$farris-icon-extend-prefix}-refresh-sm::before {
+  content: '\e106';
+}
+.#{$farris-icon-extend-prefix}-recurrence-sm::before {
+  content: '\e106';
+}
+.#{$farris-icon-extend-prefix}-clock::before {
+  content: '\e107';
+}
+.#{$farris-icon-extend-prefix}-calendar::before {
+  content: '\e108';
+}
+.#{$farris-icon-extend-prefix}-save::before {
+  content: '\e109';
+}
+.#{$farris-icon-extend-prefix}-floppy::before {
+  content: '\e109';
+}
+.#{$farris-icon-extend-prefix}-print::before {
+  content: '\e10a';
+}
+.#{$farris-icon-extend-prefix}-printer::before {
+  content: '\e10a';
+}
+.#{$farris-icon-extend-prefix}-edit::before {
+  content: '\e10b';
+}
+.#{$farris-icon-extend-prefix}-pencil::before {
+  content: '\e10b';
+}
+.#{$farris-icon-extend-prefix}-delete::before {
+  content: '\e10c';
+}
+.#{$farris-icon-extend-prefix}-trash::before {
+  content: '\e10c';
+}
+.#{$farris-icon-extend-prefix}-attachment::before {
+  content: '\e10d';
+}
+.#{$farris-icon-extend-prefix}-clip::before {
+  content: '\e10d';
+}
+.#{$farris-icon-extend-prefix}-attachment-45::before {
+  content: '\e10e';
+}
+.#{$farris-icon-extend-prefix}-clip-45::before {
+  content: '\e10e';
+}
+.#{$farris-icon-extend-prefix}-link-horizontal::before {
+  content: '\e10f';
+}
+.#{$farris-icon-extend-prefix}-hyperlink::before {
+  content: '\e10f';
+}
+.#{$farris-icon-extend-prefix}-unlink-horizontal::before {
+  content: '\e110';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-remove::before {
+  content: '\e110';
+}
+.#{$farris-icon-extend-prefix}-link-vertical::before {
+  content: '\e111';
+}
+.#{$farris-icon-extend-prefix}-unlink-vertical::before {
+  content: '\e112';
+}
+.#{$farris-icon-extend-prefix}-lock::before {
+  content: '\e113';
+}
+.#{$farris-icon-extend-prefix}-unlock::before {
+  content: '\e114';
+}
+.#{$farris-icon-extend-prefix}-cancel::before {
+  content: '\e115';
+}
+.#{$farris-icon-extend-prefix}-cancel-outline::before {
+  content: '\e116';
+}
+.#{$farris-icon-extend-prefix}-cancel-circle::before {
+  content: '\e117';
+}
+.#{$farris-icon-extend-prefix}-check::before {
+  content: '\e118';
+}
+.#{$farris-icon-extend-prefix}-checkmark::before {
+  content: '\e118';
+}
+.#{$farris-icon-extend-prefix}-check-outline::before {
+  content: '\e119';
+}
+.#{$farris-icon-extend-prefix}-checkmark-outline::before {
+  content: '\e119';
+}
+.#{$farris-icon-extend-prefix}-success::before {
+  content: '\e119';
+}
+.#{$farris-icon-extend-prefix}-check-circle::before {
+  content: '\e11a';
+}
+.#{$farris-icon-extend-prefix}-checkmark-circle::before {
+  content: '\e11a';
+}
+.#{$farris-icon-extend-prefix}-close::before {
+  content: '\e11b';
+}
+.#{$farris-icon-extend-prefix}-x::before {
+  content: '\e11b';
+}
+.#{$farris-icon-extend-prefix}-close-outline::before {
+  content: '\e11c';
+}
+.#{$farris-icon-extend-prefix}-x-outline::before {
+  content: '\e11c';
+}
+.#{$farris-icon-extend-prefix}-error::before {
+  content: '\e11c';
+}
+.#{$farris-icon-extend-prefix}-close-circle::before {
+  content: '\e11d';
+}
+.#{$farris-icon-extend-prefix}-x-circle::before {
+  content: '\e11d';
+}
+.#{$farris-icon-extend-prefix}-plus::before {
+  content: '\e11e';
+}
+.#{$farris-icon-extend-prefix}-plus-outline::before {
+  content: '\e11f';
+}
+.#{$farris-icon-extend-prefix}-plus-circle::before {
+  content: '\e120';
+}
+.#{$farris-icon-extend-prefix}-minus::before {
+  content: '\e121';
+}
+.#{$farris-icon-extend-prefix}-kpi-trend-equal::before {
+  content: '\e121';
+}
+.#{$farris-icon-extend-prefix}-minus-outline::before {
+  content: '\e122';
+}
+.#{$farris-icon-extend-prefix}-minus-circle::before {
+  content: '\e123';
+}
+.#{$farris-icon-extend-prefix}-sort-asc::before {
+  content: '\e124';
+}
+.#{$farris-icon-extend-prefix}-sort-desc::before {
+  content: '\e125';
+}
+.#{$farris-icon-extend-prefix}-unsort::before {
+  content: '\e126';
+}
+.#{$farris-icon-extend-prefix}-sort-clear::before {
+  content: '\e126';
+}
+.#{$farris-icon-extend-prefix}-sort-asc-sm::before {
+  content: '\e127';
+}
+.#{$farris-icon-extend-prefix}-sort-desc-sm::before {
+  content: '\e128';
+}
+.#{$farris-icon-extend-prefix}-filter::before {
+  content: '\e129';
+}
+.#{$farris-icon-extend-prefix}-filter-clear::before {
+  content: '\e12a';
+}
+.#{$farris-icon-extend-prefix}-filter-sm::before {
+  content: '\e12b';
+}
+.#{$farris-icon-extend-prefix}-filter-sort-asc-sm::before {
+  content: '\e12c';
+}
+.#{$farris-icon-extend-prefix}-filter-sort-desc-sm::before {
+  content: '\e12d';
+}
+.#{$farris-icon-extend-prefix}-filter-add-expression::before {
+  content: '\e12e';
+}
+.#{$farris-icon-extend-prefix}-filter-add-group::before {
+  content: '\e12f';
+}
+.#{$farris-icon-extend-prefix}-login::before {
+  content: '\e130';
+}
+.#{$farris-icon-extend-prefix}-logout::before {
+  content: '\e131';
+}
+.#{$farris-icon-extend-prefix}-download::before {
+  content: '\e132';
+}
+.#{$farris-icon-extend-prefix}-upload::before {
+  content: '\e133';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-open::before {
+  content: '\e134';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-open-sm::before {
+  content: '\e135';
+}
+.#{$farris-icon-extend-prefix}-launch::before {
+  content: '\e136';
+}
+.#{$farris-icon-extend-prefix}-window::before {
+  content: '\e137';
+}
+.#{$farris-icon-extend-prefix}-window-maximize::before {
+  content: '\e137';
+}
+.#{$farris-icon-extend-prefix}-windows::before {
+  content: '\e138';
+}
+.#{$farris-icon-extend-prefix}-window-restore::before {
+  content: '\e138';
+}
+.#{$farris-icon-extend-prefix}-tiles::before {
+  content: '\e138';
+}
+.#{$farris-icon-extend-prefix}-window-minimize::before {
+  content: '\e139';
+}
+.#{$farris-icon-extend-prefix}-gear::before {
+  content: '\e13a';
+}
+.#{$farris-icon-extend-prefix}-cog::before {
+  content: '\e13a';
+}
+.#{$farris-icon-extend-prefix}-custom::before {
+  content: '\e13a';
+}
+.#{$farris-icon-extend-prefix}-gears::before {
+  content: '\e13b';
+}
+.#{$farris-icon-extend-prefix}-cogs::before {
+  content: '\e13b';
+}
+.#{$farris-icon-extend-prefix}-wrench::before {
+  content: '\e13c';
+}
+.#{$farris-icon-extend-prefix}-settings::before {
+  content: '\e13c';
+}
+.#{$farris-icon-extend-prefix}-preview::before {
+  content: '\e13d';
+}
+.#{$farris-icon-extend-prefix}-eye::before {
+  content: '\e13d';
+}
+.#{$farris-icon-extend-prefix}-zoom::before {
+  content: '\e13e';
+}
+.#{$farris-icon-extend-prefix}-search::before {
+  content: '\e13e';
+}
+.#{$farris-icon-extend-prefix}-zoom-in::before {
+  content: '\e13f';
+}
+.#{$farris-icon-extend-prefix}-zoom-out::before {
+  content: '\e140';
+}
+.#{$farris-icon-extend-prefix}-pan::before {
+  content: '\e141';
+}
+.#{$farris-icon-extend-prefix}-move::before {
+  content: '\e141';
+}
+.#{$farris-icon-extend-prefix}-calculator::before {
+  content: '\e142';
+}
+.#{$farris-icon-extend-prefix}-cart::before {
+  content: '\e143';
+}
+.#{$farris-icon-extend-prefix}-shopping-cart::before {
+  content: '\e143';
+}
+.#{$farris-icon-extend-prefix}-connector::before {
+  content: '\e144';
+}
+.#{$farris-icon-extend-prefix}-plus-sm::before {
+  content: '\e145';
+}
+.#{$farris-icon-extend-prefix}-minus-sm::before {
+  content: '\e146';
+}
+.#{$farris-icon-extend-prefix}-kpi-status-deny::before {
+  content: '\e147';
+}
+.#{$farris-icon-extend-prefix}-kpi-status-hold::before {
+  content: '\e148';
+}
+.#{$farris-icon-extend-prefix}-kpi-status-open::before {
+  content: '\e149';
+}
+.#{$farris-icon-extend-prefix}-play::before {
+  content: '\e200';
+}
+.#{$farris-icon-extend-prefix}-pause::before {
+  content: '\e201';
+}
+.#{$farris-icon-extend-prefix}-stop::before {
+  content: '\e202';
+}
+.#{$farris-icon-extend-prefix}-rewind::before {
+  content: '\e203';
+}
+.#{$farris-icon-extend-prefix}-forward::before {
+  content: '\e204';
+}
+.#{$farris-icon-extend-prefix}-volume-down::before {
+  content: '\e205';
+}
+.#{$farris-icon-extend-prefix}-volume-up::before {
+  content: '\e206';
+}
+.#{$farris-icon-extend-prefix}-volume-off::before {
+  content: '\e207';
+}
+.#{$farris-icon-extend-prefix}-hd::before {
+  content: '\e208';
+}
+.#{$farris-icon-extend-prefix}-subtitles::before {
+  content: '\e209';
+}
+.#{$farris-icon-extend-prefix}-playlist::before {
+  content: '\e20a';
+}
+.#{$farris-icon-extend-prefix}-audio::before {
+  content: '\e20b';
+}
+.#{$farris-icon-extend-prefix}-play-sm::before {
+  content: '\e20c';
+}
+.#{$farris-icon-extend-prefix}-pause-sm::before {
+  content: '\e20d';
+}
+.#{$farris-icon-extend-prefix}-stop-sm::before {
+  content: '\e20e';
+}
+.#{$farris-icon-extend-prefix}-heart-outline::before {
+  content: '\e300';
+}
+.#{$farris-icon-extend-prefix}-fav-outline::before {
+  content: '\e300';
+}
+.#{$farris-icon-extend-prefix}-favorite-outline::before {
+  content: '\e300';
+}
+.#{$farris-icon-extend-prefix}-heart::before {
+  content: '\e301';
+}
+.#{$farris-icon-extend-prefix}-fav::before {
+  content: '\e301';
+}
+.#{$farris-icon-extend-prefix}-favorite::before {
+  content: '\e301';
+}
+.#{$farris-icon-extend-prefix}-star-outline::before {
+  content: '\e302';
+}
+.#{$farris-icon-extend-prefix}-bookmark-outline::before {
+  content: '\e302';
+}
+.#{$farris-icon-extend-prefix}-star::before {
+  content: '\e303';
+}
+.#{$farris-icon-extend-prefix}-bookmark::before {
+  content: '\e303';
+}
+.#{$farris-icon-extend-prefix}-checkbox::before {
+  content: '\e304';
+}
+.#{$farris-icon-extend-prefix}-shape-rect::before {
+  content: '\e304';
+}
+.#{$farris-icon-extend-prefix}-checkbox-checked::before {
+  content: '\e305';
+}
+.#{$farris-icon-extend-prefix}-tri-state-indeterminate::before {
+  content: '\e306';
+}
+.#{$farris-icon-extend-prefix}-tri-state-null::before {
+  content: '\e307';
+}
+.#{$farris-icon-extend-prefix}-circle::before {
+  content: '\e308';
+}
+.#{$farris-icon-extend-prefix}-radiobutton::before {
+  content: '\e309';
+}
+.#{$farris-icon-extend-prefix}-shape-circle::before {
+  content: '\e309';
+}
+.#{$farris-icon-extend-prefix}-radiobutton-checked::before {
+  content: '\e30a';
+}
+.#{$farris-icon-extend-prefix}-notification::before {
+  content: '\e400';
+}
+.#{$farris-icon-extend-prefix}-bell::before {
+  content: '\e400';
+}
+.#{$farris-icon-extend-prefix}-information::before {
+  content: '\e401';
+}
+.#{$farris-icon-extend-prefix}-info::before {
+  content: '\e401';
+}
+.#{$farris-icon-extend-prefix}-question::before {
+  content: '\e402';
+}
+.#{$farris-icon-extend-prefix}-help::before {
+  content: '\e402';
+}
+.#{$farris-icon-extend-prefix}-warning::before {
+  content: '\e403';
+}
+.#{$farris-icon-extend-prefix}-exception::before {
+  content: '\e403';
+}
+.#{$farris-icon-extend-prefix}-photo-camera::before {
+  content: '\e500';
+}
+.#{$farris-icon-extend-prefix}-image::before {
+  content: '\e501';
+}
+.#{$farris-icon-extend-prefix}-photo::before {
+  content: '\e501';
+}
+.#{$farris-icon-extend-prefix}-image-export::before {
+  content: '\e502';
+}
+.#{$farris-icon-extend-prefix}-photo-export::before {
+  content: '\e502';
+}
+.#{$farris-icon-extend-prefix}-zoom-actual-size::before {
+  content: '\e503';
+}
+.#{$farris-icon-extend-prefix}-zoom-best-fit::before {
+  content: '\e504';
+}
+.#{$farris-icon-extend-prefix}-image-resize::before {
+  content: '\e505';
+}
+.#{$farris-icon-extend-prefix}-crop::before {
+  content: '\e506';
+}
+.#{$farris-icon-extend-prefix}-mirror::before {
+  content: '\e507';
+}
+.#{$farris-icon-extend-prefix}-flip-horizontal::before {
+  content: '\e508';
+}
+.#{$farris-icon-extend-prefix}-flip-vertical::before {
+  content: '\e509';
+}
+.#{$farris-icon-extend-prefix}-rotate::before {
+  content: '\e50a';
+}
+.#{$farris-icon-extend-prefix}-rotate-right::before {
+  content: '\e50b';
+}
+.#{$farris-icon-extend-prefix}-rotate-left::before {
+  content: '\e50c';
+}
+.#{$farris-icon-extend-prefix}-brush::before {
+  content: '\e50d';
+}
+.#{$farris-icon-extend-prefix}-palette::before {
+  content: '\e50e';
+}
+.#{$farris-icon-extend-prefix}-paint::before {
+  content: '\e50f';
+}
+.#{$farris-icon-extend-prefix}-droplet::before {
+  content: '\e50f';
+}
+.#{$farris-icon-extend-prefix}-background::before {
+  content: '\e50f';
+}
+.#{$farris-icon-extend-prefix}-line::before {
+  content: '\e510';
+}
+.#{$farris-icon-extend-prefix}-shape-line::before {
+  content: '\e510';
+}
+.#{$farris-icon-extend-prefix}-brightness-contrast::before {
+  content: '\e511';
+}
+.#{$farris-icon-extend-prefix}-saturation::before {
+  content: '\e512';
+}
+.#{$farris-icon-extend-prefix}-invert-colors::before {
+  content: '\e513';
+}
+.#{$farris-icon-extend-prefix}-transperancy::before {
+  content: '\e514';
+}
+.#{$farris-icon-extend-prefix}-opacity::before {
+  content: '\e514';
+}
+.#{$farris-icon-extend-prefix}-greyscale::before {
+  content: '\e515';
+}
+.#{$farris-icon-extend-prefix}-blur::before {
+  content: '\e516';
+}
+.#{$farris-icon-extend-prefix}-sharpen::before {
+  content: '\e517';
+}
+.#{$farris-icon-extend-prefix}-shape::before {
+  content: '\e518';
+}
+.#{$farris-icon-extend-prefix}-round-corners::before {
+  content: '\e519';
+}
+.#{$farris-icon-extend-prefix}-front-element::before {
+  content: '\e51a';
+}
+.#{$farris-icon-extend-prefix}-back-element::before {
+  content: '\e51b';
+}
+.#{$farris-icon-extend-prefix}-forward-element::before {
+  content: '\e51c';
+}
+.#{$farris-icon-extend-prefix}-backward-element::before {
+  content: '\e51d';
+}
+.#{$farris-icon-extend-prefix}-align-left-element::before {
+  content: '\e51e';
+}
+.#{$farris-icon-extend-prefix}-align-center-element::before {
+  content: '\e51f';
+}
+.#{$farris-icon-extend-prefix}-align-right-element::before {
+  content: '\e520';
+}
+.#{$farris-icon-extend-prefix}-align-top-element::before {
+  content: '\e521';
+}
+.#{$farris-icon-extend-prefix}-align-middle-element::before {
+  content: '\e522';
+}
+.#{$farris-icon-extend-prefix}-align-bottom-element::before {
+  content: '\e523';
+}
+.#{$farris-icon-extend-prefix}-thumbnails-up::before {
+  content: '\e524';
+}
+.#{$farris-icon-extend-prefix}-thumbnails-right::before {
+  content: '\e525';
+}
+.#{$farris-icon-extend-prefix}-thumbnails-down::before {
+  content: '\e526';
+}
+.#{$farris-icon-extend-prefix}-thumbnails-left::before {
+  content: '\e527';
+}
+.#{$farris-icon-extend-prefix}-full-screen::before {
+  content: '\e528';
+}
+.#{$farris-icon-extend-prefix}-fullscreen::before {
+  content: '\e528';
+}
+.#{$farris-icon-extend-prefix}-full-screen-exit::before {
+  content: '\e529';
+}
+.#{$farris-icon-extend-prefix}-fullscreen-exit::before {
+  content: '\e529';
+}
+.#{$farris-icon-extend-prefix}-reset-color::before {
+  content: '\e52a';
+}
+.#{$farris-icon-extend-prefix}-paint-remove::before {
+  content: '\e52a';
+}
+.#{$farris-icon-extend-prefix}-background-remove::before {
+  content: '\e52a';
+}
+.#{$farris-icon-extend-prefix}-page-properties::before {
+  content: '\e600';
+}
+.#{$farris-icon-extend-prefix}-bold::before {
+  content: '\e601';
+}
+.#{$farris-icon-extend-prefix}-italic::before {
+  content: '\e602';
+}
+.#{$farris-icon-extend-prefix}-underline::before {
+  content: '\e603';
+}
+.#{$farris-icon-extend-prefix}-font-family::before {
+  content: '\e604';
+}
+.#{$farris-icon-extend-prefix}-foreground-color::before {
+  content: '\e605';
+}
+.#{$farris-icon-extend-prefix}-convert-lowercase::before {
+  content: '\e606';
+}
+.#{$farris-icon-extend-prefix}-convert-uppercase::before {
+  content: '\e607';
+}
+.#{$farris-icon-extend-prefix}-strikethrough::before {
+  content: '\e608';
+}
+.#{$farris-icon-extend-prefix}-sub-script::before {
+  content: '\e609';
+}
+.#{$farris-icon-extend-prefix}-sup-script::before {
+  content: '\e60a';
+}
+.#{$farris-icon-extend-prefix}-div::before {
+  content: '\e60b';
+}
+.#{$farris-icon-extend-prefix}-all::before {
+  content: '\e60c';
+}
+.#{$farris-icon-extend-prefix}-h1::before {
+  content: '\e60d';
+}
+.#{$farris-icon-extend-prefix}-h2::before {
+  content: '\e60e';
+}
+.#{$farris-icon-extend-prefix}-h3::before {
+  content: '\e60f';
+}
+.#{$farris-icon-extend-prefix}-h4::before {
+  content: '\e610';
+}
+.#{$farris-icon-extend-prefix}-h5::before {
+  content: '\e611';
+}
+.#{$farris-icon-extend-prefix}-h6::before {
+  content: '\e612';
+}
+.#{$farris-icon-extend-prefix}-list-ordered::before {
+  content: '\e613';
+}
+.#{$farris-icon-extend-prefix}-list-numbered::before {
+  content: '\e613';
+}
+.#{$farris-icon-extend-prefix}-list-unordered::before {
+  content: '\e614';
+}
+.#{$farris-icon-extend-prefix}-list-bulleted::before {
+  content: '\e614';
+}
+.#{$farris-icon-extend-prefix}-indent-increase::before {
+  content: '\e615';
+}
+.#{$farris-icon-extend-prefix}-indent::before {
+  content: '\e615';
+}
+.#{$farris-icon-extend-prefix}-indent-decrease::before {
+  content: '\e616';
+}
+.#{$farris-icon-extend-prefix}-outdent::before {
+  content: '\e616';
+}
+.#{$farris-icon-extend-prefix}-insert-up::before {
+  content: '\e617';
+}
+.#{$farris-icon-extend-prefix}-insert-top::before {
+  content: '\e617';
+}
+.#{$farris-icon-extend-prefix}-insert-middle::before {
+  content: '\e618';
+}
+.#{$farris-icon-extend-prefix}-insert-down::before {
+  content: '\e619';
+}
+.#{$farris-icon-extend-prefix}-insert-bottom::before {
+  content: '\e619';
+}
+.#{$farris-icon-extend-prefix}-align-top::before {
+  content: '\e61a';
+}
+.#{$farris-icon-extend-prefix}-align-middle::before {
+  content: '\e61b';
+}
+.#{$farris-icon-extend-prefix}-align-bottom::before {
+  content: '\e61c';
+}
+.#{$farris-icon-extend-prefix}-align-left::before {
+  content: '\e61d';
+}
+.#{$farris-icon-extend-prefix}-align-center::before {
+  content: '\e61e';
+}
+.#{$farris-icon-extend-prefix}-align-right::before {
+  content: '\e61f';
+}
+.#{$farris-icon-extend-prefix}-align-justify::before {
+  content: '\e620';
+}
+.#{$farris-icon-extend-prefix}-align-remove::before {
+  content: '\e621';
+}
+.#{$farris-icon-extend-prefix}-text-wrap::before {
+  content: '\e622';
+}
+.#{$farris-icon-extend-prefix}-rule-horizontal::before {
+  content: '\e623';
+}
+.#{$farris-icon-extend-prefix}-table-align-top-left::before {
+  content: '\e624';
+}
+.#{$farris-icon-extend-prefix}-table-align-top-center::before {
+  content: '\e625';
+}
+.#{$farris-icon-extend-prefix}-table-align-top-right::before {
+  content: '\e626';
+}
+.#{$farris-icon-extend-prefix}-table-align-middle-left::before {
+  content: '\e627';
+}
+.#{$farris-icon-extend-prefix}-table-align-middle-center::before {
+  content: '\e628';
+}
+.#{$farris-icon-extend-prefix}-table-align-middle-right::before {
+  content: '\e629';
+}
+.#{$farris-icon-extend-prefix}-table-align-bottom-left::before {
+  content: '\e62a';
+}
+.#{$farris-icon-extend-prefix}-table-align-bottom-center::before {
+  content: '\e62b';
+}
+.#{$farris-icon-extend-prefix}-table-align-bottom-right::before {
+  content: '\e62c';
+}
+.#{$farris-icon-extend-prefix}-table-align-remove::before {
+  content: '\e62d';
+}
+.#{$farris-icon-extend-prefix}-borders-all::before {
+  content: '\e62e';
+}
+.#{$farris-icon-extend-prefix}-borders-outside::before {
+  content: '\e62f';
+}
+.#{$farris-icon-extend-prefix}-borders-inside::before {
+  content: '\e630';
+}
+.#{$farris-icon-extend-prefix}-borders-inside-horizontal::before {
+  content: '\e631';
+}
+.#{$farris-icon-extend-prefix}-borders-inside-vertical::before {
+  content: '\e632';
+}
+.#{$farris-icon-extend-prefix}-border-top::before {
+  content: '\e633';
+}
+.#{$farris-icon-extend-prefix}-border-bottom::before {
+  content: '\e634';
+}
+.#{$farris-icon-extend-prefix}-border-left::before {
+  content: '\e635';
+}
+.#{$farris-icon-extend-prefix}-border-right::before {
+  content: '\e636';
+}
+.#{$farris-icon-extend-prefix}-border-no::before {
+  content: '\e637';
+}
+.#{$farris-icon-extend-prefix}-borders-show-hide::before {
+  content: '\e638';
+}
+.#{$farris-icon-extend-prefix}-form::before {
+  content: '\e639';
+}
+.#{$farris-icon-extend-prefix}-border::before {
+  content: '\e639';
+}
+.#{$farris-icon-extend-prefix}-form-element::before {
+  content: '\e63a';
+}
+.#{$farris-icon-extend-prefix}-code-snippet::before {
+  content: '\e63b';
+}
+.#{$farris-icon-extend-prefix}-select-all::before {
+  content: '\e63c';
+}
+.#{$farris-icon-extend-prefix}-button::before {
+  content: '\e63d';
+}
+.#{$farris-icon-extend-prefix}-select-box::before {
+  content: '\e63e';
+}
+.#{$farris-icon-extend-prefix}-calendar-date::before {
+  content: '\e63f';
+}
+.#{$farris-icon-extend-prefix}-group-box::before {
+  content: '\e640';
+}
+.#{$farris-icon-extend-prefix}-textarea::before {
+  content: '\e641';
+}
+.#{$farris-icon-extend-prefix}-textbox::before {
+  content: '\e642';
+}
+.#{$farris-icon-extend-prefix}-textbox-hidden::before {
+  content: '\e643';
+}
+.#{$farris-icon-extend-prefix}-password::before {
+  content: '\e644';
+}
+.#{$farris-icon-extend-prefix}-paragraph-add::before {
+  content: '\e645';
+}
+.#{$farris-icon-extend-prefix}-edit-tools::before {
+  content: '\e646';
+}
+.#{$farris-icon-extend-prefix}-template-manager::before {
+  content: '\e647';
+}
+.#{$farris-icon-extend-prefix}-change-manually::before {
+  content: '\e648';
+}
+.#{$farris-icon-extend-prefix}-track-changes::before {
+  content: '\e649';
+}
+.#{$farris-icon-extend-prefix}-track-changes-enable::before {
+  content: '\e64a';
+}
+.#{$farris-icon-extend-prefix}-track-changes-accept::before {
+  content: '\e64b';
+}
+.#{$farris-icon-extend-prefix}-track-changes-accept-all::before {
+  content: '\e64c';
+}
+.#{$farris-icon-extend-prefix}-track-changes-reject::before {
+  content: '\e64d';
+}
+.#{$farris-icon-extend-prefix}-track-changes-reject-all::before {
+  content: '\e64e';
+}
+.#{$farris-icon-extend-prefix}-document-manager::before {
+  content: '\e64f';
+}
+.#{$farris-icon-extend-prefix}-custom-icon::before {
+  content: '\e650';
+}
+.#{$farris-icon-extend-prefix}-dictionary-add::before {
+  content: '\e651';
+}
+.#{$farris-icon-extend-prefix}-image-light-dialog::before {
+  content: '\e652';
+}
+.#{$farris-icon-extend-prefix}-image-insert::before {
+  content: '\e652';
+}
+.#{$farris-icon-extend-prefix}-image-edit::before {
+  content: '\e653';
+}
+.#{$farris-icon-extend-prefix}-image-map-editor::before {
+  content: '\e654';
+}
+.#{$farris-icon-extend-prefix}-comment::before {
+  content: '\e655';
+}
+.#{$farris-icon-extend-prefix}-comment-remove::before {
+  content: '\e656';
+}
+.#{$farris-icon-extend-prefix}-comments-remove-all::before {
+  content: '\e657';
+}
+.#{$farris-icon-extend-prefix}-silverlight::before {
+  content: '\e658';
+}
+.#{$farris-icon-extend-prefix}-media-manager::before {
+  content: '\e659';
+}
+.#{$farris-icon-extend-prefix}-video-external::before {
+  content: '\e65a';
+}
+.#{$farris-icon-extend-prefix}-flash-manager::before {
+  content: '\e65b';
+}
+.#{$farris-icon-extend-prefix}-find-and-replace::before {
+  content: '\e65c';
+}
+.#{$farris-icon-extend-prefix}-find::before {
+  content: '\e65c';
+}
+.#{$farris-icon-extend-prefix}-copy::before {
+  content: '\e65d';
+}
+.#{$farris-icon-extend-prefix}-files::before {
+  content: '\e65d';
+}
+.#{$farris-icon-extend-prefix}-cut::before {
+  content: '\e65e';
+}
+.#{$farris-icon-extend-prefix}-paste::before {
+  content: '\e65f';
+}
+.#{$farris-icon-extend-prefix}-paste-as-html::before {
+  content: '\e660';
+}
+.#{$farris-icon-extend-prefix}-paste-from-word::before {
+  content: '\e661';
+}
+.#{$farris-icon-extend-prefix}-paste-from-word-strip-file::before {
+  content: '\e662';
+}
+.#{$farris-icon-extend-prefix}-paste-html::before {
+  content: '\e663';
+}
+.#{$farris-icon-extend-prefix}-paste-markdown::before {
+  content: '\e664';
+}
+.#{$farris-icon-extend-prefix}-paste-plain-text::before {
+  content: '\e665';
+}
+.#{$farris-icon-extend-prefix}-apply-format::before {
+  content: '\e666';
+}
+.#{$farris-icon-extend-prefix}-clear-css::before {
+  content: '\e667';
+}
+.#{$farris-icon-extend-prefix}-copy-format::before {
+  content: '\e668';
+}
+.#{$farris-icon-extend-prefix}-strip-all-formating::before {
+  content: '\e669';
+}
+.#{$farris-icon-extend-prefix}-strip-css-format::before {
+  content: '\e66a';
+}
+.#{$farris-icon-extend-prefix}-strip-font-elements::before {
+  content: '\e66b';
+}
+.#{$farris-icon-extend-prefix}-strip-span-elements::before {
+  content: '\e66c';
+}
+.#{$farris-icon-extend-prefix}-strip-word-formatting::before {
+  content: '\e66d';
+}
+.#{$farris-icon-extend-prefix}-format-code-block::before {
+  content: '\e66e';
+}
+.#{$farris-icon-extend-prefix}-style-builder::before {
+  content: '\e66f';
+}
+.#{$farris-icon-extend-prefix}-module-manager::before {
+  content: '\e670';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-light-dialog::before {
+  content: '\e671';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-insert::before {
+  content: '\e671';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-globe::before {
+  content: '\e672';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-globe-remove::before {
+  content: '\e673';
+}
+.#{$farris-icon-extend-prefix}-hyperlink-email::before {
+  content: '\e674';
+}
+.#{$farris-icon-extend-prefix}-anchor::before {
+  content: '\e675';
+}
+.#{$farris-icon-extend-prefix}-table-light-dialog::before {
+  content: '\e676';
+}
+.#{$farris-icon-extend-prefix}-table-insert::before {
+  content: '\e676';
+}
+.#{$farris-icon-extend-prefix}-table::before {
+  content: '\e677';
+}
+.#{$farris-icon-extend-prefix}-table-properties::before {
+  content: '\e678';
+}
+.#{$farris-icon-extend-prefix}-table-wizard::before {
+  content: '\e678';
+}
+.#{$farris-icon-extend-prefix}-table-cell::before {
+  content: '\e679';
+}
+.#{$farris-icon-extend-prefix}-table-cell-properties::before {
+  content: '\e67a';
+}
+.#{$farris-icon-extend-prefix}-table-column-insert-left::before {
+  content: '\e67b';
+}
+.#{$farris-icon-extend-prefix}-table-column-insert-right::before {
+  content: '\e67c';
+}
+.#{$farris-icon-extend-prefix}-table-row-insert-above::before {
+  content: '\e67d';
+}
+.#{$farris-icon-extend-prefix}-table-row-insert-below::before {
+  content: '\e67e';
+}
+.#{$farris-icon-extend-prefix}-table-column-delete::before {
+  content: '\e67f';
+}
+.#{$farris-icon-extend-prefix}-table-row-delete::before {
+  content: '\e680';
+}
+.#{$farris-icon-extend-prefix}-table-cell-delete::before {
+  content: '\e681';
+}
+.#{$farris-icon-extend-prefix}-table-delete::before {
+  content: '\e682';
+}
+.#{$farris-icon-extend-prefix}-cells-merge::before {
+  content: '\e683';
+}
+.#{$farris-icon-extend-prefix}-cells-merge-horizontally::before {
+  content: '\e684';
+}
+.#{$farris-icon-extend-prefix}-cells-merge-vertically::before {
+  content: '\e685';
+}
+.#{$farris-icon-extend-prefix}-cell-split-horizontally::before {
+  content: '\e686';
+}
+.#{$farris-icon-extend-prefix}-cell-split-vertically::before {
+  content: '\e687';
+}
+.#{$farris-icon-extend-prefix}-table-unmerge::before {
+  content: '\e688';
+}
+.#{$farris-icon-extend-prefix}-pane-freeze::before {
+  content: '\e689';
+}
+.#{$farris-icon-extend-prefix}-row-freeze::before {
+  content: '\e68a';
+}
+.#{$farris-icon-extend-prefix}-column-freeze::before {
+  content: '\e68b';
+}
+.#{$farris-icon-extend-prefix}-toolbar-float::before {
+  content: '\e68c';
+}
+.#{$farris-icon-extend-prefix}-spell-checker::before {
+  content: '\e68d';
+}
+.#{$farris-icon-extend-prefix}-validation-xhtml::before {
+  content: '\e68e';
+}
+.#{$farris-icon-extend-prefix}-validation-data::before {
+  content: '\e68f';
+}
+.#{$farris-icon-extend-prefix}-toggle-full-screen-mode::before {
+  content: '\e690';
+}
+.#{$farris-icon-extend-prefix}-formula-fx::before {
+  content: '\e691';
+}
+.#{$farris-icon-extend-prefix}-sum::before {
+  content: '\e692';
+}
+.#{$farris-icon-extend-prefix}-symbol::before {
+  content: '\e693';
+}
+.#{$farris-icon-extend-prefix}-dollar::before {
+  content: '\e694';
+}
+.#{$farris-icon-extend-prefix}-currency::before {
+  content: '\e694';
+}
+.#{$farris-icon-extend-prefix}-percent::before {
+  content: '\e695';
+}
+.#{$farris-icon-extend-prefix}-custom-format::before {
+  content: '\e696';
+}
+.#{$farris-icon-extend-prefix}-decimal-increase::before {
+  content: '\e697';
+}
+.#{$farris-icon-extend-prefix}-decimal-decrease::before {
+  content: '\e698';
+}
+.#{$farris-icon-extend-prefix}-font-size::before {
+  content: '\e699';
+}
+.#{$farris-icon-extend-prefix}-image-absolute-position::before {
+  content: '\e69a';
+}
+.#{$farris-icon-extend-prefix}-globe-outline::before {
+  content: '\e700';
+}
+.#{$farris-icon-extend-prefix}-globe::before {
+  content: '\e701';
+}
+.#{$farris-icon-extend-prefix}-marker-pin::before {
+  content: '\e702';
+}
+.#{$farris-icon-extend-prefix}-marker-pin-target::before {
+  content: '\e703';
+}
+.#{$farris-icon-extend-prefix}-pin::before {
+  content: '\e704';
+}
+.#{$farris-icon-extend-prefix}-unpin::before {
+  content: '\e705';
+}
+.#{$farris-icon-extend-prefix}-share::before {
+  content: '\e800';
+}
+.#{$farris-icon-extend-prefix}-user::before {
+  content: '\e801';
+}
+.#{$farris-icon-extend-prefix}-inbox::before {
+  content: '\e802';
+}
+.#{$farris-icon-extend-prefix}-blogger::before {
+  content: '\e803';
+}
+.#{$farris-icon-extend-prefix}-blogger-box::before {
+  content: '\e804';
+}
+.#{$farris-icon-extend-prefix}-delicious::before {
+  content: '\e805';
+}
+.#{$farris-icon-extend-prefix}-delicious-box::before {
+  content: '\e806';
+}
+.#{$farris-icon-extend-prefix}-digg::before {
+  content: '\e807';
+}
+.#{$farris-icon-extend-prefix}-digg-box::before {
+  content: '\e808';
+}
+.#{$farris-icon-extend-prefix}-email::before {
+  content: '\e809';
+}
+.#{$farris-icon-extend-prefix}-envelop::before {
+  content: '\e809';
+}
+.#{$farris-icon-extend-prefix}-letter::before {
+  content: '\e809';
+}
+.#{$farris-icon-extend-prefix}-email-box::before {
+  content: '\e80a';
+}
+.#{$farris-icon-extend-prefix}-envelop-box::before {
+  content: '\e80a';
+}
+.#{$farris-icon-extend-prefix}-letter-box::before {
+  content: '\e80a';
+}
+.#{$farris-icon-extend-prefix}-facebook::before {
+  content: '\e80b';
+}
+.#{$farris-icon-extend-prefix}-facebook-box::before {
+  content: '\e80c';
+}
+.#{$farris-icon-extend-prefix}-google::before {
+  content: '\e80d';
+}
+.#{$farris-icon-extend-prefix}-google-box::before {
+  content: '\e80e';
+}
+.#{$farris-icon-extend-prefix}-google-plus::before {
+  content: '\e80f';
+}
+.#{$farris-icon-extend-prefix}-google-plus-box::before {
+  content: '\e810';
+}
+.#{$farris-icon-extend-prefix}-linkedin::before {
+  content: '\e811';
+}
+.#{$farris-icon-extend-prefix}-linkedin-box::before {
+  content: '\e812';
+}
+.#{$farris-icon-extend-prefix}-myspace::before {
+  content: '\e813';
+}
+.#{$farris-icon-extend-prefix}-myspace-box::before {
+  content: '\e814';
+}
+.#{$farris-icon-extend-prefix}-pinterest::before {
+  content: '\e815';
+}
+.#{$farris-icon-extend-prefix}-pinterest-box::before {
+  content: '\e816';
+}
+.#{$farris-icon-extend-prefix}-reddit::before {
+  content: '\e817';
+}
+.#{$farris-icon-extend-prefix}-reddit-box::before {
+  content: '\e818';
+}
+.#{$farris-icon-extend-prefix}-stumble-upon::before {
+  content: '\e819';
+}
+.#{$farris-icon-extend-prefix}-stumble-upon-box::before {
+  content: '\e81a';
+}
+.#{$farris-icon-extend-prefix}-tell-a-friend::before {
+  content: '\e81b';
+}
+.#{$farris-icon-extend-prefix}-tell-a-friend-box::before {
+  content: '\e81c';
+}
+.#{$farris-icon-extend-prefix}-tumblr::before {
+  content: '\e81d';
+}
+.#{$farris-icon-extend-prefix}-tumblr-box::before {
+  content: '\e81e';
+}
+.#{$farris-icon-extend-prefix}-twitter::before {
+  content: '\e81f';
+}
+.#{$farris-icon-extend-prefix}-twitter-box::before {
+  content: '\e820';
+}
+.#{$farris-icon-extend-prefix}-yammer::before {
+  content: '\e821';
+}
+.#{$farris-icon-extend-prefix}-yammer-box::before {
+  content: '\e822';
+}
+.#{$farris-icon-extend-prefix}-behance::before {
+  content: '\e823';
+}
+.#{$farris-icon-extend-prefix}-behance-box::before {
+  content: '\e824';
+}
+.#{$farris-icon-extend-prefix}-dribbble::before {
+  content: '\e825';
+}
+.#{$farris-icon-extend-prefix}-dribbble-box::before {
+  content: '\e826';
+}
+.#{$farris-icon-extend-prefix}-rss::before {
+  content: '\e827';
+}
+.#{$farris-icon-extend-prefix}-rss-box::before {
+  content: '\e828';
+}
+.#{$farris-icon-extend-prefix}-vimeo::before {
+  content: '\e829';
+}
+.#{$farris-icon-extend-prefix}-vimeo-box::before {
+  content: '\e82a';
+}
+.#{$farris-icon-extend-prefix}-youtube::before {
+  content: '\e82b';
+}
+.#{$farris-icon-extend-prefix}-youtube-box::before {
+  content: '\e82c';
+}
+.#{$farris-icon-extend-prefix}-folder::before {
+  content: '\e900';
+}
+.#{$farris-icon-extend-prefix}-folder-open::before {
+  content: '\e901';
+}
+.#{$farris-icon-extend-prefix}-folder-add::before {
+  content: '\e902';
+}
+.#{$farris-icon-extend-prefix}-folder-up::before {
+  content: '\e903';
+}
+.#{$farris-icon-extend-prefix}-folder-more::before {
+  content: '\e904';
+}
+.#{$farris-icon-extend-prefix}-fields-more::before {
+  content: '\e904';
+}
+.#{$farris-icon-extend-prefix}-aggregate-fields::before {
+  content: '\e905';
+}
+.#{$farris-icon-extend-prefix}-file::before {
+  content: '\e906';
+}
+.#{$farris-icon-extend-prefix}-file-vertical::before {
+  content: '\e906';
+}
+.#{$farris-icon-extend-prefix}-file-add::before {
+  content: '\e907';
+}
+.#{$farris-icon-extend-prefix}-file-txt::before {
+  content: '\e908';
+}
+.#{$farris-icon-extend-prefix}-txt::before {
+  content: '\e908';
+}
+.#{$farris-icon-extend-prefix}-file-csv::before {
+  content: '\e909';
+}
+.#{$farris-icon-extend-prefix}-csv::before {
+  content: '\e909';
+}
+.#{$farris-icon-extend-prefix}-file-excel::before {
+  content: '\e90a';
+}
+.#{$farris-icon-extend-prefix}-file-xls::before {
+  content: '\e90a';
+}
+.#{$farris-icon-extend-prefix}-excel::before {
+  content: '\e90a';
+}
+.#{$farris-icon-extend-prefix}-xls::before {
+  content: '\e90a';
+}
+.#{$farris-icon-extend-prefix}-file-word::before {
+  content: '\e90b';
+}
+.#{$farris-icon-extend-prefix}-file-doc::before {
+  content: '\e90b';
+}
+.#{$farris-icon-extend-prefix}-word::before {
+  content: '\e90b';
+}
+.#{$farris-icon-extend-prefix}-doc::before {
+  content: '\e90b';
+}
+.#{$farris-icon-extend-prefix}-file-mdb::before {
+  content: '\e90c';
+}
+.#{$farris-icon-extend-prefix}-mdb::before {
+  content: '\e90c';
+}
+.#{$farris-icon-extend-prefix}-file-ppt::before {
+  content: '\e90d';
+}
+.#{$farris-icon-extend-prefix}-ppt::before {
+  content: '\e90d';
+}
+.#{$farris-icon-extend-prefix}-file-pdf::before {
+  content: '\e90e';
+}
+.#{$farris-icon-extend-prefix}-pdf::before {
+  content: '\e90e';
+}
+.#{$farris-icon-extend-prefix}-file-psd::before {
+  content: '\e90f';
+}
+.#{$farris-icon-extend-prefix}-psd::before {
+  content: '\e90f';
+}
+.#{$farris-icon-extend-prefix}-file-flash::before {
+  content: '\e910';
+}
+.#{$farris-icon-extend-prefix}-flash::before {
+  content: '\e910';
+}
+.#{$farris-icon-extend-prefix}-file-config::before {
+  content: '\e911';
+}
+.#{$farris-icon-extend-prefix}-config::before {
+  content: '\e911';
+}
+.#{$farris-icon-extend-prefix}-file-ascx::before {
+  content: '\e912';
+}
+.#{$farris-icon-extend-prefix}-ascx::before {
+  content: '\e912';
+}
+.#{$farris-icon-extend-prefix}-file-bac::before {
+  content: '\e913';
+}
+.#{$farris-icon-extend-prefix}-bac::before {
+  content: '\e913';
+}
+.#{$farris-icon-extend-prefix}-file-zip::before {
+  content: '\e914';
+}
+.#{$farris-icon-extend-prefix}-zip::before {
+  content: '\e914';
+}
+.#{$farris-icon-extend-prefix}-film::before {
+  content: '\e915';
+}
+.#{$farris-icon-extend-prefix}-css3::before {
+  content: '\e916';
+}
+.#{$farris-icon-extend-prefix}-html5::before {
+  content: '\e917';
+}
+.#{$farris-icon-extend-prefix}-html::before {
+  content: '\e918';
+}
+.#{$farris-icon-extend-prefix}-source-code::before {
+  content: '\e918';
+}
+.#{$farris-icon-extend-prefix}-view-source::before {
+  content: '\e918';
+}
+.#{$farris-icon-extend-prefix}-css::before {
+  content: '\e919';
+}
+.#{$farris-icon-extend-prefix}-js::before {
+  content: '\e91a';
+}
+.#{$farris-icon-extend-prefix}-exe::before {
+  content: '\e91b';
+}
+.#{$farris-icon-extend-prefix}-csproj::before {
+  content: '\e91c';
+}
+.#{$farris-icon-extend-prefix}-vbproj::before {
+  content: '\e91d';
+}
+.#{$farris-icon-extend-prefix}-cs::before {
+  content: '\e91e';
+}
+.#{$farris-icon-extend-prefix}-vb::before {
+  content: '\e91f';
+}
+.#{$farris-icon-extend-prefix}-sln::before {
+  content: '\e920';
+}
+.#{$farris-icon-extend-prefix}-cloud::before {
+  content: '\e921';
+}
+.#{$farris-icon-extend-prefix}-file-horizontal::before {
+  content: '\e922';
+}
+
+// Aliases
+.#{$farris-icon-extend-prefix}-page-portrait {
+  @extend .#{$farris-icon-extend-prefix}-file-vertical;
+}
+.#{$farris-icon-extend-prefix}-page-landscape {
+  @extend .#{$farris-icon-extend-prefix}-file-horizontal;
+}
+
+// backwards compatibility
+.#{$farris-icon-extend-prefix}-arrow-s::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-down;
+}
+.#{$farris-icon-extend-prefix}-arrow-e::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-right;
+}
+.#{$farris-icon-extend-prefix}-arrow-n::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-up;
+}
+.#{$farris-icon-extend-prefix}-arrow-w::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-left;
+}
+.#{$farris-icon-extend-prefix}-seek-n::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-seek-up;
+}
+.#{$farris-icon-extend-prefix}-seek-e::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-end-right;
+}
+.#{$farris-icon-extend-prefix}-seek-s::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-seek-down;
+}
+.#{$farris-icon-extend-prefix}-seek-w::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-end-left;
+}
+.#{$farris-icon-extend-prefix}-sarrow-n::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-up;
+}
+.#{$farris-icon-extend-prefix}-sarrow-e::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-right;
+}
+.#{$farris-icon-extend-prefix}-sarrow-s::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-down;
+}
+.#{$farris-icon-extend-prefix}-sarrow-w::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-left;
+}
+.#{$farris-icon-extend-prefix}-collapse::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-down;
+}
+.#{$farris-icon-extend-prefix}-expand::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-right;
+}
+.#{$farris-icon-extend-prefix}-expand-n::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-up;
+}
+.#{$farris-icon-extend-prefix}-expand-e::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-right;
+}
+.#{$farris-icon-extend-prefix}-expand-s::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-down;
+}
+.#{$farris-icon-extend-prefix}-expand-w::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-60-left;
+}
+.#{$farris-icon-extend-prefix}-resize-nw::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-45-up-left;
+}
+.#{$farris-icon-extend-prefix}-arrowhead-n::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-chevron-up;
+}
+.#{$farris-icon-extend-prefix}-arrowhead-e::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-chevron-right;
+}
+.#{$farris-icon-extend-prefix}-arrowhead-s::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-chevron-down;
+}
+.#{$farris-icon-extend-prefix}-arrowhead-w::before {
+  @extend .#{$farris-icon-extend-prefix}-arrow-chevron-left;
+}
+.#{$farris-icon-extend-prefix}-deny::before {
+  @extend .#{$farris-icon-extend-prefix}-cancel-outline;
+}
+.k-plus::before {
+  @extend .#{$farris-icon-extend-prefix}-plus;
+}
+.#{$farris-icon-extend-prefix}-add::before {
+  @extend .#{$farris-icon-extend-prefix}-plus;
+}
+.#{$farris-icon-extend-prefix}-splus::before {
+  @extend .#{$farris-icon-extend-prefix}-plus-sm;
+}
+.k-minus::before {
+  @extend .#{$farris-icon-extend-prefix}-minus;
+}
+.#{$farris-icon-extend-prefix}-sminus::before {
+  @extend .#{$farris-icon-extend-prefix}-minus-sm;
+}
+.#{$farris-icon-extend-prefix}-refresh-clear::before {
+  @extend .#{$farris-icon-extend-prefix}-non-recurrence;
+}
+.#{$farris-icon-extend-prefix}-restore::before {
+  @extend .#{$farris-icon-extend-prefix}-window-restore;
+}
+.#{$farris-icon-extend-prefix}-maximize::before {
+  @extend .#{$farris-icon-extend-prefix}-window-maximize;
+}
+.#{$farris-icon-extend-prefix}-minimize::before {
+  @extend .#{$farris-icon-extend-prefix}-window-minimize;
+}
+.#{$farris-icon-extend-prefix}-insert-image::before {
+  @extend .#{$farris-icon-extend-prefix}-image-insert;
+}
+.#{$farris-icon-extend-prefix}-insert-file::before {
+  @extend .#{$farris-icon-extend-prefix}-file-add;
+}
+.#{$farris-icon-extend-prefix}-pdfa::before {
+  @extend .#{$farris-icon-extend-prefix}-pdf;
+}
+.#{$farris-icon-extend-prefix}-xlsa::before {
+  @extend .#{$farris-icon-extend-prefix}-xls;
+}
+.#{$farris-icon-extend-prefix}-hamburger::before {
+  @extend .#{$farris-icon-extend-prefix}-menu;
+}
+.#{$farris-icon-extend-prefix}-vbars::before {
+  @extend .#{$farris-icon-extend-prefix}-more-vertical;
+}
+.#{$farris-icon-extend-prefix}-hbars::before {
+  @extend .#{$farris-icon-extend-prefix}-more-horizontal;
+}
+.#{$farris-icon-extend-prefix}-dimension::before {
+  @extend .#{$farris-icon-extend-prefix}-arrows-dimensions;
+}
+.#{$farris-icon-extend-prefix}-undo-large::before {
+  @extend .#{$farris-icon-extend-prefix}-undo;
+}
+.#{$farris-icon-extend-prefix}-redo-large::before {
+  @extend .#{$farris-icon-extend-prefix}-redo;
+}
+.#{$farris-icon-extend-prefix}-rotate-ccw::before {
+  @extend .#{$farris-icon-extend-prefix}-rotate-left;
+}
+.#{$farris-icon-extend-prefix}-rotate-cw::before {
+  @extend .#{$farris-icon-extend-prefix}-rotate-right;
+}
+.#{$farris-icon-extend-prefix}-strike-through::before {
+  @extend .#{$farris-icon-extend-prefix}-strikethrough;
+}
+.#{$farris-icon-extend-prefix}-text::before {
+  @extend .#{$farris-icon-extend-prefix}-foreground-color;
+}
+.#{$farris-icon-extend-prefix}-fx::before {
+  @extend .#{$farris-icon-extend-prefix}-formula-fx;
+}
+.#{$farris-icon-extend-prefix}-subscript::before {
+  @extend .#{$farris-icon-extend-prefix}-sub-script;
+}
+.#{$farris-icon-extend-prefix}-superscript::before {
+  @extend .#{$farris-icon-extend-prefix}-sup-script;
+}
+.#{$farris-icon-extend-prefix}-increase-decimal::before {
+  @extend .#{$farris-icon-extend-prefix}-decimal-increase;
+}
+.#{$farris-icon-extend-prefix}-decrease-decimal::before {
+  @extend .#{$farris-icon-extend-prefix}-decimal-decrease;
+}
+.#{$farris-icon-extend-prefix}-justify-left::before {
+  @extend .#{$farris-icon-extend-prefix}-align-left;
+}
+.#{$farris-icon-extend-prefix}-justify-center::before {
+  @extend .#{$farris-icon-extend-prefix}-align-center;
+}
+.#{$farris-icon-extend-prefix}-justify-right::before {
+  @extend .#{$farris-icon-extend-prefix}-align-right;
+}
+.#{$farris-icon-extend-prefix}-justify-full::before {
+  @extend .#{$farris-icon-extend-prefix}-align-justify;
+}
+.#{$farris-icon-extend-prefix}-justify-clear::before {
+  @extend .#{$farris-icon-extend-prefix}-align-remove;
+}
+.#{$farris-icon-extend-prefix}-insert-n::before {
+  @extend .#{$farris-icon-extend-prefix}-insert-up;
+}
+.#{$farris-icon-extend-prefix}-insert-m::before {
+  @extend .#{$farris-icon-extend-prefix}-insert-middle;
+}
+.#{$farris-icon-extend-prefix}-insert-s::before {
+  @extend .#{$farris-icon-extend-prefix}-insert-down;
+}
+.#{$farris-icon-extend-prefix}-insert-unordered-list::before {
+  @extend .#{$farris-icon-extend-prefix}-list-unordered;
+}
+.#{$farris-icon-extend-prefix}-insert-ordered-list::before {
+  @extend .#{$farris-icon-extend-prefix}-list-ordered;
+}
+.#{$farris-icon-extend-prefix}-clearformat::before {
+  @extend .#{$farris-icon-extend-prefix}-clear-css;
+}
+.#{$farris-icon-extend-prefix}-create-table::before {
+  @extend .#{$farris-icon-extend-prefix}-table-light-dialog;
+}
+.#{$farris-icon-extend-prefix}-add-column-left::before {
+  @extend .#{$farris-icon-extend-prefix}-table-column-insert-left;
+}
+.#{$farris-icon-extend-prefix}-add-column-right::before {
+  @extend .#{$farris-icon-extend-prefix}-table-column-insert-right;
+}
+.#{$farris-icon-extend-prefix}-group-delete::before {
+  @extend .#{$farris-icon-extend-prefix}-close;
+}
+.#{$farris-icon-extend-prefix}-delete-column::before {
+  @extend .#{$farris-icon-extend-prefix}-table-column-delete;
+}
+.#{$farris-icon-extend-prefix}-add-row-above::before {
+  @extend .#{$farris-icon-extend-prefix}-table-row-insert-above;
+}
+.#{$farris-icon-extend-prefix}-add-row-below::before {
+  @extend .#{$farris-icon-extend-prefix}-table-row-insert-below;
+}
+.#{$farris-icon-extend-prefix}-delete-row::before {
+  @extend .#{$farris-icon-extend-prefix}-table-row-delete;
+}
+.#{$farris-icon-extend-prefix}-merge-cells::before {
+  @extend .#{$farris-icon-extend-prefix}-cells-merge;
+}
+.#{$farris-icon-extend-prefix}-normal-layout::before {
+  @extend .#{$farris-icon-extend-prefix}-table-unmerge;
+}
+.#{$farris-icon-extend-prefix}-page-layout::before {
+  @extend .#{$farris-icon-extend-prefix}-layout-2-by-2;
+}
+.#{$farris-icon-extend-prefix}-all-borders::before {
+  @extend .#{$farris-icon-extend-prefix}-borders-all;
+}
+.#{$farris-icon-extend-prefix}-inside-borders::before {
+  @extend .#{$farris-icon-extend-prefix}-borders-inside;
+}
+.#{$farris-icon-extend-prefix}-inside-horizontal-borders::before {
+  @extend .#{$farris-icon-extend-prefix}-borders-inside-horizontal;
+}
+.#{$farris-icon-extend-prefix}-inside-vertical-borders::before {
+  @extend .#{$farris-icon-extend-prefix}-borders-inside-vertical;
+}
+.#{$farris-icon-extend-prefix}-outside-borders::before {
+  @extend .#{$farris-icon-extend-prefix}-borders-outside;
+}
+.#{$farris-icon-extend-prefix}-top-border::before {
+  @extend .#{$farris-icon-extend-prefix}-border-top;
+}
+.#{$farris-icon-extend-prefix}-right-border::before {
+  @extend .#{$farris-icon-extend-prefix}-border-right;
+}
+.#{$farris-icon-extend-prefix}-bottom-border::before {
+  @extend .#{$farris-icon-extend-prefix}-border-bottom;
+}
+.#{$farris-icon-extend-prefix}-left-border::before {
+  @extend .#{$farris-icon-extend-prefix}-border-left;
+}
+.#{$farris-icon-extend-prefix}-no-borders::before {
+  @extend .#{$farris-icon-extend-prefix}-border-no;
+}
+.#{$farris-icon-extend-prefix}-merge-horizontally::before {
+  @extend .#{$farris-icon-extend-prefix}-cells-merge-horizontally;
+}
+.#{$farris-icon-extend-prefix}-merge-vertically::before {
+  @extend .#{$farris-icon-extend-prefix}-cells-merge-vertically;
+}
+.#{$farris-icon-extend-prefix}-freeze-col::before {
+  @extend .#{$farris-icon-extend-prefix}-column-freeze;
+}
+.#{$farris-icon-extend-prefix}-freeze-row::before {
+  @extend .#{$farris-icon-extend-prefix}-row-freeze;
+}
+.#{$farris-icon-extend-prefix}-freeze-panes::before {
+  @extend .#{$farris-icon-extend-prefix}-pane-freeze;
+}
+.#{$farris-icon-extend-prefix}-format-number::before {
+  @extend .#{$farris-icon-extend-prefix}-custom-format;
+}
+.#{$farris-icon-extend-prefix}-fullscreen-enter::before {
+  @extend .#{$farris-icon-extend-prefix}-full-screen;
+}
+.#{$farris-icon-extend-prefix}-volume-low::before {
+  @extend .#{$farris-icon-extend-prefix}-volume-down;
+}
+.#{$farris-icon-extend-prefix}-volume-high::before {
+  @extend .#{$farris-icon-extend-prefix}-volume-up;
+}
+.#{$farris-icon-extend-prefix}-volume-mute::before {
+  @extend .#{$farris-icon-extend-prefix}-volume-off;
+}
+.#{$farris-icon-extend-prefix}-tick::before {
+  @extend .#{$farris-icon-extend-prefix}-check;
+}
+.#{$farris-icon-extend-prefix}-note::before {
+  @extend .#{$farris-icon-extend-prefix}-info;
+}
+
+// RTL icons
+.k-rtl .#{$farris-icon-extend-prefix}-indent-increase,
+.k-rtl .#{$farris-icon-extend-prefix}-indent-decrease,
+.k-rtl .#{$farris-icon-extend-prefix}-expand,
+.k-rtl .#{$farris-icon-extend-prefix}-collapse,
+[dir='rtl'] .#{$farris-icon-extend-prefix}-expand,
+[dir='rtl'] .#{$farris-icon-extend-prefix}-collapse {
+  transform: scaleX(-1);
+}
+
+.k-sprite {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  -ms-high-contrast-adjust: none;
+}
+.#{$farris-icon-extend-prefix}mage {
+  display: inline-block;
+}
+// sass-lint:enable single-line-per-selector

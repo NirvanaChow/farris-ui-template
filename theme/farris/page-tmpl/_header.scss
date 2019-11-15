@@ -1,0 +1,195 @@
+/*******************************
+            头部区域 
+*******************************/
+
+.#{$pt-header-prefix} {
+  flex-shrink: 0;
+  background: $farris-ptlayout-header-bg;
+  box-shadow: $farris-ptlayout-header-shadow;
+  // 元素的普通间距
+  &-el-mt {
+    margin-top: $f-pt-header-common-gutter-y;
+  }
+  &-el-mb {
+    margin-bottom: $f-pt-header-common-gutter-y;
+  }
+  &-el-my {
+    margin-top: $f-pt-header-common-gutter-y;
+    margin-bottom: $f-pt-header-common-gutter-y;
+  }
+  &-el-mx {
+    margin-left: $f-pt-header-inner-gutter-x;
+    margin-right: $f-pt-header-inner-gutter-x;
+  }
+  // Header——默认区域
+  &-base {
+    padding: $f-pt-card-header-inner-gutter;
+    @include f-header-flex;
+    @extend .f-utils-nogutters;
+    // 标题区域
+    .f-title {
+      display: inline-flex;
+      align-items: center;
+      // > * {
+      //   margin: 0 $f-pt-header-el-gutter 0 0;
+      // }
+      .f-title {
+        // 标题——文字
+        &-text {
+          font-size: 18px;
+          line-height: 28px;
+          color: $f-text-01;
+          @include text-truncate;
+          margin: 0 $f-pt-header-el-gutter-new 0 0;
+        }
+        // 标题——图标
+        &-icon {
+          display: inline-flex;
+          width: 1.625rem;
+          height: 1.625rem;
+          line-height: 1.625rem;
+          flex-shrink: 0;
+          text-align: center;
+          background-color: $farris-title-icon-bg;
+          border-radius: 0.25rem;
+          color: $farris-title-icon-color;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          overflow: hidden;
+          img {
+            display: block;
+            width: 1.625rem;
+            height: 1.625rem;
+          }
+          margin: 0 $f-el-header-title-icon-right-gutter 0 0;
+        }
+        // 标题——副标题
+        &-subtitle {
+          padding: 0 0 0 $f-pt-header-el-gutter-new;
+          font-size: $farris-font-size-base;
+          @include text-truncate;
+          border-left: 1px solid $f-neutral-05;
+          margin: 0 $f-pt-header-el-gutter-new 0 0;
+        }
+        // 状态
+        &-status {
+          // margin: 0 $f-pt-header-el-gutter 0 0;
+          margin: 0 $f-pt-header-el-gutter-new 0 0;
+        }
+        // 翻页区域
+        &-pagination {
+          margin: 0 $f-pt-header-el-gutter-new 0 0;
+          span {
+            width: $f-pager-ctr-icon-width;
+            height: $f-pager-ctr-icon-height;
+            margin: $f-pager-ctr-icon-outer-gutter;
+            color: $f-pager-ctr-icon-text;
+            line-height: $f-pager-ctr-icon-line-height;
+            border-width: $f-pager-ctr-icon-border-width;
+            border-style: solid;
+            border-color: $f-pager-ctr-icon-border-color;
+            border-radius: $f-pager-ctr-icon-border-radius;
+            background: $f-pager-ctr-icon-background;
+            &.f-state-disabled {
+              color: $f-pager-ctr-icon-disable-text;
+              border-color: $f-pager-ctr-icon-disable-border-color;
+              background: $f-pager-ctr-icon-disable-background;
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    // 中间区域
+    .f-content {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    // 工具区
+    .f-toolbar {
+      flex-shrink: 0;
+    }
+    .f-toolbar-viewchange {
+      margin-left: 0.375rem;
+    }
+  }
+  // Header——扩展区域
+  &-extend {
+    // padding: 0 $pt-header-inner-gutter-x $f-pt-header-common-gutter-y;
+  }
+}
+
+// 1906——财务有页面已经应用这个样式——保留
+.f-pt-header {
+  min-height: $farris-ptlayout-header-height;
+  padding: $farris-ptlayout-header-inner-gutter;
+  flex-shrink: 0;
+  background: $farris-ptlayout-header-bg;
+  box-shadow: $farris-ptlayout-header-shadow;
+  display: block;
+  &-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    // 标题区域
+    .f-title-ctr {
+      display: inline-flex;
+      align-items: center;
+      @include text-truncate;
+      .f-title {
+        margin: 0 $f-pt-header-el-gutter 0 0;
+        @extend .farris-form-title;
+      }
+      // 副标题区域
+      .f-subtitle-ctr {
+        margin: 0 $f-pt-header-el-gutter 0 0;
+        padding: 0 0 0 $f-pt-header-el-gutter;
+        font-size: $farris-font-size-base;
+        border-left: 1px solid $f-neutral-05;
+        .f-subtitle {
+          display: inline-block;
+          margin: 0;
+          font-size: $farris-font-size-base;
+        }
+      }
+    }
+  }
+}
+
+// ToDo———————1909—————————工具条组件调整
+.f-component-responsetoolbar {
+  position: relative;
+  .f-component-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+  .f-component-content {
+    display: inline-flex;
+    white-space: nowrap;
+  }
+}
+
+/*
+* 不同类型模板对应不同的图标颜色
+*/
+
+$header-icon-text: (
+  manage: $f-ornament-01,
+  dict: $f-ornament-02,
+  bill: $f-ornament-03,
+  query: $f-ornament-04,
+  param: $f-ornament-05
+);
+
+@each $type, $bg in $header-icon-text {
+  .f-text-orna-#{$type} {
+    color: $farris-title-icon-color!important;
+    background: $bg!important;
+  }
+}

@@ -1,0 +1,55 @@
+<div class="f-page f-page-navigate f-page-is-listnav">
+    <div class="f-page-main">
+      <!--扩展页面主内容区-->
+        <div class="f-page-content">
+            <!--新导航组件-->
+            <farris-list-nav
+            class="f-page-content-nav"
+            (nav-state-change)="navStateChange($event)"
+            [listnavWidth]="240"
+            [hover]="true"
+            [title]="'业务支付申请来源'">
+                <ng-template listNavContent>
+                    <farris-list-view
+                    [data]="listnavData"
+                    listidName="id"
+                    (list-click)="listClick($event)"
+                    >
+                    <ng-template listTemplate let-item="item">
+                        ...listview列表部分
+                    </ng-template>
+                    </farris-list-view>
+                </ng-template>
+            </farris-list-nav>
+            <section class="f-page-content-main">
+                <!-- 完整独立页面结构-->
+                <!--页面模板 是管理列表-->
+                <div class="f-page f-page-is-managelist  f-page-has-scheme">
+                    <farris-section
+                    class="f-section-scheme f-section-in-managelist"
+                    [showHeader]="false">
+                        <ng-template farrisSectionContent>
+                            ...筛选方案
+                        </ng-template>
+                    </farris-section>
+                    <div class="f-page-header">
+                        ...标题区域
+                    </div>
+                    <div class="f-page-main">
+                        <farris-section class="f-section-grid f-section-in-managelist">
+                            <ng-template farrisSectionTitle>
+                                ...标题区域
+                            </ng-template>
+                            <ng-template farrisSectionExtend>
+                                ...section扩展区域
+                            </ng-template>
+                            <ng-template farrisSectionContent>
+                                ...section内容区域
+                            </ng-template>
+                        </farris-section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

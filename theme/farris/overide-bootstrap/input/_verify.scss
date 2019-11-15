@@ -1,0 +1,4 @@
+
+// 重写原来的输入控件
+@include bt-form-validation-state('valid', $farris-input-border-color);
+@include bt-form-validation-state('invalid', $farris-input-border-color);

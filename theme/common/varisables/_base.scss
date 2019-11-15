@@ -1,0 +1,121 @@
+// 字体
+$farris-font-family-base: 'PingFangSC-Regular', 'Microsoft YaHei', 'Segoe UI',
+  Segoe, Arial, sans-serif !default;
+// 字体大小
+$farris-font-size-base: 0.875rem !default;
+// 行高
+$farris-line-height-base: 1.4286 !default;
+$farris-font-weight-light: 300 !default;
+$farris-font-weight-normal: 400 !default;
+$farris-font-weight-bold: 700 !default;
+// 图标默认字体
+$farris-icon-font-family: 'Material Icons';
+// H标签字体
+$farris-h1-font-size: 1.625rem;
+$farris-h2-font-size: 1.5rem;
+$farris-h3-font-size: 1.375rem;
+$farris-h4-font-size: 1.25rem;
+$farris-h5-font-size: 1rem;
+$farris-h6-font-size: 0.875rem;
+// H标签字体——行高
+$farris-h1-line-height: 2.125rem;
+$farris-h2-line-height: 2;
+$farris-h3-line-height: 1.875rem;
+$farris-h4-line-height: 1.75rem;
+$farris-h5-line-height: 1.375rem;
+$farris-h6-line-height: 1.25rem;
+// 文字类型
+// 单据标题文字-20px
+$farris-text-size-01: 1.25rem;
+// 弹窗标题文字-16px
+$farris-text-size-02: 1rem;
+// 常规通用文字-14px
+$farris-text-size-03: 0.875rem;
+// 说明文字、Small Button文本—13px
+$farris-text-size-04: 0.8125rem;
+// 时间、日期、分页控件文本 -12px
+$farris-text-size-05: 0.75rem;
+// 单据标题文字-20px
+$farris-text-line-height-01: 1.75rem;
+// 弹窗标题文字-16px
+$farris-text-line-height-02: 1.375rem;
+// 常规通用文字-14px
+$farris-text-line-height-03: 1.25rem;
+// 说明文字、Small Button文本—13px
+$farris-text-line-height-04: 1.125rem;
+// 时间、日期、分页控件文本 -12px
+$farris-text-line-height-05: 1.0625rem;
+// 错误提示信息字体高度 18px
+$farris-text-line-height-06: 1.125rem;
+
+// H标签行高
+$farris-headings-line-height: 1.2;
+// 主题色统一定义
+// 全局标题栏标题色\合计行文字色
+
+// $farris-theme-00: #1a599e !default;
+
+
+// 主色
+$farris-primary:$f-theme-04!default;
+// 成功
+$farris-success:$f-semantic-success !default;
+// 消息
+$farris-info: $f-semantic-info!default;
+// 警告
+$farris-warning:$f-semantic-warning !default;
+// 危险
+$farris-danger: $f-semantic-danger !default;
+
+
+
+// 背景色——复写单独用在body上
+$farris-body-bg: #f0f3f6 !default;
+// bootstrap 中变量$body-bg被应用在其他组件内，先复写body样式
+$farris-kd-component-bg: #f0f2f5;
+
+// 通用文字
+$farris-body-color: $f-text-02 !default;
+
+// 组件Active状态
+$farris-component-active-color: $f-text-00 !default;
+$farris-component-active-bg: $farris-primary !default;
+$farris-component-active-border-color:$farris-primary !default;
+
+//标题icon 背景色及icon颜色
+$farris-title-icon-bg:$f-ornament-01;
+$farris-title-icon-color:$f-text-00;
+
+
+
+// 默认边线宽度
+$farris-border-width: 1px !default;
+// 默认边线颜色
+$farris-border-color: $f-neutral-02 !default;
+// 边线圆角
+// 默认圆角、分页圆角、模板主区域圆角
+$farris-border-radius: 0.125rem !default;
+$farris-border-radius-lg: 0.125rem !default;
+$farris-border-radius-sm: 0.125rem !default;
+
+// 启用box-shadow
+$farris-enable-shadows: true;
+// 灰度文字
+$farris-text-muted: $f-text-05;
+
+// 划分列
+$f-grid-columns: 12;
+$f-grid-gutter-width: 28px;
+
+// 鼠标滑过按钮是否带下划线
+$f-link-hover-decoration:none!default;
+// 图标链接
+$f-kd-icon-font-url:'./farrisicon-extend.ttf';
+
+//文字按钮组中三个点背景色
+$farris-btn-group-dropdown-bg:$f-theme-04;
+$farris-btn-group-dropdown-color:$f-theme-04;
+$farris-btn-group-dropdown-bg-opacity:0.12;
+$farris-btn-group-dropdown-bg-hover-opacity:0.24;
+$farris-btn-group-dropdown-bg-focus-opacity:1;
+$farris-btn-group-dropdown-focus-color:$f-text-00;

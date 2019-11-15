@@ -1,0 +1,172 @@
+// Grid
+.k-grid {
+  border-width: $farris-grid-width;
+  tr.k-state-selected > td,
+  th.k-state-selected,
+  td.k-state-selected {
+    border-color: $farris-grid-selected-border;
+    color: $grid-selected-text;
+    background-color: $grid-selected-bg;
+  }
+  td {
+    height: $farris-table-td-height;
+    white-space: nowrap;
+  }
+  // 行内编辑
+  .k-grid-edit-row {
+    td {
+      padding-top: $farris-table-td-editcell-padding-y;
+      padding-bottom: $farris-table-td-editcell-padding-y;
+      //  height:$farris-table-td-editcell;
+    }
+  }
+}
+// grid-sm样式
+.f-cmp-grid-sm {
+  td {
+    padding: $farris-grid-sm-cell-padding-y $farris-grid-sm-cell-padding-x;
+    height: $farris-table-sm-td-height;
+  }
+
+  th {
+    padding: $farris-grid-sm-header-padding-y $farris-grid-sm-header-padding-x;
+  }
+
+  .k-grid-edit-row {
+    td {
+      padding-top: $farris-table-sm-td-editcell-padding-y;
+      padding-bottom: $farris-table-sm-td-editcell-padding-y;
+    }
+  }
+}
+// 带边线
+.f-cmp-grid-bordered {
+  th,
+  td {
+    border-width: 0 0 1px 1px;
+  }
+  .k-grid-header {
+    border-width: 1px;
+  }
+  .k-grid-content {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+  }
+  .k-grid-footer {
+    border-width: 0px 1px 0 1px;
+  }
+}
+
+.k-grid-content {
+  tr:last-child td {
+    border-bottom-width: $grid-cell-horizontal-border-width;
+  }
+}
+.k-grid-header-wrap,
+.k-grid-footer-wrap {
+  border-width: 0 $grid-cell-vertical-border-width 0 0;
+}
+// th样式
+.k-grid-header {
+  .k-header {
+    font-weight: $farris-grid-header-font-weight;
+  }
+}
+
+// Checkbox样式
+.k-grid,
+.table {
+  .k-checkbox-label,
+  .k-radio-label {
+    margin-bottom: 0;
+  }
+}
+
+// 20190507-Grid 暂无数据
+.k-grid tbody {
+  .k-grid-norecords {
+    &:hover {
+      background: initial;
+    }
+    td {
+      border: none;
+    }
+    &.k-state-selected,&.f-state-selected{
+      td{
+        background:#fff;
+      }
+    }
+    &.k-state-hover,&.f-state-hover{
+      background:#fff;
+    }
+  }
+}
+
+// 行内编辑 输入控件间距
+.k-edit-cell {
+  & > .k-textbox,
+  & > .k-widget,
+  & > .text-box {
+    margin-left: 0;
+  }
+}
+.k-grid-edit-row {
+  & > td {
+    & > .k-textbox,
+    & > .k-widget,
+    & > .text-box {
+      margin-left: 0;
+    }
+  }
+}
+
+// 2019年6月12日 表格启用属性，checkbox选中，当前行并不选中
+.k-grid {
+  // 标志选中
+  //  th.f-state-selected,
+  //td.f-state-selected
+  tr.f-state-selected > td {
+    border-color: $farris-grid-selected-border;
+    color: $grid-selected-text;
+    background-color: $grid-selected-bg;
+  }
+
+  tr.f-state-checked {
+    &.k-state-selected {
+      & > td {
+        border-color: $grid-border;
+        color: $grid-text;
+        background-color: $grid-bg;
+      }
+      &.k-alt {
+      //  color: $grid-alt-text;
+       // background-color: $grid-alt-bg;
+        & > td {
+          // border-color: $farris-grid-alt-border;
+          color: $grid-alt-text;
+          background-color: $grid-alt-bg;
+        }
+      }
+      &:hover,
+      &.k-state-hover{
+        &>td{
+          color: $grid-hovered-text;
+          background-color: $grid-hovered-bg;
+        }
+      }
+      &.f-state-selected,
+      &.k-alt.f-state-selected {
+        &> td{
+          border-color: $farris-grid-selected-border;
+          color: $grid-selected-text;
+          background-color: $grid-selected-bg;
+        }
+      }
+    }
+  }
+  tbody tr.f-state-checked:hover,
+  tbody tr.f-state-checked.k-state-hover {
+    color: $grid-hovered-text;
+    background-color: $grid-hovered-bg;
+  }
+}

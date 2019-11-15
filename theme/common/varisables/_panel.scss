@@ -1,0 +1,35 @@
+
+
+// 手风琴
+$farris-panelbar-header-padding-y: $f-panel-bar-header-padding-y;
+$farris-panelbar-header-padding-x: 0.875rem;
+$farris-panelbar-header-padding-with-icon-left: 2.1875rem; // 暂时不用
+$farris-panel-border: $f-neutral-04;
+$farris-panel-text: $f-text-02;
+$farris-panel-bg: $f-neutral-00;
+$farris-panel-content-gunter: 0.9375rem;
+// 标题
+// $farris-accordion-title-font-size:$farris-font-size-base;
+$farris-accordion-header-bg: $f-neutral-00;
+// 选中
+$farris-panel-link-selected-text: $f-theme-03;
+$farris-panel-link-selected-background: $f-neutral-00;
+$farris-panel-link-selected-border: $f-neutral-04;
+// 禁用
+$farris-panel-link-disabled-text: $f-text-08;
+$farris-panel-link-disabled-background: $f-neutral-00;
+$farris-panel-link-disabled-border: $f-neutral-02;
+// 滑过
+$farris-panel-link-hover-text: $f-theme-05;
+$farris-panel-link-hover-background: $f-neutral-00;
+$farris-panel-link-hover-border: $f-neutral-04;
+// 展开收起图标
+$farris-panel-icon-font-family: $farris-icon-font-family;
+$farris-panel-icon-expand: 'expand_more';
+$farris-panel-icon-collapse: 'expand_less';
+$farris-panel-icon-font-size: 1.125rem;
+$farris-panel-icon-left: 0.75rem;
+$farris-panel-icon-text: $f-neutral-01;
+
+$farris-panel-item-title-size:1rem;
+$farris-panel-item-title-line-height:1.375rem;

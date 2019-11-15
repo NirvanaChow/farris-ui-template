@@ -1,0 +1,130 @@
+// 流程进度
+.f-cmp-process {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: $f-cmp-process-outer-gutter;
+  .f-cmp-process-step {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: $f-cmp-process-step-outer-gutter;
+    > * {
+      align-self: center;
+    }
+    .f-cmp-process-icon {
+      .f-icon,.f-icon-md {
+        display: none;
+      }
+    }
+    &:last-child {
+      flex: 0 0 auto !important;
+      .f-cmp-process-next {
+        display: none;
+      }
+    }
+  }
+  .f-cmp-process-step-done {
+    .f-cmp-process-icon {
+      color: $f-cmp-process-done-icon-text;
+      background: $f-cmp-process-done-icon-background;
+      .f-icon,.f-icon-md {
+        display: inline-block;
+      }
+      .f-text {
+        display: none;
+      }
+    }
+    .f-cmp-process-next {
+      .f-icon,.f-icon-md {
+        color: $f-cmp-process-done-next-text;
+      }
+      &::after {
+        border-color: $f-cmp-process-done-next-border-color;
+      }
+    }
+    .f-cmp-process-text{
+      color:$f-cmp-process-done-text-text;
+    }
+  }
+  .f-cmp-process-step-on{
+    .f-cmp-process-icon {
+      color: $f-cmp-process-on-icon-text;
+      background: $f-cmp-process-on-icon-background;
+    }
+    .f-cmp-process-text{
+      color:$f-cmp-process-on-text-text;
+    }
+  }
+  .f-cmp-process-icon {
+    width: $f-cmp-process-icon-width;
+    height: $f-cmp-process-icon-height;
+    margin: $f-cmp-process-icon-outer-gutter;
+    border-radius: $f-cmp-process-icon-border-radius;
+    color: $f-cmp-process-icon-text;
+    font-size: $f-cmp-process-icon-font-size;
+    background: $f-cmp-process-icon-background;
+    display: inline-flex;
+    vertical-align: middle;
+    text-align: center;
+    line-height: $f-cmp-process-icon-height;
+    justify-content: center !important;
+    .f-text {
+      font-style: normal;
+    }
+    > * {
+      align-self: center;
+    }
+  }
+  .f-cmp-process-text {
+    margin: $f-cmp-process-text-outer-gutter;
+    color: $f-cmp-process-text-text;
+    font-size: $f-cmp-process-text-font-size;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .f-cmp-process-next {
+    position: relative;
+    min-width: 60px;
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: flex-end;
+    .f-icon,.f-icon-md {
+      display: block;
+      color: $f-cmp-process-next-text;
+    }
+    &::after {
+      content: '';
+      border-top: 2px dotted $f-cmp-process-next-border-color;
+      left: 0;
+      height: 2px;
+      overflow: hidden;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -1px;
+    }
+  }
+  &.f-cmp-process-fill {
+    .f-cmp-process-step {
+      flex: 1 1 auto;
+    }
+    .f-cmp-process-next {
+      flex: 1 1 0;
+      min-width: auto;
+    }
+  }
+  &.f-cmp-process-large{
+    .f-cmp-process-step{
+        margin:$f-cmp-process-large-step-outer-gutter;
+    }
+    .f-cmp-process-icon {
+        width: $f-cmp-process-large-icon-width;
+        height:$f-cmp-process-large-icon-height;
+        margin: $f-cmp-process-icon-outer-gutter;
+        border-radius:$f-cmp-process-large-icon-border-radius;
+    }
+  }
+}

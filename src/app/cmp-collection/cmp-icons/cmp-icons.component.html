@@ -1,0 +1,46 @@
+<h4 class="m-3">图标含义</h4>
+<p class="mx-3">图标应用在模板标题栏</p>
+<div class="farris-split-section m-3 p-3">
+  <div class="row m-0">
+    <div class="col-6 col-md-3" *ngFor="let headerIcon of headerIcons; let i = index">
+      <div class="f-page-header-base">
+        <div class="f-title">
+          <span class="f-title-icon " [ngClass]="headerIcon.color">
+              <i class="f-icon" [ngClass]="headerIcon.icon"></i>
+          </span>         
+        </div>
+      </div>
+      <p class="mb-1">
+        应用：<span>{{ headerIcon['type'] }}</span>
+      </p>
+      <p class="mb-1">
+        图标：<span>{{ headerIcon['icon'] }}</span>
+      </p>
+      <p class="mb-1">
+        颜色：<span>{{ headerIcon['color'] }}</span>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- 
+<h4 class="m-3">图片含义</h4>
+<p class="mx-3">
+  图片位置<span class="text-danger"
+    >platform\common\web\assets\header-icons</span
+  >
+</p>
+<div class="farris-split-section m-3 p-3">
+  <div class="row m-0">
+    <div class="col-3 mb-2" *ngFor="let imgRecord of iconDatas">
+      <p class="text-center">
+        <img [src]="'assets/img/' + imgRecord['code'] + '.svg'" />
+      </p>
+      <p class="mb-1">
+        应用： <span>{{ imgRecord['name'] }}</span>
+      </p>
+      <p class="mb-1">
+        图标： <span>{{ imgRecord['code'] }}</span>
+      </p>
+    </div>
+  </div>
+</div> -->

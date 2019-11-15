@@ -1,0 +1,98 @@
+[
+  {
+    "title": "默认",
+    "code": "default",
+    "variables": [
+      {
+        "name": "f-theme-02",
+        "value": "#2277e4"
+      },
+      {
+        "name": "f-theme-03",
+        "value": "#0068f3"
+      },
+      {
+        "name": "f-theme-04",
+        "value": "#388fff"
+      },
+      {
+        "name": "f-theme-05",
+        "value": "#59a1ff"
+      }
+    ],
+    "types": [
+      {
+        "title": "标准",
+        "type": "default"
+      },
+      {
+        "title": "宽松版",
+        "type": "loose"
+      }
+    ]
+  },
+  {
+    "title": "中国红",
+    "code": "red",
+    "variables": [
+      {
+        "name": "f-theme-02",
+        "value": "#cf242a"
+      },
+      {
+        "name": "f-theme-03",
+        "value": "#c42228"
+      },
+      {
+        "name": "f-theme-04",
+        "value": "#d9262c"
+      },
+      {
+        "name": "f-theme-05",
+        "value": "#df464b"
+      }
+    ],
+    "types": [
+      {
+        "title": "标准",
+        "type": "default"
+      },
+      {
+        "title": "宽松版",
+        "type": "loose"
+      }
+    ]
+  },
+  {
+    "title": "清新绿",
+    "code": "green",
+    "variables": [
+      {
+        "name": "f-theme-02",
+        "value": "#00bcd9"
+      },
+      {
+        "name": "f-theme-03",
+        "value": "#0aaac2"
+      },
+      {
+        "name": "f-theme-04",
+        "value": "#00c0de"
+      },
+      {
+        "name": "f-theme-05",
+        "value": "#30cfe8"
+      }
+    ],
+    "types": [
+      {
+        "title": "标准",
+        "type": "default"
+      },
+      {
+        "title": "宽松版",
+        "type": "loose"
+      }
+    ]
+  }
+]

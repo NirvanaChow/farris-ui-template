@@ -1,0 +1,110 @@
+$temp-modal-tips-content-gutter-left: #{$farris-modal-tips-content-gutter-left +
+  $farris-modal-tips-icon-size};
+$temp-modal-tips-content-gutter-right: #{$farris-modal-tips-content-gutter-right +
+  $farris-icon-font-size};
+// 弹出窗口里的提示信息
+.modal-tips {
+  padding: $farris-modal-tips-gutter;
+  .modal-tips-content {
+    margin-top: $farris-modal-tips-content-gutter-top;
+    margin-left: $temp-modal-tips-content-gutter-left;
+    margin-right: $temp-modal-tips-content-gutter-right;
+  }
+  .modal-tips-title {
+    color: $farris-modal-tips-title-color;
+    font-size: $farris-modal-tips-title-font-size;
+    line-height: $farris-modal-tips-title-line-height;
+    font-weight: $farris-modal-tips-font-weight;
+    margin: 0 0 $farris-modal-tips-title-margin-bt 0;
+  }
+  .toast-msg {
+    margin: 0;
+    word-break:break-all;
+    font-size: $farris-modal-tips-only-msg-size;
+    line-height: $farris-modal-tips-only-msg-line-height
+  }
+  .only-toast-msg {
+    color: $farris-modal-tips-only-msg-color;
+    font-size: $farris-modal-tips-only-msg-size;
+    line-height: $farris-modal-tips-only-msg-line-height;
+  }
+
+  //messager 结构修改 20191014
+  .toast-msg-title{
+    margin: 0;
+    word-break:break-all;
+    font-size: $farris-modal-tips-only-msg-size;
+    line-height: $farris-modal-tips-only-msg-line-height;
+    color: $farris-modal-msg-title-color;
+  }
+  .toast-msg-detail{
+    margin: 0;
+    word-break:break-all;
+    color: $farris-modal-msg-title-detail-color;
+    font-size: $farris-modal-tips-title-font-size;
+    margin-top: $farris-modal-msg-title-gutter-bottom;
+  }
+
+  .modal-tips-iconwrap {
+    // padding-top: 1px;
+    .f-icon {
+      font-size: $farris-modal-tips-icon-size;
+      margin-right: $farris-modal-tips-content-gutter-right;
+    }
+  }
+}
+// 默认调用最大的按钮
+.modal-footer {
+  .btn,
+  .k-button {
+    min-width: $farris-modal-footer-btn-min-width;
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+  }
+}
+
+.message-container {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    min-width: 60px;
+    margin: auto 5px;
+  }
+}
+
+.farris-messager {
+  display: flex;
+
+  .icon {
+    background-position: center 3px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+  }
+
+  .msg {
+    flex: 1;
+  }
+}
+//信息提示框样式修改 20191014
+.modal-message{
+  .modal-tips{
+    padding: 32px 32px 28px;
+    .modal-tips-content{
+      padding: 0;
+    }
+    .modal-tips-iconwrap{
+      margin: 0;
+      .f-icon{
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .modal-footer{
+    background: #fff;
+    border:none;
+    padding: 0 32px 24px;
+  }
+}

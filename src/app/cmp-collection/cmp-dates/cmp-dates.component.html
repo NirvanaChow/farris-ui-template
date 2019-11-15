@@ -1,0 +1,769 @@
+<h4 class=" m-3">数字控件(Kendo)</h4>
+<div class="row farris-split-section m-3 py-3 flex-wrap">
+  <div class="col-12 col-md-6">
+    <h5>普通状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-12" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">数字控件</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-numerictextbox
+                [(ngModel)]="numericValue"
+                class="form-control"
+              ></kendo-numerictextbox>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>禁用状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-12" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">数字控件</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-numerictextbox
+                [(ngModel)]="numericValue"
+                [disabled]="true"
+                class="form-control"
+              ></kendo-numerictextbox>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>只读状态</h5>
+    <div class="form-row farris-form"  [ngClass]="horizontalCls">
+      <div class="col-12" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">数字控件</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-numerictextbox
+                [(ngModel)]="numericValue"
+                [readonly]="true"
+                class="form-control f-state-readonly"
+              ></kendo-numerictextbox>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class=" m-3">Switch(Kendo)</h4>
+<div class="row farris-split-section m-3 py-3 flex-wrap">
+  <div class="col-12 col-md-6">
+    <h5>普通状态</h5>
+    <div class="form-row farris-form"  [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">选中</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch [(ngModel)]="switchValue" class="form-control"></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">未选中</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch [(ngModel)]="switchValue2" class="form-control"></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>禁用状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">选中</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch
+                [(ngModel)]="switchValue"
+                [disabled]="true"
+                class="form-control"
+              ></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">未选中</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch
+                [(ngModel)]="switchValue2"
+                [disabled]="true"
+                class="form-control"
+              ></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>只读状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">选中</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch
+                [(ngModel)]="switchValue"
+                [readonly]="true"
+                class="f-state-readonly form-control"
+              ></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">未选中</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-switch
+                [(ngModel)]="switchValue2"
+                [readonly]="true"
+                class="f-state-readonly form-control"
+              ></kendo-switch>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 class=" m-3">下拉控件(Kendo)</h4>
+<div class="row farris-split-section m-3 py-3 flex-wrap">
+  <div class="col-12 col-md-6">
+    <h5>普通状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">AutoComplete</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-autocomplete
+                [data]="listItems"
+                [value]="'足球'"
+                [class]="'form-control'"
+              >
+              </kendo-autocomplete>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">DropDownList</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-combobox
+                [data]="listItems"
+                [value]="'足球'"
+                [class]="'form-control'"
+              >
+              </kendo-combobox>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">ComboBox</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dropdownlist
+                [data]="listItems"
+                [value]="'足球'"
+                [class]="'form-control'"
+              >
+              </kendo-dropdownlist>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">MultiSelect</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-multiselect
+                [data]="listItems"
+                [value]="multSelect"
+                [placeholder]="'Your favorite sports'"
+                [class]="'form-control'"
+              ></kendo-multiselect>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>禁用状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">AutoComplete</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-autocomplete
+                [data]="listItems"
+                [value]="'足球'"
+                [class]="'form-control'"
+                [disabled]="true"
+              >
+              </kendo-autocomplete>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">DropDownList</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-combobox
+                [data]="listItems"
+                [value]="'足球'"
+                [class]="'form-control'"
+                [disabled]="true"
+              >
+              </kendo-combobox>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">ComboBox</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dropdownlist
+                [data]="listItems"
+                [value]="'Basketball'"
+                [class]="'form-control'"
+                [disabled]="true"
+              >
+              </kendo-dropdownlist>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">MultiSelect</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-multiselect
+                [data]="listItems"
+                [value]="multSelect"
+                [placeholder]="'Your favorite sports'"
+                [class]="'form-control'"
+                [disabled]="true"
+              ></kendo-multiselect>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>只读状态</h5>
+    <div class="form-row farris-form">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">AutoComplete</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-autocomplete
+                [data]="listItems"
+                
+                [value]="'足球'"
+                class="form-control f-state-readonly"
+                [readonly]="true"
+              >
+              </kendo-autocomplete>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">DropDownList</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-combobox
+                [data]="listItems"
+                [value]="'Basketball'"
+                class="form-control f-state-readonly"
+                [readonly]="true"
+              >
+              </kendo-combobox>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">ComboBox</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dropdownlist
+                [data]="listItems"
+               
+                [value]="'足球'"
+                class="form-control f-state-readonly"
+                [readonly]="true"
+              >
+              </kendo-dropdownlist>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">MultiSelect</span>
+              <span class="farris-label-info text-danger">*</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-multiselect
+                [data]="listItems"
+                [value]="multSelect"
+                [placeholder]="'Your favorite sports'"
+                class="form-control f-state-readonly"
+                [readonly]="true"
+              ></kendo-multiselect>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 class=" m-3">下拉控件(combo-list)</h4>
+<div class="row farris-split-section m-3 py-3 flex-wrap">
+  <div class="col-12 col-md-6">
+      <h5>普通状态</h5>
+      <div class="form-row farris-form" [ngClass]="horizontalCls">
+        <div class="col-6" [ngClass]="inputCls">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">combolist</span>
+              </label>
+              <div class="farris-input-wrap">
+                  <farris-combo-list
+                  [(ngModel)]="valObj.id"
+                  [(selectedValues)]="valObj.text"
+                  [idField]="'id'"
+                  [textField]="'text'"
+                  [data]="listItemsDropDown"
+                ></farris-combo-list>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6" [ngClass]="inputCls">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">multiCombolist</span>
+              </label>
+              <div class="farris-input-wrap">
+                  <farris-combo-list
+                    [(ngModel)]="multiCombolist.id"
+                    [(selectedValues)]="multiCombolist.text"
+                    [idField]="'id'"
+                    [textField]="'text'"
+                    [multiSelect]="true"
+                    [data]="multilistItemsDropDown"
+                  ></farris-combo-list>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-6">
+      <h5>只读状态</h5>
+      <div class="form-row farris-form" [ngClass]="horizontalCls">
+        <div class="col-6" [ngClass]="inputCls">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">combolist</span>
+              </label>
+              <div class="farris-input-wrap">
+                  <farris-combo-list
+                  [(ngModel)]="valObj.id"
+                  [(selectedValues)]="valObj.text"
+                  [idField]="'id'"
+                  [textField]="'text'"
+                  [data]="listItemsDropDown"
+                  [readonly]="true"
+                ></farris-combo-list>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6" [ngClass]="inputCls">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">multiCombolist</span>
+              </label>
+              <div class="farris-input-wrap">
+                  <farris-combo-list
+                        [(ngModel)]="multiCombolist.id"
+                        [(selectedValues)]="multiCombolist.text"
+                        [idField]="'id'"
+                        [textField]="'text'"
+                        [multiSelect]="true"
+                        [data]="multilistItemsDropDown"
+                        [readonly]="true"
+                    ></farris-combo-list>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-12 col-md-6">
+      <h5>禁用状态</h5>
+      <div class="form-row farris-form" [ngClass]="horizontalCls">
+        <div class="col-6" [ngClass]="inputCls">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">combolist</span>
+              </label>
+              <div class="farris-input-wrap">
+                  <farris-combo-list
+                  [(ngModel)]="valObj.id"
+                  [(selectedValues)]="valObj.text"
+                  [idField]="'id'"
+                  [textField]="'text'"
+                  [data]="listItemsDropDown"
+                  [disabled]="true"
+                ></farris-combo-list>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6" [ngClass]="inputCls">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-text">multiCombolist</span>
+              </label>
+              <div class="farris-input-wrap">
+                  <farris-combo-list
+                        [(ngModel)]="multiCombolist.id"
+                        [(selectedValues)]="multiCombolist.text"
+                        [idField]="'id'"
+                        [textField]="'text'"
+                        [multiSelect]="true"
+                        [data]="multilistItemsDropDown"
+                        [disabled]="true"
+                    ></farris-combo-list>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<h4 class=" m-3">日期控件(Kendo)</h4>
+<div class="row farris-split-section m-3 py-3 flex-wrap">
+  <div class="col-12 col-md-6">
+    <h5>普通状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">日期输入</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dateinput
+                [value]="value"
+                class="form-control"
+              ></kendo-dateinput>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">日期选择</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-datepicker
+                [value]="value"
+                class="form-control"
+              ></kendo-datepicker>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">时间选择</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-timepicker
+                [value]="value"
+                class="form-control"
+              ></kendo-timepicker>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>禁用状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">日期输入</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dateinput
+                [value]="value"
+                [disabled]="true"
+                class="form-control"
+              ></kendo-dateinput>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">日期选择</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-datepicker
+                [value]="value"
+                class="form-control"
+                [disabled]="true"
+              ></kendo-datepicker>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">时间选择</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-timepicker
+                [value]="value"
+                [disabled]="true"
+                class="form-control"
+              ></kendo-timepicker>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h5>只读状态</h5>
+    <div class="form-row farris-form" [ngClass]="horizontalCls">
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">日期输入</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dateinput
+                [value]="value"
+                [readonly]="true"
+                class="form-control f-state-readonly"
+              ></kendo-dateinput>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">日期选择</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-datepicker
+                [value]="value"
+                [readonly]="true"
+                class="form-control f-state-readonly"
+              ></kendo-datepicker>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6" [ngClass]="inputCls">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-text">时间选择</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-timepicker
+                [value]="value"
+                [readonly]="true"
+                class="form-control f-state-readonly"
+              ></kendo-timepicker>
+              <div class="farris-feedback valid-feedback">
+                设置符合规则
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 class=" m-3">日历控件(Kendo)</h4>
+<div class="row farris-split-section m-3 py-3 ">
+  <kendo-multiviewcalendar></kendo-multiviewcalendar>
+</div>

@@ -1,0 +1,551 @@
+/* 20190912此处应该用不到
+label {
+  margin-left: $farris-label-margin-left;
+}*/
+
+.farris-form {
+  flex-shrink: 0;
+}
+//20191101 input-group添加focus类名
+.input-group.input-group-focus{
+  border-color: $input-focus-border-color;
+  box-shadow: $input-box-shadow, $input-focus-box-shadow;
+}
+// input 布局
+// 默认纵向时，标签页
+.farris-input-wrap {
+  display: block;
+  position: relative;
+  .form-control {
+    width: 100%;
+    display: block;
+    &.form-control-invalid{
+      border-color: $f-semantic-danger;
+    }
+  }
+  .k-switch {
+    width: $f-k-switch-size;
+    height: auto;
+    display: inline-flex;
+  }
+  .input-group .form-control {
+    width: 1%;
+  }
+
+  .farris-feedback {
+    position: absolute;
+    bottom: -$farris-feedback-position-bottom;
+    left: 0;
+    padding: 3px 8px;
+    z-index: 999;
+    display: none;
+    .f-feedback-message{
+      font-size: $farris-feedback-font-size;
+      line-height: $farris-feedback-line-height;
+    }
+    &.f-state-invalid,&.f-state-valid{
+      display: block;
+    }
+    &.f-state-invalid{
+      background: $f-semantic-danger-bg;
+      .f-feedback-message{
+        color: $f-semantic-danger;
+      }
+    }
+    &.f-state-valid{
+      background: $f-semantic-success-bg;
+      .f-feedback-message{
+        color: $f-semantic-success;
+      }
+    }
+    
+  }
+  
+
+
+}
+
+.farris-form-group {
+  flex-wrap: nowrap !important;
+  .farris-input-wrap,
+  .col-form-label {
+    label {
+      display: inline-block;
+    }
+  }
+  .farris-input-wrap {
+    .custom-control-label {
+      display: inline;
+    }
+    .custom-checkbox {
+      margin-bottom: 0;
+      margin-top: 0.125rem;
+    }
+    .custom-radio {
+      margin-bottom: 0;
+      margin-top: 0.125rem;
+    }
+  }
+  // .radio-checkbox-inline{
+  //   .custom-checkbox,
+  //   .custom-radio{
+  //     display: inline;
+  //   }
+  // }
+}
+.form-inline,
+.farris-form-controls-inline .farris-group-wrap {
+  .farris-input-wrap {
+    flex: 1 1 auto;
+  }
+  .col-form-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end !important;
+    flex-direction: row !important;
+  }
+}
+.farris-form-inline,
+.farris-form-controls-inline .farris-group-wrap {
+  display: block;
+  .col-form-label {
+    width: $farris-inline-label-default-width;
+    flex-shrink: 0;
+    margin-right: $farris-inline-label-margin-x;
+    @include text-truncate;
+    justify-content: flex-end !important;
+    flex-direction: row !important;
+    > * {
+      min-width: 0;
+      @include text-truncate;
+    }
+  }
+  .form-group {
+    margin-bottom: $f-el-form-title-input-top-bottom-gutter;
+    flex-wrap: nowrap !important;
+  }
+}
+.farris-label-info {
+  padding: $farris-label-info-padding;
+}
+// 通过表单控制样式
+.farris-form-controls-inline {
+  .form-group {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .farris-group-ver {
+    .form-group,
+    .col-form-label {
+      display: block;
+    }
+  }
+}
+
+.form-label-plaintext {
+  .farris-label-text {
+    color: $farris-form-label-plaintext-text;
+  }
+}
+
+//  checkbox radio 标签在后面
+.f-checkradio-no-label {
+  .farris-form-inline,
+  .farris-form-controls-inline {
+    .col-form-label {
+      width: 1px;
+      overflow: hidden;
+      height: calc(
+        #{$farris-line-height-base} * #{$farris-line-height-base} + #{$input-padding-y}*
+          2 + #{$input-border-width}* 2
+      );
+    }
+    .custom-radio,
+    .custom-checkbox {
+      @include text-truncate;
+    }
+  }
+}
+
+.farris-form-controls-inline {
+  .f-checkradio-no-label {
+    .col-form-label {
+      width: 1px;
+      overflow: hidden;
+      height: calc(
+        #{$farris-line-height-base} * #{$farris-line-height-base} + #{$input-padding-y}*
+          2 + #{$input-border-width}* 2
+      );
+    }
+  }
+}
+
+// form-group
+.input-group {
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  .form-control {
+    border: 0;
+    height: $f-input-height-inner;
+    box-shadow: none;
+  }
+
+  .input-group-prepend,
+  .input-group-append {
+    background: $farris-input-group-append-bg;
+    & > .input-group-text,
+    & > .btn,
+    & > .dropdown {
+      border: 0;
+    }
+    & > .input-group-text {
+      background: transparent;
+      .modal_close{
+        background: $f-input-group-close-icon-bg;
+        color: $f-input-group-close-icon-color;
+        border-radius: 50%;
+        font-size: $f-input-group-close-icon-size;
+      }
+    }
+  }
+  &:not(.farris-input-group-readonly):not(.farris-input-group-disable):not(.f-state-readonly):not(.f-state-disabled):hover{
+    border-color: $farris-input-hovered-border-color;
+  }
+}
+//20190925 数字控件 滑过样式修改
+
+.k-numerictextbox .k-numeric-wrap{
+  &:hover{
+    border-color: $farris-input-hovered-border-color;
+  }
+}
+
+/*覆盖*/
+.k-input,
+.k-textbox,
+.k-textarea,
+.k-input.k-textbox {
+  // Invalid
+  &:invalid,
+  &:valid {
+    color: $input-color;
+    border-color: $input-border-color;
+  }
+}
+.k-autocomplete,
+.k-dateinput-wrap,
+.k-dropdown-wrap,
+.k-picker-wrap,
+.k-multiselect-wrap,
+.k-numeric-wrap {
+  .k-input {
+    color: inherit;
+    border-color: inherit;
+    box-shadow: none;
+  }
+}
+.custom-control-label {
+  margin-left: 0;
+}
+// checkbox radio 横向布局
+.farris-checkradio-hor {
+  flex-wrap: wrap;
+  display: inline-flex;
+}
+
+/*20190417 增加输入控件是下划线的*/
+.f-input-underline {
+  .form-control {
+    background: transparent;
+    border-width: 0 0 1px 0;
+    border-color: $f-input-underline-border-color;
+    border-style: solid;
+    &:focus {
+      background: transparent;
+      border-color: $farris-input-focus-border-color;
+      color: $farris-input-focused-color;
+      box-shadow: none;
+    }
+    &:disabled,
+    &:disabled:hover {
+      background: transparent;
+      border-color: $farris-input-disabled-border-color;
+      border-style: dashed;
+      color: $farris-input-disabled-color;
+    }
+    &[readonly],
+    &[readonly]:hover {
+      background: transparent;
+      border-color: $farris-input-readonly-border-color;
+      border-style: dashed;
+      color: $farris-input-readonly-color;
+    }
+    // .lookupbox {
+    //   &.f-state-disabled .form-control {
+    //     background: transparent;
+    //   }
+    //   .input-group-append {
+    //     background: transparent;
+    //   }
+    // }
+  }
+  .input-group {
+    border-width: 0 0 1px 0;
+    border-color: $f-input-underline-border-color;
+    border-style: solid;
+    .form-control {
+      border: 0;
+    }
+    &.f-state-disabled {
+      border-color: $farris-input-disabled-border-color;
+      border-style: dashed;
+    }
+    &.f-state-readonly {
+      border-color: $farris-input-readonly-border-color;
+      border-style: dashed;
+    }
+  }
+  .k-widget {
+    border-width: 0;
+  }
+  .k-autocomplete,
+  .k-multiselect-wrap,
+  .k-dropdown .k-dropdown-wrap,
+  .k-combobox .k-dropdown-wrap,
+  .k-datepicker .k-picker-wrap,
+  .k-timepicker .k-picker-wrap,
+  .k-datetimepicker .k-picker-wrap,
+  .k-dateinput .k-dateinput-wrap,
+  .k-numerictextbox .k-numeric-wrap {
+    border-width: 0 0 1px 0;
+    border-color: $f-input-underline-border-color;
+    border-style: solid;
+    background: transparent;
+    &.k-state-disabled {
+      border-color: $farris-input-disabled-border-color;
+      border-style: dashed;
+    }
+    &.k-state-focused {
+      box-shadow: none;
+    }
+  }
+  .k-state-disabled {
+    &.k-multiselect .k-multiselect-wrap,
+    &.k-dateinput .k-dateinput-wrap {
+      border-color: $farris-input-disabled-border-color;
+      border-style: dashed;
+    }
+  }
+
+  .f-state-readonly,
+  [ng-reflect-readonly='true'] {
+    &.k-autocomplete,
+    &.k-multiselect-wrap,
+    &.k-dropdown .k-dropdown-wrap,
+    &.k-combobox .k-dropdown-wrap,
+    &.k-datepicker .k-picker-wrap,
+    &.k-timepicker .k-picker-wrap,
+    &.k-datetimepicker .k-picker-wrap,
+    &.k-dateinput .k-dateinput-wrap,
+    &.k-numerictextbox .k-numeric-wrap {
+      border-color: $farris-input-readonly-border-color;
+      border-style: dashed;
+    }
+  }
+  /*日期时间控件*/
+  .k-datepicker .k-picker-wrap,
+  .k-timepicker .k-picker-wrap,
+  .k-datetimepicker .k-picker-wrap {
+    .k-dateinput .k-dateinput-wrap {
+      border-width: 0;
+    }
+  }
+}
+/*20190511 输入控件的查看状态
+* 先控制只读、禁用状态显示
+*/
+.f-state-form-view {
+  .farris-group-wrap {
+    .farris-label-text {
+      color: $farris-input-viewstate-label-color;
+    }
+  }
+  .form-control {
+    &:focus {
+      background: $farris-input-viewstate-input-bg;
+      border-color: $farris-input-viewstate-input-border-color;
+      color: $farris-input-viewstate-input-color;
+      box-shadow: none;
+    }
+    &:disabled,
+    &:disabled:hover {
+      background: $farris-input-viewstate-input-bg;
+      border-color: $farris-input-viewstate-input-border-color;
+      color: $farris-input-viewstate-input-color;
+    }
+    &[readonly],
+    &[readonly]:hover {
+      background: $farris-input-viewstate-input-bg;
+      border-color: $farris-input-viewstate-input-border-color;
+      color: $farris-input-viewstate-input-color;
+    }
+  }
+  .input-group {
+    border-color: $farris-input-viewstate-input-border-color;
+    &.f-state-disabled {
+      border-color: $farris-input-viewstate-input-border-color;
+    }
+    &.f-state-readonly {
+      border-color: $farris-input-viewstate-input-border-color;
+    }
+  }
+  .k-autocomplete,
+  .k-autocomplete,
+  .k-multiselect-wrap,
+  .k-dropdown .k-dropdown-wrap,
+  .k-combobox .k-dropdown-wrap,
+  .k-dateinput .k-dateinput-wrap,
+  .k-numerictextbox .k-numeric-wrap {
+    &.k-state-disabled {
+      background: $farris-input-viewstate-input-bg;
+      border-color: $farris-input-viewstate-input-border-color;
+      color: $farris-input-viewstate-input-color;
+    }
+  }
+
+  .k-state-disabled {
+    &.k-multiselect {
+      .k-multiselect-wrap {
+        border-color: $farris-input-viewstate-input-border-color;
+        background: $farris-input-viewstate-input-bg;
+        .k-button {
+          color: $farris-input-viewstate-input-color;
+          border-color: $farris-btn-disabled-border-color;
+          background: $farris-btn-disabled-bg;
+        }
+      }
+    }
+    &.k-dateinput {
+      .k-dateinput-wrap {
+        background: $farris-input-viewstate-input-bg;
+        border-color: $farris-input-viewstate-input-border-color;
+        color: $farris-input-viewstate-input-color;
+      }
+    }
+    &.k-datepicker,
+    &.k-timepicker,
+    &.k-datetimepicker {
+      .k-picker-wrap {
+        background: $farris-input-viewstate-input-bg;
+        border-color: $farris-input-viewstate-input-border-color;
+        color: $farris-input-viewstate-input-color;
+        .k-dateinput-wrap {
+          color: $farris-input-viewstate-input-color;
+        }
+      }
+    }
+  }
+
+  .f-state-readonly,
+  [ng-reflect-readonly='true'] {
+    &.k-autocomplete,
+    &.k-multiselect-wrap,
+    &.k-dropdown .k-dropdown-wrap,
+    &.k-combobox .k-dropdown-wrap,
+    &.k-datepicker .k-picker-wrap,
+    &.k-timepicker .k-picker-wrap,
+    &.k-datetimepicker .k-picker-wrap,
+    &.k-dateinput .k-dateinput-wrap,
+    &.k-numerictextbox .k-numeric-wrap {
+      background: $farris-input-viewstate-input-bg;
+      border-color: $farris-input-viewstate-input-border-color;
+      color: $farris-input-viewstate-input-color;
+    }
+    &.k-datepicker .k-picker-wrap .k-dateinput-wrap,
+    &.k-timepicker .k-picker-wrap .k-dateinput-wrap {
+      background: $farris-input-viewstate-input-bg;
+      color: $farris-input-viewstate-input-color;
+    }
+    .k-multiselect-wrap {
+      background: $farris-input-viewstate-input-bg;
+      border-color: $farris-input-viewstate-input-border-color;
+      .k-button {
+        color: $farris-input-viewstate-input-color;
+        border-color: $farris-btn-disabled-border-color;
+        background: $farris-btn-disabled-bg;
+      }
+    }
+  }
+}
+// 2019年6月11日
+// 配合col-auto，形成固定的宽度输入控件
+.f-form-controls-fixed-with {
+  .farris-input-wrap {
+    width: 60px;
+  }
+}
+
+// 2019年8月5日-单独的checkbox、radio 不带间距，这样可用于表格
+.f-checkradio-single {
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  display: inline-flex;
+  .custom-control-label {
+    &::after {
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+// 2019年8月6日
+.f-form-table {
+  width: 100%;
+  table-layout: fixed;
+  td {
+    padding-left: $f-grid-gutter-width * 0.5;
+    padding-right: $f-grid-gutter-width * 0.5;
+  }
+}
+/**
+* 折叠面板里面放form  -----------------------------此处应该没有人用
+**/
+.farris-panel {
+  &.f-panel-width-form-next-tab,
+  &.f-panel-width-form {
+    .card {
+      .card-body {
+        padding: 0;
+      }
+    }
+  }
+}
+// 输入控件最大宽度
+@media (min-width: map-get($map:$grid-breakpoints, $key:lg)) {
+  .farris-form {
+    .farris-group-wrap {
+      max-width: $farris-form-group-max-width;
+    }
+  }
+  .farris-form {
+    .farris-group-auto {
+      .farris-group-wrap {
+        max-width: none;
+      }
+    }
+  }
+  .farris-form-auto {
+    .farris-group-wrap {
+      max-width: none;
+    }
+  }
+}

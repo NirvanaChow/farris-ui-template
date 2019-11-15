@@ -1,0 +1,151 @@
+// Theme overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+@import './variables';
+@import './overrides';
+// 表格
+$table-bg: $farris-grid-bg;
+// 原: 不区分x,y
+$table-cell-padding: $farris-grid-cell-padding-x;
+$table-border-color: $farris-grid-border;
+$table-border-width: $farris-grid-cell-horizontal-border-width;
+$table-accent-bg: $farris-grid-alt-bg;
+$table-hover-bg: $farris-grid-hovered-bg;
+// 输入控件
+$input-placeholder-color: $farris-input-placeholder-color;
+$input-disabled-bg: $farris-input-disabled-bg;
+$input-disabled-color: $farris-input-disabled-color;
+$input-bg: $farris-input-bg;
+$input-color: $farris-input-color;
+$input-border-color: $farris-input-border-color;
+$input-btn-focus-box-shadow: $farris-input-btn-focus-box-shadow;
+$input-focus-border-color: $farris-input-focus-border-color;
+$input-plaintext-color: $farris-input-plaintext-color;
+$input-box-shadow: $farris-input-box-shadow;
+// 自定义Checkbox和Radio
+$custom-control-indicator-bg: $farris-checkbox-bg;
+$custom-control-indicator-box-shadow: $farris-custom-control-indicator-box-shadow;
+
+$custom-control-indicator-disabled-bg: $farris-checkbox-bg;
+$custom-control-label-disabled-color: $farris-cr-disabled-color;
+
+$custom-control-indicator-checked-color: $farris-checkbox-checked-text;
+$custom-control-indicator-checked-bg: $farris-checkbox-bg;
+$custom-control-indicator-checked-disabled-bg: $farris-checkbox-bg;
+$custom-control-indicator-checked-box-shadow: none !default;
+
+// $custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg,
+//   $input-btn-focus-box-shadow !default;
+
+// $custom-control-indicator-active-color: $component-active-color !default;
+// $custom-control-indicator-active-bg:;
+$custom-control-indicator-active-box-shadow: none !default;
+
+$custom-checkbox-indicator-border-radius: $border-radius !default;
+$custom-checkbox-indicator-icon-checked: $farris-custom-checkbox-indicator-icon-checked;
+
+// $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
+// $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
+$custom-checkbox-indicator-icon-indeterminate: $farris-custom-checkbox-indicator-icon-checked;
+$custom-checkbox-indicator-indeterminate-box-shadow: none !default;
+
+$custom-radio-indicator-border-radius: 50% !default;
+$custom-radio-indicator-icon-checked: $farris-custom-radio-indicator-icon-checked;
+
+//Modal 弹出窗口
+$modal-backdrop-opacity: $farris-modal-backdrop-opacity;
+$modal-content-box-shadow-sm-up: $farris-modal-content-box-shadow-sm-up;
+$modal-backdrop-bg: $farris-modal-backdrop-bg;
+$modal-backdrop-opacity: $modal-backdrop-opacity;
+$modal-content-border-width: $farris-modal-content-border-width;
+$modal-header-padding: $farris-modal-header-padding-y;
+$modal-inner-padding: $farris-modal-inner-padding;
+// $modal-dialog-margin: 0.5rem;
+// $modal-dialog-margin-y-sm-up: 1.75rem ;
+$modal-title-line-height: $farris-modal-title-line-height;
+$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($modal-backdrop-bg, 0.5);
+//字体大小
+$font-size-base: $farris-font-size-base;
+$font-size-lg: $farris-font-size-base;
+$font-size-sm: $farris-font-size-base;
+//输入控件大小
+// $input-padding-x-sm: $farris-input-padding-x-sm;
+// $input-padding-y-sm: $farris-input-padding-y-sm;
+// $input-line-height-sm: $farris-input-line-height-sm;
+
+// $input-padding-y-lg: $farris-input-padding-y-lg;
+// $input-padding-x-lg: $farris-input-padding-x-lg;
+// $input-line-height-lg: $farris-input-line-height-lg;
+
+// $input-btn-line-height: $farris-input-line-height;
+// $input-btn-padding-y: $farris-bt-input-btn-padding-y;
+$input-btn-padding-x: $farris-input-btn-padding-x;
+$input-btn-padding-y: $farris-input-btn-padding-y;
+$input-btn-line-height: $farris-input-btn-line-height;
+
+$input-btn-padding-x-sm: $farris-input-btn-padding-x-sm;
+$input-btn-padding-y-sm: $farris-input-btn-padding-y-sm;
+$input-btn-line-height-sm: $farris-input-btn-line-height-sm;
+
+$input-btn-padding-y-lg: $farris-input-btn-padding-y-lg;
+$input-btn-padding-x-lg: $farris-input-btn-padding-x-lg;
+$input-btn-line-height-lg: $farris-input-btn-line-height-lg;
+
+// $input-btn-btn-line-height: $farris-input-line-height;
+// $input-btn-btn-padding-y: $farris-bt-input-btn-padding-y;
+// 按钮
+
+//计算输入控件的高度
+// $input-height-border: $farris-btn-border-width * 2;
+// $input-height-inner: ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2);
+// $input-height: calc(#{$input-btn-height-inner} + #{$input-btn-height-border}) ;
+
+// $input-height-inner-sm: ($font-size-sm * $input-line-height-sm) +($input-btn-padding-y-sm * 2) ;
+// $input-height-sm: calc( #{$input-btn-height-inner-sm} + #{$input-btn-height-border}) ;
+
+// $input-height-inner-lg: ($font-size-lg * $input-line-height-lg) +  ($input-btn-padding-y-lg * 2) ;
+// $input-height-lg: calc(#{$input-height-inner-lg} + #{$input-btn-height-border}) ;
+
+// 标签
+$label-margin-bottom:$farris-label-margin-bottom;
+
+// 下拉控件
+$custom-select-padding-y:$farris-custom-select-padding-y;
+$custom-select-padding-x:$farris-custom-select-padding-x;
+
+// 更新分界点
+$grid-breakpoints:$farris-grid-breakpoints;
+
+// 链接样式
+$link-color:$farris-btn-link-color;
+$link-hover-color:$farris-btn-link-hover-color;
+$btn-link-disabled-color:$farris-btn-link-disabled-color;
+$btn-box-shadow:$farris-btn-box-shadow;
+$btn-focus-box-shadow:$farris-btn-focus-box-shadow;
+$btn-active-box-shadow:$farris-btn-active-box-shadow;
+$btn-disabled-opacity:$farris-btn-disabled-opacity;
+// 下拉箭头
+$caret-width:$farris-caret-width;
+$dropdown-link-active-bg:$farris-dropdown-link-active-bg;
+$dropdown-link-active-color:$farris-dropdown-link-active-color;
+$dropdown-padding-y:$farris-dropdown-padding-y;
+$dropdown-box-shadow:$farris-dropdown-box-shadow;
+$dropdown-link-disabled-color:$farris-dropdown-link-disabled-color;
+$dropdown-link-hover-bg:$farris-dropdown-link-hover-bg;
+$dropdown-link-hover-color:$farris-dropdown-link-hover-color;
+$dropdown-border-width:$farris-dropdown-border-width;
+$dropdown-border-width:$farris-dropdown-border-width;
+$dropdown-divider-bg:$farris-dropdown-divider-bg;
+// 弹出窗口
+$modal-header-border-width:$farris-modal-header-border-width;
+$modal-header-border-color:$farris-modal-header-border-color;
+$modal-footer-border-width:$farris-modal-footer-border-width;
+$modal-footer-border-color:$farris-modal-footer-border-color;
+$modal-header-padding:$farris-modal-header-padding;
+
+// 徽章
+$badge-font-weight:$f-badge-font-weight;
+$badge-padding-x:$f-badge-padding-x;
+$badge-padding-y:$f-badge-padding-y;
+$badge-font-size:$f-badge-font-size;

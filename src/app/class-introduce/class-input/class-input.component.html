@@ -1,0 +1,302 @@
+<dl class="bd-example-introduce-class-list">
+  <dt>1. 输入控件的基本结构</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>
+      a.
+      输入控件有基本的结构，用来控制布局方向、禁用、只读央视，并控制第三方引入控件的样式。注意<code>form-control</code>的位置。
+    </p>
+  </dd>
+</dl>
+<div class="bd-example">
+  <div class="farris-form form-inline farris-form-inline">
+    <div class="f-utils-flex-row-wrap">
+      <div class="col-6">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">输入控件标签</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input class="form-control" type="text" value="输入值" readonly />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<code-show [path]="getPath('basic')" [show]="showCodeArea"></code-show>
+<dl class="bd-example-introduce-class-list">
+  <dd>
+    <p>
+      b.
+      默认是有最大宽度限制，如果是要求某个输入控件解除宽度限制，增加<code>farris-group-auto</code>。
+    </p>
+  </dd>
+</dl>
+<div class="bd-example">
+  <div class="farris-form form-inline farris-form-inline">
+    <div class="f-utils-flex-row-wrap">
+      <div class="col-6 farris-group-auto">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-info text-danger">*</span>
+              <span class="farris-label-text">输入控件标签</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input class="form-control" type="text" value="输入值" readonly />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<code-show [path]="getPath('width-auto')" [show]="showCodeArea"></code-show>
+<dl class="bd-example-introduce-class-list">
+  <dt>2. Checkbox布局</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>a. 默认标签是在前面</p>
+    <p>
+      b.
+      只对齐标签在后面。注意<code>label</code>标签的<code>for</code>属性。如果前面标签中没有文字，把<code>for</code>属性去掉。
+    </p>
+    <p>c. 前标签不占位置。需要增加<code> f-checkradio-no-label</code></p>
+  </dd>
+</dl>
+<div class="bd-example">
+  <div class="farris-form form-inline farris-form-inline">
+    <div class="f-utils-flex-row-wrap">
+      <div class="col-6">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label" for="class-input-checkbox01">
+              <span class="farris-label-text">是否启用</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  id="class-input-checkbox01"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox01"
+                ></label>
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text"></span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  id="class-input-checkbox02"
+                  type="checkbox"
+                />
+                <label class="custom-control-label" for="class-input-checkbox02"
+                  >是否启用</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 f-checkradio-no-label">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text"></span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  id="class-input-checkbox03"
+                  type="checkbox"
+                />
+                <label class="custom-control-label" for="class-input-checkbox03"
+                  >是否启用</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<code-show [path]="getPath('basic-checkbox')" [show]="showCodeArea"></code-show>
+
+<dl class="bd-example-introduce-class-list">
+  <dt>3. 自行构建checkbox组</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>a. 默认纵向布局</p>
+    <p>b. 横向布局，增加<code>farris-checkradio-hor</code>。</p>
+  </dd>
+</dl>
+<div class="bd-example">
+  <div class="farris-form form-inline farris-form-inline">
+    <div class="f-utils-flex-row-wrap">
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">支付方式</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  name="class-input-checkbox-group01"
+                  id="class-input-checkbox-group01"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox-group01"
+                  >信用卡</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  name="class-input-checkbox-group01"
+                  id="class-input-checkbox-group02"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox-group02"
+                  >储蓄卡</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  name="class-input-checkbox-group01"
+                  id="class-input-checkbox-group03"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox-group03"
+                  >微信支付</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">支付方式</span>
+            </label>
+            <div class="farris-input-wrap farris-checkradio-hor">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  name="class-input-checkbox-group02"
+                  id="class-input-checkbox-group04"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox-group04"
+                  >信用卡</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  name="class-input-checkbox-group02"
+                  id="class-input-checkbox-group05"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox-group05"
+                  >储蓄卡</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  name="class-input-checkbox-group02"
+                  id="class-input-checkbox-group06"
+                  type="checkbox"
+                />
+                <label
+                  class="custom-control-label"
+                  for="class-input-checkbox-group06"
+                  >微信支付</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<code-show [path]="getPath('checkboxgroup')" [show]="showCodeArea"></code-show>
+<dl class="bd-example-introduce-class-list">
+  <dt>4. 单选多选在表格</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>a. 增加class<code>f-checkradio-single</code></p>
+  </dd>
+</dl>
+<div class="bd-example">
+  <div class="row">
+    <div class="col-auto">
+      表格启用checkbox结构
+    </div>
+    <div class="col">
+      <div class="custom-control custom-checkbox f-checkradio-single">
+        <input
+          class="custom-control-input"
+          id="listcard_checkbox_02"
+          type="checkbox"
+        /><label
+          class="custom-control-label"
+          for="listcard_checkbox_02"
+        ></label>
+      </div>
+    </div>
+    <div class="col-auto">表格启用radio结构</div>
+    <div class="col">
+      <div class="custom-control custom-radio f-checkradio-single">
+        <input
+          class="custom-control-input"
+          id="class-input-radio01"
+          type="radio"
+        />
+        <label class="custom-control-label" for="class-input-radio01"></label>
+      </div>
+    </div>
+  </div>
+</div>
+<code-show [path]="getPath('checkboxtable')" [show]="showCodeArea"></code-show>

@@ -1,0 +1,114 @@
+// checkbox
+.custom-control{
+  padding-left:0;
+}
+.custom-control-input{
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  opacity: 0;
+}
+.custom-control-label {
+  padding-left: $custom-control-gutter;
+  color: $farris-custom-control-color;
+  //20191010 checkbox中没有文字时 显示错位
+  display: inline;
+  &::before {
+    @include f-icon-extend('FarrisIcons',false);
+    color:$farris-checkbox-border;
+    font-size:1.125rem;
+    top:0;
+    left:0;
+  }
+  &::after{
+    display:none;
+    content:'';
+  }
+}
+.custom-checkbox {
+  padding-right: $farris-checkbox-radio-right-gutter;
+  margin-bottom: $farris-checkbox-radio-bottom-gutter;
+
+  .custom-control-label {
+    &::before {
+      // border: 1px solid $farris-checkbox-border;
+      content: '\e304';
+    }
+    // &::after {
+    //   content: '';
+    // }
+    &:hover{
+      &::before{
+        color: $farris-checkbox-hover-text;
+      }
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      // border-color: $farris-checkbox-checked-border;
+      color: $farris-checkbox-checked-text;
+      content: '\e305';
+    }
+  }
+  .custom-control-input:indeterminate ~ .custom-control-label::before {
+    font-family: 'FarrisIcons';
+    content: '\e306';
+    color: $farris-checkbox-checked-text;
+  }
+  .custom-control-input[readonly] ~ .custom-control-label {
+    color: $farris-cr-readonly-text;
+    &::before {
+      color: $farris-cr-readonly-border;
+    }
+  }
+  .custom-control-input:disabled ~ .custom-control-label {
+    color: $farris-cr-disabled-text;
+    &::before {
+      color: $farris-cr-disabled-border;
+    }
+  }
+}
+.custom-control {
+  .custom-checkbox,
+  .custom-radio {
+    padding-left: $farris-cr-left-gutter;
+  }
+}
+.custom-radio {
+  padding-right: $farris-checkbox-radio-right-gutter;
+  margin-bottom: $farris-checkbox-radio-bottom-gutter;
+  .custom-control-label {
+    &::before {
+      //border: 1px solid $farris-checkbox-border;
+      content: '\e309';
+    }
+    // &::after {
+    // }
+    &:hover{
+      &::before{
+        color: $farris-radio-hover-text;
+      }
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      content: '\e30a';
+      color: $farris-radio-checked-text;
+    }
+
+  }
+  .custom-control-input[readonly] ~ .custom-control-label {
+    color: $farris-cr-readonly-text;
+    &::before {
+      color: $farris-cr-readonly-border;
+    }
+  }
+  .custom-control-input:disabled ~ .custom-control-label {
+    color: $farris-cr-disabled-text;
+    &::before {
+      color: $farris-cr-disabled-border;
+    }
+
+  }
+}
+
+

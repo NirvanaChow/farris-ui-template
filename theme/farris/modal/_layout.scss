@@ -1,0 +1,220 @@
+.modal.farris-modal {
+  .actions {
+    flex: 1;
+    margin: -$farris-modal-header-padding-y * 0.5 0;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .f-btn-icon {
+      cursor: pointer;
+      //color:#ACBED2;
+      color:$f-neutral-01;
+      text-align: center;
+      &:hover{
+        color:$f-text-02;
+      }
+    }
+    
+    .modal-tips-iconwrap {
+      .f-icon {
+        font-size: $farris-modal-icon-size;
+      }
+      .modal-tips-content {
+        padding-top: $farris-modal-text-padding-top;
+      }
+    }
+  }
+  .ng-draggable {
+    cursor: move;
+  }
+
+  .modal-dialog {
+    max-width: initial;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    pointer-events: all;
+  }
+  // 移除拖动时候动画响应慢的情况
+  &.fade .modal-dialog {
+    transform: none;
+    transition: none;
+  }
+
+  .modal-content {
+    height: 100%;
+    overflow: hidden;
+  }
+  .modal-body {
+    padding: 0;
+  }
+}
+
+.k-grid-table {
+  transform: none !important;
+}
+
+// .modal-backdrop {
+//   background-color: #d0d0d0;
+//   &.show {
+//     opacity: 0.3;
+//   }
+// }
+
+.ng-resizable {
+  position: relative;
+}
+
+.ng-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  touch-action: none;
+  &::after{    
+    @include f-icon-extend('FarrisExtend',false);  
+    display: none;
+    position: absolute;
+    font-size:1.25rem;
+    content:'\e027';
+    color:$f-theme-05;
+  }
+  &:hover{
+    &::after{
+      display: block;
+    }
+  }
+  &.ng-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    height: 100%;
+    top: 0;
+    &::after{
+      top: 50%;
+      margin-top: -0.5rem;
+      right:-0.5rem;
+    }
+  }
+  &.ng-resizable-w {
+    cursor: w-resize;
+    width: 7px;
+    left: -5px;
+    height: 100%;
+    top: 0;
+    &::after{
+      top: 50%;
+      margin-top: -0.5rem;
+      right:-0.5rem;
+    }
+  }
+  &.ng-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    bottom: -5px;
+    width: 100%;
+    left: 0;
+    &::after{
+      left:50%;
+      top:0;
+      margin-top:-0.5rem;
+      transform: rotate(90deg);
+    }
+  }
+  &.ng-resizable-n {
+    cursor: n-resize;
+    height: 7px;
+    top: -5px;
+    width: 100%;
+    left: 0;
+    &::after{
+      left:50%;
+      top:0;
+      margin-top:-0.5rem;
+      transform: rotate(90deg);
+    }
+  }
+  &.ng-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+  }
+  &.ng-resizable-sw {
+    cursor: sw-resize;
+    width: 12px;
+    height: 12px;
+    left: 1px;
+    bottom: 1px;
+  }
+  &.ng-resizable-ne {
+    cursor: ne-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    top: 1px;
+  }
+  &.ng-resizable-nw {
+    cursor: nw-resize;
+    width: 12px;
+    height: 12px;
+    left: 1px;
+    top: 1px;
+  }
+}
+
+.ng-resizable-diagonal {
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+
+
+// 弹出窗口内的样式 —— 未抽取变量
+.farris-messager {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .modal-tips{
+    margin-bottom:0;
+    flex:1 1 auto;
+    padding:0 0 0 1.25rem;
+    // overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    .modal-tips-iconwrap{
+      margin:0.5625rem 0;
+      padding:0;
+    }
+    .modal-tips-content{
+      margin:0;
+      padding:0.5625rem 0.9375rem 0.5625rem 0;
+    }
+  }
+  .fixdiv {
+    overflow: auto;
+  }
+
+  // .fixdiv::-webkit-scrollbar {
+  //   width: 4px;
+  //   height: 4px;
+  // }
+  // .fixdiv::-webkit-scrollbar-track {
+  //   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  // }
+  // .fixdiv::-webkit-scrollbar-thumb {
+  //   background-color: #6e6e6e;
+  //   outline: #708090 solid 1px;
+  // }
+}

@@ -1,0 +1,72 @@
+<!-- form-inline farris-form-inline -->
+<div class="bd-example">
+  <div class="form-row">
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">AutoComplete</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-autocomplete
+              [data]="listItems"
+              [placeholder]="'最喜欢的运动项目'"
+              [class]="'form-control'"
+            >
+            </kendo-autocomplete>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">DropDownList</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-combobox [data]="listItems" [value]="'Basketball'"    [class]="'form-control'"> </kendo-combobox>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">ComboBox</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-dropdownlist [data]="listItems" [value]="'Basketball'"    [class]="'form-control'">
+            </kendo-dropdownlist>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="farris-group-wrap">
+        <div class="form-group farris-form-group">
+          <label for="hpinput01" class="col-form-label">
+            <span class="farris-label-text">MultiSelect</span>
+            <span class="farris-label-info text-danger">*</span>
+          </label>
+          <div class="farris-input-wrap">
+            <kendo-multiselect
+            [data]="listItems"
+            [value]="value"
+            [placeholder]="'Your favorite sports'"
+            [class]="'form-control'"
+          ></kendo-multiselect>
+            <div class="farris-feedback valid-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

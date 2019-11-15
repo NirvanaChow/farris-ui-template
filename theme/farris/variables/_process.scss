@@ -1,0 +1,53 @@
+// 步骤条外间距
+$f-cmp-process-outer-gutter:0 auto!default;
+// 步骤与步骤之间的间距
+$f-cmp-process-step-outer-gutter:0 1rem 0 0!default;
+// 步骤条状态-未执行-图标-背景色 
+$f-cmp-process-icon-background:$f-neutral-02!default;
+// 步骤条状态-未执行-图标-颜色
+$f-cmp-process-icon-text:$f-text-00!default;
+// 步骤条状态-未执行-图标-字体大小
+$f-cmp-process-icon-font-size:0.75rem!default;
+// 步骤条状态-未执行-图标-宽度
+$f-cmp-process-icon-width:1.25rem!default;
+// 步骤条状态-未执行-图标-高度
+$f-cmp-process-icon-height:$f-cmp-process-icon-width!default;
+// 步骤条状态-未执行-图标-半径
+$f-cmp-process-icon-border-radius:$f-cmp-process-icon-width * 0.5!default;
+// 步骤条状态-图标与箭头的间距
+$f-cmp-process-icon-outer-gutter:0 0.625rem 0 0;
+// 步骤条状态-步骤文字
+$f-cmp-process-text-text:$f-text-05!default;
+// 步骤条状态-步骤文字
+$f-cmp-process-text-font-size:0.875rem;
+// 步骤条状态-步骤文字间距
+$f-cmp-process-text-outer-gutter:0 0.625rem 0 0;
+// 步骤条状态-虚线箭头-使用的图标颜色 
+$f-cmp-process-next-text: $f-neutral-02!default;
+// 步骤条状态-虚线箭头-边线
+$f-cmp-process-next-border-color:$f-cmp-process-next-text!default;
+// 步骤条状态-已完成-图标-颜色
+$f-cmp-process-done-icon-text:$f-text-00;
+// 步骤条状态-已完成-图标-背景色
+$f-cmp-process-done-icon-background:$f-theme-05;
+// 步骤条状态-已完成-虚线箭头-使用的图标颜色
+$f-cmp-process-done-next-text:$f-theme-05;
+// 步骤条状态-已完成-虚线箭头-边线颜色
+$f-cmp-process-done-next-border-color:$f-theme-05;
+// 步骤条状态-已完成-文字
+$f-cmp-process-done-text-text:$f-text-02;
+
+// 步骤条状态——正在进行-图标颜色
+$f-cmp-process-on-icon-text:$f-text-00;
+// 步骤条状态——正在进行
+$f-cmp-process-on-icon-background:$f-theme-04;
+// 步骤条状态——正在进行-文字
+$f-cmp-process-on-text-text:$f-text-02;
+
+// 步骤条——大号
+$f-cmp-process-large-step-outer-gutter:0 0.5rem 0 0!default;
+$f-cmp-process-large-icon-width:1.875rem!default;
+$f-cmp-process-large-icon-height:$f-cmp-process-large-icon-width!default;
+$f-cmp-process-large-icon-border-radius:$f-cmp-process-large-icon-width * 0.5!default;
+
+

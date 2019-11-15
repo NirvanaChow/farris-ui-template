@@ -1,0 +1,29 @@
+// 输入控件
+.form-control {
+    &:disabled,
+    &:disabled:hover {
+      border-color: $farris-input-disabled-border-color;
+      color: $farris-input-disabled-color;
+      background: $farris-input-disabled-bg;
+    }
+    &[readonly],
+    &[readonly]:hover {
+      border-color: $farris-input-readonly-border-color;
+      color: $farris-input-readonly-color;
+      background: $farris-input-readonly-bg;
+    }
+    &:hover {
+      background-color: $farris-input-btn-hovered-bg;
+      color: $farris-input-hovered-color;
+      border-color: $farris-input-hovered-border-color;
+      @if $enable-shadows {
+        box-shadow: $farris-input-btn-hovered-box-shadow;
+      }
+    }
+    &[readonly]:focus {
+      box-shadow: none;
+    }
+    &:focus {
+      box-shadow: $input-focus-box-shadow;
+    }
+  }

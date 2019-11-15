@@ -1,0 +1,51 @@
+// 侧边栏
+// 遮罩背景层——要低于modal-dialog的层
+$f-sidebar-overlay-zindex: 900 !default;
+// 动画
+$f-sidebar-transition-time: 0.5s !default;
+// 主区域-阴影
+$f-sidebar-main-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.15) !default;
+// 主区域-背景色
+$f-sidebar-main-bg: $f-neutral-00 !default;
+// 主区域-宽度
+$f-sidebar-main-width: 21.25rem!default;
+// 头部区域-高度
+$f-sidebar-header-height: 2.625rem!default;
+// 头部区域-下边线
+$f-sidebar-header-border-width:0 0 1px 0!default;
+$f-sidebar-header-border-color:$f-neutral-05!default;
+// 头部区域-内间距
+$f-sidebar-header-inner-gutter: 0 0.875rem 0 1.5rem!default;
+
+// 头部区域-标题字体大小
+$f-sidebar-header-title-font-size:1rem!default;
+$f-sidebar-header-title-text:$f-text-02!default;
+// 关闭图标
+$f-sidebar-icon-close-width:1.25rem!default;
+$f-sidebar-icon-close-height:1.25rem!default;
+$f-sidebar-icon-close-size:1.25rem;
+$f-sidebar-icon-close-color:$f-theme-04!default;
+$f-sidebar-icon-close-icon:'\e016'!default;
+// 収折图标
+$f-sidebar-entry-icon-width:1.5rem!default;
+$f-sidebar-entry-icon-height:1.875rem!default;
+$f-sidebar-entry-icon-size:1rem!default;
+$f-sidebar-entry-icon-bg:$f-theme-04!default;
+$f-sidebar-entry-icon-color:$f-text-00!default;
+$f-sidebar-entry-icon-shadow: 0 2px 3px 0 rgba(96, 129, 186, 0.2)!default;
+
+// 収折图标区域
+$f-sidebar-entry-ctr-pos-left-border-radius: 0px 4px 4px 0px!default;
+$f-sidebar-entry-ctr-pos-right-border-radius:4px 0px 0px 4px!default;
+
+
+// 収折图标Top 2019年6月15日 此时是个固定的值
+$f-sidebar-entry-icon-top-position:#{$farris-ptlayout-header-height + $farris-split-section-outer-gutter-y}!default;
+
+// Todo 2019年6月15日
+// entry的图标是默认的
+
+
+
+
+

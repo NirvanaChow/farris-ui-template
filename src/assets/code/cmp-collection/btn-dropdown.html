@@ -1,0 +1,36 @@
+<div class="btn-group mr-3" fDropdown>
+    <button class="btn btn-secondary dropdown-toggle" fDropdownToggle type="button">
+        普通下拉
+    </button>
+    <div class="dropdown-menu" fDropdownMenu>
+        <li class="dropdown-item"><span>动作一</span></li>
+        <li class="dropdown-item"><span>动作二</span></li>
+        <li class="dropdown-item"><span>动作三</span></li>
+        <div class="dropdown-divider"></div>
+        <li class="dropdown-item"><span>其他动作事件</span></li>
+    </div>
+</div>
+<div class="btn-group mr-3" fDropdown>
+    <button type="button" class="btn btn-primary">按钮分开</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" fDropdownToggle></button>
+    <div class="dropdown-menu" fDropdownMenu>
+        <li class="dropdown-item"><span>动作一</span></li>
+        <li class="dropdown-item"><span>动作二</span></li>
+        <li class="dropdown-item"><span>动作三</span></li>
+        <div class="dropdown-divider"></div>
+        <li class="dropdown-item"><span>其他动作事件</span></li>
+    </div>
+</div>
+<!--placement: top、left、right、bottom-left-->
+<div class="btn-group mr-3" fDropdown [placement]="'top'">
+    <button class="btn btn-secondary dropdown-toggle" fDropdownToggle type="button">
+        下拉菜单朝上
+    </button>
+    <div class="dropdown-menu" fDropdownMenu>
+        <li class="dropdown-item"><span>动作一</span></li>
+        <li class="dropdown-item"><span>动作二</span></li>
+        <li class="dropdown-item"><span>动作三</span></li>
+        <div class="dropdown-divider"></div>
+        <li class="dropdown-item"><span>其他动作事件</span></li>
+    </div>
+</div>

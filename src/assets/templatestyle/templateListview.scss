@@ -1,0 +1,212 @@
+.f-template-listview-row{
+    display: flex;
+    flex:1;
+    align-items: center;
+    padding: 10px 2px 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    .list-view-item-title{
+        display: flex;
+        align-items:center;
+        padding-right: 8px;
+        .item-title-img{
+            width: 60px;
+            height: 60px;
+            margin-right: 16px;
+            border-radius: 6px;
+            background: #388FFF;
+            overflow: hidden;
+            .img{
+                display: block;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .item-title{
+            flex: 1;
+            .item-title-heading{
+                margin: 0;
+                line-height: 28px;
+                max-height: 28px;
+                font-size: 16px;
+                overflow: hidden;
+            }
+            .item-title-text{
+                margin-bottom: 0;
+                line-height: 24px;
+                font-size: 14px;
+                color: #999;
+            }
+        }
+    }
+    .list-view-item-content{
+        flex: 1;
+        padding: 0 8px;
+        text-align: right;
+        .content-message{
+            margin-bottom: 10px;
+            font-size: 0;
+            .ower,.date{
+                display: inline-block;
+                font-size: 14px;
+                color: #999;
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            .ower{
+                text-align: left;
+            }
+            .date{
+                margin-left: 80px;
+                text-align: right;
+            }
+        }
+        .content-progressrate{
+            font-size: 0;
+            float: right;
+            .progress-con,.progress-tip{
+                display: inline-block;
+                font-size: 14px;
+                line-height: 22px;
+            }
+            .progress-main{
+                min-width: 245px;
+                text-align: left;
+            }
+            .progress-con{
+                position: relative;
+                width: 200px;
+                height: 5px;
+                border-radius: 5px;
+                background-color: #ccc;
+                .full{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    // width: 120px;
+                    height: 5px;
+                    border-radius: 5px;
+                    background-color: #388FFF;
+                    &.error{
+                        background-color: #f00;
+                    }
+                }
+            }
+            .progress-tip{
+                margin-left: 8px;
+                color: #999;
+                height: 22px;
+                &.error{
+                    cursor: pointer;
+                    .k-icon{
+                        &::before{
+                            width: 12px;
+                            height: 12px;
+                            line-height: 12px;
+                            text-align: center;
+                            color: #fff;
+                            border-radius: 50%;
+                            background: #f00;
+                        }
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .list-view-item-operate{
+        padding-left: 20px;
+        font-size: 0;
+        .operate-btn{
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 14px;
+            color: #388FFF;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.f-template-listview-title-text {
+    color: #000;
+    opacity: 0.65;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.f-template-timeline-row{
+    width:100%;
+    .timeline-example-content-wrapper{
+        .timeline-example-title{
+            padding-bottom: 12px;
+            @extend .f-template-listview-title-text;
+            border-bottom: 1px solid rgba(220,220,220,0.60);
+            .title-sum{
+                line-height: 22px;
+                font-size: 16px;
+                color: #F49730;
+            }
+        }
+        .timeline-example-content{
+            .content-data{
+                font-size: 0;
+                margin-top: 16px;
+                li{
+                    display: inline-block;
+                    padding-right: 30px;
+                    margin-bottom: 18px;
+                    @extend .f-template-listview-title-text;
+                }
+            }
+            .content-progress{
+
+            }
+        }
+    }
+}
+
+.f-template-listnav-row{
+    .list-nav-link{
+        display: flex;
+        align-items: center;
+        padding: 10px 14px 10px 40px;
+        &.link-disable{
+            background-color: #F9F9F9;
+        }
+        .nav-item-name{
+            flex: 1;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            opacity: 0.85;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-item-counter{
+            display: inline-block;
+            padding: 0 5px;
+            height: 14px;
+            line-height: 14px;
+            background: rgba(89,161,255,0.14);
+            border-radius: 8px;
+            font-size: 10px;
+            color: #388FFF;
+        }
+        &:hover{
+            background: #E6F7FF;
+        }
+        &.active{
+            background: #E6F7FF;
+            border-left: 3px solid #388FFF;
+            padding-left: 37px;
+            .nav-item-counter{
+                background: #388FFF;
+                color: #fff;
+            }
+            
+        }
+    }
+}

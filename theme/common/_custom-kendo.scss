@@ -1,0 +1,213 @@
+// Theme overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+@import './variables';
+@import './overrides';
+$accent: $farris-primary;
+// 分页
+$pager-padding-x: $farris-pagination-wrap-padding-x;
+$pager-padding-y: $farris-pagination-wrap-padding-y;
+// $accent-contrast: contrast-wcag( $accent ) !default;
+// 表格背景色
+$grid-bg: $farris-grid-bg;
+$grid-text: $farris-grid-text;
+$grid-border: $farris-grid-border;
+$grid-selected-bg:$farris-grid-selected-bg;
+$grid-selected-text:$farris-grid-selected-text;
+$grid-hovered-text:$farris-grid-hovered-text;
+$grid-hovered-bg:$farris-grid-hovered-bg;
+// 奇偶行
+$grid-alt-text: $farris-grid-alt-text;
+$grid-alt-bg: $farris-grid-alt-bg;
+$grid-alt-border: $farris-grid-alt-border;
+// 表格横向border-width
+$grid-cell-horizontal-border-width: $farris-grid-cell-horizontal-border-width;
+// 表格纵向border-width
+$grid-cell-vertical-border-width: $farris-grid-cell-vertical-border-width;
+// 表格 padding
+$grid-cell-padding-x: $farris-grid-cell-padding-x;
+$grid-cell-padding-y: $farris-grid-cell-padding-y;
+$grid-header-padding-y: $farris-grid-header-padding-y;
+$grid-header-padding-x: $farris-grid-header-padding-x;
+// 表格 Header
+$grid-header-bg: $farris-grid-header-bg;
+$grid-header-text: $farris-grid-header-text;
+$grid-header-border: $farris-grid-header-border;
+// 表格 鼠标滑过 td
+$grid-hovered-text: $farris-grid-hovered-text;
+$grid-hovered-bg: $farris-grid-hovered-bg;
+$grid-hovered-border: $farris-grid-hovered-border;
+// 表格 选中
+$pager-selected-text: $farris-grid-selected-text;
+$pager-selected-bg: $farris-grid-selected-bg;
+$pager-selected-border: $farris-grid-selected-border;
+// 输入框
+$input-text: $farris-input-color;
+$input-bg: $farris-input-bg;
+$input-border: $farris-input-border-color;
+$input-shadow: $farris-input-box-shadow;
+
+$input-hovered-text: $farris-input-hovered-color;
+$input-hovered-bg: $farris-input-btn-hovered-bg;
+$input-hovered-border: $farris-input-hovered-border-color;
+$input-hovered-shadow: $farris-input-btn-hovered-box-shadow;
+
+$input-focused-text: $farris-input-focused-color;
+$input-focused-bg: $farris-input-btn-focus-bg;
+$input-focused-border: $farris-input-focus-border-color;
+$input-focused-shadow: $farris-input-btn-focus-box-shadow;
+
+// 输入框 控件大小 
+$input-padding-x: $farris-input-btn-padding-x;
+$input-padding-y: $farris-input-btn-padding-y;
+
+$twbs-input-padding-x: $farris-input-btn-padding-x;
+$twbs-input-padding-y: $farris-input-btn-padding-y;
+$button-padding-y:$farris-input-btn-padding-y;
+
+// 禁用时候的透明度和灰度
+$disabled-opacity: $farris-disabled-opacity;
+$disabled-filter: $farris-disabled-filter;
+// checkbox 和 radio
+$checkbox-bg: $farris-checkbox-bg;
+$checkbox-border: $farris-checkbox-border;
+$checkbox-checked-border: $farris-checkbox-checked-border;
+$checkbox-checked-bg: $farris-checkbox-checked-bg;
+$checkbox-checked-text: $farris-checkbox-checked-text;
+$checkbox-radius: $farris-checkbox-radius;
+
+$radio-border: $farris-radio-border;
+$radio-bg: $farris-radio-bg;
+$radio-checked-bg: $farris-radio-checked-bg;
+
+
+// 弹出窗口
+$modal-content-bg: $farris-modal-content-bg;
+$modal-content-color: $farris-modal-content-color;
+$modal-header-bg: $farris-modal-header-bg;
+$modal-header-color: $farris-modal-header-text;
+$window-titlebar-border-width: $farris-modal-content-border-width;
+$window-titlebar-padding-y: $farris-modal-header-padding-y;
+$window-titlebar-padding-x: $farris-modal-header-padding-x;
+$window-title-line-height: $farris-modal-title-line-height;
+$window-inner-padding-y: $farris-modal-inner-padding;
+$window-inner-padding-x: $farris-modal-inner-padding;
+$dialog-button-spacing: #{$farris-footer-el-gutter * 2};
+// 手风琴
+$panel-border: $farris-panel-border;
+$panel-text: $farris-panel-text;
+$panel-bg: $farris-panel-bg;
+$panelbar-header-padding-y: $farris-panelbar-header-padding-y;
+$panelbar-header-padding-x: $farris-panelbar-header-padding-x;
+
+
+// node样式
+$node-hovered-text: $farris-tree-node-hover-text;
+$node-hovered-bg: $farris-tree-node-hover-bg;
+$node-hovered-border: $farris-tree-node-hover-border;
+$node-selected-text: $farris-tree-node-hover-text;
+$node-selected-bg: $farris-tree-node-selected-bg;
+$node-selected-border: $farris-tree-node-selected-border;
+
+// 控件的背景色，因为默认是同整个body的背景色，此处单独定色
+$widget-bg:$farris-kd-component-bg;
+
+// 分页控件背景色
+$pager-bg:$f-neutral-00;
+
+
+$tabstrip-item-padding-x:$farris-tabstrip-item-padding-x;
+
+// 在线编辑表格的padding
+$edit-cell-input-space:$farris-input-padding-x;
+$grid-form-component-offset:0;
+// 输入控件的高度
+// $farris-table-input-height: calc(
+// #{$farris-input-padding-y * 2}+#{$farris-border-width * 2}+ #{$farris-font-size-base *
+//    $farris-input-line-height}
+// );
+// $farris-table-td-editcell: calc(
+//   #{$farris-grid-cell-padding-y * 2} + #{$farris-grid-cell-horizontal-border-width} +
+//      #{$farris-table-input-height}
+// );
+
+
+
+// 树控件
+$treeview-item-padding-y: $farris-tree-item-padding-y;
+$treeview-item-border-width:$f-treeview-item-border-width;
+
+$treeview-bg:$f-treeview-bg;
+$treeview-text: $f-treeview-text;
+$treeview-border: $f-treeview-border;
+
+$treeview-item-hovered-text:$f-treeview-item-hovered-text;
+$treeview-item-hovered-bg:$f-treeview-item-hovered-bg;
+$treeview-item-hovered-border:$f-treeview-item-hovered-border;
+
+$treeview-item-selected-text:$f-treeview-item-selected-text;
+$treeview-item-selected-bg:$f-treeview-item-selected-bg;
+$treeview-item-selected-border:$f-treeview-item-selected-border;
+
+// Switch 2019年6月13日
+// Switch 开关 2019年6月13日
+$switch-container-shadow:$f-switch-container-shadow;
+$switch-container-hovered-shadow:$f-switch-container-hovered-shadow;
+$switch-container-focused-shadow:$f-switch-container-focused-shadow;
+// k-switch-container
+$switch-on-text:$f-switch-on-text;
+$switch-on-bg:$f-switch-on-bg;
+$switch-on-border:$f-switch-on-border;
+// $f-switch-on-gradient:null!default;
+$switch-on-shadow:$f-switch-on-shadow;
+// k-switch-on .k-state-focused
+$switch-on-focused-shadow:$f-switch-on-focused-shadow;
+$switch-on-focused-bg:$f-switch-on-focused-bg;
+$switch-on-focused-text:$f-switch-on-focused-text;
+$switch-on-focused-border:$f-switch-on-focused-border;
+//$f-switch-on-focused-gradient: null !default;
+// k-state-hover :hover
+$switch-on-hovered-bg:$f-switch-on-hovered-bg;
+$switch-on-hovered-text:$f-switch-on-hovered-text;
+$switch-on-hovered-border:$f-switch-on-hovered-border;
+// $f-switch-on-hovered-gradient: null !default;
+//
+$switch-on-handle-bg:$f-switch-on-handle-bg;
+$switch-on-handle-text:$f-switch-on-handle-text;
+$switch-on-handle-border:$f-switch-on-handle-border;
+//$f-switch-on-handle-gradient: null !default;
+$switch-on-handle-shadow:$f-switch-on-handle-shadow;
+
+$switch-on-handle-hovered-bg: $f-switch-on-handle-hovered-bg;
+$switch-on-handle-hovered-text:$f-switch-on-handle-hovered-text;
+$switch-on-handle-hovered-border: $f-switch-on-handle-hovered-border;
+$switch-on-handle-hovered-gradient:$f-switch-on-handle-hovered-gradient;
+//
+$switch-off-bg:$f-switch-off-bg;
+$switch-off-text:$f-switch-off-text;
+$switch-off-border:$f-switch-off-border;
+// $switch-off-gradient: null !default;
+$switch-off-shadow:$f-switch-off-shadow;
+$switch-off-focused-shadow:$f-switch-off-focused-shadow;
+
+$switch-off-focused-bg:$f-switch-off-focused-bg;
+$switch-off-focused-text:$f-switch-off-focused-text;
+$switch-off-focused-border:$f-switch-off-focused-border;
+$switch-off-focused-gradient:$f-switch-off-focused-gradient;
+
+$switch-off-hovered-bg:$f-switch-off-hovered-bg;
+$switch-off-hovered-text:$f-switch-off-hovered-text;
+$switch-off-hovered-border:$f-switch-off-hovered-border;
+$switch-off-hovered-gradient:$f-switch-off-hovered-gradient;
+
+$switch-container-padding-y:$f-switch-container-padding-y;
+$switch-container-padding-x:$f-switch-container-padding-x;
+
+// Switch 大小
+$switch-size:$f-k-switch-size;
+$switch-handle-size:$f-k-switch-handle-size;
+$switch-border-radius:$f-k-switch-border-radius;
+$switch-on-left-x: calc(100% - #{$switch-handle-size} - 0.125rem);
+// kendo图标转成独立的图标文件
+$icon-font-url:$f-kd-icon-font-url;

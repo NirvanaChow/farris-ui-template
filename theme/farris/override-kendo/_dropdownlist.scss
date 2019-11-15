@@ -1,0 +1,10 @@
+//20190917 kendo 下拉列表修改样式
+.k-list .k-item.k-state-focused.k-state-selected{
+    box-shadow: none;
+}
+.k-list .k-item{
+    padding: $f-btn-padding-y 0.875rem;
+}
+.k-list-scroller .k-list{
+    padding: 0.25rem 0;
+}

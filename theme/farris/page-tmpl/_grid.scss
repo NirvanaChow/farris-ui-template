@@ -1,0 +1,112 @@
+/*******************************
+      1906-可能被财务页面引入
+*******************************/
+.f-grid-bar-ctr {
+  display: flex;
+  flex-direction: row;
+  margin: $f-grid-bar-ctr-outer-gutter;
+  .f-title-ctr {
+    flex-shrink: 0;
+    margin: $f-grid-bar-ctr-title-ctr-title-outer-gutter;
+    font-size: $farris-text-size-02;
+    line-height: $farris-text-line-height-02;
+    color: $f-grid-bar-ctr-title-ctr-text;
+    clear: both;
+    overflow: hidden;
+    .f-title {
+      float: left;
+      position: relative;
+      padding: $f-grid-bar-ctr-title-ctr-title-inner-gutter;
+      margin: 0;
+      font-size: $farris-text-size-02;
+      line-height: $farris-text-line-height-02;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &::after {
+        position: absolute;
+        content: '';
+        width: $f-grid-bar-ctr-title-ctr-title-border-width;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: $f-grid-bar-ctr-title-ctr-title-border-color;
+        border-radius: $farris-border-radius;
+      }
+    }
+  }
+  .f-subtitle-ctr {
+    color: $f-grid-bar-ctr-title-ctr-subtitle-ctr-text;
+    margin: $f-grid-bar-ctr-title-ctr-title-outer-gutter;
+    .f-subtitle {
+      font-size: $farris-text-size-02;
+      line-height: $farris-text-line-height-02;
+    }
+  }
+  .f-toolbar-ctr {
+    margin: 0 0 0 auto;
+    color: $f-grid-bar-ctr-title-icon-text;
+  }
+}
+// 子表
+.f-cmp-grid-is-sub {
+  min-height: 310px;
+}
+
+/*******************************
+      Grid Section
+*******************************/
+$f-grid-prefix: 'f-component-grid';
+
+.#{$f-section-prefix}-grid {
+  // 在管理列表
+  // 在左列右卡页面
+  &.#{$f-section-prefix}-in-managelist,
+  &.#{$f-section-prefix}-in-nav,
+  &.#{$f-section-prefix}-in-main {
+    flex: 1 1 0;
+    .#{$f-section-prefix}-content {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+    }
+    // 表格占剩余所有
+    .#{$f-grid-prefix} {
+      flex: 1 1 0;
+    }
+  }
+  // 表格超出隐藏
+  .#{$f-grid-prefix} {
+    overflow: hidden;
+  }
+}
+
+// 从表的高度,以后从表支持分页
+.f-grid-is-sub {
+    height: 350px;
+}
+// 丛丛表的高度，以后从表支持分页
+.f-grid-is-subsub {
+    height: 350px;
+}
+
+/**
+* Section 扩展区域表格
+**/
+.f-section-extend-gridfilter {
+  background: $f-aid-02;
+  border: 1px solid rgba($f-theme-05, 0.3);
+  border-radius: 2px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 4px 14px;
+  > * {
+    margin: 0 10px 0 0;
+  }
+}
+
+// 从表中 grid 问题
+.f-grid-is-sub .f-component-grid{
+  flex:1 1 0;
+}

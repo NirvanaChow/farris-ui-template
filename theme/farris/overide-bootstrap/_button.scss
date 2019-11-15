@@ -1,0 +1,219 @@
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  @include button-size(
+    $f-btn-padding-y,
+    $btn-padding-x,
+    $font-size-base,
+    $btn-line-height,
+    $btn-border-radius
+  );
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    @include box-shadow($btn-focus-box-shadow);
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $farris-btn-theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+.btn-primary {
+  @include button-variant(
+    $farris-btn-primary-bg,
+    $farris-btn-primary-border,
+    $farris-btn-primary-hover-bg,
+    $farris-btn-primary-hover-border,
+    $farris-btn-primary-active-bg,
+    $farris-btn-primary-active-border,
+    $farris-btn-primary-color,
+    $farris-btn-primary-hover-color,
+    $farris-btn-primary-active-color,
+    $farris-btn-primary-disabled-bg,
+    $farris-btn-primary-disabled-border,
+    $farris-btn-primary-disabled-color
+  );
+}
+
+.btn-secondary {
+  @include button-variant(
+    $farris-btn-secondary-bg,
+    $farris-btn-secondary-border,
+    $farris-btn-secondary-hover-bg,
+    $farris-btn-secondary-hover-border,
+    $farris-btn-secondary-active-bg,
+    $farris-btn-secondary-active-border,
+    $farris-btn-secondary-color,
+    $farris-btn-secondary-hover-color,
+    $farris-btn-secondary-active-color,
+    $farris-btn-secondary-disabled-bg,
+    $farris-btn-secondary-disabled-border,
+    $farris-btn-secondary-disabled-color
+  );
+}
+
+.btn-danger {
+  @include button-variant(
+    $farris-btn-danger-bg,
+    $farris-btn-danger-border,
+    $farris-btn-danger-hover-bg,
+    $farris-btn-danger-hover-border,
+    $farris-btn-danger-active-bg,
+    $farris-btn-danger-active-border,
+    $farris-btn-danger-color,
+    $farris-btn-danger-hover-color,
+    $farris-btn-danger-active-color,
+    $farris-btn-danger-disabled-bg,
+    $farris-btn-danger-disabled-border,
+    $farris-btn-danger-disabled-color
+  );
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $farris-btn-link-color;
+  background-color: transparent;
+  //20190918 修改link按钮样式
+  padding: 0;
+  border: 0;
+  line-height: 20px;
+
+  @include hover {
+    color: $farris-btn-link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+    color: $farris-btn-link-active-color;
+    @include box-shadow(none);
+  }
+  &:active,
+  &.active {
+    box-shadow: none !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $farris-btn-link-disabled-color;
+    pointer-events: none;
+  }
+  // No need for an active state here
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn-warning {
+  color: $farris-btn-warning-text;
+}
+// @each $color, $value in $theme-colors {
+//   .btn-#{$color} {
+//     &:focus,.focus{
+//         box-shadow: $farris-btn-box-shadow;
+//     }
+//   }
+// }

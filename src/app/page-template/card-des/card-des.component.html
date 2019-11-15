@@ -1,0 +1,288 @@
+<div class="farris-header">
+  <!-- 顶部操作条和标题——————————————————开始 -->
+  <nav class="navbar p-0">
+    <h4 class="farris-form-title mr-auto">卡片</h4>
+    <div class="btn-toolbar">
+      <button class="btn btn-primary f-btn-ml " (click)="changeState('add')">
+        新增
+      </button>
+      <button class="btn btn-secondary f-btn-ml " (click)="changeState('edit')">
+        编辑
+      </button>
+      <button class="btn btn-secondary f-btn-ml " (click)="changeState('view')">
+        查看
+      </button>
+      <button class="btn btn-secondary f-btn-ml " (click)="changeState('save')">
+        保存
+      </button>
+      <button class="btn btn-secondary f-btn-ml " (click)="changeState('save')">
+        删除
+      </button>
+    </div>
+  </nav>
+  <!-- 页面操作按钮 ————————————————————结束 -->
+</div>
+<div class="farris-header row m-0 p-0" style="min-height: 4.6rem;">
+  <div class="col-sm-4 col-md-4 text-truncate">
+    <p class="pb-1 m-0">
+      <small class="text-muted mr-2">客户</small>
+      <span class="title-color">大润发超市</span>
+    </p>
+    <p class="pb-1 m-0">
+      <small class="text-muted mr-2">联系电话</small>
+      <span class="title-color">15066151234</span>
+    </p>
+    <p class="pb-1 m-0">
+      <small class="text-muted mr-2">项目</small>
+      <span class="title-color">XXXX</span>
+    </p>
+  </div>
+  <div class="d-none d-md-block col-md-4">
+    <p class="pb-1 m-0">
+      <small class="text-muted mr-2">客户采购单号</small>
+      <span class="title-color">XXXX</span>
+    </p>
+    <p class="pb-1 m-0">
+      <small class="text-muted mr-2">信用证号</small>
+      <span class="title-color">FB0004</span>
+    </p>
+    <p class="pb-1 m-0">
+      <small class="text-muted mr-2">渠道</small>
+      <span class="title-color">XXXXX</span>
+    </p>
+  </div>
+  <div class="col-sm-5 col-md-2 text-center">
+    <p class="h3 pt-2 text-warning">3560</p>
+    <p class="pb-1 m-0"><span class="font-weight-bold">收现款金额</span></p>
+  </div>
+  <div class="col-2 text-center text-center">
+    <p class="h3 pt-2 text-success">345200</p>
+    <p class="pb-1 m-0"><span class="font-weight-bold">销售总额</span></p>
+  </div>
+</div>
+<div class="flex-fill farris-split-section f-cmp-px farris-overflow-y-auto ">
+  <form
+    class="farris-form farris-card-content-bg farris-form-controls-inline farris-card-section f-cmp-mb f-cmp-mx-minus "
+    *ngIf="defaultData"
+  >
+    <fieldset class="col-12" farrisFold>
+      <legend class=" f-legend-icon f-legend-show">客户相关</legend>
+      <div class="d-flex flex-wrap mb-2">
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-info text-danger">*</span><span class="farris-label-text">客户</span>                
+              </label>
+              <div class="farris-input-wrap">
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="defaultData.FKDD.data.KH"
+                  name="kh"
+                  [readonly]="readonlyState()"
+                />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">客户别名</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="defaultData.FKDD.data.KHBM"
+                  name="khbm"
+                  [readonly]="readonlyState()"
+                />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">客户采购单号</span>
+              </label>
+              <div class="farris-input-wrap">
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="defaultData.FKDD.data.KHCGDH"
+                  name="khcgdh"
+                  [readonly]="readonlyState()"
+                />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label for="hpinput01" class="col-form-label">
+                <span class="farris-label-info text-danger">*</span><span class="farris-label-text">业务员</span>                
+              </label>
+              <div class="farris-input-wrap">
+                <farris-lookup-grid
+                  name="lxdh"
+                  [(ngModel)]="item"
+                  [uri]="'assets/data/empoyee.json'"
+                  [singleSelect]="true"
+                  [idField]="'Code'"
+                  [pageSize]="20"
+                  [pageIndex]="1"
+                  [pagination]="true"
+                  [textField]="'Name'"
+                  [valueField]="'Code'"
+                  [disabled]="readonlyState()"
+                ></farris-lookup-grid>
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="col-12" farrisFold>
+      <legend class=" f-legend-icon f-legend-show">单据相关</legend>
+      <div class="d-flex flex-wrap mb-2">
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-info text-danger">*</span><span class="farris-label-text">单据编号</span>
+                
+              </label>
+              <div class="farris-input-wrap">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="DJBH"
+                  [(ngModel)]="defaultData.FKDD.data.DJBH"
+                  [readonly]="readonlyState()"
+                />
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">业务类型</span>
+              </label>
+              <div class="farris-input-wrap">
+                <kendo-dropdownlist
+                  [class]="'form-control'"
+                  [data]="listItemsDropDown"
+                  [value]="'服务合同'"
+                  [readonly]="readonlyState()"
+                >
+                </kendo-dropdownlist>
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="farris-group-wrap">
+            <div class="form-group farris-form-group">
+              <label class="col-form-label">
+                <span class="farris-label-text">业务日期</span>
+              </label>
+              <div class="farris-input-wrap">
+                <kendo-datepicker
+                  [class]="'form-control'"
+                  name="YWRQ"
+                  [readonly]="readonlyState()"
+                ></kendo-datepicker>
+                <div class="farris-feedback valid-feedback"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <kendo-grid [class]="'f-cmp-mb farris-subgrid'">
+    <kendo-grid-column title="物料编号" width="180"></kendo-grid-column>
+    <kendo-grid-column title="物料名称" width="180"></kendo-grid-column>
+    <kendo-grid-column title="物料描述" width="180"></kendo-grid-column>
+    <kendo-grid-column title="物料特征" width="180"></kendo-grid-column>
+    <kendo-grid-column title="物料别名" width="180"></kendo-grid-column>
+    <kendo-grid-column title="客户物料编号" width="180"></kendo-grid-column>
+    <kendo-grid-column title="主数量" width="180"></kendo-grid-column>
+    <kendo-grid-column title="主单位" width="180"></kendo-grid-column>
+    <kendo-grid-column title="折前主单价" width="180"></kendo-grid-column>
+    <kendo-grid-column title="主单价" width="180"></kendo-grid-column>
+    <kendo-grid-column title="辅数量" width="180"></kendo-grid-column>
+    <kendo-grid-column title="辅单位" width="180"></kendo-grid-column>
+    <kendo-grid-column title="折前辅单价" width="180"></kendo-grid-column>
+    <kendo-grid-column title="辅单价" width="180"></kendo-grid-column>
+  </kendo-grid>
+  <section class="farris-grid-toolbar  mx-2">
+    <h5 class="mr-auto farris-grid-title">交货信息</h5>
+    <div class="">
+      <button class="k-button k-flat k-state-disabled mr-2">新增</button>
+      <button class="k-button k-flat k-state-disabled mr-2">删除</button>
+    </div>
+  </section>
+  <kendo-grid [class]="'f-cmp-mb farris-subgrid'">
+    <kendo-grid-column title="送达方" width="180"></kendo-grid-column>
+    <kendo-grid-column title="送货地址" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收货人" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收货电话" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收获地区" width="180"></kendo-grid-column>
+    <kendo-grid-column title="工厂" width="180"></kendo-grid-column>
+    <kendo-grid-column title="发货库存组织" width="180"></kendo-grid-column>
+    <kendo-grid-column title="发货仓库" width="180"></kendo-grid-column>
+    <kendo-grid-column title="发货条件" width="180"></kendo-grid-column>
+    <kendo-grid-column title="物流组织" width="180"></kendo-grid-column>
+    <kendo-grid-column title="计划交货日期" width="180"></kendo-grid-column>
+    <kendo-grid-column title="客户要求交货日期" width="180"></kendo-grid-column>
+    <kendo-grid-column title="货位"></kendo-grid-column>
+    <kendo-grid-column title="批号"></kendo-grid-column>
+    <kendo-grid-column title="允许不足交货" width="180"></kendo-grid-column>
+    <kendo-grid-column title="不足交货容差(%)" width="180"></kendo-grid-column>
+    <kendo-grid-column title="允许超量交货" width="180"></kendo-grid-column>
+    <kendo-grid-column title="超量交货容差(%)" width="180"></kendo-grid-column>
+    <kendo-grid-column title="交货相关" width="180"></kendo-grid-column>
+    <kendo-grid-column title="补货相关" width="180"></kendo-grid-column>
+  </kendo-grid>
+  <section class="farris-grid-toolbar mx-2">
+    <h5 class="mr-auto farris-grid-title">结算信息</h5>
+    <div class="">
+      <button class="k-button k-flat k-state-disabled mr-2">新增</button>
+      <button class="k-button k-flat k-state-disabled mr-2">删除</button>
+    </div>
+  </section>
+  <kendo-grid [class]="'f-cmp-mb farris-subgrid'">
+    <kendo-grid-column title="开票财务组织" width="180"></kendo-grid-column>
+    <kendo-grid-column title="开票路径" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收票方" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收票地址" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收票联系人" width="180"></kendo-grid-column>
+    <kendo-grid-column title="收票电话" width="180"></kendo-grid-column>
+    <kendo-grid-column title="开票依据" width="180"></kendo-grid-column>
+    <kendo-grid-column title="开票数量控制" width="180"></kendo-grid-column>
+    <kendo-grid-column title="允许不足开票" width="180"></kendo-grid-column>
+    <kendo-grid-column title="不足开票容差(%)" width="180"></kendo-grid-column>
+    <kendo-grid-column title="允许超量开票" width="180"></kendo-grid-column>
+    <kendo-grid-column title="超量开票容差(%)" width="180"></kendo-grid-column>
+    <kendo-grid-column title="税率"></kendo-grid-column>
+    <kendo-grid-column title="计税方式" width="180"></kendo-grid-column>
+    <kendo-grid-column title="寄售结清" width="180"></kendo-grid-column>
+    <kendo-grid-column title="应收财务组织" width="180"></kendo-grid-column>
+    <kendo-grid-column title="付款方"></kendo-grid-column>
+  </kendo-grid>
+</div>

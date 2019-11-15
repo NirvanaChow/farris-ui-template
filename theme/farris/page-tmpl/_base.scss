@@ -1,0 +1,267 @@
+/*
+* 模板结构
+Positioning 
+Box model 盒模型
+Typographic 排版
+Visual 外观 
+*/
+/*******************************
+            根目录
+*******************************/
+.f-page-root {
+  @include f-utils-absolute-all;
+  overflow: hidden;
+}
+/*******************************
+            整个页面
+*******************************/
+.#{$f-page-prefix} {
+  @include f-utils-absolute-all;
+  @include f-utils-flex;
+  background: $farris-pt-bg;
+  /*******************************
+            主要内容区
+  *******************************/
+  &-main {
+    flex: 1 1 0;
+    background: $farris-split-section-bg;
+    box-shadow: $farris-split-section-shadow;
+    border-radius: $farris-split-section-border-radius;
+    margin: $f-pt-split-section-outer-gutter;
+    // 扩展区域
+    &-extend {
+    }
+    // 最后一个Section 去掉间隔
+    > .#{$f-section-prefix}:last-child {
+      margin-bottom: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+/*******************************
+          管理列表
+*******************************/
+.#{$f-page-prefix}-is-managelist,
+.#{$f-page-prefix}-is-managelistwithsidebar {
+  .#{$f-page-prefix}-main {
+    @include f-utils-flex;
+  }
+}
+.#{$f-page-prefix}-has-scheme, .#{$f-page-prefix}-has-query{
+  .#{$f-page-prefix}-main {
+    margin-top: -$farris-split-section-outer-gutter-y;
+  }
+  .f-page-header {
+    margin: $farris-split-section-outer-gutter;
+    margin-bottom: 0;
+  }
+}
+/*******************************
+         导航模板
+*******************************/
+.#{$f-page-prefix}-navigate {
+  .#{$f-page-prefix}-main {
+    @include f-utils-flex;
+  }
+  .#{$f-page-prefix}-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    // 默认取消栅格间距
+    & > .col,
+    & > [class*='col-'] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 1px 0 4px 0 rgba(0, 28, 64, 0.1);
+      > .#{$f-section-prefix}:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &-main {
+      flex: 1 1 0;
+      overflow: auto;
+      > .#{$f-section-prefix}:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/*******************************
+         列表导航
+*******************************/
+.#{$f-page-prefix}-is-listnav {
+  > .#{$f-page-prefix}-main {
+    margin: 0;
+  }
+  .#{$f-page-prefix}-content {
+    background: $farris-pt-bg;
+    // 导航区域
+    &-nav {
+      //    box-shadow: none;
+    }
+    // 主题内容区
+    &-main {
+      position: relative;
+      margin: 0 0 0 -4px;
+      .#{$f-page-prefix}-header {
+        // margin: 0.625rem 0 0;
+      }
+      .#{$f-page-prefix}-main {
+      }
+    }
+  }
+}
+
+/*******************************
+         双列表
+*******************************/
+.#{$f-page-prefix} {
+  &-is-grid-grid,
+  &-is-tree-grid {
+    .#{$f-page-prefix}-content-main {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+/*******************************
+         卡片模板
+*******************************/
+.#{$f-page-prefix}-card {
+  // 主内容区出现滚动条
+  .#{$f-page-prefix}-main {
+    overflow: auto;
+  }
+}
+/*******************************
+         卡片模板
+*******************************/
+.#{$f-page-prefix}-is-wizard {
+  .#{$f-page-prefix}-main {
+    @include f-utils-flex;
+  }
+}
+
+/*******************************
+        标题区域是一致的
+*******************************/
+
+.f-title {
+  //flex-shrink: 0;
+  @include text-truncate;
+}
+.f-content {
+  flex: 1 0 0;
+}
+.f-toolbar {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  .f-btn-separator {
+    display: inline-block;
+    width: 1px;
+    background-color: #c2cbd1;
+    height: 1em;
+    margin: 0 8px;
+  }
+}
+.f-response-toolbar {
+  display: block;
+}
+
+// & > .col,
+// & > [class*='col-'] {
+//   padding-left: 0;
+//   padding-right: 0;
+// }
+
+// 按钮左右padding
+.f-btn-ml {
+  margin-left: 0.375rem !important;
+}
+.f-btn-mr {
+  margin-right: $farris-btn-gutter-x !important;
+}
+.f-cmp-mt {
+  margin-right: $farris-cmp-gutter-y !important;
+}
+.f-cmp-mb {
+  margin-bottom: $farris-cmp-gutter-y !important;
+}
+.f-cmp-mx {
+  margin-left: $farris-cmp-gutter-x !important;
+  margin-right: $farris-cmp-gutter-x !important;
+}
+.f-cmp-mx-minus {
+  margin-left: -$farris-cmp-gutter-x !important;
+  margin-right: -$farris-cmp-gutter-x !important;
+}
+/** 20190812 ---------------------------------暂未被使用
+.f-cmp-my {
+  margin-top: $farris-cmp-gutter-y !important;
+  margin-bottom: $farris-cmp-gutter-y !important;
+}
+.f-cmp-my-minus {
+  margin-top: -$farris-split-setcion-inner-gutter-y !important;
+  margin-bottom: -$farris-split-setcion-inner-gutter-y !important;
+}**/
+.f-cmp-px {
+  padding-left: $farris-cmp-gutter-x !important;
+  padding-right: $farris-cmp-gutter-x !important;
+}
+
+.f-cmp-py {
+  padding-top: $farris-cmp-gutter-y !important;
+  padding-bottom: $farris-cmp-gutter-y !important;
+}
+.f-cmp-p {
+  padding: $farris-cmp-gutter-y $farris-cmp-gutter-x !important;
+}
+.f-cmp-pt {
+  padding-top: $farris-cmp-gutter-y !important;
+}
+.f-cmp-pb {
+  padding-bottom: $farris-cmp-gutter-y !important;
+}
+
+// 组件之间的间隔，可能是border或者间距
+.f-cmp-gutter {
+  border-bottom: $f-pt-special-gutter;
+}
+// 分割线——下
+.f-split-border-b {
+  border-bottom: 1px solid $f-neutral-05;
+}
+.flex-fill.k-grid {
+  overflow: hidden;
+}
+
+/*元素通用间距*/
+.f-common-px {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.f-common-py {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.f-common-pt {
+}
+.f-common-py-form {
+  padding-top: 14px;
+  padding-bottom: 8px;
+}

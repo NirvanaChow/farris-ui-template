@@ -1,0 +1,152 @@
+.f-view-change{
+    display: inline-block;
+    .f-view-change-tile{
+        display: flex;
+        .f-view-change-tile-btn{
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            padding: $f-btn-padding-y 0.5rem;
+            line-height: 20px;
+            font-size: 0.875rem;
+            border:1px solid $f-neutral-02;
+            margin-left: -1px;
+            color: $f-neutral-01;
+            background-color: $f-neutral-00;
+            &:first-child{
+                border-radius: 0.125rem 0 0 0.125rem;
+            }
+            &:last-child{
+                border-radius: 0 0.125rem 0.125rem 0;
+            }
+            &:not(.tile-btn-disable):hover,&.tile-btn-active{
+                border-color: $f-theme-05;
+                position: relative;
+            }
+            &:not(.tile-btn-disable):hover .tile-btn-icon{
+                color: $f-theme-04;
+            }
+            &.tile-btn-active{
+                background-color: $f-theme-04;
+                color: $f-text-00;
+                &:hover{
+                    background: $f-theme-05;
+                    border-color: $f-theme-05;
+                }
+                .tile-btn-icon{
+                    color: $f-text-00!important;
+                }
+            }
+            &-disable{
+                color: $f-text-06;
+                background-color: $f-neutral-08;
+                cursor: default;
+            }
+        }
+    }
+    .f-view-change-dropdown{
+        display: inline-block;
+        position: relative;
+        .f-view-change-toggle{
+            display: inline-block;
+            background-color: $f-neutral-00;
+            border:1px solid $f-neutral-02;
+            border-radius: 0.125rem;
+            padding: $f-btn-padding-y 0.5rem;
+            line-height: 20px;
+            width: 2.875rem;
+            text-align: center;
+            white-space: nowrap;
+            .toggle-btn-icon {
+                font-size:1rem;
+                color: $f-neutral-01;
+            }
+            &::after{
+                content: '';
+                display: inline-block;
+                margin-left: 2px;
+                border-top: 4px solid $f-neutral-01;
+                border-right: 4px solid transparent;
+                border-bottom: 0;
+                border-left: 4px solid transparent;
+            }
+            &:hover{
+                border-color: $f-theme-04;
+                .toggle-btn-icon{
+                    color: $f-theme-04;
+                }
+                &::after{
+                    border-top-color: $f-theme-04;
+                }
+            }
+        }
+        .f-view-change-typelist{
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            z-index: 1000;
+            min-width: 10rem;
+            padding-top: 6px;
+            .f-view-change-typelist-content{
+                background-color: $f-neutral-00;
+                box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .15);
+                border-radius: .125rem;
+                padding: 0.625rem 0;
+            }
+
+            .f-view-change-typelist-arrow{
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: 2px;
+                width: 8.48528137px;
+                height: 8.48528137px;
+                background: transparent;
+                border-style: solid;
+                border-width: 4.24264069px;
+                border-top-color: $f-neutral-00;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: $f-neutral-00;
+                box-shadow: -2px -2px 5px rgba(0,0,0,0.08);
+                transform: translateX(-50%) rotate(45deg);
+            }
+            .typelist-item{
+                padding: $f-dropdown-item-padding-y 0.5rem;
+                line-height: 20px;
+                font-size: 0.875rem;
+                color: $f-text-04;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: left;
+                cursor: pointer;
+                .typelist-item-icon{
+                    display: inline-block;
+                    width: 1rem;
+                    margin-right: 4px;
+                    font-size:1rem;
+                    color: $f-neutral-01;
+                }
+                &:not(.typelist-item-disable):hover{
+                    background-color: $f-aid-03;
+                    color: $f-text-02;
+                }
+                &.typelist-item-active{
+                    background-color: $f-aid-02;
+                    color: $f-text-02;
+                }
+
+                &-disable{
+                    color: $f-text-06;
+                    cursor: text;
+                    &:hover{
+                        color: $f-text-06;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

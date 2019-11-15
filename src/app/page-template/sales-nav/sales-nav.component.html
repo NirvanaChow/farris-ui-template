@@ -1,0 +1,177 @@
+<!-- <app-tab-router></app-tab-router> -->
+<!--
+  说明 ——只用来演示界面模板
+-->
+<div
+  class="d-inline-flex bd-navbar py-2"
+  style="height:auto;background:rgba(22, 36, 50, 0.6);"
+>
+  <select
+    class="form-control mx-3"
+    [(ngModel)]="selectedPage"
+    (change)="changePageType()"
+    name="listType"
+  >
+    <option value="">选择列表类型</option>
+    <option *ngFor="let item of pageTypeInfo.list" [value]="item.value">{{
+      item.name
+    }}</option>
+  </select>
+  <select
+    class="form-control mx-3"
+    [(ngModel)]="selectedPage"
+    (change)="changePageType()"
+    name="cardType"
+  >
+    <option value="">选择卡片类型</option>
+    <option *ngFor="let item of pageTypeInfo.card" [value]="item.value">{{
+      item.name
+    }}</option>
+  </select>
+  <select
+    class="form-control mx-3"
+    [(ngModel)]="selectedPage"
+    (change)="changePageType()"
+    name="listCardType"
+  >
+    <option value="">选择列卡类型</option>
+    <option *ngFor="let item of pageTypeInfo.listCard" [value]="item.value">{{
+      item.name
+    }}</option>
+  </select>
+  <select
+    class="form-control mx-3"
+    [(ngModel)]="selectedPage"
+    (change)="changePageType()"
+    name="treeCardType"
+  >
+    <option value="">选择树卡类型</option>
+    <option *ngFor="let item of pageTypeInfo.treeCard" [value]="item.value">{{
+      item.name
+    }}</option>
+  </select>
+</div>
+<div class="flex-fill position-relative">
+  <router-outlet>奋力加载中......</router-outlet>
+</div>
+<div class="docs-pagetmpl-intro box-shadow-lg">
+  <span (click)="gotoURL('modify-des')">说明<small>(3.25)</small></span>
+</div>
+
+<farris-dialog #farrisDialog [width]="700" [height]="500" [title]="'修改要点'">
+  <div class="p-3">
+    <h4>19年3月8日</h4>
+    <h5>一、过滤条</h5>
+    <ul>
+      <li>
+        <h6>
+          1、过滤条结构
+          <span
+            class="text-info g-pointer"
+            (click)="checkForPage('listcard-filter')"
+            >Demo</span
+          >
+        </h6>
+        <b>原写法</b>
+        <figure class="highlight px-3 py-2">
+          <pre>
+&lt;form  class="farris-form farris-form-controls-inline d-flex flex-wrap f-split-border-b farris-card-section"
+&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="farris-group-wrap"&gt;
+      &lt;div class="form-group farris-form-group"&gt;
+        &lt;label for="hpinput01" class="col-form-label"&gt;
+          &lt;span class="farris-label-text"&gt;订单编号&lt;/span&gt;
+          &lt;span class="farris-label-info text-danger"&gt;*&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class="farris-input-wrap"&gt;
+          输入控件
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="farris-group-wrap"&gt;
+      &lt;div class="form-group farris-form-group"&gt;
+        &lt;label class="col-form-label"&gt;
+          &lt;span class="farris-label-text"&gt;类型&lt;/span&gt;
+          &lt;small class="farris-label-info text-muted"&gt;&lt;/small&gt;
+        &lt;/label&gt;
+        &lt;div class="farris-input-wrap"&gt;
+        输入控件
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-3"&gt;
+    &lt;div class="farris-group-wrap"&gt;
+      &lt;div class="form-group farris-form-group"&gt;
+        &lt;label class="col-form-label"&gt;
+          &lt;span class="farris-label-text"&gt;客户名称&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class="farris-input-wrap"&gt;
+        输入控件
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-3 text-right"&gt;
+    &lt;button class="btn btn-secondary"&gt;
+      查询
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+          </pre>
+        </figure>
+        <b>新写法</b>
+      </li>
+    </ul>
+    <h5>二、列表模板</h5>
+    <ul>
+      <li>
+        <h6>
+          1、列表与整体内容区的间距
+          <span class="text-info g-pointer" (click)="checkForPage('list')"
+            >Demo</span
+          >
+        </h6>
+        <b>原写法</b>
+        <figure class="highlight px-3 py-2">
+          <pre>
+&lt;div class="flex-fill d-flex farris-split-section m-2"&gt;
+            ...
+            &lt;/div&gt;
+          </pre>
+        </figure>
+        <b>新写法</b>
+        <figure class="highlight px-3 py-2">
+          <pre>&lt;div class="flex-fill d-flex farris-split-section <span class="text-success">f-cmp-p</span> <s class="text-danger">m-2</s>"&gt;
+                ...
+                &lt;/div&gt;
+              </pre>
+        </figure>
+      </li>
+    </ul>
+    <h5>三、纯卡片</h5>
+    <ul>
+      <li>
+        <h6>1、输入控件区域与整体内容区的间距</h6>
+        <b>原写法</b>
+        <figure class="highlight px-3 py-2">
+          <pre>
+&lt;form class="farris-form farris-card-content-bg"&gt;
+            ...
+            &lt;/form&gt;
+          </pre>
+        </figure>
+        <b>新写法</b>
+        <figure class="highlight px-3 py-2">
+          <pre>&lt;form class="farris-form farris-card-content-bg <span class="text-success"> f-cmp-mb</span>&gt;
+                ...
+                &lt;/form&gt;
+              </pre>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</farris-dialog>

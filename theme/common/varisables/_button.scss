@@ -1,0 +1,93 @@
+// 按钮
+$farris-btn-padding-x: 0.8125rem !default;
+$farris-btn-padding-x-sm: 0.8125rem !default;
+$farris-btn-padding-x-lg: 0.9375rem !default;
+
+// breakpoints
+$farris-grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  el: 1690px
+) !default;
+
+/*按钮——————开始*/
+$farris-btn-disabled-bg:$f-neutral-08!default ;
+$farris-btn-disabled-color: $f-text-06 !default;
+$farris-btn-disabled-border-color:$f-neutral-03!default;
+// primary
+$farris-btn-primary-bg: $farris-primary !default;
+$farris-btn-primary-border: $farris-primary !default;
+$farris-btn-primary-color: $f-text-00 !default;
+$farris-btn-primary-hover-bg: $f-theme-05!default;
+$farris-btn-primary-hover-border: $f-theme-05 !default;
+$farris-btn-primary-hover-color:  $f-text-00 !default;
+$farris-btn-primary-active-bg: $f-theme-03!default;
+$farris-btn-primary-active-border: $f-theme-03!default;
+$farris-btn-primary-active-color:  $f-text-00 !default;
+$farris-btn-primary-disabled-bg: $farris-btn-disabled-bg !default;
+$farris-btn-primary-disabled-color: $farris-btn-disabled-color !default;
+$farris-btn-primary-disabled-border: $farris-btn-disabled-border-color !default;
+
+// secondary
+$farris-btn-secondary-bg: $f-neutral-00 !default;
+$farris-btn-secondary-border: $f-neutral-02!default;
+$farris-btn-secondary-color: $f-text-04!default;
+$farris-btn-secondary-hover-bg: $farris-btn-secondary-bg !default;
+$farris-btn-secondary-hover-border:$f-theme-05 !default;
+$farris-btn-secondary-hover-color: $f-theme-05!default;
+$farris-btn-secondary-active-bg: $farris-btn-secondary-bg !default;
+$farris-btn-secondary-active-border: $f-theme-03!default;
+$farris-btn-secondary-active-color: $f-theme-03!default;
+$farris-btn-secondary-disabled-bg:  $farris-btn-disabled-bg !default;
+$farris-btn-secondary-disabled-color:$farris-btn-disabled-color !default;
+$farris-btn-secondary-disabled-border: $farris-btn-disabled-border-color !default;
+// danger
+$farris-btn-danger-bg:$f-neutral-00 !default;
+$farris-btn-danger-border: $f-neutral-02 !default;
+$farris-btn-danger-color: $farris-danger !default;
+$farris-btn-danger-hover-bg: $farris-btn-danger-bg !default;
+$farris-btn-danger-hover-border: $farris-danger !default;
+$farris-btn-danger-hover-color: $farris-danger !default;
+$farris-btn-danger-active-bg:$farris-btn-danger-bg !default;
+$farris-btn-danger-active-border: $farris-danger !default;
+$farris-btn-danger-active-color:  $farris-danger !default;
+$farris-btn-danger-disabled-bg:  $farris-btn-disabled-bg !default;
+$farris-btn-danger-disabled-color: $farris-btn-disabled-color !default;
+$farris-btn-danger-disabled-border: $farris-btn-disabled-border-color !default;
+// 链接
+$farris-btn-link-color: $f-theme-04;
+$farris-btn-link-hover-color: $f-theme-05;
+$farris-btn-link-active-color: $f-theme-03;
+$farris-btn-link-disabled-color: $farris-btn-disabled-color !default;//#c0c0c0;
+// box-shadow 阴影
+$farris-btn-box-shadow:none!default;
+$farris-btn-focus-box-shadow:none !default;
+$farris-btn-active-box-shadow:none !default;
+$farris-btn-disabled-opacity: 1 !default;
+/*按钮——————结束*/
+
+// ------ error $farris-bt-input-btn-padding-y: 0.3125rem !default;
+// $btn-line-height: $input-btn-line-height !default;
+// $btn-padding-y-sm: $input-btn-padding-y-sm !default;
+// $btn-padding-x-sm: $input-btn-padding-x-sm !default;
+// $btn-line-height-sm: $input-btn-line-height-sm !default;
+// $btn-padding-y-lg: $input-btn-padding-y-lg !default;
+// $btn-padding-x-lg: $input-btn-padding-x-lg !default;
+// $btn-line-height-lg: $input-btn-line-height-lg !default;
+$farris-btn-border-width: 1px !default;
+// $btn-font-weight: $font-weight-normal !default;
+// $btn-focus-width: $input-btn-focus-width !default;
+// $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+
+// $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
+// $btn-link-disabled-color: $gray-600 !default;
+// $btn-block-spacing-y: 0.5rem !default;
+// Allows for customizing button radius independently from global border radius
+// $btn-border-radius: $border-radius !default;
+// $btn-border-radius-lg: $border-radius-lg !default;
+// $btn-border-radius-sm: $border-radius-sm !default;
+// warning
+$farris-btn-warning-text: $f-text-00;

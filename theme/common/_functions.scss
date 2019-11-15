@@ -1,0 +1,167 @@
+// 重写 bootstrap按钮样式
+// kendoui禁用样式
+@mixin k-disabled {
+  background-color: $farris-input-disabled-bg;
+  color: $f-text-06;
+  border-color: $farris-input-disabled-bg;
+}
+// bootstrap验证样式
+// Form control focus state
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-focus-border-color` variable.
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+@mixin form-control-focus() {
+  &:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0; // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+@mixin set-bg-text-border($background, $text, $border-color) {
+  color: $text;
+  background-color: $background;
+  border-color: $border-color;
+}
+@mixin btn-icon-size() {
+  $btn-icon-size: ($farris-btn-icon-padding-y * 2) +
+    $farris-btn-icon-line-height * $farris-btn-icon-font-size + 0.125rem;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
+}
+@mixin bt-form-validation-state($state, $color) {
+  .farris-input-wrap {
+    .form-control,
+    .custom-select {
+      .was-validated &:#{$state},
+      &.is-#{$state} {
+        border-color: $color;
+        &:focus {
+          border-color: $color;
+          box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
+        } // ~ .#{$state}-feedback, // ~ .#{$state}-tooltip { // display: block; // }
+      }
+    } // .form-control-file { // .was-validated &:#{$state}, // &.is-#{$state} { // ~ .#{$state}-feedback, // ~ .#{$state}-tooltip { // display: block; // } // } // }
+    .form-check-input {
+      .was-validated &:#{$state} {
+        ~ .form-check-label {
+          color: $color;
+        }
+        ~ .#{$state}-feedback,
+        ~ .#{$state}-tooltip {
+          display: block;
+        }
+      }
+    }
+    .custom-control-input {
+      .was-validated &:#{$state} {
+        ~ .custom-control-label {
+          color: $color;
+          &::before {
+            background-color: lighten($color, 25%);
+          }
+        }
+        // ~ .#{$state}-feedback,
+        // ~ .#{$state}-tooltip { // display: block; // }
+        &:checked {
+          ~ .custom-control-label::before {
+            @include gradient-bg(lighten($color, 10%));
+          }
+        }
+        &:focus {
+          ~ .custom-control-label::before {
+            box-shadow: 0 0 0 1px $body-bg,
+              0 0 0 $input-focus-width rgba($color, 0.25);
+          }
+        }
+      }
+    }
+    // custom file
+    .custom-file-input {
+      .was-validated &:#{$state} {
+        ~ .custom-file-label {
+          border-color: $color;
+          &::after {
+            border-color: inherit;
+          }
+        }
+        // ~ .#{$state}-feedback,
+        // ~ .#{$state}-tooltip {
+        // display: block; // }
+        &:focus {
+          ~ .custom-file-label {
+            box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*2019年6月29日  输入控件按钮icon图标*/
+%f_apperance_input_icon {
+  background-color: $farris-input-icon-bg;
+  border-color: $farris-input-icon-border-color;
+  color: $farris-input-icon-color;
+}
+%f_apperance_input_icon_hover {
+  background-color: $farris-input-icon-hover-bg;
+  border-color: $farris-input-icon-hover-border-color;
+  color: $farris-input-icon-hover-color;
+}
+%f_apperance_input {
+  background-color: $input-bg;
+  border-color: $farris-input-border-color;
+}
+@mixin f_apperance($what) {
+  // Widget
+  @if ($what == input) {
+    @extend %f_apperance_input;
+  }
+  @if ($what == input-icon) {
+    @extend %f_apperance_input_icon;
+  }
+  @if ($what == input-icon-hover) {
+    @extend %f_apperance_input_icon_hover;
+  }
+}
+@mixin f_apperance_input {
+  @extend %f_apperance_input;
+}
+@mixin f_apperance_button {
+  @extend %f_apperance_button;
+}
+
+@mixin f-make-grid-width-columns(
+  $columns: $grid-columns,
+  $gutter: $grid-gutter-width
+) {
+  %grid-column {
+    position: relative;
+    min-height: 1px; // Prevent columns from collapsing when empty
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+  }
+  @for $i from 1 through $columns {
+    .f-col-w#{$i},
+    .f-col-h#{$i} {
+      @extend %grid-column;
+    }
+    .f-col-w#{$i} {
+      width: percentage($i / $columns);
+    }
+    .f-col-h#{$i} {
+      height: percentage($i / $columns);
+    }
+  }
+}

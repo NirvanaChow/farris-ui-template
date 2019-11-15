@@ -1,0 +1,81 @@
+// 异常信息提醒
+/*
+*覆盖原来的样式
+*/
+/*
+*.ng-invalid.ng-touched,
+.ng-invalid.ng-dirty 
+*/
+.farris-input-wrap {
+    // 新增
+    .k-widget.is-invalid {
+      &.k-autocomplete,
+      &.k-maskedtextbox > .k-textbox {
+        color: $danger;
+        border-color: $danger;
+      }
+  
+      > .k-dateinput-wrap,
+      > .k-dropdown-wrap,
+      > .k-picker-wrap,
+      > .k-multiselect-wrap,
+      > .k-numeric-wrap {
+        color: $danger;
+        border-color: $danger;
+      }
+    }
+    //覆盖
+    .k-input,
+    .k-textbox,
+    .k-textarea,
+    .k-input.k-textbox {
+      // Invalid
+      &:invalid,
+     //  &.k-state-invalid,
+       &.ng-invalid.ng-touched,
+       &.ng-invalid.ng-dirty {
+        color: $input-text;
+        border-color: $input-border;
+      }
+    }
+    // .k-widget.k-state-invalid,
+    .ng-invalid.ng-touched,
+    .ng-invalid.ng-dirty {
+      &.k-autocomplete,
+      &.k-maskedtextbox > .k-textbox {
+        color: $input-text;
+        border-color: $input-border;
+      }
+  
+      > .k-dateinput-wrap,
+      > .k-dropdown-wrap,
+      > .k-picker-wrap,
+      > .k-multiselect-wrap,
+      > .k-numeric-wrap {
+        color: $input-text;
+        border-color: $input-border;
+      }
+    }
+  }
+  
+  // 通过信息提醒
+  /**
+  .ng-valid.ng-touched,
+  .ng-valid.ng-dirty
+  **/
+  .k-widget.is-valid {
+    &.k-autocomplete,
+    &.k-maskedtextbox > .k-textbox {
+      color: $success;
+      border-color: $success;
+    }
+  
+    > .k-dateinput-wrap,
+    > .k-dropdown-wrap,
+    > .k-picker-wrap,
+    > .k-multiselect-wrap,
+    > .k-numeric-wrap {
+      color: $success;
+      border-color: $success;
+    }
+  }

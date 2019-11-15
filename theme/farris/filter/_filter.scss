@@ -1,0 +1,10 @@
+.f-filter-footer,
+.f-sort-editor {
+  .footer-container{
+    height: 32px;
+    min-height: 32px;
+    background-color: $f-neutral-07;
+    line-height: 32px;
+    flex-shrink: 0;
+  }
+}

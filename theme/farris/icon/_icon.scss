@@ -1,0 +1,312 @@
+// 字体定义
+// @font-face {
+//   font-family: 'FarrisIcons';
+//   font-style: normal;
+//   font-weight: normal;
+//   src: url('farrisicon.ttf?t=1559205317835') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+// }
+// 定义图标
+// .f-icon-md {
+//   width: $farris-icon-size;
+//   height: $farris-icon-size;
+//   line-height: 1;
+//   font-family: $farris-icon-font-family;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-size: $farris-icon-font-size;
+//   display: inline-block;
+//   text-transform: none;
+//   letter-spacing: normal;
+//   word-wrap: normal;
+//   white-space: nowrap;
+//   direction: ltr;
+//   -webkit-font-smoothing: antialiased;
+//   text-rendering: optimizeLegibility;
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-font-feature-settings: 'liga';
+//   font-feature-settings: 'liga';
+// }
+// .f-icon::before {
+//   vertical-align: baseline;
+// }
+.f-icon-md{
+  @include f-icon-extend();
+}
+
+
+// 覆盖Kendo中图标的样式
+$farris-i-prefix: 'k-i';
+@import '../../../farris-icon/scss/farris/variables';
+@import '../../../farris-icon/scss/farris/rewrite';
+
+.f-btn-icon {
+  cursor: pointer;
+  font-size: $farris-btn-icon-font-size;
+  line-height: $farris-btn-icon-line-height;
+  padding: $farris-btn-icon-padding-y $farris-btn-icon-padding-x;
+  border: $farris-btn-icon-border-width solid $farris-btn-icon-border-color;
+  border-radius: $farris-btn-icon-border-radius;
+  position: relative;
+  @include btn-icon-size();
+
+  &.f-bare {
+    border-color: transparent !important; // sass-lint:disable-line no-important
+    color: inherit;
+    background: none !important; // sass-lint:disable-line no-important
+    box-shadow: none !important; // sass-lint:disable-line no-important
+    transition: color 0.2s ease-in-out;
+
+    &:hover,
+    &.f-state-hover,
+    &:active,
+    &.f-state-active,
+    &:hover:active,
+    &:hover.f-state-active {
+      color: inherit;
+    }
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &::before {
+    border-radius: $farris-btn-icon-border-radius;
+    content: '';
+    background: $f-neutral-00;
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    left: -$farris-btn-icon-border-width;
+    right: -$farris-btn-icon-border-width;
+    top: -$farris-btn-icon-border-width;
+    bottom: -$farris-btn-icon-border-width;
+    z-index: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  &:hover,
+  &.f-state-hover {
+    &::before {
+      opacity: $farris-flat-button-hover-opacity;
+    }
+  }
+  &::after {
+    border-radius: $farris-btn-icon-border-radius;
+    content: '';
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    left: -$farris-btn-icon-border-width;
+    right: -$farris-btn-icon-border-width;
+    top: -$farris-btn-icon-border-width;
+    bottom: -$farris-btn-icon-border-width;
+    z-index: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+// 弹出提示的图标
+.f-icon-error,
+.f-icon-danger {
+  color: $farris-danger;
+  &::before {
+    content: '\e11d';
+  }
+}
+.f-icon-info {
+  font-family: 'FarrisIcons';
+  color: $farris-info;
+  &::before {
+    content: '\eb05';
+  }
+}
+.f-icon-warning {
+  font-family: 'FarrisIcons';
+  color: $farris-warning;
+  &::before {
+    content: '\eb06';
+  }
+}
+.f-icon-question {
+  font-family: 'FarrisIcons';
+  color: $farris-info;
+  &::before {
+    content: '\eb04';
+  }
+}
+.f-icon-success {
+  color: $farris-success;
+  &::before {
+    content: '\e11a';
+  }
+}
+.f-icon-default {
+  font-family: 'FarrisIcons';
+  color: $farris-info;
+  &::before {
+    content: '\eb14';
+  }
+}
+
+// 帮助图标
+.f-icon-lookup::before {
+  content: '\e032';
+  // font-family: 'FarrisIcons';
+  // content:"\e138";
+}
+// 分页图标
+.f-page-pre::before {
+  font-family: 'FarrisIcons';
+  content: '\e016';
+}
+.f-page-first::before {
+  font-family: $farris-icon-font-family;
+  content: '\e5dc';
+}
+.f-page-last::before {
+  font-family: $farris-icon-font-family;
+  content: '\e5dd';
+}
+.f-page-next::before {
+  font-family: 'FarrisIcons';
+  content: '\e014';
+}
+
+// 最小化图标
+.modal_minimize {
+  &::before {
+    content: '\e139';
+  }
+}
+.f-icon-minimize {
+  &::before {
+    content: '\e139';
+  }
+}
+// 最大化图标
+.modal_maximize {
+  &::before {
+    content: '\e528';
+  }
+}
+.f-icon-maximize {
+  &::before {
+    content: '\e528';
+  }
+}
+.f-icon-close {
+  font-family: 'FarrisIcons';
+  &::before {
+    content: '\e11b';
+  }
+}
+.modal_close {
+  font-family: 'FarrisIcons';
+  font-size:1.25rem;
+  // '\e11b'
+  &::before {
+    content: '\e11b';
+  }
+}
+// web_asset
+.modalrevert::before {
+  content: '\e529';
+}
+// 输入组件分组，涉及图标
+.f-legend-icon::after {
+  content: '';
+  width: 1.125rem;
+  height: 0.875rem;
+  font-size: 1.25rem;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 18px;
+  margin: 0 0.25rem 0 0;
+  color: $f-neutral-01;
+}
+
+.f-legend-collapse {
+  &::after {
+    font-size:0.875rem;
+    font-family: 'FarrisIcons';
+    content: '\e013';
+  }
+}
+
+.f-legend-show {
+  &::after {
+    font-size:0.875rem;
+    font-family: 'FarrisIcons';
+    content: '\e015';
+  }
+}
+// 侧边栏图标
+.f-sidebar-close::before {
+  content: '\e11b';
+}
+.f-sidebar-entry::before {
+  content: '\e014';
+}
+
+// 时间
+.f-icon-timepicker::before{
+  content: '\e107';
+}
+
+// // 运输的图标
+// .f-icon-transport,
+// .f-icon-settlement,
+// .f-icon-outofstock,
+// .f-icon-invoice,
+// .f-icon-receivables,
+// .f-icon-delivergoods {
+//   font-family: 'FarrisIcons';
+// }
+// .f-icon-transport {
+//   &::before {
+//     content: '\eb07';
+//   }
+// }
+
+// // 结算的图标
+// .f-icon-settlement {
+//   &::before {
+//     content: '\eb08';
+//   }
+// }
+// // 出库的图标
+// .f-icon-outofstock {
+//   &::before {
+//     content: '\eb09';
+//   }
+// }
+// // 开票图标
+// .f-icon-invoice {
+//   &::before {
+//     content: '\eb0a';
+//   }
+// }
+// // 收款图标
+// .f-icon-receivables {
+//   &::before {
+//     content: '\eb0b';
+//   }
+// }
+// // 发货计划图标
+// .f-icon-delivergoods {
+//   &::before {
+//     content: '\eb0c';
+//   }
+// }
+
+
+//20190923 增加图标文字按钮样式
+.btn-icontext{
+  display: inline-flex;
+  align-items: center;
+  .f-icon{
+    margin: 0 ($farris-btn-padding-x / 2) 0 (-$farris-btn-padding-x / 2);
+  }
+}

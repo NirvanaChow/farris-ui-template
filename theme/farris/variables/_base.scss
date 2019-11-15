@@ -1,0 +1,40 @@
+
+// 页面——滚动条——纵向——宽度
+$farris-scrollbar-width: 12px;
+// 页面——滚动条——横向——高度
+$farris-scrollbar-height: 12px;
+// 页面——滚动条——边线圆角
+$farris-scrollbar-border-radius: 4px;
+// 页面——滚动条——背景色
+$farris-scrollbar-track-bg: #eee;
+// 页面——滚动条——滑块条颜色
+$farris-scrollbar-thumb-bg: rgba(0, 0, 0, 0.2);
+
+// Info——按钮颜色
+$farris-info-btn-text:$f-text-00!default;
+
+
+// 弹出窗口——提示消息类——图标——大小
+$farris-modal-icon-size: 2rem !default;
+// 弹出窗口——提示消息类——文字——内间距
+$farris-modal-text-padding-top: 0.25rem !default;
+
+// 消息提示框
+$farris-notify-toast-close-top: 0.5rem !default;
+$farris-notify-toast-close-right: 0.5rem !default;
+$farris-notify-toast-close-color: $f-text-06 !default;
+// 提示消息——阴影
+$farris-notify-toast-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15) !default;
+// 提示消息——背景色
+$farris-notify-toast-bg:$f-neutral-00 !default;
+// 提示消息——透明度
+$farris-notify-toast-opacity: 1 !default;
+// 提示消息——宽度
+$farris-notify-toast-width: 21.25rem !default;
+
+
+// loading
+$farris-loading-z-index: 1061 !default;
+
+//提示消息-间距
+$farris-notify-gutter:0.625rem;

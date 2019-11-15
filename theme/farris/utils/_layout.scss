@@ -1,0 +1,134 @@
+/*
+* 占所有控件
+*/
+.f-utils-absolute-all {
+  @include f-utils-absolute-all;
+}
+/*
+* Flex布局,默认是overflow:hidden;
+*/
+.f-utils-flex-column {
+  @include f-utils-flex(column, true);
+}
+.f-utils-fill-flex-column {
+  flex: 1 1 0;
+  @include f-utils-flex(column, true);
+}
+.f-utils-flex-row {
+  @include f-utils-flex(row, true);
+  flex-wrap: nowrap;
+}
+.f-utils-flex-row-wrap {
+  @include f-utils-flex(row, true);
+  flex-wrap: wrap !important;
+}
+.f-utils-fill-flex-row {
+  flex: 1 1 0;
+  @include f-utils-flex(row, true);
+  flex-wrap: nowrap !important;
+}
+.f-utils-fill-flex-row-wrap {
+  flex: 1 1 0;
+  @include f-utils-flex(row, true);
+  flex-wrap: wrap !important;
+}
+.f-utils-fill {
+  flex: 1 1 0;
+  overflow: hidden;
+}
+.f-utils-fill-auto {
+  flex: 1 1 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.f-utils-overflow-xhya {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+.f-utils-overflow-xayh {
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
+}
+.f-utils-overflow-xaya {
+  overflow: auto !important;
+}
+.f-utils-overflow-hidden {
+  overflow: hidden !important;
+}
+.f-utils-overflow-auto {
+  overflow: auto !important;
+}
+
+.f-utils-nogutters {
+  & > .col,
+  & > [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*5月28日前版本 滚动*/
+.f-overflow-y-auto {
+  overflow-y: auto !important;
+}
+.f-overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+.f-overflow-x-auto {
+  overflow-x: auto !important;
+}
+.f-overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .f-overflow#{$infix}-y-auto {
+      overflow-y: auto !important;
+    }
+    .f-overflow#{$infix}-y-hidden {
+      overflow-y: hidden !important;
+    }
+    .f-overflow#{$infix}-x-auto {
+      overflow-x: auto !important;
+    }
+    .f-overflow#{$infix}-x-hidden {
+      overflow-x: hidden !important;
+    }
+  }
+}
+
+.farris-overflow-y-auto {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+.farris-overflow-y-hidden {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+.farris-overflow-hidden {
+  overflow: hidden !important;
+}
+/**
+* 生成只带 宽度和高度得样式
+**/
+@include f-make-grid-width-columns();
+// 20190916 增加强制折行
+.f-utils-text-break {
+  white-space: normal !important;
+  word-break: break-all !important;
+}
+
+// 文字
+$common-text-color: (
+  emphasize: $f-text-01,
+  light: $f-text-04,
+  mute: $f-text-06
+);
+
+@each $type, $color in $header-icon-text {
+  .f-text-#{$type} {
+    color: $color !important;
+  }
+}

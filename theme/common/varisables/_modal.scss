@@ -1,0 +1,46 @@
+// Modal弹出窗口
+$farris-modal-backdrop-opacity: 0.15 !default;
+$farris-modal-backdrop-bg: #000 !default;
+$farris-modal-content-box-shadow-sm-up: 0 0.25rem 0.75rem 0
+  rgba($farris-modal-backdrop-bg, 0.2);
+$farris-modal-content-border-width: 0 !default;
+$farris-modal-content-bg: #fff !default;
+$farris-modal-content-color: $f-text-02 !default;
+$farris-modal-inner-padding: 0.625rem !default;
+$farris-modal-header-padding: 0.75rem 0.5rem 0.75rem 1.125rem !default;
+$farris-modal-header-padding-x: 0.9375rem !default;
+$farris-modal-header-padding-y: 0.5rem !default;
+$farris-modal-header-with-icon-padding-right: 0.5rem !default;
+$farris-footer-el-gutter: 0.25rem !default;
+$farris-modal-header-bg: #fff !default;
+$farris-modal-header-text: #000 !default;
+$farris-modal-header-close-opacity: 1;
+$farris-modal-title-line-height: $farris-h5-line-height;
+$farris-modal-title-font-size: $farris-h5-font-size;
+$farris-modal-header-border-width: 1px !default;
+$farris-modal-header-border-color: #e2e8f0 !default;
+$farris-modal-footer-border-width: 1px !default;
+$farris-modal-footer-border-color: $farris-modal-header-border-color !default;
+$farris-modal-footer-bg: $f-neutral-09 !default;
+// Modal 提示消息
+$farris-modal-tips-gutter-x: 0.9375rem !default;
+$farris-modal-tips-gutter: 0.5625rem 0.625rem 0.5625rem 1.25rem !default;
+$farris-modal-tips-title-color: $f-text-04;
+$farris-modal-tips-title-font-size: 0.875rem!default;
+$farris-modal-tips-title-line-height: 1.25rem;
+$farris-modal-tips-title-margin-bt: 0 !default;
+
+$farris-modal-tips-icon-size: 1.3rem !default;
+$farris-modal-tips-font-weight: normal !default;
+$farris-modal-tips-content-gutter-top: 0 !default;
+$farris-modal-tips-content-gutter-left: 0.625rem !default;
+$farris-modal-tips-content-gutter-right: 0.9375rem !default;
+$farris-modal-footer-btn-min-width: 3.125rem !default;
+$farris-modal-tips-only-msg-color: $farris-modal-tips-title-color !default;
+$farris-modal-tips-only-msg-size: 1rem !default;
+$farris-modal-tips-only-msg-line-height: 1.375rem !default;
+
+//message 提示信息
+$farris-modal-msg-title-color: $f-text-01!default;
+$farris-modal-msg-title-gutter-bottom:0.875rem;
+$farris-modal-msg-title-detail-color: $f-text-04!default;

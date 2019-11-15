@@ -1,0 +1,160 @@
+// Bootstrap的収折
+// f-state-selected 选中
+// f-state-default 默认
+// f-state-disabled 禁用
+.accordion,
+.farris-panel {
+  .card {
+    border-top:0;
+    border-right: 0;
+    border-left: 0;
+    border-color: $farris-panel-border;
+    .card-header {
+      position: relative;
+      border-width: 0;
+      background-color: $farris-accordion-header-bg;
+      color: $farris-panel-text;
+      padding: $farris-panelbar-header-padding-y
+        $farris-panelbar-header-padding-x;
+      &:hover{
+        @include set-bg-text-border(
+          $farris-panel-link-hover-background,
+          $farris-panel-link-hover-text,
+          $farris-panel-link-hover-border
+        );
+      }
+      .panel-item-title{
+        font-size: $farris-panel-item-title-size;
+        line-height: $farris-panel-item-title-line-height;
+      }
+    }
+    .card-body {
+      padding: $farris-panel-content-gunter;
+    }
+    &.f-state-hover {
+      @include set-bg-text-border(
+        $farris-panel-link-hover-background,
+        $farris-panel-link-hover-text,
+        $farris-panel-link-hover-border
+      );
+    }
+    &.f-state-disabled {
+      .card-header {
+        @include set-bg-text-border(
+          $farris-panel-link-disabled-background,
+          $farris-panel-link-disabled-text,
+          $farris-panel-link-disabled-border
+        );
+      }
+      .f-icon {
+        display: none;
+      }
+      .accordion-title {
+        color: $farris-panel-link-disabled-text;
+      }
+    }
+    &.f-state-selected {
+      .card-header {
+        @include set-bg-text-border(
+          $farris-panel-link-selected-background,
+          $farris-panel-link-selected-text,
+          $farris-panel-link-selected-border
+        );
+      }
+    }
+  }
+  .accordion-title {
+    color: $farris-panel-text;
+  }
+  .f-accordion-collapse,
+  .f-accordion-expand {
+    margin-top: -5px;
+    color: $farris-panel-icon-text;
+    font-size: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: middle;
+
+  }
+  .f-accordion-collapse::before {
+    font-family: 'FarrisIcons';
+    content: '\e013';
+  }
+  .f-accordion-expand::before {
+    font-family: 'FarrisIcons';
+    content: '\e015';
+  }
+}
+.farris-panel {
+  .card:not(:first-of-type):not(:last-of-type) {
+    // border-bottom: 0;
+    border-radius: 0;
+  }
+
+  .card:not(:first-of-type) {
+    .card-header:first-child {
+      border-radius: 0;
+    }
+  }
+
+  .card:first-of-type {
+    // border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .card:last-of-type {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+// 分割线类型
+.farris-panel-dividing-line {
+  .card {
+    border-width: 0;
+    .card-header {
+      border-width: 0 0 1px 0;
+      background-color: #fff;
+      border-color: #f0f0f0;
+    }
+    &.f-state-selected .card-header {
+      background-color: #fff;
+      border-color: #f0f0f0;
+      color: $farris-panel-link-selected-text;
+    }
+  }
+}
+// panel 在収折面板
+.f-cmp-panel-pt-card-subgrid {
+  margin:0;
+  @extend .farris-panel-dividing-line;
+}
+.f-cmp-panel-has-form {
+  .card {
+    .card-body {
+      padding: 0;
+    }
+  }
+}
+//20190919折叠面板手风琴 icon图标样式 
+.accordion,.farris-panel{
+  .card{
+    .card-header{
+      .f-icon{
+        color: $farris-panel-text;
+      }
+      &:hover{
+        .f-icon{
+          color: $farris-panel-link-hover-text;
+        }
+      }
+    }
+    &.f-state-selected {
+      .card-header {
+        .f-icon{
+          color: $farris-panel-link-selected-text;
+        }
+      }
+    }
+  }
+}

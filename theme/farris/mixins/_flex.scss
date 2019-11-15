@@ -1,0 +1,25 @@
+@mixin f-utils-flex($direction: column, $showImportant: false) {
+  @if $showImportant {
+    display: flex!important;
+    flex-direction: $direction!important;
+  } @else {
+    display: flex;
+    flex-direction: $direction;
+  }
+  overflow: hidden;
+}
+@mixin f-utils-absolute-all {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+@mixin f-header-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}

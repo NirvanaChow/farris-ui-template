@@ -1,0 +1,78 @@
+// 引入变量和方法
+@import './variables';
+@import './mixins';
+// 引入 material-icons
+// @import '../third-part/material-icons';
+// 自定义图标样式
+@import './icon/icon';
+// 页面模板结构样式
+@import './page-tmpl/layout';
+// 按钮
+@import './btn/layout';
+// 徽章
+@import '././badge/layout';
+// 模板
+@import './template/layout';
+
+// 弹出窗口内容
+@import './modal/layout';
+// 输入控件布局
+@import './input/layout';
+@import './static-text/layout';
+@import './input/image';
+// 収折面板布局
+@import './accordion/layout';
+// 自定义Tabs
+@import './tabs/layout';
+// 消息提示布局
+@import './message/layout';
+// 正在加载
+@import './loading/layout';
+// 帮助
+@import './lookup/layout';
+// 过滤
+@import './filter/filter';
+// 提示
+@import './notify/layout';
+// 表格
+@import './table/layout';
+// 分页
+@import './pagination/layout';
+// 下拉
+@import './dropdown/layout';
+// 流程进度
+@import './process/layout';
+// 侧边栏
+@import './sidebar/layout';
+// section
+@import './section/layout';
+// 方案
+@import './scheme/layout';
+// 工具类样式
+@import './utils/layout';
+// 滚动条
+@import './scrollbar/layout';
+// onepage
+@import './onepage/layout';
+// 滚动监听
+@import './scrollspy/layout';
+// 表格
+// 动画布局
+@import '../third-part/animation.scss';
+// 视图切换组件
+@import './view-change/layout';
+
+// 临时追加样式 8月30日
+// @import '../../src/assets/templatestyle/templateListview.scss';
+
+//20190924穿梭框样式
+@import './multi-select/layout';
+
+//20190926 listview模板提取颜色变量 步骤条提取变量
+@import './listview/layout';
+//步骤条颜色变量
+@import './progress-step/layout';
+//switch
+@import './switch/layout';
+//多选列表
+@import './combolist/layout';

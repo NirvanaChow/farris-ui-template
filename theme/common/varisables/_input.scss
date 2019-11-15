@@ -1,0 +1,142 @@
+
+// Links
+$farris-link-color: $farris-primary;
+// $link-decoration:           none !default;
+// $link-hover-color:          darken($link-color, 15%) !default;
+// $link-hover-decoration:     underline !default;
+// 输入框 按钮
+$farris-input-btn-padding-x: 0.5rem !default;
+$farris-input-btn-padding-y: $f-input-btn-padding-y !default;
+$farris-input-btn-line-height: $farris-line-height-base !default;
+
+$farris-input-btn-padding-x-sm: 0.4375rem !default;
+$farris-input-btn-padding-y-sm: 0.125rem !default;
+$farris-input-btn-line-height-sm: $farris-line-height-base !default;
+
+$farris-input-btn-padding-y-lg: 0.25rem !default;
+$farris-input-btn-padding-x-lg: 0.3125rem !default;
+$farris-input-btn-line-height-lg: $farris-line-height-base !default;
+// 输入框
+$farris-input-padding-x: 0.5rem !default;
+$farris-input-padding-y: 0.125 !default;
+$farris-input-line-height: $farris-line-height-base !default;
+
+
+// -------------------输入控件
+$farris-input-placeholder-color: $f-text-06 !default;
+// 输入控件 默认状态
+$farris-input-bg:#fff !default;
+$farris-input-color:rgba(0,0,0,0.85)!default;
+$farris-input-border-color: $f-neutral-02 !default;
+
+// 输入控件 禁用状态
+$farris-input-disabled-bg: $farris-input-bg!default;
+//$farris-input-disabled-color:rgba(0,0,0,0.65) !default;
+$farris-input-disabled-border-color: $f-neutral-06!default;
+$farris-input-readonly-bg: $farris-input-bg !default;
+//$farris-input-readonly-color: rgba(0,0,0,0.65) !default;
+$farris-input-readonly-border-color: $f-neutral-06!default;
+/*
+    20190912 输入控件修改只读和禁用颜色
+*/
+$farris-input-disabled-color:$f-text-08;
+$farris-input-readonly-color:$f-text-02;
+
+// 输入控件 聚焦状态
+$farris-input-btn-focus-bg: $farris-input-bg !default;
+$farris-input-btn-focus-box-shadow: 0 0 2px 1px rgba($f-theme-03, 0.3) !default;
+$farris-input-focused-color: $f-text-02 !default;
+$farris-input-focus-border-color: $f-theme-03 !default;
+
+// 输入控件 按钮划过滑过
+$farris-input-btn-hovered-bg: $farris-input-bg !default;
+$farris-input-btn-hovered-box-shadow: 0 0 0 !default;
+$farris-input-hovered-color: $f-text-02 !default;
+$farris-input-hovered-border-color: $f-theme-05 !default;
+
+// 输入控件 查看态
+$farris-input-viewstate-label-color:rgba(0,0,0,0.65);
+$farris-input-viewstate-input-color:rgba(0,0,0,0.85);
+$farris-input-viewstate-input-bg: $farris-input-bg !default;
+$farris-input-viewstate-input-border-color:transparent;
+
+
+
+
+// 扁平化
+$farris-input-plaintext-color: $f-text-01 !default;
+// bt输入控件中阴影
+$farris-input-box-shadow: 0 0 0 !default;
+// KendoUI中disabled会用opacity
+$farris-disabled-opacity: 0.65 !default;
+$farris-disabled-filter: none !default;
+// KendoUI checkbox-radio
+$farris-check-icon-size: 1.375rem !default;
+$farris-cr-font-family: $farris-icon-font-family;
+$farris-radio-icon-size: 1rem !default;
+$farris-checkbox-bg: $f-neutral-00 !default;
+$farris-checkbox-border: $f-neutral-02 !default;
+$farris-checkbox-checked-border: $f-theme-04 !default;
+$farris-checkbox-checked-bg: transprant !default;
+$farris-checkbox-checked-text: $f-theme-04 !default;
+$farris-checkbox-hover-text: $f-theme-05 !default;
+$farris-checkbox-radius: 0.125rem !default;
+$farris-cr-left-gutter: 1.3125rem;
+$farris-radio-border: $f-neutral-02 !default;
+$farris-radio-bg: $f-neutral-00 !default;
+$farris-radio-checked-bg: $f-theme-04 !default;
+$farris-radio-checked-text: $f-theme-04 !default;
+$farris-radio-hover-text: $f-theme-05 !default;
+$farris-cr-disabled-color: $f-neutral-06 !default;
+$farris-cr-disabled-text: $f-text-08 !default;
+
+//$farris-cr-disabled-border: $f-neutral-06 !default;
+$farris-cr-border: $f-theme-04!default;
+$farris-cr-disabled-border: rgba($farris-cr-border,0.2) !default;
+$farris-cr-readonly-text: $f-text-02 !default;
+$farris-cr-readonly-border: rgba($farris-cr-border,0.6) !default;
+
+$farris-checkbox-radio-right-gutter: 0.8125rem;
+$farris-checkbox-radio-bottom-gutter: 0.25rem;
+// Bootstrap checkbox-radio
+$farris-custom-control-indicator-box-shadow: 0 0 0 !default;
+$farris-custom-checkbox-indicator-icon-checked: none !default;
+$farris-custom-radio-indicator-icon-checked: none !default;
+// checkbox-raido icon 编译时会变成汉字
+// $farris-checkbox-icon: "\e834" !default;
+// $farris-radio-icon: "\e837" !default;
+$farris-radio-icon-font-size: 22px !default;
+//checkout radio label文字默认颜色
+$farris-custom-control-color: $f-text-02!default;
+
+
+// 标签
+$farris-label-margin-bottom: 0.3125rem;
+$farris-label-margin-left: 0.3125rem;
+// 下拉
+$farris-custom-select-padding-y: $farris-input-btn-padding-y;
+$farris-custom-select-padding-x: $farris-input-btn-padding-x;
+
+// 前后input group中标签使用的背景色
+$farris-input-group-append-bg: #e4e7eb;
+// 分页下拉与分页标签之间的间距
+$farris-select-gutter: 0.9375rem;
+// group最大宽度 20190920 为了适应输入框最大宽度320px 所作修改
+//$farris-form-group-max-width: 30rem;
+$farris-form-group-max-width: 26.625rem;
+
+// 输入控件-图标-默认颜色
+$farris-input-icon-bg:transparent;
+$farris-input-icon-border-color:transparent;
+$farris-input-icon-color:rgba(0,0,0,0.25);
+// 输入控件-图标-滑过颜色
+$farris-input-icon-hover-bg:transparent;
+$farris-input-icon-hover-border-color:transparent;
+$farris-input-icon-hover-color:$f-theme-05;
+
+//form-control
+$f-input-height-border:1px;
+$f-font-line-height:1.25rem;
+$f-input-height-inner:($f-font-line-height) + ($f-input-btn-padding-y * 2) !default;
+$f-input-height:calc(#{$f-input-height-inner} + (#{$f-input-height-border}*2)) !default;
+ 

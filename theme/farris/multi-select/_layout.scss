@@ -1,0 +1,89 @@
+.#{$f-multiselect-prefix}{
+    background: $f-multiselect-bg;
+    margin: 0;
+    .#{$f-multiselect-prefix}-list{
+        border: $f-multiselect-border;
+        border-radius: $f-multiselect-radius;
+        background-color: $f-multiselect-bg;
+        padding: 0;
+        &-content {
+            height: $f-multiselect-height;
+            .columns-box {
+                padding: 0;
+            }
+        }
+        .#{$f-multiselect-prefix}-list-title{
+            background: $f-multiselect-title-bg;
+            border-radius: $f-multiselect-radius $f-multiselect-radius 0 0;
+            line-height: 1.25rem;
+            font-size: 0.875rem;
+            color: $f-multiselect-title-color;
+            padding: $f-multiselect-title-inner-gutter;
+            margin-bottom: 0;
+        }
+        .#{$f-multiselect-prefix}-list-group{
+            padding: $f-multiselect-list-inner-gutter;
+            &-item{
+                padding:$f-multiselect-list-item-inner-gutter;
+                line-height: 1.25rem;
+                cursor: default;
+                .custom-control-label{
+                    font-size: 0.875rem;
+                    color: $f-multiselect-list-item-color;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .custom-control-input:disabled + .custom-control-label{
+                    color: $f-multiselect-list-item-disable-color;
+                }
+                &.active{
+                    background: $f-multiselect-list-item-active-bg;
+                }
+                .custom-checkbox{
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .#{$f-multiselect-prefix}-list-btns{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .f-btn-icon{
+            width: 3.125rem;
+            margin-bottom: 0.625rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.right-all{
+                margin-bottom: 2.5rem;
+            }
+        }
+        // .btn-item{
+        //     justify-content: center;
+        //     display: flex;
+        //     flex-direction: column;
+        //     position: absolute;
+        //     left: 50%;
+        //     margin-left: -1.5265rem;
+        //     &.btn-right{
+        //         top: 6.25rem;
+        //     }
+        //     &.btn-left{
+        //         bottom: 6.25rem;
+        //     }
+        //     .f-btn-icon{
+        //         width: 3.125rem;
+        //         margin-bottom: 0.625rem;
+        //         &:last-child{
+        //             margin-bottom: 0;
+        //         }
+        //     }
+        // }
+    }
+}

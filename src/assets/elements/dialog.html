@@ -1,0 +1,377 @@
+<h4>
+    弹出窗口</h4>
+<hr />
+<div class="row">
+    <div class="col-12 col-el-6">
+        <h5>KendoUI</h5>
+        <div class="example-wrapper bd-example mb-3" style="
+    height: 560px;
+">
+            <!---->
+            <!---->
+            <!---->
+            <kendo-window tabindex="0" class="k-widget k-window k-window-wrapper" dir="ltr" style="min-width: 250px; min-height: 100px; position: absolute; z-index: 10003; width: 450px; top: 83.5px; left: 466.5px;">
+                <!---->
+                <kendo-window-titlebar class="k-window-titlebar k-dialog-titlebar k-header">
+                    <!---->
+                    <div class="k-window-title">弹出Window</div>
+                    <button kendowindowminimizeaction="" class="k-button-icon k-button k-bare" dir="ltr" style="display: inline-flex;">
+                        <span class="k-icon k-i-window-minimize" role="presentation"></span>
+                    </button>
+                    <button kendowindowmaximizeaction="" class="k-button-icon k-button k-bare" dir="ltr" style="display: inline-flex;">
+                        <span class="k-icon k-i-window-maximize" role="presentation"></span>
+                    </button>
+                    <button kendowindowrestoreaction="" class="k-button-icon k-button k-bare" dir="ltr" style="display: none;">
+                        <span class="k-icon k-i-window-restore" role="presentation"></span>
+                    </button>
+                    <button kendowindowcloseaction="" class="k-button-icon k-button k-bare" dir="ltr">
+                        <span class="k-icon k-i-close" role="presentation"></span>
+                    </button>
+                    <!---->
+                    <!---->
+                </kendo-window-titlebar>
+                <!---->
+
+                <!---->
+                <div class="k-content k-window-content">
+                    <!---->
+
+                    <form class="k-form p-0">
+                        <fieldset>
+                            <legend>用户信息</legend>
+
+                            <label class="k-form-field">
+                                <span>姓名</span>
+                                <input class="k-textbox" placeholder="姓名">
+                            </label>
+                            <label class="k-form-field">
+                                <span>地址</span>
+                                <input class="k-textbox" placeholder="地址">
+                            </label>
+                        </fieldset>
+
+                        <div class="text-right">
+                            <button class="k-button" type="button">取消</button>
+                            <button class="k-button k-primary" type="button">确认</button>
+                        </div>
+                    </form>
+
+                    <!---->
+                    <!---->
+                </div>
+
+                <!---->
+                <!---->
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-n k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-e k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-s k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-w k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-se k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-sw k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-ne k-resize-handle" style="display: block;">
+                </div>
+                <div kendowindowdraggable="" kendowindowresizehandle="" class="k-resize-nw k-resize-handle" style="display: block;">
+                </div>
+
+            </kendo-window>
+        </div>
+        <div class="example-dialog" style="height:300px;">
+                <kendo-dialog class="k-dialog-wrapper" dir="ltr">
+                        <div class="k-overlay"></div>
+            
+                        <div class="k-widget k-window k-dialog">
+                            <kendo-dialog-titlebar class="k-window-titlebar k-dialog-titlebar k-header">
+                                <div class="k-window-title k-dialog-title">
+                                    Title
+                                </div>
+                                <div class="k-window-actions k-dialog-actions">
+                                    <a class="k-button k-bare k-button-icon k-window-action k-dialog-action k-dialog-close">
+                                        <span class="k-icon k-i-x"></span>
+                                    </a>
+                                </div>
+                            </kendo-dialog-titlebar>
+            
+                            <div class="k-content k-window-content k-dialog-content">
+                                <!-- template -->
+                                Dialog content template
+                            </div>
+            
+                            <kendo-dialog-actions class="k-button-group k-dialog-buttongroup k-dialog-button-layout-stretched">
+                                <button class="k-button">
+                                    Action
+                                </button>
+                                <button class="k-button k-primary" dir="ltr">
+                                    Primary
+                                </button>
+                            </kendo-dialog-actions>
+                        </div>
+                    </kendo-dialog>
+
+            <!---->
+        </div>
+        <div class="test-area">
+                <div class="k-widget k-window k-dialog">
+
+                        <div class="k-window-titlebar k-dialog-titlebar k-header" id="titlebar-id">
+                            <span class="k-window-title k-dialog-title">
+                                Title
+                                <!-- descendants --> g y p
+                                <!-- ascendant --> t d l
+                            </span>
+                            <div class="k-window-actions k-dialog-actions">
+                                <a class="k-button k-bare k-button-icon k-window-action k-dialog-action k-dialog-close">
+                                    <span class="k-icon k-i-close"></span>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="k-content k-window-content k-dialog-content">
+                            <!-- template -->
+                            Dialog content template
+                        </div>
+            
+                        <div class="k-button-group k-dialog-buttongroup k-dialog-button-layout-stretched">
+                            <button type="button" class="k-button k-state-focused">
+                                Action (focused)
+                            </button>
+                            <button type="button" class="k-button k-primary">
+                                Primary
+                            </button>
+                        </div>
+                    </div>
+            
+                    <div class="k-widget k-window k-dialog">
+            
+                        <div class="k-window-titlebar k-dialog-titlebar k-header" id="titlebar-id">
+                            <span class="k-window-title k-dialog-title">Title</span>
+                            <div class="k-window-actions k-dialog-actions"></div>
+                        </div>
+            
+                        <div class="k-content k-window-content k-dialog-content">
+                            <!-- template -->
+                            Dialog without titlebar action buttons
+                        </div>
+            
+                        <div class="k-button-group k-dialog-buttongroup k-dialog-button-layout-stretched">
+                            <button type="button" class="k-button">
+                                Action
+                            </button>
+                            <button type="button" class="k-button k-primary k-state-focused">
+                                Primary (focused)
+                            </button>
+                        </div>
+                    </div>
+            
+                    <div class="k-widget k-window k-dialog">
+            
+                        <div class="k-window-titlebar k-dialog-titlebar k-header" id="titlebar-id">
+                            <span class="k-window-title k-dialog-title">Title</span>
+                            <div class="k-window-actions k-dialog-actions">
+                                <a class="k-button k-bare k-button-icon k-window-action k-dialog-action k-dialog-close">
+                                    <span class="k-icon k-i-close"></span>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="k-content k-window-content k-dialog-content">
+                            <!-- template -->
+                            Dialog without action buttons
+                        </div>
+                    </div>
+            
+                    <div class="k-widget k-window k-dialog">
+            
+                        <div class="k-content k-window-content k-dialog-content">
+                            <!-- template -->
+                            Dialog without title
+                        </div>
+            
+                        <div class="k-button-group k-dialog-buttongroup k-dialog-button-layout-stretched">
+                            <button type="button" class="k-button">
+                                Action
+                            </button>
+                            <button type="button" class="k-button">
+                                Action
+                            </button>
+                        </div>
+                    </div>
+            
+                    <div class="k-widget k-window k-dialog" style="height: 170px">
+                        <div class="k-window-titlebar k-dialog-titlebar k-header" id="titlebar-id">
+                            <span class="k-window-title k-dialog-title">Title</span>
+                            <div class="k-window-actions k-dialog-actions">
+                                <a class="k-button k-bare k-button-icon k-window-action k-dialog-action k-dialog-close">
+                                    <span class="k-icon k-i-close"></span>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="k-content k-window-content k-dialog-content k-scroll">
+                            <!-- template -->
+                            Dialog content template with long text and vertical scrolling. Dialog content template with long text and vertical scrolling. Dialog content template with long text and vertical scrolling.
+                        </div>
+            
+                        <div class="k-button-group k-dialog-buttongroup k-dialog-button-layout-stretched">
+                            <button type="button" class="k-button k-state-focused">
+                                Action (focused)
+                            </button>
+                            <button type="button" class="k-button k-primary">
+                                Primary
+                            </button>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div class="col-12 col-el-6">
+        <h5>Bootstrap</h5>
+        <div class="bd-example-modal mb-3">
+            <div class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0 mb-3">
+            <div class="bd-example-modal col">
+                <div class="modal  modal-sm" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document" style="top:20px;left:20px;">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <section class="modal-tips">
+                                    <div class="float-left modal-tips-iconwrap">
+                                        <span class="f-icon f-icon-success"></span>
+                                    </div>
+                                    <div class="modal-tips-content">
+                                        <h5 class="modal-tips-title">确认要删除这条信息吗？</h5>
+                                        <p>一系列的信息描述，可能会很长。也可以是很短同样也可以带标点。</p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary">确认</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-example-modal col">
+                <div class="modal  modal-sm" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document"  style="top:20px;left:20px;">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <section class="modal-tips">
+                                    <div class="float-left modal-tips-iconwrap">
+                                            <span class="f-icon f-icon-warning"></span>
+                                    </div>
+                                    <div class="modal-tips-content">
+                                        <h5 class="modal-tips-title">确认要删除这条信息吗？</h5>
+                                        <p>一系列的信息描述，可能会很长。也可以是很短同样也可以带标点。</p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary">确认</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-example-modal col">
+                <div class="modal  modal-sm" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document"  style="top:20px;left:20px;">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <section class="modal-tips">
+                                    <div class="float-left modal-tips-iconwrap">
+                                            <span class="f-icon f-icon-error"></span>
+                                    </div>
+                                    <div class="modal-tips-content">
+                                        <h5 class="modal-tips-title">操作会警告</h5>
+                                        <p>一系列的信息描述，可能会很长。也可以是很短同样也可以带标点。</p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">确认</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bd-example-modal">
+            <div class="modal modal-sm" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd-example">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

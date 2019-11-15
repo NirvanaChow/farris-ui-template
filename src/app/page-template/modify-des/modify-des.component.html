@@ -1,0 +1,500 @@
+<div class="farris-header">
+  <!-- 顶部操作条和标题——————————————————开始 -->
+  <nav class="navbar p-0">
+    <h4 class="farris-form-title mr-auto">已生成表单如何标准化说明</h4>
+  </nav>
+  <!-- 页面操作按钮 ————————————————————结束 -->
+</div>
+<div
+  class="flex-fill farris-split-section d-flex flex-column  f-cmp-px f-overflow-y-hidden"
+>
+  <kendo-tabstrip class="flex-fill f-tabstrip-fill  farris-overflow-y-hidden">
+    <kendo-tabstrip-tab [title]="'思路'">
+      <ng-template kendoTabContent>
+        <div class="flex-fill f-cmp-y farris-overflow-y-auto">
+          <h5>调整界面的思路</h5>
+          <p>
+            1、界面上用的m-2,pr-2这种普通控制间距的样式，调整为预定义的界面间距。
+          </p>
+          <p>
+            2、默认左右布局，右侧的卡片布局是通栏一列。如果自己使用了两列的布局，输入控件布局的class可以不用替换。但是form用的class还是要替换的。
+          </p>
+          <p>
+            3、卡片输入控件的布局，原是用的响应式一列、两列、三列、四列
+            col-sm-12 col-md-6 col-lg-4 col-xl-3，现在更换为一列、两列、四列
+            col-12 col-md-6 col-xl-3
+          </p>
+          <p>
+            4、不同Build的建的表单，可能带的默认样式是不一样的。比如输入控件
+          </p>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab [title]="'工具技巧-元数据(3月18日)'">
+      <ng-template kendoTabContent>
+        <div class="flex-fill f-cmp-y row no-gutters farris-overflow-y-auto">
+          <div class="col-12 col-md-6">
+            <h4>一、用工具vs code</h4>
+            <div>
+              <img
+                src="assets/img/modify-des2.jpg"
+                class="pr-3"
+                style="max-width: 100%;"
+              />
+            </div>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、工具按钮</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >btn-toolbar btn-group-lg
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >btn-toolbar
+                </p>
+              </li>
+              <li>
+                <h5>2、按钮</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >btn btn-primary mr-2
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >btn btn-primary f-btn-ml
+                </p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >btn btn-secondary mr-2
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >btn btn-secondary f-btn-ml
+                </p>
+              </li>
+              <li>
+                <h5>3、中间内容区</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-split-section m-2
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-split-section f-cmp-p
+                </p>
+              </li>
+              <li>
+                <h5>4、左侧区域</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-lsection px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-lsection
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <h4>二、左列右卡、左树右卡</h4>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、选中组件结构中<b>detail-form-layout</b></h5>
+                <p>【appearance】的【class】属性值</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >farris-form pt-2 px-3 px-md-4 farris-form-controls-inline
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-form d-flex flex-wrap f-rreign-mtable-form-next-tab
+                  farris-form-controls-inline
+                </p>
+              </li>
+              <li>
+                <h5>2、选中组件结构中<b>detail-form-layout</b></h5>
+                <p>输入控件的</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >col-12 px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >col-12
+                </p>
+              </li>
+            </ul>
+            <h4>三、卡片</h4>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、选中组件结构中<b>card-container</b></h5>
+                <p>【appearance】的【class】属性值</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >farris-card-section
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >f-mtable-form-next-tab
+                </p>
+              </li>
+              <li>
+                <h5>2、选中组件结构中<b>basic-form-layout</b></h5>
+                <p>【appearance】的【class】属性值</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >d-flex flex-wrap col-12 px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >d-flex flex-wrap flex-fill
+                </p>
+              </li>
+              <li>
+                <h5>3、选中组件结构中<b>basic-form-layout</b></h5>
+                <p>输入控件的</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >col-sm-12 col-md-6 col-lg-4 col-xl-3
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >
+                  col-12 col-md-6 col-xl-3
+                </p>
+              </li>
+            </ul>
+            <h4>四、多数据源模板</h4>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、选中组件结构中<b>detail-form-layout</b></h5>
+                <p>【appearance】的【class】属性值</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >farris-form pt-2 px-3 px-md-4 farris-form-controls-inline
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-form d-flex flex-wrap farris-form-controls-inline
+                  f-rregin-mtable-form-next-tab
+                </p>
+              </li>
+              <li>
+                <h5>2、选中组件结构中<b>detail-form-layout</b></h5>
+                <p>输入控件的</p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >&nbsp;</span
+                  >col-12 px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >col-12
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab [title]="'工具技巧-源码(3月16日)'">
+      <ng-template kendoTabContent>
+        <div class="flex-fill f-cmp-y row no-gutters farris-overflow-y-auto">
+          <div class="col-12 col-md-6">
+            <h4>一、用工具vs code</h4>
+            <div>
+              <img
+                src="assets/img/modify-des.png"
+                class="pr-3"
+                style="max-width: 100%;"
+              />
+            </div>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、工具按钮</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >btn-toolbar btn-group-lg
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >btn-toolbar
+                </p>
+              </li>
+              <li>
+                <h5>2、按钮</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >btn btn-primary mr-2
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >btn btn-primary f-btn-ml
+                </p>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >btn btn-secondary mr-2
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >btn btn-secondary f-btn-ml
+                </p>
+              </li>
+              <li>
+                <h5>3、中间内容区</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-split-section m-2
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-split-section f-cmp-p
+                </p>
+              </li>
+              <li>
+                <h5>4、左侧区域</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-lsection px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-lsection
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <h4>二、左列右卡、左树右卡</h4>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、detail-form-component 组件的表单</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-form pt-2 px-3 px-md-4 farris-form-controls-inline
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-form d-flex flex-wrap f-rreign-mtable-form-next-tab
+                  farris-form-controls-inline
+                </p>
+              </li>
+              <li>
+                <h5>2、detail-form-component 组件的输入控件</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >col-12 px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >col-12
+                </p>
+              </li>
+            </ul>
+            <h4>三、卡片</h4>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、root-component 组件</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-card-section
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >f-mtable-form-next-tab
+                </p>
+              </li>
+              <li>
+                <h5>2、app-basicformcomponent组件的表单</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >
+                  &lt;div class=" d-flex flex-wrap col-12 px-0"
+                  [formGroup]="viewModel.form"&gt;
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >&lt;div class="d-flex flex-wrap flex-fill"
+                  [formGroup]="viewModel.form"&gt;
+                </p>
+              </li>
+              <li>
+                <h5>3、app-basicformcomponent组件的输入控件</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >col-sm-12 col-md-6 col-lg-4 col-xl-3
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >col-12 col-md-6 col-xl-3
+                </p>
+              </li>
+            </ul>
+            <h4>四、多数据源模板</h4>
+            <ul class="p-0 m-0">
+              <li>
+                <h5>1、detail-form-component 组件</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >farris-form pt-2 px-3 px-md-4 farris-form-controls-inline
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >farris-form d-flex flex-wrap farris-form-controls-inline
+                  f-rregin-mtable-form-next-tab
+                </p>
+              </li>
+              <li>
+                <h5>2、detail-form-component 组件的输入控件</h5>
+                <p>
+                  <span class="bg-info d-inline-block" style="width:50px;"
+                    >搜索:</span
+                  >col-12 px-0
+                </p>
+                <p>
+                  <span class="bg-success d-inline-block" style="width:50px;"
+                    >替换:</span
+                  >col-12
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab [title]="'相关样式'"  [selected]="true">
+      <ng-template kendoTabContent>
+        <div class="f-cmp-y">
+          <ul class="p-0 m-0 cmp-show-column3">
+            <li>
+              <p><b class="mr-2">按钮左间距</b>.f-btn-ml</p>
+              <p><b class="mr-2">按钮右间距</b>.f-btn-mr</p>
+              <p><b class="mr-2">组件上间距</b>.f-cmp-mt</p>
+              <p><b class="mr-2">组件下间距</b>.f-cmp-mb</p>
+              <p><b class="mr-2">组件左右间距</b>.f-cmp-mx</p>
+              <p>
+                <b class="mr-2">组件左右负间距，消除父元素存在的内间距</b
+                >.f-cmp-mx-minus
+              </p>
+              <p><b class="mr-2">组件上下间距</b>.f-cmp-my</p>
+              <p>
+                <b class="mr-2">组件上下负间距，消除父元素存在的内间距</b
+                >.f-cmp-my-minus
+              </p>
+              <p><b class="mr-2">组件内部左右间距</b>.f-cmp-px</p>
+              <p><b class="mr-2">组件内部上下间距</b>.f-cmp-py</p>
+              <p><b class="mr-2">组件内间距</b>.f-cmp-p</p>
+            </li>
+            <li>
+              <p><b class="mr-2">卡片主表</b>.f-mtable-form</p>
+              <p>
+                <b class="mr-2">卡片主表下面是标签页</b>f-mtable-form-next-tab
+              </p>
+              <p><b class="mr-2">右侧卡片主表</b>.f-rregion-mtable-form</p>
+              <p>
+                <b class="mr-2">右侧卡片主表下面是标签页</b
+                >f-rregion-mtable-form-next-tab
+              </p>
+              <p><b class="mr-2">折叠面板内部放主表</b>.f-panel-width-form</p>
+              <p>
+                <b class="mr-2">折叠面板内部放主表下面是标签页</b
+                >.f-panel-width-form-next-tab
+              </p>
+              <p><b class="mr-2">下分割线</b>.f-split-border-b</p>
+            </li>
+            <li>
+              <h4>界面中问题的解决方法<small class="mx-3 bg-danger"
+                >已提交更新，未发布 3月25日</small
+              > <small class="ml-3 btn btn-link" (click)="navigateTo('page-template/listcard')">Demo</small></h4>
+              <h5>
+                一、解除输入控件跨行宽度限制
+              </h5>
+              <p>两种方式：</p>
+              <p>
+                1、整个form解除限制,在farris-form元素或输入控件的统一父元素上增加：farris-form-auto
+              </p>
+              <p>
+                2、只要某个输入控件解除宽度限制，在改控件上增加：farris-group-auto
+              </p>
+              <h5>
+                二、checkbox\radio 标签在后，隐藏前标签占位 <small class="ml-3 btn btn-link" (click)="navigateTo('page-template/listcard')">Demo</small>
+              </h5>
+              <p>增加class：f-checkradio-no-label</p>
+              <h5>
+                  三、带过滤条的左右结构如何适应不同浏览器 <small class="ml-3 btn btn-link" (click)="navigateTo('page-template/listcard-filter')">Demo</small>
+                </h5>
+                <p>左右布局的父元素增加class </p>
+                <pre>
+&lt;div class="row no-gutters flex-fill <span class="text-success">flex-nowrap farris-overflow-hidden</span>" &gt;
+                </pre>
+                
+              <h5>
+                四、只有一个从表时，如何修改符合规范
+              </h5>
+              <p>
+                只有一个从表，规范要求不能用Tab控件。只是代码结构的组合。可以参照如下
+              </p>
+              <pre>
+&lt;div class="farris-grid-toolbar"&gt;
+  &lt;h4 class="farris-grid-title"&gt;Grid标题&lt;/h4&gt;
+  &lt;div class="btn-toolbar ml-auto"&gt;
+      &lt;button class="btn btn-link"&gt;新增&lt;/button&gt;
+      &lt;button  class="btn btn-link"&gt;删除&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;kendo-grid [class]="'farris-subgrid'"&gt;&lt;/kendo-grid&gt;
+              </pre>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+  </kendo-tabstrip>
+</div>

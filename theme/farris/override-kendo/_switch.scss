@@ -1,0 +1,50 @@
+.k-switch {
+  .k-switch-container {
+    //padding值和设计图不同 删掉
+    // padding: 1px 0;
+  }
+  // 禁用
+  &.k-state-disabled {
+    opacity: 1;
+    .k-switch-container {
+      background: $f-switch-disabled-bg;
+      border-color: $f-switch-disabled-border-color;
+    }
+  }
+  //只读
+  &[ng-reflect-readonly='true'] {
+    .k-switch-container {
+      background: $f-switch-readonly-bg;
+      border-color: $f-switch-readonly-border-color;
+    }
+  }
+  &.k-switch-on {
+    //  background: $farris-switch-on-bg;
+    //   border-color: $farris-switch-on-border-color; // 只读
+    &.k-state-disabled {
+      .k-switch-container {
+        background: $f-switch-on-disabled-bg;
+        border-color: $f-switch-on-disabled-border-color;
+      }
+    }
+    // 禁用
+    &[aria-readonly='true'] {
+      .k-switch-container {
+        background: $f-switch-on-readonly-bg;
+        border-color: $f-switch-on-readonly-border-color;
+      }
+    }
+  }
+}
+.k-switch-label-on,
+.k-switch-label-off {
+  display: none;
+}
+
+// kendo 不同版本的兼容问题处理
+.k-switch-on .k-switch-label-off + .k-switch-handle {
+  left: $switch-on-left-x;
+}
+.k-switch-on .k-switch-handle {
+  left: 0;
+}

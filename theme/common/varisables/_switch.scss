@@ -1,0 +1,82 @@
+// Switch开关
+// $farris-switch-bg: $farris-aid-03;
+// $farris-switch-border-color: $farris-aid-03;
+
+
+// $farris-switch-on-bg: $farris-theme-01;
+// $farris-switch-on-border-color: $farris-theme-01;
+// $farris-switch-handle-bg: #fff;
+// $farris-switch-handle-border-color: #fff;
+
+// $farris-switch-on-handle-bg: #fff;
+// $farris-switch-on-handle-border-color: #fff;
+
+$farris-k-switch-size: 2.75rem;
+$farris-k-switch-handle-size: 1.25rem;
+
+// Switch 开关 2019年6月13日
+$f-switch-border-radius:2.5rem!default;
+$f-switch-container-padding-y:0.125rem!default;
+$f-switch-container-padding-x:0.125rem!default;
+$f-switch-container-shadow:null!default;
+$f-switch-container-hovered-shadow:null!default;
+$f-switch-container-focused-shadow:null!default;
+// k-switch-container
+$f-switch-on-text:$f-text-00!default;
+$f-switch-on-bg:$f-theme-04!default;
+$f-switch-on-border:$f-switch-on-bg!default;
+// $f-switch-on-gradient:null!default;
+$f-switch-on-shadow: null !default;
+// k-switch-on .k-state-focused
+$f-switch-on-focused-shadow: null;
+$f-switch-on-focused-bg: null !default;
+$f-switch-on-focused-text: null !default;
+$f-switch-on-focused-border: null !default;
+//$f-switch-on-focused-gradient: null !default;
+// k-state-hover :hover
+$f-switch-on-hovered-bg:$f-theme-05!default;
+$f-switch-on-hovered-text: $f-switch-on-text !default;
+$f-switch-on-hovered-border: null !default;
+// $f-switch-on-hovered-gradient: null !default;
+//
+$f-switch-on-handle-bg: $f-neutral-00!default;
+$f-switch-on-handle-text: $f-switch-on-text !default;
+$f-switch-on-handle-border: $f-switch-on-handle-bg!default;
+//$f-switch-on-handle-gradient: null !default;
+$f-switch-on-handle-shadow: null !default;
+
+$f-switch-on-handle-hovered-bg:  $f-neutral-00 !default;
+$f-switch-on-handle-hovered-text: $f-switch-on-text !default;
+$f-switch-on-handle-hovered-border: $f-switch-on-handle-border !default;
+$f-switch-on-handle-hovered-gradient: null !default;
+//
+$f-switch-off-bg: $f-neutral-02 !default;
+$f-switch-off-text:$f-text-02 !default;
+$f-switch-off-border:$f-switch-on-border!default;
+// $switch-off-gradient: null !default;
+$f-switch-off-shadow: null !default;
+$f-switch-off-focused-shadow: null !default;
+
+$f-switch-off-focused-bg: null !default;
+$f-switch-off-focused-text: null !default;
+$f-switch-off-focused-border: null !default;
+$f-switch-off-focused-gradient: null !default;
+
+$f-switch-off-hovered-bg: $f-switch-off-bg !default;
+$f-switch-off-hovered-text: $f-switch-off-text !default;
+$f-switch-off-hovered-border: null !default;
+$f-switch-off-hovered-gradient: null !default;
+
+$f-switch-disabled-bg: $f-neutral-06;
+$f-switch-disabled-border-color: $f-switch-disabled-bg;
+$f-switch-readonly-bg: $f-neutral-04;
+$f-switch-readonly-border-color: $f-switch-readonly-bg;
+
+$f-switch-on-disabled-bg: rgba($f-switch-on-bg,0.2);
+$f-switch-on-disabled-border-color: $f-switch-on-disabled-bg;
+
+$f-switch-on-readonly-bg: rgba($f-switch-on-bg,0.6);
+$f-switch-on-readonly-border-color:$f-switch-on-readonly-bg;
+
+
+

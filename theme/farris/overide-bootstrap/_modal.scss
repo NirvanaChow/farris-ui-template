@@ -1,0 +1,37 @@
+// 弹出窗口
+.modal-header {
+    flex-shrink: 0;
+    // padding: $modal-header-padding $farris-modal-header-with-icon-padding-right
+    //   $modal-header-padding $farris-modal-header-padding-x;
+    background: $farris-modal-header-bg;
+    color: $farris-modal-header-text;
+    align-items: center;
+    .close {
+      color: $farris-modal-header-text;
+      opacity: $farris-modal-header-close-opacity;
+      padding: $farris-btn-icon-padding-y $farris-btn-icon-padding-x;
+      margin: -$farris-modal-header-padding-y * 0.5 0;
+      border: $farris-btn-icon-border-width solid transparent;
+      font-size: 1rem;
+      @include btn-icon-size();
+      &:not(:disabled):not(.disabled):hover,
+      &:not(:disabled):not(.disabled):focus {
+        color: $farris-modal-header-text;
+      }
+    }
+  }
+  .modal-title {
+    font-size: $farris-modal-title-font-size;
+  }
+  .modal-footer {
+    flex-shrink: 0;
+    background: $farris-modal-footer-bg;
+    padding: 0.625rem 1.125rem;
+    > :not(:first-child) {
+      margin-left: $farris-footer-el-gutter;
+    }
+    > :not(:last-child) {
+      margin-right: $farris-footer-el-gutter;
+    }
+  }
+  

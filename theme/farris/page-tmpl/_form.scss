@@ -1,0 +1,152 @@
+/*
+* 卡片区域
+*/
+.f-form-ctr {
+  padding: $farris-split-setcion-inner-gutter-y
+    $farris-split-setcion-inner-gutter-x 0.25rem;
+  display: block; // 组件本身位于其他组件内无高度问题
+}
+/*******************************
+         表单布局
+*******************************/
+.f-section-form {
+  &.#{$f-section-prefix} {
+    //padding-bottom: 8px; // 14px - 6px 输入控件
+    padding: $f-pt-card-one-section-inner-gutter;
+  }
+  //   .#{$f-section-prefix}-header{
+  //     margin:0;
+  //   }
+  // }
+}
+.f-form-layout{
+  display: flex;
+  flex-wrap: wrap;
+  .f-section-formgroup{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+// 分组
+.f-section-formgroup {
+  .f-section-formgroup {
+    &-legend {
+      width: 100%;
+      padding:$f-form-ctr-formgroup-legend-inner-gutter;
+      margin: $f-form-ctr-formgroup-legend-outer-gutter;
+    }
+  }
+  &-legend {
+    @include f-header-flex;
+    height:32px;
+    background: $farris-formgroup-legend-bg;
+    border-radius: 2px;
+    .f-title {
+      font-size: 0.875rem;
+      // line-height: 1.25rem;
+      color: $farris-formgroup-legend-title-color;
+
+      flex: 1 1 0;
+      cursor: pointer;
+      height: 32px;
+      line-height: 2rem;
+
+    }
+    .f-toolbar{
+      .btn{
+        padding-left:6px;
+        padding-right:6px;
+      }
+    }
+    &:hover{
+      .f-title,.f-toolbar .f-btn-collapse-expand{
+        color:  $farris-formgroup-legend-title-hover-color;
+      }
+    }
+    &:active{
+      .f-title,.f-toolbar .f-btn-collapse-expand{
+        color:  $farris-formgroup-legend-title-active-color;
+      }
+    }
+  }
+  &-inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &.f-state-collapse{
+    .f-section-formgroup-inputs{
+      display: none;
+    }
+  }
+
+  // 分组与分组的间距
+  + .f-section-formgroup {
+    margin: $f-pt-card-one-section-outer-gutter 0 0; // 14px - 6px 输入控件
+  }
+}
+
+// // 表单的标题栏
+// .f-form-bar-ctr {
+//   display: flex;
+//   flex-direction: row;
+//   padding: $f-form-bar-ctr-inner-gutter;}
+//   .f-title-ctr {
+//     flex-shrink: 0;
+//     margin: $f-form-bar-ctr-title-ctr-title-outer-gutter;
+//     font-size: $farris-text-size-02;
+//     line-height: $farris-text-line-height-02;
+//     color: $f-form-bar-ctr-title-ctr-text;
+//     clear: both;
+//     overflow: hidden;
+//     .f-title {
+//       float: left;
+//       position: relative;
+//       padding: $f-form-bar-ctr-title-ctr-title-inner-gutter;
+//       margin: 0;
+//       font-size: $farris-text-size-02;
+//       line-height: $farris-text-line-height-02;
+//       white-space: nowrap;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//       &::after {
+//         position: absolute;
+//         content: '';
+//         width: $f-form-bar-ctr-title-ctr-title-border-width;
+//         top: 0;
+//         left: 0;
+//         bottom: 0;
+//         background: $f-form-bar-ctr-title-ctr-title-border-color;
+//         border-radius: $farris-border-radius;
+//       }
+//     }
+//   }
+//   .f-subtitle-ctr {
+//     color: $f-form-bar-ctr-title-ctr-subtitle-ctr-text;
+//     margin: $f-form-bar-ctr-title-ctr-title-outer-gutter;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     .f-subtitle {
+//       font-size: $farris-text-size-02;
+//       line-height: $farris-text-line-height-02;
+//     }
+//   }
+//   .f-toolbar-ctr {
+//     margin: 0 0 0 auto;
+//     color: $f-form-bar-ctr-title-toolbar-text;
+//   }
+// }
+// // 卡片区域在右侧
+// .f-form-ctr-pt-right {
+//   .f-form-bar-ctr {
+//     border-bottom: $f-form-ctr-pt-right-form-bar-ctr-border-bottom;
+//     padding: $f-form-ctr-pt-right-form-bar-ctr-inner-gutter;
+//     margin-bottom:$farris-split-setcion-inner-gutter-y;
+//     .f-title {
+//       padding: 0;
+//       &::after {
+//         display: none;
+//       }
+//     }
+//   }
+// }

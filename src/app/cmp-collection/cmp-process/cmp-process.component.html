@@ -1,0 +1,405 @@
+<h4 class="m-3">分步过程组件</h4>
+<p class="mx-3">可以根据需要自行替换数字为图标</p>
+<div class="farris-split-section  p-3 mx-3 mb-0">
+  <h5>多个流程节点</h5>
+  <div class="f-cmp-process mb-3">
+    <div class="f-cmp-process-step f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">1</i>
+      </span>
+      <span class="f-cmp-process-text">
+        审批中
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">2</i>
+      </span>
+      <span class="f-cmp-process-text">
+        待复核
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">3</i>
+      </span>
+      <span class="f-cmp-process-text">
+        允许发送银行
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step f-cmp-process-step-on">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">4</i>
+      </span>
+      <span class="f-cmp-process-text">网银发送待确认</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">5</i>
+      </span>
+      <span class="f-cmp-process-text">等待发送银行</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">6</i>
+      </span>
+      <span class="f-cmp-process-text">银行正在处理 </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">7</i>
+      </span>
+      <span class="f-cmp-process-text">银行付款成功</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+  </div>
+  <h5>占满父元素</h5>
+  <div class="f-cmp-process f-cmp-process-fill  mb-3">
+    <div class="f-cmp-process-step f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">1</i>
+      </span>
+      <span class="f-cmp-process-text">
+        审批中
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">2</i>
+      </span>
+      <span class="f-cmp-process-text">
+        待复核
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-on">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">3</i>
+      </span>
+      <span class="f-cmp-process-text">
+        允许发送银行
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">4</i>
+      </span>
+      <span class="f-cmp-process-text">网银发送待确认</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+  </div>
+  <h5>设定父宽度col-8自适应</h5>
+  <div class="col-8">
+    <div class="f-cmp-process  f-cmp-process-fill  mb-3">
+      <div class="f-cmp-process-step f-cmp-process-step-done">
+        <span class="f-cmp-process-icon">
+          <i class="f-icon-md">done</i>
+          <i class="f-text">1</i>
+        </span>
+        <span class="f-cmp-process-text">
+          审批中
+        </span>
+        <span class="f-cmp-process-next">
+          <i class="f-icon-md">chevron_right</i>
+        </span>
+      </div>
+      <div class="f-cmp-process-step  f-cmp-process-step-done">
+        <span class="f-cmp-process-icon">
+          <i class="f-icon-md">done</i>
+          <i class="f-text">2</i>
+        </span>
+        <span class="f-cmp-process-text">
+          待复核
+        </span>
+        <span class="f-cmp-process-next">
+          <i class="f-icon-md">chevron_right</i>
+        </span>
+      </div>
+      <div class="f-cmp-process-step  f-cmp-process-step-on">
+        <span class="f-cmp-process-icon">
+          <i class="f-icon-md">done</i>
+          <i class="f-text">3</i>
+        </span>
+        <span class="f-cmp-process-text">
+          允许发送银行
+        </span>
+        <span class="f-cmp-process-next">
+          <i class="f-icon-md">chevron_right</i>
+        </span>
+      </div>
+      <div class="f-cmp-process-step">
+        <span class="f-cmp-process-icon">
+          <i class="f-icon-md">done</i>
+          <i class="f-text">4</i>
+        </span>
+        <span class="f-cmp-process-text">网银发送待确认</span>
+        <span class="f-cmp-process-next">
+          <i class="f-icon-md">chevron_right</i>
+        </span>
+      </div>
+      <div class="f-cmp-process-step">
+        <span class="f-cmp-process-icon">
+          <i class="f-icon-md">done</i>
+          <i class="f-text">5</i>
+        </span>
+        <span class="f-cmp-process-text">等待发送银行</span>
+        <span class="f-cmp-process-next">
+          <i class="f-icon-md">chevron_right</i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<code-show class="mx-3 d-block" [path]="getPath('progress-basic')" [show]="showCodeArea"></code-show>
+<div class="farris-split-section  p-3 mx-3 mb-0">
+  <h5>大号多个流程节点</h5>
+  <!-- <div class="f-cmp-process  f-cmp-process-large mb-3">
+    <div class="f-cmp-process-step">
+      <div class="f-cmp-process-icon">
+        <span class="f-process-step-done-show"
+          ><i class="f-icon-md f-icon-md-delivergoods"></i
+        ></span>
+        <span class="f-process-step-done-hide"><i class="f-text">1</i></span>
+      </div>
+      <span class="f-cmp-process-text">
+        发货计划
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md f-icon-md-outofstock"></i>
+        <i class="f-text">2</i>
+      </span>
+      <span class="f-cmp-process-text">
+        出库
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md f-icon-md-transport"></i>
+        <i class="f-text">3</i>
+      </span>
+      <span class="f-cmp-process-text">
+        运输
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md f-icon-md-settlement"></i>
+        <i class="f-text">4</i>
+      </span>
+      <span class="f-cmp-process-text">结算</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md f-icon-md-receivables"></i>
+        <i class="f-text">5</i>
+      </span>
+      <span class="f-cmp-process-text">收款</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md f-icon-md-invoice"></i>
+        <i class="f-text">6</i>
+      </span>
+      <span class="f-cmp-process-text">开票</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+  </div> -->
+  <div class="f-cmp-process  f-cmp-process-large mb-3">
+    <div class="f-cmp-process-step f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">`
+        <i class="f-icon-md">done</i>
+        <i class="f-text">1</i>
+      </span>
+      <span class="f-cmp-process-text">
+        发货计划
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-ste`  f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">2</i>
+      </span>
+      <span class="f-cmp-process-text">
+        出库
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-on">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">3</i>
+      </span>
+      <span class="f-cmp-process-text">
+        运输
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">4</i>
+      </span>
+      <span class="f-cmp-process-text">结算</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">5</i>
+      </span>
+      <span class="f-cmp-process-text">收款</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">6</i>
+      </span>
+      <span class="f-cmp-process-text">开票</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+  </div>
+  <h5>大号多个流程节点占满父元素</h5>
+  <div class="f-cmp-process  f-cmp-process-large f-cmp-process-fill  mb-3">
+    <div class="f-cmp-process-step f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">1</i>
+      </span>
+      <span class="f-cmp-process-text">
+        发货计划
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">2</i>
+      </span>
+      <span class="f-cmp-process-text">
+        出库
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step  f-cmp-process-step-done">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">3</i>
+      </span>
+      <span class="f-cmp-process-text">
+        运输
+      </span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step f-cmp-process-step-on">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">4</i>
+      </span>
+      <span class="f-cmp-process-text">结算</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">5</i>
+      </span>
+      <span class="f-cmp-process-text">收款</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+    <div class="f-cmp-process-step">
+      <span class="f-cmp-process-icon">
+        <i class="f-icon-md">done</i>
+        <i class="f-text">6</i>
+      </span>
+      <span class="f-cmp-process-text">开票</span>
+      <span class="f-cmp-process-next">
+        <i class="f-icon-md">chevron_right</i>
+      </span>
+    </div>
+  </div>
+</div>
+<code-show class="mx-3 d-block" [path]="getPath('progress-big')" [show]="showCodeArea"></code-show>

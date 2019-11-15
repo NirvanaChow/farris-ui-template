@@ -1,0 +1,166 @@
+<div class="farris-header">
+  <nav class="navbar p-0">
+    <h4 class="farris-form-title mr-auto">左树右卡</h4>
+    <div class="btn-toolbar">
+      <button class="btn btn-primary  mr-2" (click)="changeState('add')">
+        新增
+      </button>
+      <button class="btn btn-secondary mr-2" (click)="changeState('edit')">
+        编辑
+      </button>
+      <button class="btn btn-secondary mr-2" (click)="changeState('delete')">
+        删除
+      </button>
+      <button class="btn btn-secondary" (click)="changeState('save')">
+        保存
+      </button>
+    </div>
+  </nav>
+</div>
+<div
+  class="position-relative  flex-fill  farris-split-section farris-overflow-hidden"
+>
+  <layout [direction]="'h'" [fill]="true">
+    <layout-panel
+      region="west"
+      [showBorder]="false"
+      [minWidth]="50"
+      class="col-4"
+    >
+      <div class="farris-main-area flex-column farris-lsection">
+        <div class="farris-grid-toolbar">
+          <h4 class="farris-grid-title">标题</h4>
+          <!-- 操作按钮 -->
+        </div>
+        <farris-treetable
+          [data]="treedata"
+          [columns]="cols"
+          [idField]="'name'"
+          [showFilterBar]="false"
+          [fixedHeader]="true"
+          [fit]="true"
+        >
+          <ng-template farrisTemplate="header" let-columns>
+            <tr>
+              <th *ngFor="let col of columns">{{ col.title }}</th>
+            </tr>
+          </ng-template>
+          <ng-template
+            farrisTemplate="body"
+            let-rowNode
+            let-rowData="rowData"
+            let-columns="columns"
+          >
+            <tr [selectRow]="rowNode">
+              <td *ngFor="let col of columns; let i = index">
+                <farris-treeTableToggler
+                  [rowNode]="rowNode"
+                  *ngIf="i == 0"
+                ></farris-treeTableToggler>
+                {{ rowData[col.field] }}
+              </td>
+            </tr>
+          </ng-template>
+        </farris-treetable>
+      </div>
+    </layout-panel>
+
+    <layout-panel region="center" [showBorder]="false" class="col-8">
+      <div class="farris-rsection farris-overflow-y-auto">
+        <form class="farris-form d-flex flex-wrap mb-2">
+          <div class="col-12">
+            <div class="farris-group-wrap form-inline farris-form-inline">
+              <div class="form-group farris-form-group">
+                <label for="hpinput01" class="col-form-label">
+                  <span class="farris-label-text">订单编号</span>
+                  <span class="farris-label-info text-danger">*</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="Ximena"
+                    [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="farris-group-wrap form-inline farris-form-inline">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">类型</span>
+                  <small class="farris-label-info text-muted">&nbsp;</small>
+                </label>
+                <div class="farris-input-wrap">
+                  <select class="form-control" [disabled]="readonlyState()">
+                    <option selected>股份公司</option>
+                    <option>国有单位</option>
+                    <option>个人</option>
+                  </select>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="farris-group-wrap form-inline farris-form-inline">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">客户名称</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="密码"
+                    [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="farris-group-wrap form-inline farris-form-inline">
+              <div class="form-group farris-form-group">
+                <label class=" col-form-label">
+                  <span class="farris-label-text">客户别名</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <input
+                    class="k-textbox form-control"
+                    type="text"
+                    [readonly]="readonlyState()"
+                  />
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="farris-group-wrap form-inline farris-form-inline">
+              <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                  <span class="farris-label-text">业务类型</span>
+                </label>
+                <div class="farris-input-wrap">
+                  <kendo-dropdownlist
+                    [class]="'form-control'"
+                    [data]="listItemsDropDown"
+                    [value]="'服务合同'"
+                    [readonly]="readonlyState()"
+                  >
+                  </kendo-dropdownlist>
+                  <div class="farris-feedback valid-feedback"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </layout-panel>
+  </layout>
+</div>

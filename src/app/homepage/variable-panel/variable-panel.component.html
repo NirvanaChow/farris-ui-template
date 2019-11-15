@@ -1,0 +1,78 @@
+
+<form #variableForm="ngForm">
+  <farris-panel class="docs-variables-panel">
+    <ng-container *ngFor="let variableItem of theme_variables">
+      <farris-panel-item
+        [title]="variableItem['title']"
+        [value]="variableItem['type']"
+      >
+        <ng-template #contentTempl>
+          <ul class="docs-variables-list">
+            <ng-container *ngFor="let varDetail of variableItem.variables">
+              <ng-container [ngSwitch]="varDetail['type']">
+                <li class="mb-2 d-flex" *ngSwitchCase="'color'">
+                  <label
+                    class="text-truncate mr-auto"
+                    [title]="varDetail['text']"
+                    >{{ varDetail['text'] }}</label
+                  >
+                  <div class=" docs-color-picker">
+                    <div class="input-group ">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder=""
+                        [name]="varDetail['name']"
+                        [(ngModel)]="varDetail['value']"
+                      />
+                      <div class="input-group-prepend">
+                        <span
+                          class="input-group-text"
+                          [style.background]="varDetail['value']"
+                          [cpUseRootViewContainer]=true
+                          [(colorPicker)]="varDetail['value']"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="mb-1 text-truncate text-muted"
+                  *ngSwitchCase="'group'"
+                >
+                  {{ varDetail['text'] }}
+                </li>
+                <li class="mb-2  d-flex" *ngSwitchDefault>
+                  <label
+                    class="text-truncate mr-auto"
+                    [title]="varDetail['text']"
+                    >{{ varDetail['text'] }}</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control docs-variables-text"
+                    [name]="varDetail['name']"
+                    [(ngModel)]="varDetail['value']"
+                  />
+                </li> </ng-container
+            ></ng-container>
+          </ul>
+        </ng-template>
+      </farris-panel-item>
+    </ng-container>
+    <farris-panel-item class="theme-exntend-panelitem" [value]="'selfTheme'">
+      <ng-template #headTempl>
+        <div (click)="changeDialg($event)">
+          自定义样式
+          <span
+            class="f-pretend-link float-right"
+            [ngClass]="show_selfvariable ? '' : 'd-none'"
+            (click)="formatCodeHandler($event)"
+            >格式化</span
+          >
+        </div>
+      </ng-template>
+      <ng-template #toolTempl> </ng-template>
+    </farris-panel-item>
+  </farris-panel>
+</form>

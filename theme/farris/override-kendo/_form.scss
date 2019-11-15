@@ -1,0 +1,39 @@
+.k-form,
+.k-form-inline {
+  legend {
+    font-size: $farris-text-size-02;
+  }
+}
+$farris-form-fieldset-legend-text: $f-neutral-01 !default;
+.farris-form,
+.k-form,
+.k-form-inline {
+  fieldset {
+    border-top: none;
+    margin: 0;
+    padding: 0;
+  }
+  legend {
+    font-weight: normal;
+    line-height: 1.4286;
+    text-transform: none;
+    color: $farris-form-fieldset-legend-text;
+    text-align: left;
+    margin-bottom: 0.75rem;
+    padding: 0 1rem 0 0;
+    width: auto;
+    font-size: 0.875rem;
+    margin-left: 0.9375rem;
+  }
+}
+//复写kendo 下拉 样式
+.k-widget.form-control{
+  .k-input{
+    padding: $f-input-btn-padding-y $twbs-input-padding-x;
+    height: $f-input-height-inner;
+  }
+}
+//20190919 kendo radio 图标错位问题
+.k-rtl .k-radio:checked + .k-radio-label::after, [dir='rtl'] .k-radio:checked + .k-radio-label::after{
+  right: 0;
+}

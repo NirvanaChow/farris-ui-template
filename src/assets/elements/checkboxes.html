@@ -1,0 +1,411 @@
+<h4>多选框</h4>
+
+
+    <div class="section">
+      <input type="checkbox" id="ch1" class="k-checkbox" checked />
+      <label class="k-checkbox-label" for="ch1">Checked</label> <br />
+      <input type="checkbox" id="ch2" class="k-checkbox" />
+      <label class="k-checkbox-label" for="ch2">Unchecked</label> <br />
+      <input type="checkbox" id="ch3" class="k-checkbox" disabled checked />
+      <label class="k-checkbox-label" for="ch3">Disabled</label> <br />
+      <input type="checkbox" id="ch4" class="k-checkbox" disabled />
+      <label class="k-checkbox-label" for="ch4">Disabled</label>
+    </div>
+    <div class="section">
+      <input type="radio" name="group1" id="rad1" class="k-radio" checked />
+      <label class="k-radio-label" for="rad1">Checked</label> <br />
+      <input type="radio" name="group1" id="rad2" class="k-radio" />
+      <label class="k-radio-label" for="rad2">Unchecked</label> <br />
+      <input
+        type="radio"
+        name="group2"
+        id="rad3"
+        class="k-radio"
+        disabled
+        checked
+      />
+      <label class="k-radio-label" for="rad3">Disabled</label> <br />
+      <input type="radio" name="group2" id="rad4" class="k-radio" disabled />
+      <label class="k-radio-label" for="rad4">Disabled</label>
+    </div>
+    <div class="section" dir="rtl">
+      <input type="checkbox" id="ch5" class="k-checkbox" checked />
+      <label class="k-checkbox-label" for="ch5">Checked</label> <br />
+      <input type="checkbox" id="ch6" class="k-checkbox" />
+      <label class="k-checkbox-label" for="ch6">Unchecked</label> <br />
+      <input type="checkbox" id="ch7" class="k-checkbox" disabled checked />
+      <label class="k-checkbox-label" for="ch7">Disabled</label> <br />
+      <input type="checkbox" id="ch8" class="k-checkbox" disabled />
+      <label class="k-checkbox-label" for="ch8">Disabled</label>
+    </div>
+    <div class="section" dir="rtl">
+      <input type="radio" name="group3" id="rad5" class="k-radio" checked />
+      <label class="k-radio-label" for="rad5">Checked</label> <br />
+      <input type="radio" name="group3" id="rad6" class="k-radio" />
+      <label class="k-radio-label" for="rad6">Unchecked</label> <br />
+      <input
+        type="radio"
+        name="group4"
+        id="rad7"
+        class="k-radio"
+        disabled
+        checked
+      />
+      <label class="k-radio-label" for="rad7">Disabled</label> <br />
+      <input type="radio" name="group4" id="rad8" class="k-radio" disabled />
+      <label class="k-radio-label" for="rad8">Disabled</label>
+    </div>
+    <h3>Checkbox和Radio</h3>
+    <div class="bd-example">
+        <div class="row mb-2">
+            <div class="col">
+                <h5>默认</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        未选中
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked id="defaultCheck3" disabled>
+                    <label class="form-check-label" for="defaultCheck3">
+                        选中
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                        禁用
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" checked id="defaultCheck4" disabled>
+                    <label class="form-check-label" for="defaultCheck4">
+                        禁用
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        未选中
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                    <label class="form-check-label" for="exampleRadios2">
+                        选中
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioDisabled" id="exampleRadios3" value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        禁用
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioDisabled" id="exampleRadios3" value="option3" checked disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        禁用
+                    </label>
+                </div>
+
+            </div>
+            <div class="col">
+                <h5>KendoUI</h5>
+                <h5>Checkboxes</h5>
+
+                <input class="k-checkbox" id="checkbox1" type="checkbox">
+                <label class="k-checkbox-label" for="checkbox1">未选中</label>
+
+                <input checked class="k-checkbox" id="checkbox2" type="checkbox">
+                <label class="k-checkbox-label" for="checkbox2">选中</label>
+                <input class="k-checkbox" id="checkbox4" type="checkbox" disabled="disabled">
+                <label class="k-checkbox-label" for="checkbox4">禁用</label>
+                <input checked="checked" class="k-checkbox" disabled="disabled" id="checkbox3" type="checkbox">
+                <label class="k-checkbox-label" for="checkbox3">禁用</label>
+
+                <h5>RadioButtons</h5>
+                <div class="mb-2">
+                    <input class="k-radio" id="radio1" name="radios" type="radio">
+                    <label class="k-radio-label" for="radio1">未选中</label>
+
+                    <input checked class="k-radio" id="radio2" name="radios" type="radio">
+                    <label class="k-radio-label" for="radio2">选中</label>
+                </div>
+                <div class="mb-2">
+                    <input class="k-radio" id="radio4" name="radios" type="radio" disabled="disabled">
+                    <label class="k-radio-label" for="radio4">禁用</label>
+                    <input checked="checked" class="k-radio" disabled="disabled" id="radio3" name="disabled-radios" type="radio">
+                    <label class="k-radio-label" for="radio3">禁用</label>
+                </div>
+            </div>
+            <div class="col">
+                <h5>Bootstrap</h5>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">未选中</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                    <label class="custom-control-label" for="customCheck3"> 选中</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2" disabled>
+                    <label class="custom-control-label" for="customCheck2">禁用</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4" checked disabled>
+                    <label class="custom-control-label" for="customCheck4">禁用</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" name="custom-radio1" id="customRadioWXZ" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioWXZ">未选中</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio"  name="custom-radio1" id="customRadioXZ" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadioXZ">选中</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio"  name="custom-radio2" id="customRadioDisabledWXZ" class="custom-control-input" disabled>
+                    <label class="custom-control-label" for="customRadioDisabledWXZ">未选中</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" name="custom-radio2" id="customRadioDisabledXZ" class="custom-control-input" checked disabled>
+                    <label class="custom-control-label" for="customRadioDisabledXZ">选中</label>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="float-left">
+                <input class="k-radio" id="kd-bt-radio-01" name="kd-bt-01" type="radio">
+                <label class="k-radio-label" for="kd-bt-radio-01">未选中</label>
+                <input checked class="k-radio" id="kd-bt-radio-02" name="kd-bt-02" type="radio">
+                <label class="k-radio-label" for="kd-bt-radio-02">选中</label>
+            </div>
+            <div class="custom-control custom-radio float-left">
+                <input type="radio" name="custom-radio2" id="kd-bt-radio-03" class="custom-control-input" checked>
+                <label class="custom-control-label" for="kd-bt-radio-03">选中</label>
+            </div>
+            <div class="custom-control custom-radio float-left">
+                <input type="radio" name="custom-radio2" id="kd-bt-radio-04" class="custom-control-input">
+                <label class="custom-control-label" for="kd-bt-radio-04">选中</label>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="float-left">
+                <input class="k-checkbox" id="kd-bt-checkbox-01" type="checkbox">
+                <label class="k-checkbox-label" for="kd-bt-checkbox-01">未选中</label>
+                <input checked class="k-checkbox" id="kd-bt-checkbox-02" type="checkbox">
+                <label class="k-checkbox-label" for="kd-bt-checkbox-02">选中</label>
+            </div>
+            <div class="custom-control custom-checkbox float-left">
+                <input type="checkbox" class="custom-control-input" id="kd-bt-checkbox-03">
+                <label class="custom-control-label" for="kd-bt-checkbox-03">未选中</label>
+            </div>
+            <div class="custom-control custom-checkbox float-left">
+                <input type="checkbox" class="custom-control-input" id="kd-bt-checkbox-04" checked>
+                <label class="custom-control-label" for="kd-bt-checkbox-04"> 选中</label>
+            </div>
+        </div>
+    </div>
+    
+    <h3>Checkbox Radio 布局验证</h3>
+    <div class="bd-example">
+        <div class="mb-3">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="verify_customCheck1">
+                <label class="custom-control-label" for="verify_customCheck1"></label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="verify_customCheck2">
+                <label class="custom-control-label" for="verify_customCheck2">有文字</label>
+            </div>
+        </div>
+        <div class="farris-group-wrap form-inline farris-form-inline">
+            <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                    <span class="farris-label-text">处理优先级</span>
+                </label>
+                <div class="farris-input-wrap farris-checkradio-hor">
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" id="listcard_checkbox_21">
+                        <label class="custom-control-label" for="listcard_checkbox_21">级别一</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" id="listcard_checkbox_22">
+                        <label class="custom-control-label" for="listcard_checkbox_22">级别二</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" id="listcard_checkbox_23">
+                        <label class="custom-control-label" for="listcard_checkbox_23">级别三</label>
+                    </div>
+                    <div class="farris-feedback valid-feedback"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                    <div class="farris-group-wrap">
+                            <div class="form-group farris-form-group">
+                                <label class=" col-form-label">
+                                    <span class="farris-label-text">XX</span>
+                                </label>
+                                <div class="farris-input-wrap">
+                                    <input class="k-textbox form-control" type="text" [readonly]="readonlyState()" />
+                                    <div class="farris-feedback valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                           
+            </div>
+            <div class="col-6">
+                    <div class="farris-group-wrap">
+                            <div class="form-group farris-form-group">
+                                <label class="col-form-label">
+                                    <span class="farris-label-text">处理优先级-无下标签</span>
+                                </label>
+                                <div class="farris-input-wrap">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" id="listcard_radio_01">
+                                        <label class="custom-control-label" for="listcard_radio_01"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="col-6">
+                    <div class="farris-group-wrap  form-inline farris-form-inline">
+                            <div class="form-group farris-form-group">
+                                <label class=" col-form-label">
+                                    <span class="farris-label-text">XX</span>
+                                </label>
+                                <div class="farris-input-wrap">
+                                    <input class="k-textbox form-control" type="text" [readonly]="readonlyState()" />
+                                    <div class="farris-feedback valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                           
+            </div>
+            <div class="col-6">
+                    <div class="farris-group-wrap  form-inline farris-form-inline">
+                            <div class="form-group farris-form-group">
+                                <label class="col-form-label">
+                                    <span class="farris-label-text">无下标签</span>
+                                </label>
+                                <div class="farris-input-wrap">
+                                        <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="verify_customCheck1">
+                                                <label class="custom-control-label" for="verify_customCheck1"></label>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+      <div class="row">
+          <div class="col-6">
+                <div class="farris-group-wrap form-inline farris-form-inline">
+                        <div class="form-group farris-form-group">
+                            <label class="col-form-label">
+                                <span class="farris-label-text">无下标签</span>
+                            </label>
+                            <div class="farris-input-wrap">
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="listcard_radio_01">
+                                    <label class="custom-control-label" for="listcard_radio_01"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          </div>
+<div class="col-6 f-checkradio-no-label">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label">
+                        <span class="farris-label-text"></span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="listcard_radio_01">
+                            <label class="custom-control-label" for="listcard_radio_01">标签位置在此处超出不显示</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+        <div class="farris-group-wrap form-inline farris-form-inline">
+            <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                    <span class="farris-label-text">横向</span>
+                </label>
+
+                <div class="farris-input-wrap  farris-checkradio-hor">
+                        <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="listcard_radio_11">
+                                <label class="custom-control-label" for="listcard_radio_11">级别一</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="listcard_radio_12">
+                                <label class="custom-control-label" for="listcard_radio_12">级别二</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="listcard_radio_13">
+                                <label class="custom-control-label" for="listcard_radio_13">级别三</label>
+                            </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="listcard_radio_11">
+                        <label class="custom-control-label" for="listcard_radio_11">级别待审批</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="listcard_radio_12">
+                        <label class="custom-control-label" for="listcard_radio_12">级别待二级审批</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="listcard_radio_13">
+                        <label class="custom-control-label" for="listcard_radio_13">特批</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="farris-group-wrap form-inline farris-form-inline">
+            <div class="form-group farris-form-group">
+                <label class="col-form-label">
+                    <span class="farris-label-text">纵向</span>
+                </label>
+
+                <div class="farris-input-wrap">
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="listcard_radio_21">
+                        <label class="custom-control-label" for="listcard_radio_21">级别二</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="listcard_radio_22">
+                        <label class="custom-control-label" for="listcard_radio_22">级别待二级审批</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="listcard_radio_23">
+                        <label class="custom-control-label" for="listcard_radio_23">特批</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="listcard_radio_21">
+                            <label class="custom-control-label" for="listcard_radio_21">级别二</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="listcard_radio_22">
+                            <label class="custom-control-label" for="listcard_radio_22">级别待二级审批</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="listcard_radio_23">
+                            <label class="custom-control-label" for="listcard_radio_23">特批</label>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+    

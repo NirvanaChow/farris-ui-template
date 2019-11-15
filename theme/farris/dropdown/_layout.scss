@@ -1,0 +1,56 @@
+.dropdown-submenu {
+  position: relative;
+  .dropdown-toggle {
+    box-shadow: none !important;
+  }
+}
+/*下拉-底部-朝左*/
+.dropdown-left > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+// .dropdown-submenu .dropdown-toggle-split::after,
+// .dropright .dropdown-toggle-split::after,
+// .dropup .dropdown-toggle-split::after {
+//   margin-left: 0.255em;
+// }
+
+.dropleft > .dropdown-menu {
+  top: 0;
+  right: 100%;
+  left: auto !important;
+  margin-right: -1px;
+}
+
+.dropdown-submenu.dropleft > .dropdown-toggle::before {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  margin-top: -$caret-width;
+}
+.dropdown-submenu.dropright > .dropdown-toggle::after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -$caret-width;
+}
+.dropright > .dropdown-menu {
+  margin-left: -1px;
+}
+// 因为btn-secondary是带边线的 2019年6月13日
+.btn-group .btn-secondary + .dropdown-toggle-split {
+  margin-left: -1px;
+}
+
+// 20190622 响应式工具条
+.f-response-content{
+  .dropdown-item{
+    &.f-rt-toggle,
+    &.f-rt-btn{
+      cursor:pointer;
+      &.disabled{
+        cursor:default;
+      }
+    }
+  }
+}

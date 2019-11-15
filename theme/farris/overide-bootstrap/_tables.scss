@@ -1,0 +1,55 @@
+
+// 表格
+.table {
+    table-layout: fixed;
+    thead {
+      background: $farris-grid-header-bg;
+      color: $farris-grid-header-text;
+      th {
+        padding: $f-grid-header-cell-padding-y $table-cell-padding;
+        line-height: 20px;
+        border-width: 0 0 $farris-grid-cell-horizontal-border-width 0;
+        font-weight: $farris-grid-header-font-weight;
+        border-color: $farris-grid-header-border;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: calc(-#{$f-grid-header-cell-line-height} / 2);
+          display: block;
+          height: $f-grid-header-cell-line-height;
+          width: 1px;
+          background-color: $farris-grid-header-splitter-color;
+        }
+        &:last-child::after{
+          display: none;
+        }
+      }
+    }
+    td {
+      border-top-width: 0;
+      border-bottom: $farris-grid-cell-horizontal-border-width solid
+        $farris-grid-border;
+      border-color: $table-border-color;
+      padding: $f-grid-cell-padding-y $table-cell-padding;
+      height: $farris-table-td-height;
+      line-height: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    tr,
+    td,
+    th {
+      &.selected {
+        border-color: $farris-grid-selected-border;
+        color: $farris-grid-selected-text;
+        background-color: $farris-grid-selected-bg;
+      }
+    }
+  }

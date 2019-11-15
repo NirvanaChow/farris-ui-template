@@ -1,0 +1,24 @@
+<div class="col-12 col-md-6 col-xl-4 f-listcard-item" *ngFor="let item of orderListData">
+  <ul>
+    <li>
+        <span>订单日期：</span>
+        {{item.DDRQ}}
+    </li>
+    <li>
+        <span>订单编号：</span>
+        {{item.DDBH}}
+    </li>
+    <li>
+        <span>单位名称：</span>
+        {{item.KHMC}}
+    </li>
+    <li>
+        <span>售达方：</span>
+        {{item.KHBM}}
+    </li>
+    <li>
+        <span>总金额：</span>
+        {{item.ZJE}}
+    </li>
+  </ul>
+</div>

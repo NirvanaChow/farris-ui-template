@@ -1,0 +1,195 @@
+/*******************************
+            Section
+*******************************/
+%sectionHasGutter {
+  margin: 0.625rem 0 0;
+  &::before {
+    content: '';
+    position: absolute;
+    height: $f-section-gutter-height;
+    background: $farris-pt-bg;
+    left: 0;
+    right: 0;
+    top: -$f-section-gutter-height;
+  }
+}
+.#{$f-section-prefix} {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: $f-pt-card-section-inner-gutter;
+  margin: 0;
+  border-radius: $farris-split-section-border-radius;
+  //box-shadow: $farris-split-section-shadow;
+  // 间距构造背景色
+  & + .#{$f-section-prefix} {
+    @extend %sectionHasGutter;
+    margin: $f-pt-split-section-outer-gutter 0 0;
+  }
+
+  // 没有间距
+  &.f-section-nogutter {
+    &::before {
+      display: none !important;
+    }
+  }
+  // Section——占剩余所有空间
+  &.#{$f-section-prefix}-fill {
+    flex: 1 1 0;
+    overflow: hidden;
+    .#{$f-section-prefix}-content {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &.#{$f-section-prefix}-content-fill {
+    display: flex;
+    flex-direction: column;
+    .#{$f-section-prefix}-content {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  //  Section——Header区域
+  &-header {
+    @include f-header-flex;
+    margin: $f-section-header-outer-gutter;
+    .f-title {
+      @extend .f-tmpl-for-title-withline;
+    }
+
+    .f-content {
+      white-space: nowrap;
+    }
+    .f-toolbar {
+      color: $f-text-04;
+    }
+  }
+  //  Section——Content区域
+  &-content {
+    // flex: 1 1 0;
+  }
+  // 扩展
+  &-extend {
+    margin: 0 0 12px;
+  }
+
+  // 收起
+  &.f-state-collapse {
+    > .#{$f-section-prefix} {
+      &-extend {
+        display: none;
+      }
+    }
+  }
+}
+
+// 启用展开收起
+.#{$f-section-prefix}-accordion {
+  &.f-state-collapse {
+    > .#{$f-section-prefix} {
+      &-header {
+        margin-bottom: 0;
+      }
+      &-content {
+        height: 0;
+        overflow: hidden;
+        flex: 0 1 0;
+      }
+    }
+  }
+}
+
+// 最大化
+.#{$f-section-prefix}-maximize {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $farris-loading-z-index - 30;
+  background: $farris-split-section-bg;
+  > .f-section-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .f-grid-is-sub {
+    flex: 1 1 0;
+    height: auto;
+  }
+}
+
+/**
+* 自定义収折
+* 表单下面分组的隐藏状态
+* 隐藏 ——默认
+* 部分显示 —— f-state-visible
+*/
+.#{$f-section-prefix}-form.#{$f-section-prefix}-custom-accordion {
+  &.f-state-collapse {
+    .f-form-layout {
+      > *:not(.f-state-visible) {
+        display: none;
+      }
+    }
+    // 分组，一个输入控件
+    .f-section-formgroup {
+      // &:not(.f-state-visible) {
+      //   display: none;
+      // }
+      // 只有在部分显示下，分组标题才可以隐藏
+      &.f-state-visible {
+        > *:not(.f-state-visible) {
+          display: none;
+        }
+      }
+    }
+    // 分组输入控件
+    .f-section-formgroup-inputs {
+      > *:not(.f-state-visible) {
+        display: none;
+      }
+
+      &.f-state-visible-all > * {
+        display: initial;
+      }
+    }
+  }
+}
+
+/*IDE 增加包裹component结构 */
+.f-struct-wrapper {
+  & + .f-struct-wrapper {
+    > .#{$f-section-prefix} {
+      @extend %sectionHasGutter;
+      margin: $f-pt-split-section-outer-gutter 0 0;
+    }
+  }
+}
+
+/**
+* Tab 内部存放
+**/
+.#{$f-section-prefix}-tabs {
+  padding-top: 6px;
+}
+
+/*******************************
+      Section TreeGrid  20190824
+*******************************/
+.#{$f-section-prefix}-treegrid {
+  &.#{$f-section-prefix}-in-nav {
+    flex: 1 1 0;
+    > .f-section-content {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      .f-componet-treetable {
+        flex: 1 1 0;
+      }
+    }
+  }
+}

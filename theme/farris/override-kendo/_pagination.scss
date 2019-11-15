@@ -1,0 +1,67 @@
+// 分页
+.k-pager-wrap {
+    font-size: $farris-pagination-font-size;
+    border-width: 0;
+    background: $farris-pagination-bg;
+    justify-content: flex-end;
+    .k-link{
+      width:auto;
+      min-width: button-size();
+    }
+    .k-link,
+    .k-state-selected {
+      padding: $farris-pagination-padding-y $farris-pagination-padding-x;
+      // width: $farris-pagination-line-height;
+      // height: $farris-pagination-line-height;
+      line-height: $farris-pagination-line-height;
+      box-sizing: border-box;
+    }
+  
+    .k-link,
+    .k-pager-nav,
+    .k-state-selected {
+      @include border-radius($farris-pagination-border-radius);
+      margin: $farris-pagination-margin-y $farris-pagination-margin-x;
+  
+      &:focus {
+        color: $farris-pagination-focus-color;
+        border-color: $farris-pagination-focus-border-color;
+      }
+    }
+    .k-link.k-state-disabled {
+      color: $farris-pagination-disabled-color;
+      background: $farris-pagination-disabled-bg;
+      border-color: $farris-pagination-disabled-border-color;
+    }
+  
+    .k-pager-info {
+      display: none;
+    }
+  }
+  .k-grid-pager {
+    margin: ($farris-pagination-wrap-margin-y - $toolbar-padding-y) 0 0;
+    padding-bottom: 0;
+    kendo-pager-prev-buttons,
+    kendo-pager-next-buttons{
+      flex-shrink: 0;
+    }
+    kendo-pager-numeric-buttons{
+      overflow-x: auto;
+     overflow-y: hidden;
+    }
+  }
+
+  
+.k-pager-numbers {
+    .k-state-selected {
+      &,
+      &:hover {
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border-color;
+        color: $pagination-active-color;
+        &.k-link {
+          color: $pagination-active-color;
+        }
+      }
+    }
+  }

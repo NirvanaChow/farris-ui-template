@@ -1,0 +1,682 @@
+<div class="farris-header">
+  <!-- 顶部操作条和标题——————————————————开始 -->
+  <nav class="navbar p-0">
+    <h4 class="farris-form-title mr-auto">左列右卡</h4>
+    <div class="btn-toolbar">
+      <button class="btn btn-primary f-btn-ml" (click)="changeState('add')">
+        新增
+      </button>
+      <button class="btn btn-secondary f-btn-ml" (click)="changeState('edit')">
+        编辑
+      </button>
+      <button class="btn btn-secondary f-btn-ml" (click)="changeState('delete')">
+        删除
+      </button>
+      <button class="btn btn-secondary f-btn-ml" (click)="changeState('save')">
+        保存
+      </button>
+    </div>
+  </nav>
+</div>
+<div class="row no-gutters farris-split-section flex-fill">
+  <div class="col-12 col-lg-6 d-flex flex-column farris-lsection">
+    <div class="farris-grid-toolbar">
+      <h4 class="farris-grid-title">Grid标题</h4>
+      <!-- 操作按钮 -->
+    </div>
+    <kendo-grid [data]="data" [class]="'flex-fill'">
+      <kendo-grid-column
+        
+        field="DDBH"
+        title="订单编号"
+        width="140"
+      >
+      </kendo-grid-column>
+      <kendo-grid-column
+        
+        field="KHMC"
+        title="客户名称"
+      >
+      </kendo-grid-column>
+      <kendo-grid-column
+        
+        field="KHBM"
+        title="客户别名"
+      >
+      </kendo-grid-column>
+    </kendo-grid>
+  </div>
+  <div class="col-12 col-lg-6 farris-rsection farris-overflow-y-auto">
+    <h4 class="farris-cardpart-title">表单信息</h4>
+    <form class="farris-form f-rregion-mtable-form ">
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span><span class="farris-label-text">订单编号</span>
+              
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                type="text"
+                class="form-control"
+                value="Ximena"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">类型</span>
+              <small class="farris-label-info text-muted">&nbsp;</small>
+            </label>
+            <div class="farris-input-wrap">
+              <select class="form-control" [disabled]="readonlyState()">
+                <option selected>股份公司</option>
+                <option>国有单位</option>
+                <option>个人</option>
+              </select>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 farris-group-auto">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">突破宽度限制</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="中国电信"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class=" col-form-label">
+              <span class="farris-label-text">客户别名</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                class="k-textbox form-control"
+                type="text"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">业务类型</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dropdownlist
+                [class]="'form-control'"
+                [data]="listItemsDropDown"
+                [value]="'服务合同'"
+                [readonly]="readonlyState()"
+              >
+              </kendo-dropdownlist>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 f-checkradio-no-label">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text"></span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_01"
+                />
+                <label
+                  class="custom-control-label"
+                  for="listcard_checkbox_01"
+                >标签在后</label>
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 f-checkradio-no-label">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_11"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_11"
+                  >标签在后</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+      <h4 class="farris-cardpart-title">表单信息</h4>
+      <form class="farris-form f-rregion-mtable-form">
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+            <div class="farris-input-wrap farris-checkradio-hor">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_21"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_21"
+                  >XXXX</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_22"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_22"
+                  >XXXX</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_23"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_23"
+                  >XXXX</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_01"
+                />
+                <label
+                  class="custom-control-label"
+                  for="listcard_radio_01"
+                ></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_11"
+                />
+                <label class="custom-control-label" for="listcard_radio_11"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_12"
+                />
+                <label class="custom-control-label" for="listcard_radio_12"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_13"
+                />
+                <label class="custom-control-label" for="listcard_radio_13"
+                  >XXX</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+
+            <div class="farris-input-wrap farris-checkradio-hor">
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_21"
+                />
+                <label class="custom-control-label" for="listcard_radio_21"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_22"
+                />
+                <label class="custom-control-label" for="listcard_radio_22"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_23"
+                />
+                <label class="custom-control-label" for="listcard_radio_23"
+                  >XXX</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class=" col-form-label">
+              <span class="farris-label-text">XX</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                class="k-textbox form-control"
+                type="text"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <h4 class="farris-cardpart-title">表单信息<small>突破宽度限制</small></h4>
+    <form class="farris-form f-rregion-mtable-form farris-form-auto row">
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label for="hpinput01" class="col-form-label">
+              <span class="farris-label-info text-danger">*</span><span class="farris-label-text">订单编号</span>
+              
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                type="text"
+                class="form-control"
+                value="Ximena"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">类型</span>
+              <small class="farris-label-info text-muted">&nbsp;</small>
+            </label>
+            <div class="farris-input-wrap">
+              <select class="form-control" [disabled]="readonlyState()">
+                <option selected>股份公司</option>
+                <option>国有单位</option>
+                <option>个人</option>
+              </select>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">客户名称</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="密码"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class=" col-form-label">
+              <span class="farris-label-text">客户别名</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                class="k-textbox form-control"
+                type="text"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">业务类型</span>
+            </label>
+            <div class="farris-input-wrap">
+              <kendo-dropdownlist
+                [class]="'form-control'"
+                [data]="listItemsDropDown"
+                [value]="'服务合同'"
+                [readonly]="readonlyState()"
+              >
+              </kendo-dropdownlist>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">偏好</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_01"
+                />
+                <label
+                  class="custom-control-label"
+                  for="listcard_checkbox_01"
+                ></label>
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_11"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_11"
+                  >XXXX</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_12"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_12"
+                  >XXXX</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_13"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_13"
+                  >XXXX</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+            <div class="farris-input-wrap farris-checkradio-hor">
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_21"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_21"
+                  >XXXX</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_22"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_22"
+                  >XXXX</label
+                >
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="checkbox"
+                  id="listcard_checkbox_23"
+                />
+                <label class="custom-control-label" for="listcard_checkbox_23"
+                  >XXXX</label
+                >
+              </div>
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_01"
+                />
+                <label
+                  class="custom-control-label"
+                  for="listcard_radio_01"
+                ></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+
+            <div class="farris-input-wrap">
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_11"
+                />
+                <label class="custom-control-label" for="listcard_radio_11"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_12"
+                />
+                <label class="custom-control-label" for="listcard_radio_12"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_13"
+                />
+                <label class="custom-control-label" for="listcard_radio_13"
+                  >XXX</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class="col-form-label">
+              <span class="farris-label-text">XXX</span>
+            </label>
+
+            <div class="farris-input-wrap farris-checkradio-hor">
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_21"
+                />
+                <label class="custom-control-label" for="listcard_radio_21"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_22"
+                />
+                <label class="custom-control-label" for="listcard_radio_22"
+                  >XXX</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  id="listcard_radio_23"
+                />
+                <label class="custom-control-label" for="listcard_radio_23"
+                  >XXX</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="farris-group-wrap form-inline farris-form-inline">
+          <div class="form-group farris-form-group">
+            <label class=" col-form-label">
+              <span class="farris-label-text">XX</span>
+            </label>
+            <div class="farris-input-wrap">
+              <input
+                class="k-textbox form-control"
+                type="text"
+                [readonly]="readonlyState()"
+              />
+              <div class="farris-feedback valid-feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

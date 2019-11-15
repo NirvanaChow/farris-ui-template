@@ -1,0 +1,56 @@
+<div class="row farris-split-section m-3 py-3 flex-wrap text-center">
+  <button
+    class="btn btn-secondary f-btn-ml"
+    [ngClass]="{ active: !stateUnderline }"
+    (click)="inputToUnderline(false)"
+  >
+    <span>控件控件普通样式</span>
+  </button>
+  <button
+    class="btn btn-secondary f-btn-ml"
+    [ngClass]="{ active: stateUnderline }"
+    (click)="inputToUnderline(true)"
+  >
+    <span>控件只带下划线样式</span>
+  </button>
+  <button
+    class="btn btn-secondary f-btn-ml"
+    [ngClass]="{ active: !stateView }"
+    (click)="formToView(false)"
+  >
+    <span>控件普通状态</span>
+  </button>
+  <button
+    class="btn btn-secondary f-btn-ml"
+    [ngClass]="{ active: stateView }"
+    (click)="formToView(true)"
+  >
+    <span>控件查看状态</span>
+  </button>
+
+  <button
+    class="btn btn-secondary f-btn-ml"
+    [ngClass]="{ active: isHorizontal }"
+    (click)="chageDirection(true)"
+  >
+    <span>横向</span>
+  </button>
+
+  <button
+  class="btn btn-secondary f-btn-ml"
+  [ngClass]="{ active: !isHorizontal }"
+  (click)="chageDirection(false)"
+>
+  <span>纵向</span>
+</button>
+
+
+</div>
+ <app-cmp-icons></app-cmp-icons>
+<app-cmp-process></app-cmp-process> 
+<app-cmp-btns></app-cmp-btns>
+<app-cmp-inputs [inputCls]="inputCls" [horizontalCls]="horizontalCls"></app-cmp-inputs>
+<app-cmp-dates [inputCls]="inputCls" [horizontalCls]="horizontalCls"></app-cmp-dates>
+<app-cmp-dialog></app-cmp-dialog>
+<app-cmp-panel></app-cmp-panel>
+<app-cmp-tab></app-cmp-tab>

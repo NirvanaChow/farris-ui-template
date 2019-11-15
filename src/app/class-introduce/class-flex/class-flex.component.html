@@ -1,0 +1,50 @@
+<dl class="bd-example-introduce-class-list">
+  <dt>1. f-utils-absolute-all</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>不清楚父元素的宽高，却想与父元素比肩。只要父元素上有样式<code>position-relative</code>,就能占满父元素的空间</p>
+  </dd>
+  <dt>2. f-utils-fill</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>a. 没有基础宽度,占剩余所有空间，并且超出隐藏，不出现滚动条</p>
+    <p>b. 父元素是流式布局，可以让该子元素占剩余所有空间。如果父元素是横向布局，占剩余所有宽度。如果父元素是纵向布局，占剩余所有高度</p>
+    <p>c. 如果兄弟元素也有这个样式，平分剩余所有空间。</p>
+  </dd>
+  <dt>3. f-utils-fill-auto</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>a. 没有基础宽度,占剩余所有空间，并且超出横向隐藏，纵向出现滚动条</p>
+    <p>b. 其他同<code>f-utils-fill</code>。</p>
+  </dd>
+  <dt>4. f-utils-flex-column</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>内部流式布局，子元素要纵向布局。配合<code>.f-utils-fill</code>,可以让某个子元素占剩余所有空间。</p>
+  </dd>
+  <dt>5. f-utils-fill-flex-column</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>占父元素的剩余所有空间，并且内部流式布局，子元素是纵向布局。相当于<code>f-utils-fill</code> 和<code>f-utils-flex-column</code></p>
+  </dd>
+  <dt>6. f-utils-flex-row</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>内部流式布局，子元素是横向布局，不能自动折下一行。常用于处理只有一行，并且内部子元素可以继承到父元素的高度</p>
+  </dd>
+  <dt>7. f-utils-fill-flex-row</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>占父元素的剩余所有空间。内部流式布局，子元素是横向布局，并且超出隐藏。</p>
+  </dd>
+  <dt>8. f-utils-flex-row-wrap</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>内部流式布局，子元素是横向布局，并且超出宽度自动折下一行。</p>
+  </dd>
+  <dt>9. f-utils-fill-flex-row-wrap</dt>
+  <dd>
+    <p>应用场景：</p>
+    <p>占父元素的剩余所有空间。内部流式布局，子元素是横向布局，并且超出宽度自动折下一行。</p>
+  </dd>
+</dl>

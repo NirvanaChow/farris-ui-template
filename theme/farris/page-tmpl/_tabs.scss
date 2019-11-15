@@ -1,0 +1,89 @@
+// 在模板区域——kendo多标签页样式
+.farris-split-section {
+  // tab样式
+  .k-tabstrip > .k-content {
+    padding: $f-pt-tabs-content-gutters;
+    border-width: 0;
+  }
+  .k-tabstrip > .k-tabstrip-items .k-item {
+    color: $farris-ptlayout-tabstrip-item-text;
+    border-width: $farris-ptlayout-tabstrip-item-border-width;
+    .k-link {
+      padding: $f-pt-tabs-header-gutters;
+      font-size: $f-pt-tabs-header-font-size;
+      line-height: $f-pt-tabs-header-line-height;
+    }
+    &.k-state-hover,
+    &:hover {
+      color: $farris-ptlayout-tabstrip-item-hover-text;
+      border-color: $farris-ptlayout-tabstrip-item-hover-border-color;
+    }
+    &.k-state-active {
+      border-color: $farris-ptlayout-tabstrip-item-active-border-color;
+      color: $farris-ptlayout-tabstrip-item-active-text;
+      &:hover {
+        border-color: $farris-ptlayout-tabstrip-item-active-border-color;
+      }
+    }
+  }
+}
+
+/*
+* 1906 在模板内默认组件样式 
+* 该版本废弃，不知项目中是否还有引用
+*/ 
+.f-pt-main .f-cmp-tabs {
+  padding: $f-cmp-tabs-inner-gutter;
+  // tab样式
+  & > .k-content {
+    padding: $f-pt-tabs-content-gutters;
+    border-width: 0;
+  }
+  & > .k-tabstrip-items .k-item {
+    color: $farris-ptlayout-tabstrip-item-text;
+    border-width: $farris-ptlayout-tabstrip-item-border-width;
+    .k-link {
+      padding: $f-pt-tabs-header-gutters;
+      font-size: $f-pt-tabs-header-font-size;
+      line-height: $f-pt-tabs-header-line-height;
+    }
+    &.k-state-hover,
+    &:hover {
+      color: $farris-ptlayout-tabstrip-item-hover-text;
+      border-color: $farris-ptlayout-tabstrip-item-hover-border-color;
+    }
+    &.k-state-active {
+      border-color: $farris-ptlayout-tabstrip-item-active-border-color;
+      color: $farris-ptlayout-tabstrip-item-active-text;
+      &:hover {
+        border-color: $farris-ptlayout-tabstrip-item-active-border-color;
+      }
+    }
+  }
+}
+
+// f-tabs-pt-card 标记标签页在卡片区域
+// f-tabs-has-grid 标记标签页包含grid
+// 标签页内容区占剩余所有
+.f-tabstrip-fill {
+  &.k-tabstrip > .k-content.k-state-active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: column;
+  .farris-tabs-body {
+    flex: 1 1 0;
+    position: relative;
+    farris-tab {
+      > div {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+      }
+    }
+  }
+}

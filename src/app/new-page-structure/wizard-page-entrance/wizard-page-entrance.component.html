@@ -1,0 +1,68 @@
+<div class="f-page f-page-is-wizard">
+  <div class="f-page-main">
+    <farris-wizard
+      [currentPageId]="stepValue"
+      [progressData]="progressData"
+      [stepClickable]="selectUnitValue !== ''"
+      [fill]="true"
+      [stepDirection]="'vertical'"
+      [stepPosition]="'PageLeft'"
+      (stateChange)="wizardStateChange($event)"
+    >
+      <ng-template wizardHeader>
+        <div class="f-template-wizard-topheader f-split-border-b f-common-py-form">
+          <div class="f-section-formgroup-inputs farris-form-controls-inline">
+            <div class="col-md-6 ">
+              <div class="farris-group-wrap">
+                <div class="form-group farris-form-group">
+                  <label class="col-form-label">
+                    <span class="farris-label-info text-danger">*</span
+                    ><span class="farris-label-text">单位</span>
+                  </label>
+                  <div class="farris-input-wrap">
+                    <select
+                      id="selectunit"
+                      class="form-control"
+                      [(ngModel)]="selectUnitValue"
+                      (ngModelChange)="change()"
+                    >
+                      <option value=""></option>
+                      <option value="1">葵花仁有限公司</option>
+                      <option value="2">大众有限公司</option>
+                    </select>
+                    <div class="farris-feedback valid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <span class="text-warning" *ngIf="selectUnitValue === ''"
+                >请选择年结单位</span
+              >
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <wizard-page [pageId]="'deliverytime'" (pageSelected)="onSelect($event)">
+        <outer-wizard-page-first></outer-wizard-page-first>
+      </wizard-page>
+      <wizard-page
+        [pageId]="'outerpagesecond'"
+        (pageSelected)="onSelect($event)"
+      >
+        <outer-wizard-page-second></outer-wizard-page-second>
+      </wizard-page>
+
+      <wizard-page [pageId]="'selectgood'" (pageSelected)="onSelect($event)">
+        <wizard-page-second></wizard-page-second>
+      </wizard-page>
+      <wizard-page
+        [pageId]="'shipmentamount'"
+        (pageSelected)="onSelect($event)"
+      >
+        <wizard-page-third></wizard-page-third>
+      </wizard-page>
+    </farris-wizard>
+  </div>
+</div>

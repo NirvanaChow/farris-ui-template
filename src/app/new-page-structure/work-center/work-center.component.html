@@ -1,0 +1,176 @@
+<div class="f-page f-page-navigate">
+  <div class="f-page-main m-0">
+    <div class="f-page-content">
+      <farris-list-nav
+        class="f-page-content-nav"
+        (navStateChange)="navStateChange($event)"
+        [listNavWidth]="240"
+      >
+        <ng-template listNavContent>
+          <farris-tabs [fill]="true">
+            <farris-tab [title]="'待办'" [id]="'upcomingTasks'">
+              <ng-template #content>
+                <div class="f-template-listnav-row">
+                  <a class="list-nav-link active d-flex">
+                    <span class="nav-item-name">
+                      审核退货订单
+                    </span>
+                    <span class="nav-item-counter">
+                      3
+                    </span>
+                  </a>
+                </div>
+                <div class="f-template-listnav-row">
+                  <a class="list-nav-link   d-flex">
+                    <span class="nav-item-name">
+                      审核销售订单
+                    </span>
+                    <span class="nav-item-counter ">
+                      3
+                    </span>
+                  </a>
+                </div>
+              </ng-template>
+            </farris-tab>
+            <farris-tab [title]="'已办'" [id]="'taskAlready'">
+              <ng-template #content>
+                <div class="f-template-listnav-row">
+                  <a class="list-nav-link active  d-flex">
+                    <span class="nav-item-name">
+                      业务办理
+                    </span>
+                    <span class="nav-item-counter">
+                      3
+                    </span>
+                  </a>
+                </div>
+              </ng-template>
+            </farris-tab>
+          </farris-tabs>
+        </ng-template>
+      </farris-list-nav>
+      <div class="f-page-content-main f-utils-flex-column">
+        <div class="f-utils-flex-row border-bottom f-cmp-pt f-cmp-px">
+          <h5 class="col">审核退货订单</h5>
+          <div>
+            <span class="f-icon f-icon-filter"></span>
+          </div>
+        </div>
+        <farris-list-view
+          #listView
+          class="f-cmp-mx f-cmp-pt"
+          [data]="listViewData"
+          listidName="id"
+          [fill]="true"
+          (listClick)="listClick($event)"
+          (checkChange)="checkChange($event)"
+          [multipleSelect]="true"
+          [supportPaging]="true"
+          (pageChanged)="pagerChanged($event)"
+          (pageSizeChanged)="pagerChanged($event)"
+          [pageSize]="5"
+          [pageIndex]="1"
+          [pageList]="[1, 2, 3, 4, 5]"
+          [total]="100"
+        >
+          <ng-template listViewHeader>
+            <div class="f-utils-flex-row">
+              <div class="col">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    class="custom-control-input"
+                    id="selectAll"
+                    type="checkbox"
+                  /><label class="custom-control-label" for="selectAll"
+                    >未选中</label
+                  >
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary  ml-2">
+                  通过<span>(2)</span>
+                </button>
+                <button class="btn btn-secondary ml-2">驳回</button>
+                <div
+                  class="btn-group  ml-2"
+                  fDropdown
+                  (dpChangeEvent)="dpSectionState($event)"
+                >
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    fDropdownToggle
+                    type="button"
+                  >
+                    批量操作
+                  </button>
+                  <div class="dropdown-menu" fDropdownMenu>
+                    <li class="dropdown-item"><span>动作一</span></li>
+                    <li class="dropdown-item disabled"><span>动作二</span></li>
+                    <li class="dropdown-item"><span>动作三</span></li>
+                    <div class="dropdown-divider"></div>
+                    <li class="dropdown-item"><span>其他动作事件</span></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template listTemplate let-item="item">
+            <div class="f-cmp-p border-bottom f-utils-flex-row">
+              <div class="f-utils-fill">
+                <h6>
+                  {{ item.title }}的请购单{{ item.code
+                  }}<span class="badge badge-warning ml-2">今日到期</span>
+                </h6>
+                <div class="f-utils-flex-row no-gutters">
+                  <div class="col-12 col-md-4">
+                    产品名称：{{ item.productName }}
+                  </div>
+                  <div class="col-6 col-md-2">
+                    购买数量：{{ item.productNumber }}
+                  </div>
+                  <div class="col-6 col-md-2">
+                    总金额：{{ item.productTotalAmount }}
+                  </div>
+                  <div class="col-6 col-md-2">
+                    包装：{{ item.productPackage }}
+                  </div>
+                  <div class="col-6 col-md-2">
+                    规格：{{ item.productFormat }}
+                  </div>
+                </div>
+              </div>
+              <div class="align-self-center ml-3">
+                <div
+                  class="btn-group"
+                  fDropdown
+                  (dpChangeEvent)="dpSectionStateInView($event)"
+                >
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    fDropdownToggle
+                    type="button"
+                  >
+                    批量操作
+                  </button>
+                  <div class="dropdown-menu text-center" fDropdownMenu>
+                    <li class="dropdown-item"><span>驳回</span></li>
+                    <li class="dropdown-item disabled">
+                      <span>查看库存</span>
+                    </li>
+                    <li class="dropdown-item"><span>查找供应商</span></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template listViewFooter>
+            <!-- <div class="list-view-footer">
+              <p class="explain">本视图概述如下</p>
+            </div> -->
+          </ng-template>
+        </farris-list-view>
+      </div>
+    </div>
+  </div>
+</div>

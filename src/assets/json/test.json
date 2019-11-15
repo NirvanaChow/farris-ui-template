@@ -1,0 +1,41 @@
+{
+    "columns": [
+        {"title": "编号", "field": "Code", "width": 60},
+        {"title": "姓名", "field": "Name", "width": 80},
+        {"title": "年龄", "field": "Age", "width": 90},
+        {"title": "出生日期", "field": "birthday", "width": 140 },
+        {"title": "身份证号", "field": "idcode", "width": 120},
+        {"title": "邮编", "field": "postcode", "width": 120},
+        {"title": "地址", "field": "address", "width": 200}
+    ],
+    "items": [
+    ],
+    "total": 28,
+    "pageInfo":{
+        "enablePager": true,
+        "pageIndex": 1,
+        "pageSize": 20,
+        "pageList": [10, 20, 30, 50]
+    },
+    "navigation": {
+        "width": 320,
+        "displayType": "List",
+        "columns": [
+            {"title": "编号", "field": "Code", "width": 60},
+            {"title": "姓名", "field": "Name", "width": 80}
+        ],
+        "items": [
+        ],
+        "singleSelect": true,
+        "idField": "Code",
+        "showFilterBar": true,
+        "pageInfo":{
+            "enablePager": true,
+            "pageIndex": 1,
+            "pageSize": 20,
+            "pageList": [10, 20, 30, 50]
+        },
+        
+        "total": 28
+    }
+}

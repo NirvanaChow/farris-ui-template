@@ -1,0 +1,114 @@
+/*头部区*/
+.ywzfsq-header {
+  background: #e6f7ff;
+  padding: 12px 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid rgba(223, 226, 232, 0.7);
+}
+.ywzfsq-title-ctr {
+  margin: 0 40px 0 0;
+  flex-shrink: 0;
+}
+.ywzfsq-title {
+  font-size: 16px;
+  color: #000000;
+  line-height: 22px;
+  display: inline-block;
+  margin: 0 0 0 8px;
+}
+.ywzfsq-info-ctr {
+  margin: 0 auto 0 0;
+}
+.ywzfsq-info-ctr ul {
+  padding: 0;
+  margin: 0;
+}
+.ywzfsq-info-ctr li {
+  display: inline-block;
+  margin: 0 30px 0 0;
+  padding: 0;
+}
+.ywzfsq-toolbar-ctr {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ywzfsq-info-sum {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  margin: 0;
+}
+.ywzfsq-info-sum span {
+  font-size: 20px;
+  line-height: 28px;
+  vertical-align: middle;
+}
+.ywzfsq-detail-icon {
+  margin: 0 0 0 20px;
+}
+/*内容区*/
+.ywzfsq-content {
+  background: #fff;
+  padding: 14px 28px 0;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.ywzfsq-timeline-content-ctr {
+  background: #f9f9f9;
+  border: 1px solid #f2f2f2;
+  padding: 1rem 14px 24px;
+  margin: 0 0 0 1.25rem;
+}
+.ywzfsq-timeline {
+  padding: 0;
+  margin: 0;
+}
+.ywzfsq-timeline-item {
+  padding: 0 0 1rem;
+}
+.ywzfsq-timeline-time-ctr {
+  color: rgba(0, 0, 0, 0.45);
+  margin: 0 0 1rem;
+}
+.ywzfsq-timeline-time-ctr span {
+  padding: 0 0 0 1.25rem;
+  position: relative;
+}
+.ywzfsq-timeline-time-ctr span::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  content: '';
+  display: inline-block;
+  background: #66b869;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -0.25rem;
+}
+.ywzfsq-timeline-header {
+  padding: 0 0 10px;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.6);
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+}
+.ywzfsq-timeline-header span {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  vertical-align: middle;
+}
+.ywzfsq-timeline-info {
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.ywzfsq-timeline-info li {
+  display: inline-block;
+  margin: 0 1.875rem 0 0;
+}
+.ywzfsq-timeline-content-ctr .f-cmp-process {
+  margin: 0 0 1rem;
+}

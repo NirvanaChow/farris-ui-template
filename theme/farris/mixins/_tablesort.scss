@@ -1,0 +1,43 @@
+//20190923 表格排序样式修改
+@mixin table-sort{
+    position: relative;
+    width: 1.25rem;
+    height: 1.125rem;
+    display: inline-block;
+    vertical-align: inherit;
+    margin-left: 0.25rem;
+    overflow: hidden;
+    &:hover{
+        cursor: pointer;
+    }
+    &::before,&::after{
+        position: absolute;
+        left: 3px;
+        font-size: 0.75rem;
+        color: $f-table-sort-icon-color;
+        font-family: 'FarrisIcons';
+        display: inline-block;
+        width: 0.75rem;
+        height: 0.75rem;
+        line-height: 0.75rem;
+        text-align: center;
+    }
+    &::before{
+        content: '\e004';
+        top: 0;
+    }
+    &::after{
+        content: '\e006';
+        bottom: 0;
+    }
+    &-asc{
+        &::before{
+            color: $f-table-sort-icon-active-color;
+        }
+    }
+    &-desc{
+        &::after{
+            color: $f-table-sort-icon-active-color;
+        }
+    }
+}

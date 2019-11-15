@@ -1,0 +1,63 @@
+<wizard-page-detail  (pagedetailSelected)="pagedetailSelected($event)">
+    <ng-template wizardPageHeader>
+        <div class="page-friendly-reminder "  [ngClass]="showReminder?'':'d-none'">
+            <div class="reminder-message">
+                <span class="reminder-title">
+                    <span class="f-icon f-icon-info"></span>
+                    <span class="reminder-name">友情提示</span>
+                </span>
+                <span class="message"
+                    >您需要对年末结算所需的前期准备进行检查，全部通过后可进行年末结转</span
+                >
+            </div>
+            <div class="reminder-close">
+                <a
+                    href="javascript:void(0)"
+                    class="no-prompt"
+                    (click)="noPrompt()"
+                    >我知道了,不再提醒</a
+                >
+                <span
+                    class="close-icon k-icon k-i-close"
+                    (click)="closePrompt()"
+                ></span>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template wizardPageContent>
+        <div class="h-100 f-utils-flex-column f-template-wizard-page-content">
+            <div class="f-utils-fill">
+              内容自定义
+            </div>
+            <div class="page-operation">
+                <button
+                    class="btn "
+                    [ngClass]="{
+                        'btn-primary': !enableDownload,
+                        'btn-secondary': enableDownload
+                    }"
+                    [disabled]="!enableBegin"
+                    (click)="startCheck()"
+                >
+                    开始检查
+                </button>
+                <button class="btn btn-primary" *ngIf="enableDownload">
+                    下载检查报告
+                </button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template wizardPageFooter>
+        <div class="f-template-wizard-page-footer">
+            <button class="btn btn-secondary" (click)="prevStep()">
+                上一步
+            </button>
+            <button
+                class="btn btn-primary"
+                (click)="finishWizard()"
+            >
+                完成
+            </button>
+        </div>
+    </ng-template>
+</wizard-page-detail >

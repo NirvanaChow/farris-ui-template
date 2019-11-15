@@ -1,0 +1,42 @@
+[
+  {
+    "title": "颜色变量",
+    "type": "basic-color-variables",
+    "variables": [
+      {
+        "text": "基础",
+        "type": "group"
+      },
+      {
+        "text": "主色Primary",
+        "name": "$farris-theme-02",
+        "value": "#1890ff",
+        "type": "color"
+      },
+      {
+        "text": "成功Success",
+        "name": "$farris-success",
+        "value": "#12ce66",
+        "type": "color"
+      },
+      {
+        "text": "消息Info",
+        "name": "$farris-info",
+        "value": "#48a7ff",
+        "type": "color"
+      },
+      {
+        "text": "警告Warning",
+        "name": "$farris-warning",
+        "value": "#f7962a",
+        "type": "color"
+      },
+      {
+        "text": "危险Danger",
+        "name": "$farris-danger",
+        "value": "#f24645",
+        "type": "color"
+      }
+    ]
+  }
+]

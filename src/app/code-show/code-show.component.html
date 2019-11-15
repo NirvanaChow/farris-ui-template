@@ -1,0 +1,11 @@
+
+<div class="bd-example-code-show-codebtn" [ngClass]="{'mb-3':!showCodeArea}">
+  <span class="float-left">{{title}}</span>
+  <button class="btn btn-success" (click)="changState()"><i class="k-icon k-i-html"></i></button>
+</div>
+<div class="bd-clipboard" [ngClass]="{'d-none':!showCodeArea}">
+  <button class="btn-clipboard" (click)="copyDoc()">Copy</button>
+</div>
+<figure class="highlight" [ngClass]="{'d-none':!showCodeArea}">
+    <pre><code [highlight]="code"></code></pre> 
+</figure>

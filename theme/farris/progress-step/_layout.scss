@@ -1,0 +1,110 @@
+$f-progress-step-border-color:$f-theme-04;
+$f-progress-step-finish-bg:$f-theme-05;
+$f-progress-step-finish-hover-bg: $f-theme-04;
+$f-progress-step-finish-active-bg: $f-theme-03;
+
+$f-progress-step-active-bg:$f-theme-04;
+$f-progress-step-active-hover-bg: $f-theme-05;
+$f-progress-step-acitve-active-bg: $f-theme-03;
+
+$f-progress-step-error-bg:$f-semantic-danger;
+$f-progress-step-line-success-color:$f-theme-05;
+
+$f-progress-step-bg:$f-neutral-02;
+
+
+.f-progress-step{
+    .step{
+        .f-progressstep-row{
+            .f-progress-step-content{
+                .step-icon {
+                    background-color: $f-progress-step-bg;
+                }
+            }
+            .f-progress-step-line{
+                &::after{
+                    border-top: 2px dotted rgba(0,0,0,0.20);
+                }
+                .triangle {
+                    border-top: 1px solid rgba(0,0,0,0.20);
+                    border-right: 1px solid rgba(0,0,0,0.20);
+                }
+                &.f-progress-step-line-success {
+                    &::after{
+                        border-color: $f-progress-step-border-color;
+                    }
+                    .triangle {
+                        border-color: $f-progress-step-border-color;
+                    }
+                }
+            }
+            &.step-finish{
+                .f-progress-step-content{
+                    .step-icon{
+                        background-color: $f-progress-step-finish-bg;
+                    }
+                }
+                &:hover{
+                    .f-progress-step-content{
+                        .step-icon{
+                            background-color: $f-progress-step-finish-hover-bg;
+                        }
+                    }
+                }
+                &:active{
+                    .f-progress-step-content{
+                        .step-icon{
+                            background-color: $f-progress-step-finish-active-bg;
+                        }
+                    }
+                }
+            }
+            &.step-active{
+                .f-progress-step-content{
+                    .step-icon{
+                        background-color: $f-progress-step-active-bg;
+                    }
+                }
+                &:hover{
+                    .f-progress-step-content{
+                        .step-icon{
+                            background-color: $f-progress-step-active-hover-bg;
+                        }
+                    }
+                }
+                &:active{
+                    .f-progress-step-content{
+                        .step-icon{
+                            background-color: $f-progress-step-acitve-active-bg;
+                        }
+                    }
+                }
+            }
+            &.step-error{
+                .f-progress-step-content{
+                    .step-icon{
+                        background-color: $f-progress-step-error-bg;
+                    }
+                }
+            }
+        }
+    }
+    .f-progress-step-list-block{
+        .step{
+            .f-progressstep-row{
+                .f-progress-step-line{
+                    border-left: 2px dotted rgba(0,0,0,0.20);
+                    .triangle{
+                        border-bottom: 1px solid rgba(0,0,0,0.20);
+                    }
+                    &.f-progress-step-line-success {
+                        border-color: $f-progress-step-line-success-color;
+                        .triangle {
+                            border-color: $f-progress-step-line-success-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

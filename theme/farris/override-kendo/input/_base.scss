@@ -1,0 +1,110 @@
+
+// 输入框
+.k-input,
+.k-textbox,
+.k-textarea,
+.k-input.k-textbox {
+  &:focus,
+  &.k-state-focused {
+    @if $enable-shadows {
+      box-shadow: $input-focused-shadow;
+    }
+    //border-color:$farris-input-focus-border-color;
+  }
+  // 错误提示
+  //&.ng-invalid.ng-touched,
+  //&.ng-invalid.ng-dirty
+  &.k-state-invalid {
+    &:focus,
+    &.k-state-focus {
+      @if $enable-shadows {
+        box-shadow: 0 0 2px 1px rgba($invalid-border, 0.7);
+      }
+    }
+  }
+}
+.k-textbox {
+  &:disabled,
+  &[disabled],
+  &.k-state-disabled {
+    @include k-disabled;
+  }
+}
+.k-maskedtextbox {
+  &.k-state-focused {
+    .k-textbox {
+      $input-focused-text: $farris-input-focused-color;
+      border-color: $input-focused-border;
+      @if $enable-shadows {
+        box-shadow: $input-focused-shadow;
+      }
+    }
+  }
+}
+
+// checkbox-radio
+.k-checkbox-label,
+.k-radio-label {
+  line-height: $farris-line-height-base;
+  min-height: $farris-font-size-base * $farris-line-height-base;
+  padding-left: $farris-cr-left-gutter;
+  padding-right: $farris-checkbox-radio-right-gutter;
+  margin-bottom: $farris-checkbox-radio-bottom-gutter;
+}
+.k-checkbox-label::before,
+.k-checkbox-label::after {
+  top: $farris-checkbox-radio-top;
+  font-size: $farris-check-icon-size;
+  font-family: $farris-cr-font-family;
+}
+.k-radio-label::before,
+.k-radio-label::after {
+  top: $farris-checkbox-radio-top;
+  font-size: $farris-radio-icon-font-size;
+  font-family: $farris-cr-font-family;
+}
+.k-checkbox-label::after {
+  content: '\e834';
+}
+.k-radio-label::after {
+  border: 1px solid $radio-border;
+  content: '\e837';
+  left: 0px;
+  width: $farris-radio-icon-size;
+  height: $farris-radio-icon-size;
+  font-size: $farris-radio-icon-font-size;
+  line-height: $farris-radio-icon-size;
+}
+.k-radio:checked + .k-radio-label::after {
+  color: $farris-radio-checked-text;
+}
+
+.k-radio:disabled + .k-radio-label,
+.k-checkbox:disabled + .k-checkbox-label
+{
+  color: $farris-cr-disabled-text;
+  &::before {
+    border-color: $farris-cr-disabled-border;
+  }
+  &::after {
+    color: $farris-cr-disabled-border;
+  }
+}
+.k-radio[readonly] + .k-radio-label,
+.k-checkbox[readonly] + .k-checkbox-label
+{
+  color: $farris-cr-readonly-text;
+  &::before {
+    border-color: $farris-cr-readonly-border;
+  }
+  &::after {
+    color: $farris-cr-readonly-border;
+  }
+}
+  // 2019年6月15日 火狐低版本浏览器
+  .k-header{
+    .k-checkbox-label,
+    .k-radio-label{
+      padding-right:0;
+    }
+  }

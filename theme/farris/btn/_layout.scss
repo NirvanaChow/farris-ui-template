@@ -1,0 +1,80 @@
+.dropdown-toggle-split {
+  padding-right: $farris-dropdown-toggle-split-x;
+  padding-left: $farris-dropdown-toggle-split-x;
+}
+.btn-info {
+  color: $farris-info-btn-text;
+}
+.f-cursor-pointer {
+  cursor: pointer !important;
+}
+/*******************************
+      输入控件中的展开收起按钮
+*******************************/
+.f-btn-collapse-expand {
+  color: $f-text-04;
+  background-color: transparent;
+  &::after {
+    @include f-icon-extend('FarrisIcons',false);
+    content: '\e015'; 
+    margin-left: $f-el-form-title-arrow-right-gutter;
+  }
+  &.f-state-expand::after {
+       content: '\e013';
+  }
+  .f-toolbar & {
+    padding-right: 0;
+  }
+}
+// 假装是Link
+.f-pretend-link {
+  color: $farris-btn-link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  @include hover {
+    color: $farris-btn-link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+//20190918 添加btn-group组件样式
+.f-btn-group{
+  .f-btn-group-links{
+      .btn-link{
+          margin-left: $f-btn-group-gutter-y;
+      }
+  }
+  .f-btn-group-dropdown{
+      margin-left: $f-btn-group-gutter-y;
+      .f-btn-dropdown{
+          display: inline-block;
+          line-height: 1;
+          border: none;
+          outline: none;
+          background-color: rgba($farris-btn-group-dropdown-color,$farris-btn-group-dropdown-bg-opacity);
+          color: $farris-btn-link-color;
+          width: 1.125rem;
+          height: 1.125rem;
+          line-height: 1.125rem;
+          text-align: center;
+          border-radius: 100%;
+          padding: 0;
+          &:hover{
+              cursor: pointer;
+              background-color: rgba($farris-btn-group-dropdown-color,$farris-btn-group-dropdown-bg-hover-opacity);
+          }
+          &:focus{
+              color: $farris-btn-group-dropdown-focus-color;
+              background-color: rgba($farris-btn-group-dropdown-color,$farris-btn-group-dropdown-bg-focus-opacity);
+          }
+          .f-icon{
+            font-size: 12px;
+          }
+      }
+      .dropdown-menu{
+          min-width: 5rem;
+      }
+  }
+}

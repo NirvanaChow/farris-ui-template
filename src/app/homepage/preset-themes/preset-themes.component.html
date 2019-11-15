@@ -1,0 +1,48 @@
+<div
+  class="doc-expand-btn"
+  (click)="expanded = !expanded"
+  [ngClass]="expanded ? 'expanded' : ''"
+>
+  <h3>切换主题</h3>
+</div>
+<div class="docs-theme-panel" [ngStyle]="{ width: expanded ? '260px' : '0px' }">
+  <h3 class="docs-navbar-title">预置主题</h3>
+  <div class="docs-theme-list">
+    <div class="mb-3" *ngFor="let theme of selfPresetThemes">
+      <!--主题名称-->
+      <h4 class="docs-theme-title">
+        {{ theme.title }}
+      </h4>
+      <!--主题颜色定义-->
+      <div class="docs-theme-property " style=" cursor: pointer">
+        <div
+          *ngFor="let temp_color of theme.variables"
+          [ngStyle]="{ background: temp_color['value'] }"
+        ></div>
+      </div>
+      <!--主题类型-->
+      <ul class="row mx-0 my-2 justify-content-between">
+        <li
+          *ngFor="let temp_type of theme.types"
+          (click)="selectTheme(theme.code, temp_type.type)"
+          class="col-5"
+          style="    height: 30px;
+           border: 1px solid #f0f3f6;
+           line-height: 30px;
+           text-align: center;
+           background: rgb(53, 86, 118);"
+        >
+          <span
+            class="k-icon k-i-check text-success mr-2"
+            [ngClass]="
+              selectedTheme == theme.code && selectedType == temp_type.type
+                ? ''
+                : 'd-none'
+            "
+          ></span>
+          <span>{{ temp_type['title'] }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+// 手风琴
+.k-panelbar {
+    .k-content {
+      padding: $farris-panel-content-gunter;
+    }
+    & > .k-item {
+      &.k-state-disabled {
+        opacity: 1;
+        @include set-bg-text-border(
+          $farris-panel-link-disabled-background,
+          $farris-panel-link-disabled-text,
+          $farris-panel-link-disabled-border
+        );
+        & > .k-link {
+          color: $farris-panel-link-disabled-text;
+        }
+      }
+      & > .k-link {
+        padding-left: $farris-panelbar-header-padding-with-icon-left;
+        background-color: $farris-accordion-header-bg;
+        color: $farris-panel-text;
+        &.k-state-selected {
+          @include set-bg-text-border(
+            $farris-panel-link-selected-background,
+            $farris-panel-link-selected-text,
+            $farris-panel-link-selected-border
+          );
+        }
+        &:hover,
+        &.k-state-hover {
+          @include set-bg-text-border(
+            $farris-panel-link-hover-background,
+            $farris-panel-link-hover-text,
+            $farris-panel-link-hover-border
+          );
+        }
+      }
+    }
+    .k-panelbar-expand,
+    .k-panelbar-collapse {
+      left: $farris-panel-icon-left;
+      font-family: $farris-panel-icon-font-family;
+      font-size: $farris-panel-icon-font-size;
+      color: $farris-panel-icon-text;
+    }
+    .k-panelbar-expand::before {
+      content: $farris-panel-icon-expand;
+    }
+    .k-panelbar-collapse::before {
+      content: $farris-panel-icon-collapse;
+    }
+  }

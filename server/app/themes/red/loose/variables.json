@@ -1,0 +1,287 @@
+[
+  
+  {
+    "title": "Body",
+    "type": "body-variables",
+    "variables": [
+      {
+        "text": "全局",
+        "type": "group"
+      },
+      {
+        "text": "背景色",
+        "name": "$farris-body-bg",
+        "value": "#d2dff2",
+        "type": "color"
+      },
+      {
+        "text": "滚动条",
+        "type": "group"
+      },
+      {
+        "text": "宽度",
+        "name": "$farris-scrollbar-width",
+        "value": "0.75rem",
+        "type": "text"
+      },
+      {
+        "text": "高度",
+        "name": "$farris-scrollbar-height",
+        "value": "0.75rem",
+        "type": "text"
+      },
+      {
+        "text": "圆角",
+        "name": "$farris-scrollbar-border-radius",
+        "value": "0.25rem",
+        "type": "text"
+      },
+      {
+        "text": "轨道背景色",
+        "name": "$farris-scrollbar-track-bg",
+        "value": "#eee",
+        "type": "color"
+      },
+      {
+        "text": "滑道背景色",
+        "name": "$farris-scrollbar-thumb-bg",
+        "value": "rgba(0,0,0,0.2)",
+        "type": "color"
+      }
+    ]
+  },
+  {
+    "title": "按钮",
+    "type": "basic-btn-variables",
+    "variables": [
+      {
+        "text": "Secondary按钮",
+        "type": "group"
+      },
+      {
+        "text": "$farris-btn-secondary-bg",
+        "name": "$farris-body-bg",
+        "value": "#d2dff2",
+        "type": "color"
+      }
+    ]
+  },
+  {
+    "title": "页面布局变量",
+    "type": "page-template-variables",
+    "variables": [
+      {
+        "text": "标题区",
+        "type": "group"
+      },
+      {
+        "text": "阴影",
+        "name": "$farris-ptlayout-header-shadow",
+        "value": "0 2px 5px 0 rgba(0, 0, 0, 0.06)",
+        "type": "text"
+      },
+      {
+        "text": "高度",
+        "name": "$farris-ptlayout-header-height",
+        "value": "2.875rem",
+        "type": "text"
+      },
+      {
+        "text": "内间距",
+        "name": "$farris-ptlayout-header-inner-gutter",
+        "value": "0.5rem 1.75rem 0 1.75rem",
+        "type": "text"
+      },
+      {
+        "text": "背景色",
+        "name": "$farris-ptlayout-header-bg",
+        "value": "#fff",
+        "type": "color"
+      },
+      {
+        "text": "标题文字",
+        "name": "$farris-ptlayout-header-title-text",
+        "value": "#1a599e",
+        "type": "color"
+      },
+      {
+        "text": "标题字体大小",
+        "name": "$farris-ptlayout-header-title-font-size",
+        "value": "1.375rem",
+        "type": "text"
+      },
+      {
+        "text": "主内容区",
+        "type": "group"
+      },
+      {
+        "text": "背景色",
+        "name": "$farris-split-section-bg",
+        "value": "#fff",
+        "type": "color"
+      },
+      {
+        "text": "外间距",
+        "name": "$farris-split-section-outer-gutter",
+        "value": "0.5rem 0.5rem",
+        "type": "text"
+      },
+      {
+        "text": "阴影",
+        "name": "$farris-split-section-shadow",
+        "value": "0 2px 5px 0 rgba(0, 0, 0, 0.06)",
+        "type": "text"
+      },
+      {
+        "text": "右侧内间距",
+        "name": "$farris-ptlayout-rsection-gutter",
+        "value": "0.9375rem 0.625rem 0.625rem 1.25rem",
+        "type": "text"
+      },
+      {
+        "text": "卡片内间距",
+        "name": "$farris-ptlayout-card-gutter",
+        "value": "1rem 0.75rem 0",
+        "type": "text"
+      },
+      {
+        "text": "标签页",
+        "type": "group"
+      },
+      {
+        "text": "文本",
+        "name": "$farris-ptlayout-tabstrip-item-text",
+        "value": "#333",
+        "type": "color"
+      },
+      {
+        "text": "边线宽度",
+        "name": "$farris-ptlayout-tabstrip-item-border-width",
+        "value": "0 0 2px 0",
+        "type": "text"
+      },
+      {
+        "text": "鼠标滑过文本",
+        "name": "$farris-ptlayout-tabstrip-item-hover-text",
+        "value": "#00a7ff",
+        "type": "color"
+      },
+      {
+        "text": "边线颜色",
+        "name": "$farris-ptlayout-tabstrip-item-hover-border-color",
+        "value": "transparent",
+        "type": "text"
+      },
+      {
+        "text": "选中文本",
+        "name": "$farris-ptlayout-tabstrip-item-active-text",
+        "value": "#1890ff",
+        "type": "text"
+      },
+      {
+        "text": "选中边线颜色",
+        "name": "$farris-ptlayout-tabstrip-item-active-border-color",
+        "value": "#1890ff",
+        "type": "text"
+      },
+      {
+        "text": "表格",
+        "type": "group"
+      },
+      {
+        "text": "单元格内间距",
+        "name": "$farris-ptlayout-grid-td-padding",
+        "value": "0.625rem 0.625rem",
+        "type": "text"
+      },
+      {
+        "text": "单元格高度",
+        "name": "$farris-ptlayout-grid-td-height",
+        "value": "2.5rem",
+        "type": "text"
+      },
+      {
+        "text": "标题单元格内间距",
+        "name": "$farris-ptlayout-grid-th-padding",
+        "value": "0.625rem 0.625rem",
+        "type": "text"
+      },
+      {
+        "text": "选中时单元格内间距",
+        "name": "$farris-ptlayout-grid-selected-padding",
+        "value": "0.625rem 0.625rem",
+        "type": "text"
+      },
+      {
+        "text": "选中时单元格背景色",
+        "name": "$farris-section-grid-selected-bg",
+        "value": "#fff",
+        "type": "color"
+      },
+      {
+        "text": "选中时单元格下边线颜色",
+        "name": "$farris-section-grid-selected-border-y-color",
+        "value": "#dce4ed",
+        "type": "color"
+      },
+      {
+        "text": "选中时单元格左边线颜色",
+        "name": "$farris-section-grid-selected-border-x-color",
+        "value": "#dce4ed",
+        "type": "color"
+      },
+      {
+        "text": "标题单元格内边线颜色",
+        "name": "$farris-ptlayout-grid-header-cell-border-color",
+        "value": "#1890ff",
+        "type": "color"
+      },
+      {
+        "text": "左侧表格标题文字",
+        "name": "$farris-ptlayout-grid-title-text",
+        "value": "#000",
+        "type": "color"
+      },
+      {
+        "text": "左侧表格标题字体大小",
+        "name": "$farris-ptlayout-lsection-grid-title-font-size",
+        "value": "1rem",
+        "type": "text"
+      },
+      {
+        "text": "左侧表格标题行高",
+        "name": "$farris-ptlayout-lsection-grid-title-font-size",
+        "value": "1.375rem",
+        "type": "text"
+      },
+      {
+        "text": "卡片和右侧表格标题文字",
+        "name": "$farris-ptlayout-rsection-grid-title-text",
+        "value": "#000",
+        "type": "color"
+      },
+      {
+        "text": "卡片和右侧表格标题字体大小",
+        "name": "$farris-ptlayout-rsection-grid-title-font-size",
+        "value": "1rem",
+        "type": "text"
+      },
+      {
+        "text": "卡片和右侧表格标题行高",
+        "name": "$farris-ptlayout-rsection-grid-title-line-height",
+        "value": "1.375rem",
+        "type": "text"
+      },
+      {
+        "text": "其他",
+        "type": "group"
+      },
+      {
+        "text": "背景色",
+        "name": "$farris-ptlayout-content-bg",
+        "value": "#f7fcff",
+        "type": "color"
+      }
+    ]
+  }
+]
